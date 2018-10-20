@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>表单</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+  </style>
+ </head>
+ <body>
+    <form action="aaa.php" method="get"> 
+        用户名：<input name="user" type="text" placeholder="请输入用户名">  <br />
+        密码：<input type="password" placeholder="请输入密码"/><br />
+        <input type="radio" name="r" value="aaa"/> 阿斯顿去
+        <input type="radio" name="r" value="bbb"/>亲爹亲 
+        <input type="radio" name="r" value="ccc"/>地区的武器
+        <input type="radio" name="r" value="ddd"/>欠我的钱 <br />
+        您的性别：
+        <input type="radio" name="sex" value="eee" id="man"/> <label for="man">男</label>
+        <input type="radio" name="sex" value="fff" id="woman"/><label for="woman">女</label><br />
+        你爱上吗
+        <input type="checkbox" name="che1"/> 恩格尔
+        <input type="checkbox" name="che2"/>全方位
+        <input type="checkbox" name="che3"/>请问
+        <input type="checkbox" name="che4"/>而且要
+        <input type="checkbox" name="che5" disabled/>特别v
+        <input type="checkbox" name="che6" checked/>请问不同 
+        <br />
+        <input type="file" name="file"/>    <br />
+        <input type="hidden" name="hide" value="1"/>  <br />
+        个人简介：
+        <textarea name="t" id="txt" cols="30" rows="10"></textarea>  <br />
+        今天星期几：         <!-- h5 datalist -->
+        <select name="hang" id="xxx" size="1">
+            <option value="one">星期一</option>
+            <option value="two">星期二</option>
+            <option value="three">星期三</option>
+            <option value="four" selected>星期四</option>
+            <option value="five">星期五</option>
+            <option value="six">星期六</option>
+            <option value="seven">星期天</option>  
+        </select>
+        <br />
+        <input type="submit" value="点我提交"> 
+        <input type="reset" />
+    </form>  
+    
+    <!-- 将前端数据发送到后端 action=“后端地址  js/ajax也能发”            不同表单项name必须不一样，后端告诉你
+                                                           method="post"放在头信息？ get请求带问好，暴露更明显 ,直接显示在url
+                                        是同控件发送数据的时候，数据必须有名字（name）
+                                        input type="submit"  提交按钮
+                                        默认值 text
+                                        placeholder  表单有提示值
+                                        value  默认值,表单的value就是输入内容
+                                        type="password"  密码
+                                        type="radio"  选择  单选name要一样 没有value选的都一样，默认on  value不能一样便于后台区分     
+                                        label标签 用来使某个html内容关联某个input增加用户体验 for id  宽高文字样式
+                                        type="checkbox"  多选  name不能一样  value没多大影响因为nmae不同   
+                                        默认选中checked  单选听前面 多选都勾上
+                                        当某些条件出发时希望某些选项禁用  disabled
+                                        文件上传 type="file"
+                                        img图片提交
+                                        type="hidden" 比如一个网站三个注册页面，仅仅希望后台看到用户来向，通过value辨别用户来源
+                                        文本域textarea多行文本输入框
+                                        下拉选框 select      selected="selected"可直接写同disabled默认显示   size改变显示数量
+                                        -->  
+                    <!-- 这些脱离form不做数据提交也能用，而且数据提交也不一定用这些，太丑了 一般隐藏input通过axjx提交数据 实在难看
+                    
+                            不常用：表单分组<fieldset>可将表单内相关元素分组
+                                    <legend>为fieledset元素定义标题-->
+            <!-- 伪类：#id:focus{} 获得焦点改样式  -->
+
+            <!-- 表单关注点：不同name和value的设定 -->
+ </body>
+</html>
+<!-- can  i  use -->

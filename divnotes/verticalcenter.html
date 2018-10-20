@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>vertical+和+垂直居中</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    img{
+        width:200px;
+        height:200px;
+    }
+    /*  div{
+        display:inline-block;
+        width:200px;
+        height:200px;
+        border:5px solid red;
+         }  */
+    .hh{
+        display:block;
+        width:600px;
+        height:200px;
+        border:5px solid green;
+        margin:0 auto;
+    }
+    .hhh{
+        vertical-align:top;     /*改变基线常用 middle bottom 默认基线baseline 稍微比底端偏上一点点   顶端对齐 只针对于inline 和inline-block有效 
+                                      一般用于文字和图片间的对其方式
+                                      text-top文本顶端对齐 text-bottom  
+                                       sub sup 上下标对其
+                                       像素值- +
+                                       以大的元素为准 ，改变值小的元素先动*/
+        font-size:30px;        /* 文字基于底部基线对其 */
+    }
+    .cc{
+        width:500px;
+        height:300px;
+        border:5px solid orange;
+    }
+  </style>
+ </head>
+ <body>
+    <img src="img/food.png" alt="" />
+    <img src="img/5.jpg" alt="" />
+    <br />
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="hh">
+        <span>qweqwdqwdqwdqw</span>
+        <span class="hhh">qwdasqwdkqjwhdiqhohdoiqw</span>
+    </div>
+    <!-- 不常使用inline-block 原因1：多个元素使用，只给第一个元素加，整体其他块都会向下移动 基线 
+                              原因2：放文字时，相对于底基线对其，盒子会往下掉-->
+    <div id="cc"></div>
+    <!-- 垂直居中：
+                1 文本 align-text:center;   line-height:父级高；  首先设置成行内块
+                2 块 vertical-align:middle; 大块才能算居中
+                3 伪居中 有时候给父级加line-height:父级高；会影响所有文本，在需居中块加个兄弟盒子比他更大高度占父级100%
+                     :after{
+                        display-inline:block;
+                        vertical-align:middle;
+                        content:"";
+                        width:;
+                        height:100%;
+                     }
+           
+                -->
+ </body>
+</html>

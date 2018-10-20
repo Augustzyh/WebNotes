@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>内联框架</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    iframe{
+        width:600px;
+        height:600px;
+        margin:100px;
+    }
+  </style>
+ </head>
+ <body>
+ <a href="www.baidu.com" target="bd">ssss</a>          <!-- 可写多个 --> 
+    <a href="www.baidu.com" target="bd">ssss</a>
+        <!-- 行内元素，默认宽高 行内块 -->
+    <iframe name="bd" src="" frameborder="1" scrolling="no"></frame>             <!-- frameborder是否显示边框
+                                                                                            scrolling不一定有用，auto无法设置单边 前端一般不用卡且慢-->       
+ </body>
+</html>

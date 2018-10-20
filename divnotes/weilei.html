@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>伪类</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    a:link{
+        color:green;             /* 初始未访问的颜色 */
+    }
+    a:hover{        
+        color:red;  /* ie7至兼容a标签hover，以上就可以兼容其他标签的 hover写在link后面
+                           顺序 active   visited  */
+    }
+    div{
+        width:100px;
+        height:200px;
+        background:green;
+    }
+    div p{
+        display:none;
+        color:blue;
+    }
+    div:hover p{
+        display:block;
+    }
+    #aa{
+        background:orange;
+    }
+    #aa::before{                /* 两个冒号  */
+        background:pink;
+        content:"我在最前面";   /* 单纯加标签最前面，伪元素，长的像元素 content必须属性 after*/
+    }
+    #aa::after{
+        content:"我是最后面的伪元素";
+        background:pink;
+    }
+  </style>
+ </head>
+ <body>
+    <a href="">表现出类的特性</a>
+    <div>
+        <p>你给我出来</p>
+    </div>
+    <div id="aa">伪元素，它不是一个真正的元素，但拥有元素的特性</div>
+ </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>圆角阴影透明</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    #radius{
+        width:200px;
+        height:200px;
+       
+        border:2px solid red;
+        margin:100px auto 0;
+        
+        /* border-radius:50px 0 0 0;  四个值 */
+        /* border-radius:100px 100px;   50%圆可分解 */
+        /* 可拆分成八个属性 0 0 0 0/0 0 0 0改变你边的弧度 */
+        border-top-left-radius:20px;
+    }
+    #shadow{
+        width:200px;
+        height:200px;
+        border:2px solid pink;
+        /* box-shadow:20px 20px 20px pink;     水平 垂直 扩散程度 颜色 */
+        /* box-shadow:20px 20px 20px 30px pink;     水平 垂直 扩散程度 扩散距离 颜色 */
+        box-shadow:20px 20px 20px 30px pink inset;     /*水平 垂直 扩散程度 扩散距离 颜色 朝内扩散*/
+    }
+    #hover{
+    /* 都不兼容ie8以下 */
+        width:200px;
+        height:200px;
+        background:url("文件/img/1.jpg") no-repeat 0/ 80%;
+        opacity:0.5;
+        /* background:orange; */
+        /* opacity:0.5; 0-1透明度
+            filter:alpha(opacity=40); 针对ie8以前，独有滤镜*/
+        /* 文字不透背景透 */
+       /*  background:rgba(0,0,0,0.5);   */ 
+        /*  图片背景透明，字不透明？ui */
+    }
+    /* 图像透明 */
+   img{
+        opacity:0.5;
+    } 
+  </style>
+
+ </head>
+ <body>
+    <div id="radius"></div>
+    <div id="shadow"></div>
+    <div id="hover">hello</div>
+   <img src="文件\img\food.png" />
+ </body>
+</html>

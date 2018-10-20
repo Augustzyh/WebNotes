@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>热点图</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    area{
+        outline:0;      /* 隐藏点击框框 */
+    }
+  </style>
+ </head>
+ <body>
+
+    <!-- map和image的关联 
+        使用area实现击跳转，相当于a标签，但比a标签丰富，可以规定区域，
+        shape可以是圆形和方形 circle rect 规定大小位置 无法加样式
+        确定圆：coords:圆心坐标,半径
+        确定矩形：rect：左定点x 左顶点y 右下角x 右下角y
+        购物跳转特别多
+    -->
+    <img src="images/1.png" alt="" usemap="#redian"/>
+    <map name="redian">
+        <area shape="circle" coords="165,80,80" href="https://www.baidu.com" alt="" />
+        <area shape="rect" coords="382,0,571,199" href="" alt="" />
+        <area shape="" coords="" href="" alt="" />
+        <area shape="" coords="" href="" alt="" />
+    </map>
+ </body>
+</html>

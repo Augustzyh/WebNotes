@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>清除浮动</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    .clearfloat:after{content:""; display:block; clear:both;}
+    #wrap{
+        width:500px;
+        height:500px;
+        border:2px solid red;
+    }
+    #wrap p{
+        width:150px;
+        height:100px;
+    
+    }
+    #wrap p.p1{
+        float:left;
+        background-color:#999966;
+    }
+    #wrap p.p2{
+        float:left;
+        background-color:#6633ff;
+    }
+    #wrap p.p3{
+        float:left;
+        background-color:#009933;
+    }
+    #wrap p.p4{
+        width:200px;
+        height:150px;
+        background-color:#666600;
+    }
+   /*  .box{
+        height:100px;         加上和浮动元素一样的高
+        overflow:hidden;       自动包裹所有浮动元素
+    } */
+  /*   .box:after{
+        content:"";
+        display:block;                  方法三 伪类
+        clear:both; */
+    }
+   /*  .clear{
+        clear:both;
+    }  */
+  </style>
+ </head>
+ <body>
+    <div id="wrap" >  <!-- 例子，不希望脱离文档流 -->
+        <div class="box clearfloat"  >          <!-- 方法二 吧浮动元素放到一个盒子里 -->
+            <p class="p1"></p>
+            <p class="p2"></p>
+            <p class="p3"></p>
+<!--             <div style="clear:both;"></div> -->
+        </div>
+       <!--  <div class="clear"></div>         方法1 ，加隔板（块级元素）
+        <div style="clear:both;"></div> -->
+        <p class="p4"></p>
+    </div>
+ </body>
+</html>

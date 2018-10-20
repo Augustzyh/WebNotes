@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>css基础</title>
+  <!--内部样式表-->
+  <style type="text/css">
+  body,p,h2{margin:0; padding:0;}
+  body{
+    background:yellow;
+  }
+  #q{
+    width:100px;
+    height:100px;
+    background:red;
+    /*padding:10px 20px;  上下 10  左右20*/
+    /*padding:20px;四个方位全是20*/
+    /*padding:10px 20px 30px;  上 10  左右20*  下30*/
+    /*padding:10px 20px 30px 40px;  上 10  右20  下30 左40*/
+    padding-top:20px;/* 单独某一边 left right bottom*/
+    border:5px dashed #000;/*边框宽度  线的类型 颜色
+                            dashed虚线  solid实线 dotted虚点
+                            */ 
+    /*改某一遍边框粗细 border-width:可拆分为四条边写，写法同padding和margin*/
+    border-right-width:10px;
+    border-bottom-style:dotted;
+    border-bottom-color:#f00;
+    
+    /*外边距margin 参数同padding*/
+    margin:auto;/*仅左右居中*/ 
+    }
+  #i{
+    font-size:12px;
+    color:#66ccff;
+  }
+  /*第一个子元数margin回传给父级*/
+  #ss{
+    overflow:hidden;
+    width:100px;
+    height:100px;
+    background-color:green;
+  }
+    
+  #aa{
+    width:30px;
+    height:30px;
+    background-color:pink;
+    margin-top:30px;
+  }
+  #g{
+    width:50px;
+    height:50px;
+    background-color:yellow;
+    margin-bottom:50px;
+  }
+  #h{
+    width:30px;
+    height:30px;
+    background-color:black;
+    margin-top:20px;/*取最大 出发bfc解决*/
+  }
+  #jj{
+    width:0;
+    height:0; 
+    border:50px solid yellow; 
+    border-color:transparent transparent  #66ffcc transparent;
+    /*border-color:#66ffcc #cc0066 #666600 #00ff00;*/
+    /*border-top-color:#66ffcc;
+    border-left-color:#cc0066;
+    border-right-color:#666600;
+    border-bottom-color:#00ff00;*/
+  }
+
+  </style>
+ </head>
+ <body>
+    <div id="q">
+        <h1 id="i">我是大标签</h1>
+    </div>
+    
+    <!--盒子模型
+        content:内容；
+        padding:内边距；（填充物）
+        margin:外边距（盒子与盒子间距）；
+        border:(边框）；
+
+        起名字：
+            id:一个标签仅一个id，其他id不能和这个id一样
+            class:一个标签可以由很多的class(如下写法)，其他人的class可以和你的class重复
+    -->
+    <div class="as sa sd"></div>
+    <!--外边距合并1-->
+    <div id="ss">
+        <p id="aa">123</p>
+    </div>
+    <!--外边距合并2  塌陷 都触发bfc解决-->
+    <div id="g">
+    
+    </div>
+    <p id="h">
+    </p>
+
+    <!--边框画三角形-->
+    <div id="jj"></div>
+ </body>
+</html>

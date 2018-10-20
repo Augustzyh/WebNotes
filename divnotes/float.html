@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>浮动</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    .div1{
+        /* float:left;  */                /* 应用：导航栏 */
+        width:150px;
+        height:150px;
+        background-color:red;
+    }
+    .div2{
+        /* float:left; */     /* right  贴父级边框，文档流浮起来，下方向上飞，文字流不变 */
+        width:100px;
+        height:100px;
+        background-color:pink;
+    }
+    .div3{
+        /* float:left; */        /* 多元素浮动，清除文档流，上下规则，遇腹肌边框会停，遇到浮动元素边缘也会停  
+                                         父级宽度不够，盒子会往下掉，若向右浮动则掉下去在右边
+                                         上一个浮动元素宽度不够，会被卡住
+                                         */
+        width:200px;
+        height:200px;
+        background-color:green;
+    }
+    #nav{
+        width:400px;
+        height:20px;
+        background-color:#ff6600;
+    }
+    #nav ul li{
+        font-weight:800;
+        float:left;
+        padding:0 14px;
+    }
+    #nav ul li a{
+        
+        color:#ffffff;
+    }
+    #nav ul li a:hover{
+        color:red;
+    }
+  </style>
+ </head>
+ <body>
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div id="nav">
+        <ul>
+            <li><a href="">天猫</a></li>
+            <li><a href="">聚划算</a></li> 
+            <li><a href="">天猫超市</a></li>             <!--  比inline-block好在 不会影响其他元素 ，每个元素很自由
+                                                                     浮动后不支持auto，外边距不会合并，块级布局
+                                                                     居中margin-left:50%;
+                                                                        transform:translate(-50%,0);
+                                                                     一般居中不浮动
+                                                                     -->
+        </ul>
+    </div>
+ </body>
+</html>

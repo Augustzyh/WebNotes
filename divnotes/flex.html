@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>Octopus</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    .box{
+                                                /* 设置为flex后，float，clear，vertical-align将失效 */
+        display: -webkit-flex;   /* Safrai   */
+        display:flex;
+        /* display:inline-flex; 行内元素也可使用flex布局 */
+    }
+    .box ul{
+        display:flex;
+        flex-direction:column-reverse;
+        flex-wrap:wrap; 
+        /* flex-flow:row wrap; */
+        justify-content:space-around;
+        align-items:flex-end;
+        width:1000px;
+        height:800px;
+        border:2px solid green;
+        margin:100px auto;
+
+    }
+    .box ul li{
+        width:100px;
+        height:100px;
+        background-color:red;
+        text-align:center;
+        line-height:100px;
+    }
+    .box ul .li1{
+        order:1;
+        /* flex-grow:2; */
+        /* flex-shrink:0; */
+        /* flex-basis:250px; */
+        flex:1 0 250px;
+
+    }
+    .box ul .li8{
+        align-self:center;
+    }
+  </style>
+ </head>
+ <body>
+    <!-- flex布局：弹性布局，为盒状模型提供最大的灵活性，任何一个容器都可以指定为flex -->
+    <div class="box">
+        <ul>
+            <li class="li1">1</li>
+            <li class="li2">2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li class="li8">8</li>
+            <!-- <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li> -->
+        </ul>
+    </div>
+    
+    <!-- 一般管flex容器简称容器，所有子元素自动成为容器成员成为flex项目，简称项目
+            容器内默认的两根轴水平主轴（main axis）和垂直交叉轴（cross start）
+            主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫main end；
+            交叉轴的开始位置叫做corss start，结束位置叫cross end
+            项目默认延主轴排列，单个项目占据主轴空间叫main size（像width），交叉轴cross size（像height）
+    -->
+    
+    <!-- 容器的属性 
+            1    flex-direction 设定主轴的方向 row默认值：主轴水平，起点在左端
+                                               row-reverse:       , 起点右端
+                                               column: 垂直方向 ， 起点上沿
+                                               column-reverse     下沿
+            2    flex-wrap: 默认nowrap 不换行，项目排列在轴线上，
+                            wrap 换行第一行在上
+                            wrap-reverse  换行第一行在下   
+            3    flex-flow: <flex-dire  ction> | <flex-wrap>
+                            为以上两个属性的简写  默认 row nowrap
+            4    justify-content:  定义项目在主轴上的对齐方式
+                                   flex-start 默认值 左对齐
+                                   flex-end 右对齐
+                                   center 中间
+                                   space-between 两端对齐项目之间间隔相等排列
+                                   space-around 项目两侧间隔相等
+            5    align-items:   定义项目在交叉轴上如何对其
+                                stretch默认值 若项目未设置高度或为auto，则将沾满整个容器的高度
+                                flex-start  交叉轴起点对其
+                                flex-end
+                                center
+                                baseline 项目的第一行文字的基线对齐
+    -->
+
+    <!-- 项目的属性 
+            1   order 每个项目加个order，数字越小，排列越靠前
+            2   flex-grow 定义项目的放大比例，默认0，若存在空间也不放大   如果所有项目的flex-grow属性都为1，则它们将等分剩余               空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多               一倍。
+            3   flex-shrink 缩小比例，默认1，若空间不足项目将缩小  如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比                 例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
+            4   flex-basis  宽，定义了项目在分配多余空间之前项目占据主轴的空间main size，浏览器根据这个属性，计算主轴是否有多                  余空间。它的默认值为auto，即项目的本来大小。
+            5   flex        none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+                            该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。
+                            为以上三个值的综合属性建议直接写这个属性                
+            6   align-self:  允许单个项目有和其他项目不一样的对齐方式，可覆盖align-items属性，默认auto，即继承父亲的                            align-items属性，若父亲未设置，则等同stretch，取值同align-items
+
+    -->
+ </body>
+</html>

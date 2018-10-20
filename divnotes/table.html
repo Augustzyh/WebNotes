@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>兼容性 表格 热点图</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+   /*  div{
+        position:relative;
+        width:100px;
+        height:100px;
+    background:rgb(155,0,0);
+        双写 rgba
+        filter:alpha(opacity=50);
+    }
+    div .bg{
+        position:absolute;
+        width:100px;
+        height:100px;
+        background:rgb(255,0,0);
+        双写 rgba
+        filter:alpha(opacity=50);
+    }
+    div p{
+        position:relative;
+        z-index:2;
+        width:50px;
+        height:50px;
+        background:green;
+    }  
+    兼容性用*/
+    table{
+        width:100px;
+        height:200px;
+        /* border-spacing:10px 10px; */
+    }
+    td,th{
+        padding:30px;
+    }
+  </style>
+ </head>
+ <body>
+    <!-- css3保证正常显示就行，没必要为一些低版本用户操心不对ie6和ie7做考虑
+    
+           常见opacity的兼容性处理 0.5=.5   ie独有滤镜：filter:alpha(opacity=0~100) 对应opacity的0~1
+           rgba，hsl  IE8以下没法做兼容    双写： 先写rgb没办法写透明rgb写一个，rgba写一个，两个都支持以后面的为准加一个滤镜，但是内容会透明 解决方案如上，但会改变主流布局，蛋疼别管了低级浏览器
+
+           部分选择器：ie6不支持属性选择器，子元素选择器>，毗邻选择器+ ，考虑实际情况做取舍
+
+           伪类：只支持a的 
+
+           具体参照caniuse.com
+           -->
+
+    <!-- 超好用的ie条件语句 另开iejudge.html  仅ie可识别 if里写版本
+        用来提示升级
+        可以放div
+
+    -->
+
+    <!-- 优雅降级，渐进增强     据项目
+        1 先屌的不行的写，然后发现低版本不好显示，要保证显示，只保证显示     对低版本没严格，更多在用户体验
+        2 先猥琐发育，然后慢慢加屌特效               保证兼容
+    -->
+
+    <!-- css hack
+        正常公司直接丢
+        非正常多掉点头发去学把
+        针对ie7
+        *background：red;只有ie7能认识 
+        即在写css时加些符号某些ie能认识
+        background:blue\0;  ie8+能认识
+        background:yellow\0\9; ie8+能认识
+    -->
+    <!-- <div>
+        <div class="bg"></div>
+        <p></p>
+    </div> -->
+
+
+
+
+
+    <!-- 表格部分
+                            现如今少用表格做布局，难以维护，看不出来模块，没div层次分明，行内样式开发时用，有些东西不能单写样式，不参与seo，不可能使用table
+                          
+    -->
+    <table border="1">       <!-- 不推荐使用 -->
+        <!-- <thead></thead>        定义表格头 tr th文字默认加粗居中
+        <tbody></tbody> -->         <!-- 定义表格主体  tr td 所有内容放在td里  tr为行 不写会自动补全-->
+        <!-- <tfoot></tfoot>  -->        <!-- 定义表格尾  写的很少，尾部没什么写的 tr td -->
+<!--                                             border-collapse:collapse; 可以让所有边框合并想excel一样 一般用这个
+                                                 border-spacing:x y;控制单元格水平垂直的距离
+                                                表格加宽高，所有元素自动分配宽高
+                                                单元格内可以引入图片
+                                                
+                                                -->
+        <caption>这是一个傻逼的表格</caption>
+        <tr>
+            <th>姓名</th>                  <!-- 每一行内元素一起变高，每一列一起变宽 -->
+            <th>学号</th>
+            <th>傻逼</th>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td colspan="2">222</td>        <!-- 列合并，rowspan行合并 -->
+            <!-- <td>333</td> -->
+        </tr>
+        <tr>
+            <td>444</td>
+            <td colspan="2">555</td>
+            <!-- <td>666</td> -->
+        </tr>
+        <tr rowspan="3">
+        
+        </tr>
+    </table>
+
+    
+    <!-- diplay:table; 变成表格的形式  父元素固定宽度
+        每个子元素加上display:table-cell; 不使用就换行显示           转换成百分比，，每个元素看比例平分
+        支持margin:auto;
+    
+    
+        -->
+
+ 
+    <!-- 热点图部分  转rediantu.html
+            点击跳转
+    -->
+ </body>
+</html>

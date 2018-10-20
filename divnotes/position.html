@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>定位</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+        /* 当你方向怎么条都不合适，浮动调也不合适，用定位，也会脱离文档流
+            定位大于浮动         top bottom left right      很少加margin
+            z-index:;     设置值 ，大的显示在上面
+            relative 保留原来文档流的位置，然后在可以通过方位词移动  参照原本自位子去动
+            absolute 脱离文档流 最近有定位的父级或者html 默认auto
+            一般儿子absolute配合父级relative用
+            fixed固定定位 小广告
+
+            多个定位元素发生时，谁的布局位置在后面谁有先显示，可以通过z-index修改
+
+        */
+    .bo{
+        position:absolute;
+        width:100px;
+        height:200px;
+        z-index:122;
+        background-color:orange;
+    }
+    #box{
+        /* position:relative;
+        top:20px;
+        left:30px; */
+        width:200px;
+        height:200px;
+        background-color:pink;
+    }
+    .bx{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100px;
+        height:100px;
+        background-color:red;
+    }
+    .fix{
+        position:fixed;      /* 坐死都不动，参照物为当前显示的窗口 */
+    }
+  </style>
+ </head>
+ <body>
+    <div class="bo"></div>
+    <div id="box"></div>
+    <div class="bx"></div>
+    <div class="fix"></div>
+ </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>高级选择器</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+
+    #aa > a{
+        color:red;           /* > 子代选择器：只选中儿子，不选其他 */
+    }
+    p + span{
+                             /* 仅选中相邻兄弟，p紧跟着的span */
+    }
+    div.xxx[title] {
+        color:green;       /* 属性选择器所有兼容 所有含title属性的div并叫xxx 可以自定义标签属性 
+                               扩展 div.xx[title='vv'] 用的不多
+                            用的多的，自定义的不可以：div.xxx[title *= 'vv'] 包含vv的 
+                            一般选图片 img[src*='.png‘]{} 选中所有插入为png的图片*/
+    }
+    p + p{
+        background:red;
+    }
+  </style>
+ </head>
+ <body>
+    <!-- <div id="aa">
+        <a href="">sadasdqw</a>
+        <p>
+            <span>aaaaaaaaaaa</span>
+            <a href="">weqwdcss</a>
+            <div>bbbbbbbbbbb</div>
+            <span>ccccccccccc</span>
+        </p>
+    </div>
+    <div class="xxx">div1</div>
+    <div class="xxx" title="xx">div2</div>
+    <div class="xxx" title="vv">div3</div>
+    <div class="xxx" title="vvsss">div3</div> -->
+   <!--  例  <style type="text/css">
+            p + p{ color:red;}
+        </style>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>        234会变红   -->
+        <p>1</p>
+        <span></span>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+    
+ </body>
+</html>

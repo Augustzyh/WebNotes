@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>position居中</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    #a{
+        position:relative;
+        width:800px;
+        height:400px;
+        border:3px solid pink;
+        margin:50px auto;
+    }
+    #b{
+        position:absolute;   /* 适用于所有元素 */
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        /* top:50%;
+           left:50%;           参照于父级高度的50% 已知自身宽高的居中 
+                                vertical-align 适用于允许修改为inline-block的元素*/
+                            
+        width:100px;
+        height:100px;
+        background:red;
+
+        margin:auto;
+        /* margin-top:-50px;
+           margin-left:50px;          回去自己高度的一半  若-50%，父级宽度的 margin里%都是基于父级宽度的 */
+           /* transform:translate(-50%,-50%);    百分比参照与自身  适用于所有 */
+    }
+  </style>
+ </head>
+ <body>
+    <div id="a">
+        <p id="b"></p>
+    </div>
+ </body>
+</html>

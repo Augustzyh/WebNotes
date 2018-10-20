@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>选择器优先级+css书写顺序</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    div > a{ color:red;}
+    div a{ color:green;}     /* 写在后面的优先级高，但是 > 和 +不提高优先级 */
+    /* hover元素本身的优先级高于hover，：hover伪类就没用了 */
+      /* 一个[title],一个伪类   和class层级一样 */
+       /* !important  行内样式 id calss/伪类/属性选择器  标签 */
+
+
+       /* 书写顺序
+            //布局定位属性
+                diplay / list-style / position 相应的上下左右 / float / clear / visibility / overflow
+            //自身属性
+                width / height / margin / padding / border / background
+            //文本属性
+                color / font / text-decoration / text-align / vertical-align / white-space / break-word
+            //其他CSS3
+                content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient...
+       */
+
+
+
+
+
+              /* visibility:collapse;  当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 "hidden"。
+                       默认：visible  元素可见
+                             hidden： 元素不可见
+                             inherit：规定应该从父元素继承 visibility 属性的值*/  
+  </style>
+ </head>
+ <body>
+    <div>
+        <a href=""></a>
+    </div>
+ </body>
+</html>

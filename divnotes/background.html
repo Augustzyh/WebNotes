@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>background</title>
+  
+          <!-- background
+                       -color 背景颜色
+                       -image 背景图片
+                       -repeat 背景平铺 no-repeat  repeat-x水平平铺  repeat-y垂直平铺
+                       -position  可-x -y 位置 (left right top bottom center)第一个值水平 第二个值垂直 先写水平再写垂直    可百分数（两个值）
+                       -size   尺寸（html5 css3）(宽 高)
+                       -attachment 图片是否滚动，默认滚动（attachment） 滚动fixed 固定
+                       CSS3:
+                       -origin 起始位置
+                       -clip
+          -->
+  
+  <style type="text/css">
+    #ba{
+       width:200px;
+       height:200px;
+      /*  background-color:pink;
+       background-repeat:no-repeat;
+       background-image:url("作业/images/ojbk.jpg");
+       background-position:50px center;
+       background-position:left bottom; 左下角
+       background-position:50% 50%;
+       background-size:100px 100px;
+       background-size:cover;  保持宽高比不变，将块填满
+       background-size:contain;  保持某一方向填满 保持宽高比不变 */
+       /*origin:content-box;padding-box;border-box;  规定图片放置区域 */
+       background:-webkit-grandient(linear, 0 0,0 bottom,from(#ddd),to(rgba()));  /* 渐变色背景 */
+
+      /* 推荐写在一起 */
+       background:pink no-repeat url("作业/images/ojbk.jpg") 50% 50% / cover ;   
+                                                          /* position */
+       /*  当加了fixed卸载复合写法里时，position的百分比时相对于整个显示窗口而言的 多个url用，隔开*/
+    }
+    
+    #bac{
+       width:500px;
+       height:1000px;
+       background-color:green;
+       background-image:url("作业/images/ojbk.jpg");
+       background-repeat:no-repeat;
+       background-attachment:fixed;
+    }
+  </style>
+   </head>
+ <body>
+    <div id="ba"></div>
+    <div id="bac"></div>
+ </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>Document</title>
+   
+   <style type="text/css">
+        /* font
+               -size :一般设置偶数,用户体验最小12px，默认16px 
+               -weight :粗细(100~700整百数 默认400) bold粗字体 bolder更粗 lighter更细 
+               -family ：
+               -style: 
+            复合写法:斜体 小型大写 粗细 字体大小/行高 字体类型；
+        */
+
+       p{
+         /*  height:30px;
+          color:gray;
+          font-size:32px;
+          font-weight:600;
+          font-family:"Microsoft yahei","楷体"，"serif";
+          font-style:italic;
+          font-style:oblique;
+          line-height:30px;   一行占多高 等于高度时上下居中 */
+          font:oblique normal 600 32px / 20px "楷体";    
+       }
+
+        p #ss{
+          /* 大小写切换 */
+          color:green;
+          font-weight:600;
+          font-variant:small-caps;
+
+        }
+
+        /* 文字垂直居中 */
+        p::before {
+            display:inline-block;
+            content:"";
+            height:100%;
+            vertical-align:center;
+        }
+   </style>
+ 
+ </head>
+ <body>
+   <p>Oh my god!</p>
+   <p id="ss">HELLO!</p>
+ </body>
+</html>

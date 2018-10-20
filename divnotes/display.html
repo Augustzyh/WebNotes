@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>Document</title>
+  <style type="text/css">
+  div{
+  /*overflow:hidden;*//*超出隐藏  overflow可拆分垂直水平-x，-y*/
+  /*overflow:visible;*//*默认值显示*/
+  overflow:auto;/*auto超出自动加滚动条   scroll超不超都有滚动条*/
+    width:100px;
+    height:30px;
+  }
+  #header{}
+  span.txt{}   /* 无空格为多重选择 */
+  p span{}    /* 空格后代 */
+  a,p,span{}   /* 多选择器公用一个样式 */
+
+                        /* 优先规则  多选择器控制一个标签的优先级：
+                            单个：！important>内联样式>id>class>标签
+                            多个：找出id选择器的个数，class选择的个数，标签选择的个数 
+                            比如id个数相同，但是前者多个class，听前者的
+                            精准选择标签放前面 听选择器多的
+                            打平：以后面的为准
+                        外部样式与内部相同
+                            <p style="color:red">内联样式</p>
+                            span{}仅一个标签的时候优先级最低，可：
+                                  color：red !important;最厉害
+                                  谨记结构样式分离
+                            */
+    
+  </style>
+ </head>
+ <body>
+    <!-- 块级元素 独占一行 默认支持狂傲div h1~h6 p ol ul li dd dl dt
+           行内元素 不独占一行  不支持狂傲 a  span b i strong em img
+           display:block 块级
+           display:inline 行内
+           display:inline-block 行内块元素
+           display:none; 隐藏
+           行内不要包括块级
+           -->
+           
+
+ <!--一般不许超出盒子范围-->
+  <div>123456 <br /> 
+        455678 <br />
+        a1111111111111
+  </div>
+  <!--
+        元素不一定要有名字，有的话有两种方式：
+        id：一个标签只能用一个id，其余标签也不能叫这个id
+        class：不唯一，一个标签可以有多个class，别人也可以用
+        命名规则：字母 数字 下划线 减号 腾讯不许使用下划线，不能以数字减号开头，见名知意
+  -->
+  <div id="select" class="choice"></div>
+  <!-- header start -->
+  <div id="header"></div>
+  <!-- header end -->
+  <div>
+      <p class="txt"></P>
+      <span class="txt" id="hh"></p>
+  
+   </div>
+  <div>
+    <p><span></span></p>
+    <span>       </span>
+    <a href=""></a>
+  </div>
+ </body>
+</html>
