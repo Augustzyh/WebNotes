@@ -1,0 +1,31 @@
+doctype html
+html
+    header
+        title Octopus
+        meta(charset='utf8')
+    body
+        .zhangyu#box index
+        div(class=flag?'unhang':'hang')
+        div#case
+            - var friends = 10
+            case friends
+                when 0
+                    p 您没有朋友
+                when 1
+                    p 您有一个朋友
+                default
+                    p 您有 #{friends} 个朋友
+        div#for
+            - for (var x = 0; x < 3; x++)
+                li item#{x}
+        div#kuai
+            -
+                var list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
+            each item in list
+                li= item
+        p
+            != '这段文字 <strong>没有</strong> 被转义！'
+        // 被翻译到页面
+            这还是上面的注释
+            直到下一行换行结束
+        //- 不翻译到页面

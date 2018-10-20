@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            window  先下载xshell
+            cd / 根目录   ~用户目录
+            1 cd /usr/local/src/
+            2 wget http://nodejs.org/dist/v10.8.0/node-v10.8.0.tar.gz  xz版本xvf
+                ls 看到压缩包
+            3 tar zxvf node-v10.8.0.tar.gz
+            配置环境变量：
+            改名字 ： mv node-v10.8.0 ./node
+            强制删除： rm -rf 文件名
+            4 编译：cd node-v0.10.24
+                ./configure --prefix=/usr/local/node/0.10.24
+                make
+                make install
+            5 vi ~/.bash_profile   加一个PATH /usr/local/src/node文件名/bin wq
+            6 source ~/.bash_profile
+
+
+            安装方法2——编译部署
+            1.安装gcc，make，openssl，wget
+
+            yum install -y gcc make gcc-c++ openssl-devel wget
+            1
+            2.下载源代码包
+
+            同样的，你可以在下载页面https://nodejs.org/en/download/中找到下载地址。然后执行指令
+
+                wget https://nodejs.org/dist/v9.3.0/node-v9.3.0.tar.gz
+                1
+            3.解压源代码包
+
+            tar -xf node-v9.3.0.tar.gz
+            1
+            4.编译
+
+            进入源代码所在路径
+
+            cd node-v9.3.0
+            1
+            先执行配置脚本
+
+                ./configure
+            1
+            编译与部署
+
+            make && make install
+            1
+            接着就是等待编译完成…
+
+5.测试
+
+            node -v
+            npm
+            1
+            2
+            如果正确输出版本号，则部署OK
+
+            这种方式安装，个人觉得比较有点麻烦，还有安装gcc等其他程序，对应新人来说可能比较晕。而且编译比较久，切部署完成后nodejs为分别放在好几个文件夹内：
+
+/usr/local/bin –放置nodejs 执行程序
+            /usr/lib –放置了node_modules，即nodejs的各种模块
+            /usr/include –放置了nodejs扩展开发用头文件
+            优点是全局安装nodejs模块，直接使用。
+        </script>
+    </body>
+</html>

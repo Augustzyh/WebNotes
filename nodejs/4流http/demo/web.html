@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(document).click(() => {
+      $.ajax({
+        url: "http://localhost:3000",
+        method: "get",
+        success(msg){
+          console.log(JSON.parse(msg))
+        }
+      })
+    })  
+    
+    
+  </script>
+</body>
+</html>

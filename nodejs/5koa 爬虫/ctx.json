@@ -1,0 +1,31 @@
+{
+  request: //koa提供
+  {
+    method: 'GET',
+  url: '/',
+  header:
+  {
+    host: 'localhost:3000',
+    connection: 'keep-alive',
+    'cache-control': 'max-age=0',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68
+    .0.3440.33 Safari/537.36',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'accept-encoding': 'gzip, deflate, br',
+    'accept-language': 'zh-CN,zh;q=0.9',
+    cookie: 'Webstorm-489142dc=4e3ca68d-4908-45fc-b95f-ab24a85c5f82; Webstorm-b0726fbb=815ac2e4-6e40-47b
+    1-824e-826210484a18'
+  },
+},
+    response: { status: 404, message: 'Not Found', header: {} }, //koa提供
+    app:
+    { subdomainOffset: 2, proxy: false, env: 'development' },
+    originalUrl: '/',
+    req: '<original node req>',   //node原生的
+    res: '<original node res>',
+    socket: '<original node socket>',
+  }
+
+
+一般不要用req和res了

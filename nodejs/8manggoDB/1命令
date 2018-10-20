@@ -1,0 +1,11 @@
+1 指定启动数据库路径
+    mongod --dbpath E:\data\db
+2 上面服务不关闭 ctrl n新建一个窗口  27017
+3 链接数据库  未配置直接 mongo 出现箭头成功 可以执行js
+
+
+
+配置版：
+启动net start MongoDB
+停止net stop MongoDB
+移除sc delete 服务名称

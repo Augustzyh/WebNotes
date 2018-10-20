@@ -1,0 +1,10 @@
+mongod --dbpath  "e:\data\db"
+mongod.exe --dbpath "E:\data\db" --logpath "E:\data\log\mongod.log" --install --serviceName "mongo" --logappend --directoryperdb
+mongod.exe --dbpath "e:\mongoDB\data\db" --logpath "e:\data\log\mongod.log" --install --serviceName "mongo" --logappend --directoryperdb
+
+
+
+启动net start MongoDB
+停止net stop MongoDB
+移除sc delete 服务名称
+
