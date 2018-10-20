@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            /*.out-enter{  !*名为show 的动画标签开始*!
+                opacity:0;
+            }
+            .out-leave{  !*结束时的标签*!
+                opacity: 0;
+            }
+            .out-enter-active{  !*开始到正常显示*!
+                transition: opacity 3s;
+            }
+            .out-leave-active{  !*正常显示到结束*!
+                transition:opacity 3s;
+            }*/
+
+            /*.out-enter-active,.out-leave-active{
+                transition: color 3s;
+            }
+            .show-enter,.out-enter-active,.out-leave-active{
+                color:green;
+            }*/
+
+            /*.out-enter-active,.out-leave-active{
+                transition: color 3s;
+            }
+            .show-enter,.out-leave-active{
+                color:pink;
+            }*/
+            .out-enter-active,.out-leave-active{
+                -webkit-animation: run 3s;
+                -o-animation: run 3s;
+                animation: run 3s;
+            }
+            @keyframes run{
+                0%{transform: scale(0)}
+                50%{transform: scale(1.1)}
+                100%{transform: scale(.9)}
+            }
+            p{
+                color:firebrick;
+                text-align:center;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <button @click="show=!show">控制</button>
+            <transition name="out" appear>  <!--标签必须要有动作-->   <!--appear初始渲染-->
+                <p v-show="show">呼吁弧线</p>
+            </transition>
+        </div>
+        
+        <script>
+            new Vue({
+                el:"#wrap",
+                data:{
+                    show:true
+                }
+            })
+        </script>
+    </body>
+</html>

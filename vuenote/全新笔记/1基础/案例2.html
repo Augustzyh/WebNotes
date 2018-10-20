@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            .fade-enter-active,.fade-leave-active{
+                -webkit-transition: opacity .5s;
+                -moz-transition: opacity .5s;
+                -ms-transition: opacity .5s;
+                -o-transition: opacity .5s;
+                transition: opacity .5s;
+            }
+            .fade-enter,.fade-leave-active{
+                opacity:0;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/axios.min.js"></script>
+        <script src="js/vue-router.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <!--
+            直接写transition时原始动画和心动画一起执行
+        -->
+        <script>
+            /*
+            * router-view 路由视图
+            * out-in 先执行原始，新内容在执行
+            * */
+            let App = Vue.component("app",{
+                template:`
+                    <div id="wrap">
+                        <transition name="fade" mode="out-in">
+                            <router-view></router-view>
+                        </transition>
+                    </div>
+                `
+            });
+
+            let article = Vue.component("wenzhang",{
+                template:"<div v-html='dp'>啊啊啊我没有</div>",
+                data(){
+                  return{
+                      dp:null
+                  }
+                },
+                mounted(){
+                    axios.get("https://route.showapi.com/341-2",{
+                        params:{  //相当于data
+                            "showapi_timestamp": Date.now(),
+                            "showapi_appid": '72364', //这里需要改成自己的appid
+                            "showapi_sign": 'e6ee8c69d66d457cacfa9a5dcda3612b',  //这里需要改成自己的应用的密钥secret
+                            "id":`/dp/${this.$route.params.abc}.html`,
+                            "page":"1"
+                        }
+                    }).then(res => {
+                        console.log(res.data.showapi_res_body.text);
+                        this.dp = res.data.showapi_res_body.text;
+                    })
+                }
+            });
+
+            let index = Vue.component("index",{
+                template:`
+                        <div>
+                        {{type}}
+                            <select v-model="type" @click="getName">
+                                <option value="dp">动态搞笑图</option>
+                                <option value="tp">图片笑话大全</option>
+                                <option value="wp">文本笑话大全</option>
+                            </select>
+                            <ul>
+                                <li v-for="item in list">
+                                <router-link :to="{path:item.id}">
+                                    {{item.title}}
+                                    <img :src="item.img" alt="">
+                                </router-link>
+                                </li>
+                            </ul>
+                        </div>
+                `,
+                data(){
+                    return{
+                        list:null,
+                        type:'dp'
+                    }
+                },
+                mounted(){   //axios写这里
+                    axios.get("https://route.showapi.com/341-3",{
+                        params:{  //相当于data
+                            "showapi_timestamp": Date.now(),
+                            "showapi_appid": '72364', //这里需要改成自己的appid
+                            "showapi_sign": 'e6ee8c69d66d457cacfa9a5dcda3612b',  //这里需要改成自己的应用的密钥secret
+                            "page":"1",
+                            "maxResult":"20",
+                        }
+                    }).then(res => {
+                        //console.log(this);//箭头函数this指向定义时父级对象
+                        console.log(res.data.showapi_res_body.contentlist);
+                        this.list = res.data.showapi_res_body.contentlist;
+                    })
+                },
+                methods:{
+                    getName(){
+                        if(this.type === 'dp'){
+                            axios.get("https://route.showapi.com/341-3",{
+                                params:{  //相当于data
+                                    "showapi_timestamp": Date.now(),
+                                    "showapi_appid": '72364', //这里需要改成自己的appid
+                                    "showapi_sign": 'e6ee8c69d66d457cacfa9a5dcda3612b',  //这里需要改成自己的应用的密钥secret
+                                    "page":"1",
+                                    "maxResult":"20",
+                                }
+                            }).then(res => {
+                                this.list = res.data.showapi_res_body.contentlist;
+                            })
+                        }else if(this.type === 'tp'){
+                            axios.get("https://route.showapi.com/341-2",{
+                                params:{  //相当于data
+                                    "showapi_timestamp": Date.now(),
+                                    "showapi_appid": '72364', //这里需要改成自己的appid
+                                    "showapi_sign": 'e6ee8c69d66d457cacfa9a5dcda3612b',  //这里需要改成自己的应用的密钥secret
+                                    "page":"1",
+                                    "maxResult":"20",
+                                }
+                            }).then(res => {
+                                this.list = res.data.showapi_res_body.contentlist;
+                            })
+                        }else{
+                            axios.get("https://route.showapi.com/341-1",{
+                                params:{  //相当于data
+                                    "showapi_timestamp": Date.now(),
+                                    "showapi_appid": '72364', //这里需要改成自己的appid
+                                    "showapi_sign": 'e6ee8c69d66d457cacfa9a5dcda3612b',  //这里需要改成自己的应用的密钥secret
+                                    "page":"1",
+                                    "maxResult":"20",
+                                }
+                            }).then(res => {
+                                this.list = res.data.showapi_res_body.contentlist;
+                            })
+                        }
+                    }
+                }
+            });
+
+            let router = new VueRouter({
+                routes:[   //路由 路径
+                    {path:'/',component:index},
+                    {path:'/dp/:abc',component:article}
+                ]
+            });
+
+            new Vue({
+                el:"#wrap",
+                router,  //使用路由
+                render: h => h(App)
+            })
+        </script>
+    </body>
+</html>

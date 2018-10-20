@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <zyh>123
+                <h1 slot="hello">456</h1></zyh>
+        </div>
+        
+        <script>
+            /*slot 当组件中没有内容的时候显示（备用内容）*/
+            /*当命名时显示内容是html里的内容，不是子组件的内容*/
+            /*当命名时候 要写多个slot与html一一对应，否则未对应的html标签不现实*/
+            Vue.component("zyh",{
+                template:"<div><slot></slot><slot name='hello'><p>这是slot备用内容</p></slot></div>"
+            })
+            new Vue({
+                el:"#wrap"
+            })
+        </script>
+    </body>
+</html>

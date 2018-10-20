@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <name1></name1> <!--不能在这里面写内容-->
+            <name2></name2>
+            <z3></z3>
+        </div>
+        
+        <script>
+            //全局写法(名字，内容)无s   可以拿来写导航 使用多次的地方可以定义成子组件,内容会覆盖
+            Vue.component("name1",{
+                template:"<div>这是子组件1<name2></name2></div>",//定义html内容
+            });
+            Vue.component("name2",{
+                template:"<h1>这是子组件2</h1>",//定义html内容
+            });
+            new Vue({
+                el:"#wrap",
+                //内部写法加s
+                components:{
+                    'z3':{
+                        template:"<p>这是子组件3<name1></name1></p>",  //可以访问父亲，但不能父亲访问儿子
+                        style:"",
+                        script:"" //后边两项在这写非常坑 .vue讲
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

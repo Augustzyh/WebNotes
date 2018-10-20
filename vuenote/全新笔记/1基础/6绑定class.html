@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        .on{
+            color:red;
+        }
+            .on2{
+                font-size:30px;
+            }
+            .have{
+                background-color:green;
+            }
+            .green{
+                color:green;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <p :class="classname">怕规定class</p><!--方法一-->
+            <p :class="[classname,moreclass]" class="have">标签2绑定多个</p><!--绑定多个追加-->
+            <p :class="{green:greenBool,on2:fontBool}">方法三</p><br>
+            <input type="checkbox" v-model="greenBool">
+            <input type="checkbox" v-model="fontBool">
+        </div>
+        
+        <script>
+            /*
+            * 绑定多个写数组形式
+            * 方法3 值为true或false  是否添加类名 可以直接写true或false
+            * */
+            let wrap = new Vue({
+                el:"#wrap",
+                data:{
+                    classname:"on",
+                    moreclass:"on2",
+                    greenBool:true,
+                    fontBool:true
+                }
+            });
+        </script>
+    </body>
+</html>

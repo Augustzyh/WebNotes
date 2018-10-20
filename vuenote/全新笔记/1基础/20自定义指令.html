@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <input type="text" v-model="a">
+            <div v-zhangyu="a">{{a}}</div>
+            <div v-aaa="{color:'red',text:'hello'}">asdasdas</div>
+        </div>
+        
+        <script>
+            Vue.directive('aaa',{  //全局写法
+                bind(el,bind){
+                    console.log(el); //div
+                    console.log(bind.value); //b
+                    el.style.color = bind.value.color;
+                    el.innerText = bind.value.text;
+                }
+            });
+            //简写
+            Vue.directive('aaaa',function () {
+                
+            })
+            new Vue({
+                el:"#wrap",
+                data:{
+                    a:"",
+                    b:"123"
+                },
+                directives:{
+                    zhangyu:{   //里面的函数类似钩子函数
+                        bind(){  //绑定的时候触发。只触发一次
+
+                        },
+                        inserted(el){   //主方法
+                            /*
+                            * 参数：1 绑定元素
+                            * */
+                            el.style.color = "red";
+                            console.log(arguments);
+                        },
+                        update(el){  //更新的时候触发  基于数据，绑定数据更改触发
+                            console.log("更新update");
+                        },
+                        componentUpdated(){  //组件完成一次的时候触发
+                            console.log("更新componentUpdated");
+                        },
+                        unbind(){ //和元素解除绑定的时候触发
+
+                        }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

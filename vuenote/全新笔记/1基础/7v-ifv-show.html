@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div v-if="show">1</div>  <!--false不显示-->
+            <div v-else>2</div>     <!--不然显示2-->
+            <input type="checkbox" v-model="show">
+
+            <div v-if="name=='3'">
+                <a href="">登陆</a>
+                用户名：<input type="text" :key="1">
+            </div>
+            <div v-else-if="name=='4'">密码：<input type="password" :key="2"></div>  <!--判断-->
+            <div v-else>都不是</div>
+            <input type="text" v-model="name">
+
+            <div v-show="show">v-show</div>
+        </div>
+        
+        <script>
+            /*
+            * v-bind:key  标识防止复用,重复渲染,只要不重复就可以，没什么要求   name不可以
+            * v-show true显示
+            * */
+            new Vue({
+                el:"#wrap",
+                data:{
+                    show:true,
+                    name:"3"
+                },
+
+            })
+        </script>
+    </body>
+</html>

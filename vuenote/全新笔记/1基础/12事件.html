@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <button @click="but($event,this)">123</button>
+        </div>
+        
+        <script>
+            new Vue({
+                el:"#wrap",
+                methods:{
+                    but(event,th){
+                        console.log(event);
+                        console.log(th);
+                    }
+                }
+            })
+
+            //若使用滚动插件pc端和移动端出现点击事件冲突
+            if(!event._constructed) {   //滚动插件添加的值
+                return false
+            }
+            //这样阻止就行了
+        </script>
+    </body>
+</html>

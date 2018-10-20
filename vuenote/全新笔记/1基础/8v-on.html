@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        #wrap{
+            width:300px;
+            height:400px;
+            background: red;
+        }
+            .green{
+
+                width:100px;
+                height:100px;
+                background: green;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <!--<div id="wrap" v-on:click="cli()"></div>-->
+
+        <!--<div id="wrap" @click="change()">
+            <div class="green" v-show="show"></div>
+        </div>-->
+        <div id="wrap" @click="change($event)">   <!--在这里this指向window-->
+            <div class="green" v-show="show" @click="change($event)"></div>
+        </div>
+        <script>
+            /*
+            * 绑定事件 写在methods内  v-on 简写@   实参event带$
+            * */
+            new Vue({
+                el:"#wrap",
+                data:{
+                    show:true
+                },
+                methods:{
+                    cli : function () {
+                        alert(1);
+                    },
+                    cli1(){   //函数简写
+                        alert(2);
+                    },
+                    change(event){
+                        event.stopPropagation();
+                        this.show = !this.show;  //指向大括号内的show
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

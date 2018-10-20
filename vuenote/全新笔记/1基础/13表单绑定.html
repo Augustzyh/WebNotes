@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <input type="radio" value="one" v-model="a">
+            <input type="radio" value="two" v-model="a">
+            {{a}}
+            <br>
+            <!--<input type="checkbox" v-model="b">-->   <!--单个选中true-->
+            <input type="checkbox" value="aaa" v-model="b">
+            <input type="checkbox" value="bbb" v-model="b">
+            <input type="checkbox" value="ccc" v-model="b">
+            {{b}}
+            <br>
+            <select name="" v-model="c">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            {{c}}
+            <br>
+            <select name="" v-model="d" multiple>  <!--多选-->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            {{d}}
+            <br>
+            <input type="text" v-model.lazy="e">  <!--失去焦点时才赋值-->
+            {{e}}
+            <br>
+            <input type="text" v-model.trim="e">  <!--去掉首尾空格-->
+            {{f}}
+        </div>
+        
+        <script>
+            new Vue({
+                el:"#wrap",
+                data:{
+                    a:'',
+                    b:[],//多个定义数组
+                    c:'',
+                    d:'',
+                    e:''
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">  <!--时子是父根据这里-->
+            <z1 @change="abc"></z1>  <!--abc不能加括号-->
+        </div>
+        
+        <script>
+            Vue.component("z1",{
+                template:"<div><z2 :abc=\"name\"></z2><button @click='but()'></button></div>",
+                methods:{
+                    but(){
+                        this.$emit('change','a','b','c'); //向爸爸传参(事件民称，传的数据)
+                    }
+                },
+                data: function (){
+                    return {
+                        name:'这里是zyh组件'
+                    }
+                }
+            })
+            Vue.component('z2',{
+                template: '<div class="z2"> {{abc}} <button @click="but()">z2</button> </div>',
+                props: ['abc'],
+                methods: {
+                    but: function () {
+                        /* 发送了消息 第一个参数事件的名称   后面所有的所要传递的消息 */
+                        this.$emit('change',{a:1,b:2})
+                    }
+                }
+            });  //只能传爸爸不能传爷爷
+            new Vue({
+                el:"#wrap",
+                methods:{
+                    abc(){
+                        console.log(arguments);
+                    }
+                }
+            })
+            //没有子组件和子组件传递
+
+
+            使用子组件内所有东西
+            1.在父级内的子组件标签上添加 ref='name'
+            2.函数里 this.$refs.name
+        </script>
+    </body>
+</html>

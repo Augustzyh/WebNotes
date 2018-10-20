@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+        </div>
+        
+        <script>
+            let zyh = Vue.component("zyh",{
+                template:'<div id="wrap">这是zyh</div>'
+            });
+            new Vue({
+                el:"#wrap",
+                render(h){  //模板显示到页面上 ,默认接受一个参数，通过执行这个参数并return
+                    console.log(h);
+                    return h(zyh);//传一个参数为模板  wrap全部替换为模板内容
+                }
+            })
+
+
+            /*
+            *
+            * 生命周期 图见官网
+            * 实现：做什么
+            * 虚线：做事情时有什么状态
+            * */
+        </script>
+    </body>
+</html>

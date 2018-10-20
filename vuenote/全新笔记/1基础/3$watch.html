@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            let wrap = new Vue({
+                el:"#wrap",
+                data:{
+                    name:"abc"
+                }
+            });
+
+            //监听值，回调(变化之前的值，变化之后的值)
+            wrap.$watch("name",function (oldval,newval) {
+                console.log(oldval, newval);
+            });
+            //变化时触发
+        </script>
+    </body>
+</html>

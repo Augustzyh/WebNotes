@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <p>{{add}}{{all}}</p>
+            <!--<p>{{add()}}</p> methods-->
+            <input type="text" v-model="inp">
+            <input type="text" v-model="inp1">
+        </div>
+        
+        <script>
+            let wrap = new Vue({
+                el:"#wrap",
+                data:{
+                    inp:0,
+                    inp1:0,
+                    name:"haha"
+                },
+                methods:{},
+                computed:{
+                    //methods里也可以但是要加括号
+                    //数据变化时就会执行
+                    add(){
+                        return this.inp*1 + this.inp1*1;
+                    },
+                    all:{
+                        //访问时触发显示默认
+                        get(){
+                            return this.name;
+                        },
+
+                        //修改时触发
+                        set(){
+                            console.log(1);
+                            this.name = 666;
+                        }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

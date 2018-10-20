@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            1 直接写在元素里
+            <button @click="$router.go(-1)">返回</button>
+        <button @click="$router.go(1)">前进</button>
+
+        2 写在函数里
+            methods: {
+                back() {
+                    this.$router.go(-1)
+                }
+            }
+
+
+        重定向：1直接写想要跳转的路由  to="/d"直接跳转到/c
+            {path: '/d', redirect: '/c'}
+            2跳转到name为c的
+            {path: '/e', redirect: {name: 'c'}}
+            3   写函数里
+            {
+                path: '/f',
+                    redirect: (hash) => {
+                    console.log(hash)
+                    if (hash.query.id === 123456) {
+                        return {name: 'c'}
+                    } else {
+                        return '/a'
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

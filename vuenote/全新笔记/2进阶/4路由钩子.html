@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+
+            模板加载之前 beforeRouteEnter 在执行了next后才触发
+            参数同enter
+            先说这个beforeEach的钩子函数，它是一个全局的before 钩子函数， （before each）意思是在 每次每一个路由改变的时候都得执行一遍。
+             next()参数或者空
+            next(无参数的时候):  进行管道中的下一个钩子，如果走到最后一个钩子函数，那么  导航的状态就是 confirmed （确认的）
+
+next('/') 或者 next({ path: '/' }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。
+
+            const g = {
+                template: `<div>这里是g</div>`,
+                beforeRouteEnter (to, from, next) {
+                    console.log(arguments)
+                    next()   //都写这里执行才会加载模板
+                }
+            }
+
+            {path: '/g',
+                component: g,
+                beforeEnter (to, from, next) {
+                // 从哪里来 到哪里去 是否继续往下加载模板
+                console.log(arguments)
+                // 不执行就不会加载moban
+                next()
+            }
+            }
+        </script>
+    </body>
+</html>

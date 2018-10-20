@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            存放一些全局的数据，比如购物车
+
+            安装 cnpm install vuex --save
+            或者dependencies 写 "vuex": "latest"
+
+            index。js：
+            import Vuex from 'vuex'
+            const state = {
+                age: 28,
+                name: 'abc'
+            }
+
+            Vue.use(Vuex)
+            //语法检测的时候 new必须进行赋值 有以下注释可以不用赋值
+            /* eslint-disable no-new */
+            new Vuex.Store({
+                //state 用来保存数据  然后交给vue使用
+            })
+
+            数据应用：
+            main.js:
+            // 变量名是固定死的
+            import store from './vuex'  App.vue:对象：$store.state
+
+            或者App.vue :
+            import {mapState} from 'vuex'
+
+            computed: {
+            ...mapState([
+                    'name',
+                    'age'
+                ])
+            },          //{{name}}
+            methods: {
+                a () {
+                    alert(this.name,this.age)
+                }
+            }    //方法使用
+
+
+            函数操控数据:
+            index.js:
+            // 这个函数名字都是写死的 主要是用来操控state数据的
+            const mutations = {
+                addage () {
+                    state.age++
+                },
+                devage () {
+                    state.age--
+                }
+            }
+
+            App.vue:
+            import {mapState, mapMutations} from 'vuex'
+            methods: {
+            ...mapMutations([
+                    'addage',
+                    'devage'
+                ])
+            }
+
+            操控操控数据的函数：
+            index.js:
+            // 用来调用mutations里的方法,这里可以进行异步操作
+            const actions = {
+                // 默认接受一个参数 参数的第一个值为commit，加括号写上mutations
+                newaddage ({commit}) {
+                    setTimeout(() => {
+                        commit('addage')
+                    }, 2000)
+                }
+            }
+
+            App.vue:
+            ...mapActions([
+                'newaddage'
+            ])
+        </script>
+    </body>
+</html>

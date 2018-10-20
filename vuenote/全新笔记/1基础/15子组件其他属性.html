@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <z1></z1>
+        </div>
+        
+        <script>
+            Vue.component("z1",{
+                template:"<h1 @click='a()'>{{name}}</h1>",
+                data(){
+                    return{
+                        name:"zyh"
+                    }
+                },  //与下面data不同供子组件使用 必须是函数 返回一个对象
+                methods:{
+                    a(){
+                        alert(1);
+                    }
+                }
+            });
+            new Vue({
+                el:"#wrap",
+                methods:{
+                    a(){
+                        alert(2);//和上面互不影响
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

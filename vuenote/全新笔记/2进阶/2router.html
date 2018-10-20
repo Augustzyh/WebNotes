@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            router-link 生成a标签 to=“” 代替 href
+            router-view 路由显示区
+            // component 也可以这么写 且每个模板都必须包在div里先
+            const index = {
+                template: `<div>这里是index</div>`
+            }
+
+            路由写法：
+            const router = new Router({
+                routes: [
+                    {path: '/', component: index},// routes :路径 模板
+                    {path: '/a', component: a}
+
+                ]
+            })
+            子路由：
+            const router = new Router({
+                routes: [
+                    {path: '/', component: index},
+                    {
+                        path: '/a',
+                        component: a,
+                        children: [
+                            {path: 'aa', component: aa}
+                        ]}
+
+                ]
+            })
+
+            访问：
+            `<div id="app">
+        这里是默认
+        <ul>
+            <li><router-link to="/a">a</router-link></li>
+            <li>
+                <router-link to="/">首页</router-link>
+                <ul>
+                    <router-link to="/a/aa">子路由</router-link>
+                </ul>
+            </li>
+        </ul>
+        <router-view></router-view>
+       </div>`
+
+            //根路由显示的地方是第一个router-view内
+            //子路由显示在父级路由模板里的第一个router-view标签里 如下
+            const a = {
+                template: `<div>这里是a<router-view>这里是aa</router-view></div>`
+            }
+
+            // 数据传递
+            // 1.通过网址进行传递 在路由里  path: ':随便定义属性'绑定一个值可接受数据   模板里{{$route.params}} 获取数据
+            http://localhost:8080/# /a/      aa
+                                    父级路由   改变时, :后面的属性值 跟着变
+            path可以写死
+
+            2.同上   :to="{ path:'/b/ob', query:{id:123}}"
+            <li><router-link :to="{ path:'/b/ob', query:{id:123}}">/b/ob加冒号</router-link></li>
+                    /b/ob?id=123                          这个值
+            此方式在网址后？数据  类似get
+
+            3.params传值方式 通过name寻找对应路由 方可获取数据
+            <li><router-link :to="{ name:'c', params:{id:123,name:'hang'}}">/c</router-link></li>
+            {path: '/c', name: 'c', component: c}
+            类似post
+
+
+            路径和name用一个就行了
+
+
+            // @是webpack规定的 代表src这个目录
+            // 若没后缀名自动匹配.vue 在不匹配js 在不匹配 寻找其他
+
+        </script>
+    </body>
+</html>
