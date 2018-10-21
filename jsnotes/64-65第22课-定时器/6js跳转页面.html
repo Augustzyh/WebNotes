@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            document.onclick = function () {
+                //window.open("http://www.baidu.com","_blank");  //其他参数不考虑
+                //写在setInterval定时器里的open一般都会被阻止，
+                window.location.href='http://www.baidu.com';//智能当前页面跳转，一般不屏蔽
+            };
+            /*setInterval(function () {
+                window.open("http://www.baidu.com","_blank");
+            },1000);*/
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            *   这里的argument  0:匹配名
+            *                   1：子项   可以有多个子项
+            *                   2：下标
+            *                   3：源字符串
+            * */
+            let str = "你tm真是个大傻 逼,垃圾，老子操你妈sb，狗逼，jb玩意，操";
+            let reg = /傻(\s|\.|\d|\,|\')*逼|j\s*b|狗\s*逼|垃\s*圾|S\s*B|操?\s*(你\s*妈|你\s*爸)?/ig;
+            console.log(str.replace(reg,function (con) {   //匹配内容
+                let star = "";
+                for(let i = 0;i<con.length;i++){
+                    star += "*";
+                }
+                return star;
+            }));
+        </script>
+    </body>
+</html>

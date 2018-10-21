@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                display: none;
+                width:100px;
+                height:100px;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            /*
+            * fadeIn  fadeOut  fadeTo fadeToggle
+            *  改变透明度最后displaynone
+            * */
+            let $wrap = $("#wrap")
+            $wrap.fadeIn(2000,function () {   //淡入
+                $wrap.fadeOut(2000,function () {  //淡出
+                    $wrap.fadeTo(2000,0.3)           //把透明度变道指定状态 必须要时间
+                })
+            })
+
+
+        </script>
+    </body>
+</html>

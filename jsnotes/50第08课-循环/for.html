@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*for(var i=0; i<10; i++){ //循环条件
+                alert(i);//循环体
+            }
+            var o = document.getElementById("wrap");
+            for(i = 0; i < 100; i++){
+                o.innerHTML += i + "<br>";
+            }
+            for(i=0;true;i++){}//死循环，条件永远为真
+
+
+            /!*
+            * break
+            *
+            * *!/
+            for(var i=0;i<10;i++){
+                if(i === 5){
+                    break;
+                }
+                console.log(i);  //等于5的时候退出  直接跳出
+            }
+            for(var i=0;i<10;i++){
+                if(i === 5){
+                    continue;
+                }
+                console.log(i);  //等于5的时候跳过
+            }*/
+            //找出最小能被多个数整除的数
+            for(var i=1;true;i++) {
+                /*if(i % 22 === 0 && i % 33 === 0 && i % 44 === 0){
+                    alert(i);
+                    break;
+                }*/
+                if(!(i%22||i%33||i%44)){
+                    alert(i);
+                    break;
+                }
+                /*if(  i%33 === 0 && i%57 === 0 && i%62 === 0 && i%7 === 0  ){
+                    alert( i );
+                    break;
+                }*/
+            }
+            /*for(var i=1;true;i++){
+
+                if(  !(i%33 || i%57 || i%62 || i%7) ){
+                    alert( i );
+                    break;
+                }
+
+                /!*if(  i%33 === 0 && i%57 === 0 && i%62 === 0 && i%7 === 0  ){
+                    alert( i );
+                    break;
+                }*!/
+
+            }*/
+        </script>
+    </body>
+</html>

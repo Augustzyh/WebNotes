@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #imgs #imgss{
+                position:absolute;
+                top:0;
+                left:0;
+            }
+        #imgss{
+            display:none;
+        }
+        </style>
+    </head>
+    <body>
+        <img src="images/1.jpg" alt="" id="imgs">
+        <img src="images/2.jpg" alt="" id="imgss">
+        
+        <script>
+            /*
+            * 方法1：改变src 需判断用方法二
+            * 2：display:none; 推荐使用
+            * 3: index
+            * */
+            var oImg = document.getElementById("imgs");
+            var oImgs = document.getElementById("imgss");
+            /*oImg.onclick = function() {
+                this.src = 'images/2.jpg';
+            };*/
+            oImg.onclick = function() {
+                this.style.display = "none";
+                oImgs.style.display = "block";
+            };
+            oImgs.onclick = function() {
+                this.style.display = "none";
+                oImg.style.display = "block";
+            };                                       //this可解决内存泄露
+        </script>
+    </body>
+</html>

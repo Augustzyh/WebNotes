@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:100px;
+                height:100px;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            //delay()  代替setTimeout  后面必须是一个队列  动画一定是队列
+            //不是队列的优先执行
+            $("#wrap")
+                .delay(1000)
+                .queue(function (){
+                    $(this).css("background-color","pink");
+                    $(this).dequeue()      //加完队列以后要手动终止队列，不然队列出不去
+                })
+                .delay(2000)
+                .fadeOut(1000)
+                .delay(2000)
+                .fadeIn(1000);
+        </script>
+    </body>
+</html>

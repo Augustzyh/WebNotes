@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * 捕获组()
+            * 使用捕获组 ()\n  对应第n个捕获组 写在第n个捕获组后面
+            * */
+
+            //let str = "abcabc";
+            //let reg = /(abc)\1/;
+           /* let str = "abjkjkabcjkk";
+            let reg  = /(ab)(c)(j(k))\4/;*/
+           /*var str = "abab";
+           var reg = /(ab)\1/;    //(ab){2}*/
+           var str = "a1a1";
+           //var reg = /([a-z]\d){2}/;
+            var reg = /([a-z]\d)\1/;  //只有a1a1才满足必须满足和第一个一样的字符
+            console.log(str.match(reg));
+        </script>
+    </body>
+</html>

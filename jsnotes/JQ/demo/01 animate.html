@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    .box{
+      margin:10px;
+      width: 100px;
+      height: 100px;
+      background: pink;
+    }
+  
+  
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    // $("#box").animate({
+    //   width: 500,
+    //   height: 1000,
+    //   opacity: 0.3,
+    //   top: 50,
+    //   left: 100
+    // }, 1000, () => {
+    //   console.log("动画结束")
+    // })
+  
+      /* 
+        stop()
+          两个参数都是布尔值：
+            第一个参数：是否清空动画队列
+            第二个参数：当前的动画是否直接到达目标值
+      
+        delay(毫秒值)  延迟  在delay之后的动画，是否延迟执行（）
+
+
+        finish（） 完成  对象的整个动画队列瞬间完成
+       */
+
+
+    // function fn(){
+    //   console.dir($.type([]))
+
+      
+
+    // }
+
+
+    // fn(1,2)
+    const $box1 = $(".box")
+
+    // $box1.click(function(){
+    //   console.log(1)
+    // })
+
+   
+
+
+    $box1[0].onclick = function(){
+      console.log(1)
+    }
+
+
+
+    const $box = $box1.clone(true)
+    
+    $("body").append($box)
+
+
+  </script>
+</body>
+</html>

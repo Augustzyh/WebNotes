@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * setInterval 重复执行
+            *                        其他没什么区别
+            * setTimeout 只执行一次
+            *
+            * */
+            function f() {
+                alert(2);
+            }
+            //setTimeout(f,5000);   //函数名，时间ms
+            setInterval(f,2000);
+        </script>
+    </body>
+</html>

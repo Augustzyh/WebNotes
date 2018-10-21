@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //console.log(self);   //同this一样指向window
+            console.log(window.location);    //可以location，但表达清楚就加window 直接弹窗是url
+            //但是不要直接写
+            console.log(window.location.href);   //可读可写
+            console.log(encodeURI("大章鱼"));   //转换成uri编码
+            console.log(encodeURIComponent("张宇航"));  //同上
+            console.log(decodeURI("%E5%A4%A7%E7%AB%A0%E9%B1%BC"));  //解码
+            //decodeURIComponent()
+
+            //hash   #后面跟的所有为hash值  如锚点  单页面应用
+            console.log(window.location.hash);
+
+            //主机
+            console.log(window.location.host);
+
+            //search  ?后边的一串
+            console.log(window.location.search);
+        </script>
+    </body>
+</html>

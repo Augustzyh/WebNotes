@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:100%;
+                /*height: 200px;*/
+                margin:50px auto;
+                border:1px dotted #000;
+            }
+            #wrap div{
+                width:50px;
+                height: 50px;
+                background-color: #abcdef;
+                font-weight: bolder;
+                text-align: center;
+                line-height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <!--<div>1</div>-->
+        </div>
+        
+        <script>
+            var oW = document.getElementById("wrap");
+            var length = 21;
+            var mid = length/2;
+            oW.style.width = 50*(mid+0.5) + "px";
+            oW.style.height = 50*length + "px";
+            for(var i= 1;i<=length;i++) {
+                var mLeft = (i <= mid ? ((i - 1) * 50) : ((length - i) * 50));
+
+            /*for(var i= 1;i<=length;i++){
+                var mLeft = 0;
+                if(i <= mid){
+                    mLeft = (i-1)*50;
+                }else{
+                    mLeft = (length-i)*50;
+                }*/
+                oW.innerHTML += "<div style='margin-left:" + mLeft +"px'>"+i+"</div>";
+            }
+        </script>
+    </body>
+</html>

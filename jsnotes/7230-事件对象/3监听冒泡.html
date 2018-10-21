@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width:100px;
+                height:100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * addEventListener
+            * bool  false 冒泡  从下到上 一直到document
+            *       true  捕获  与冒泡相反 丢石头  从上到下  一直到子集
+            *       ie 不支持事件捕获
+            * */
+            wrap.addEventListener("click",fn,true);
+            document.addEventListener("click",fn,true);
+            function fn() {
+                console.log(this);
+            }
+        </script>
+    </body>
+</html>

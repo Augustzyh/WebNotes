@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap{
+            width:100px;
+            height:100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        /*
+        * slideDown slideUp slideToggle
+        * */
+        let $wrap = $("#wrap")
+        $wrap.animate({
+            width: 500,
+            marginLeft:200,
+            opacity: 0.5,
+            height:500
+        },2000,"linear",function () {
+            $wrap.animate({
+                width:200,
+                height:200,
+                backgroundColor:"green"   //没有改变颜色的哦
+            })
+        })
+
+
+    </script>
+</body>
+</html>

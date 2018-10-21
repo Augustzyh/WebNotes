@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <p class="pa">1</p>
+        <p class="pa">2</p>
+        <p class="pa">3</p>
+
+        <script>
+            var oPa = document.getElementsByClassName("pa");//每次使用，他会按着oPa再找一遍
+
+            /*oPa[0].className = "kk";
+
+            oPa[0].className = "jj";   //这样子第一个p叫kk，第二个叫jj 静态方法*/
+
+            //动态方法
+            obj = oPa[0];          //就代表第一个标签
+            obj.className = "kk";
+            obj.className = "jj";
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap ul{
+                width:200px;
+                margin:50px auto;
+            }
+            #wrap ul li{
+                width:100%;
+                background-color:#9900cc;
+                border:2px solid #000;
+                color:#fff;
+                line-height:50px;
+                font-size:20px;
+                text-indent:20px;
+            }
+            #wrap ul li div{
+                display:none;
+            }
+            #wrap ul li div.open{
+                display:block;
+            }
+            #wrap ul .on{
+                width:100%;
+                height:50px;
+            }
+            #wrap ul p{
+                width:100%;
+                height:30px;
+                border-bottom:1px dotted #bbb;
+                background-color: #fff;
+                color:#000;
+                line-height:30px;
+            }
+            #wrap ul p:hover{
+                background-color:orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul>
+                <li>
+                    <h3 class="on">同事</h3>
+                    <div>
+                    <p>aaa</p>
+                    <p>bbb</p>
+                    <p>ccc</p>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="on">好友</h3>
+                    <div>
+                        <p>aaa</p>
+                        <p>bbb</p>
+                        <p>ccc</p>
+                        <p>bbb</p>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="on">VIP</h3>
+                    <div>
+                        <p>aaa</p>
+                        <p>bbb</p>
+                        <p>ccc</p>
+                        <p>ccc</p>
+                        <p>ccc</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <script>
+            //点击拉出，再点击收回
+            var oH = document.getElementsByClassName("on"),
+                oD = document.querySelectorAll("#wrap ul li div"),
+                index = 0,
+                len = oH.length;
+            for(var i=0;i<len;i++) {
+                oH[i].index = i;
+                oH[i].onclick = function () {
+                    /*if (oD[this.index].className === "") {
+                        oD[this.index].className = "open";
+                    }else{
+                        oD[this.index].className = "";
+                    }*/
+                    oD[this.index].className = oD[this.index].className === "" ? "open" : "" ;
+                };
+            }
+
+            /*var oH = document.getElementsByClassName("on"),
+                oD = document.getElementsByClassName("open"),
+                index = 0;
+            for(var i = 0;i<oH.length;i++){
+                oH[i].index = i;
+                oH[i].onclick = function () {
+                    oD[index].style.display = "";
+                    index = this.index;
+                    oD[index].style.display = "block";
+                }
+            }            //方法2，不带回点*/
+            /*bool=false;
+            oP[0].onclick = function () {
+                if(bool === false) {
+                    oOn[0].style.display = "block";
+                    oOn[1].style.display = "none";
+                    oOn[2].style.display = "none";
+                    bool = true;
+                }else{
+                    oOn[0].style.display = "none";
+                    bool = false;
+                }
+            }
+            oP[1].onclick = function () {
+                oOn[0].style.display = "none";
+                oOn[1].style.display = "block";
+                oOn[2].style.display = "none";
+            }
+            oP[2].onclick = function () {
+                oOn[0].style.display = "none";
+                oOn[1].style.display = "none";
+                oOn[2].style.display = "block";
+            }*/
+        </script>
+    </body>
+</html>

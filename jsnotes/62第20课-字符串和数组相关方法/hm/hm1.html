@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="58-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap{
+            width:640px;
+            height:330px;
+            border:1px solid #bbb;
+            margin:100px auto;
+            padding:20px;
+            text-align: center;
+        }
+        #wrap input,#wrap button{
+            user-select:none;
+            vertical-align:middle;
+        }
+        #wrap p {
+            text-indent:20px;
+            margin:20px auto;
+            text-align:left;
+            line-height:25px;
+        }
+        #wrap p span{
+            color:red;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="text" value="">
+        <button>搜索</button>
+        <input type="text" value="">
+        <button>替换</button>
+        <button>重置</button>
+        <div class="txt">
+            <p>张家界是湖南省辖地级市，原名大庸市，辖2个市辖区（永定区、武陵源区）、
+                2个县（慈利县、桑植县）。位于湖南西北部，澧水中上游，属武陵山区腹地。[1]
+                张家界因旅游建市，是中国最重要的旅游城市之一，是湘鄂渝黔革命根据地的发源地和中
+                心区域。
+            <p>1982年9月，张家界国家森林公园成为中国第一个国家森林公园。</p>
+            <p>1988年8月，张家界武陵源风景名胜区被列入国家重点风景名胜区；1992年，
+                由张家界国家森林公园等三大景区构成的武陵源风景名胜区被联合国教科文组织列入
+                《世界自然遗产名录》；2004年2月，被列入全球首批《世界地质公园》；
+                2007年，被列入中国首批国家5A级旅游景区。[2]</p>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var oInput = document.getElementsByTagName("input"),
+                oBtn = document.getElementsByTagName("button"),
+                oTxt = document.querySelector("#wrap .txt"),
+                txt = oTxt.innerHTML,
+                TXT = oTxt.innerHTML
+            ;
+            oBtn[0].onclick = function () {
+                var val = oInput[0].value;
+                if(!val)return;
+                oTxt.innerHTML = txt.split(val).join("<span>" + val + "</span>");
+                //oInput[0].value = "";
+            };
+            oBtn[1].onclick = function () {
+                var val1 = oInput[0].value,
+                    val2 = oInput[1].value;
+                if(!(val1 && val2))return;
+                oTxt.innerHTML = txt.split(val1).join("<span>" + val2 + "</span>");
+                txt = txt.split(val1).join(val2);  //更新txt
+            };
+            oBtn[2].onclick = function () {
+                oTxt.innerHTML = TxT;
+            }
+        })();
+    </script>
+</body>
+</html>

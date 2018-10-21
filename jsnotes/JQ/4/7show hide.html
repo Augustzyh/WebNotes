@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width:100px;
+                height:100px;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            let $wrap = $("#wrap");
+            //$wrap.hide();
+            /*
+            * 时间参数 ：fast 300ms  normal 500 slow 800
+            * 运动曲线 默认swing  其他需引入插件
+            *
+            * */
+            $wrap.hide("fast","linear",() => {  //时间参数，只支持两种运动曲线，回调函数
+                $wrap.show(2000)
+            })
+
+            //toggle  对应取反
+        </script>
+    </body>
+</html>

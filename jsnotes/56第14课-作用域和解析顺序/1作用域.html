@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            *   作用域
+            *   script 是个最大的作用域
+            *
+            *   function的{}内是一个作用域
+            *
+            *
+            *   作用域链：
+            *       当处于某一个作用域里面使用变量时，如果找不到，往父级作用域里面查找，以此类推，直到
+            *       script作用域内找不到，报错；
+            *
+            *       当处于一个作用域内修改某个变量值时，也一样先修改自己的，若自己没有，先修改父级的。。。
+            *
+            *       当作用域链没有该变量的相关定义的话，js允许在某个子作用域内设置一个全局变量，但绝对不推荐
+            *
+            * */
+
+            //a  b 全局变量       js内部不会销毁只要打开浏览器，故尽量避免使用全局变量
+            var a = 10;
+            var b = 20;
+
+            fn();//调用产生一个新的作用域
+            function fn() {
+                var c=30;
+                var d=40;
+            }       //和ab在同一个script作用域内
+
+
+
+            //特例
+                 //两个script并行，全局变量时相通的，但是为先后顺序关系，智能后面的读前面的
+
+            //同一个一个函数，两次执行，作用域是独立的
+        </script>
+    </body>
+</html>

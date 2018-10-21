@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //e.key 存储按下的什么键
+            //e.keyCode 按键对应的数值  百度  不推荐使用
+            //e.which  除上面之外还能表示鼠标
+            /*document.onkeydown = function (e) {
+                //console.log(e.key);
+                console.log(e.which);   //ie8-不支持
+            }
+            document.onmousedown = function (e) {
+                console.log(e.which);
+            }*/
+            document.onkeydown = function (e) {
+                /*if(e.keyCode === 116){   //阻止f5
+                    return false;
+                }*/
+                console.log(e.keyCode);
+            }
+        </script>
+    </body>
+</html>

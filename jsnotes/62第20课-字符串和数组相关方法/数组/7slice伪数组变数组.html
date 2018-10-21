@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <script>
+            var arr = [1,2,3,4,5];
+            var n = arr.slice(1,4);  //不仅可以切割字符串，还能切割数组  第几位切到第几位，不包含末位
+            alert(n);                 //不改变原数组
+            var oD = document.getElementsByTagName("div");
+            console.log(arr);
+            console.log(oD);
+            //oD 是一个伪数组
+            /*
+                不同数组之间都拥有Array()内的方法，继承其方法，虽然自己本身没有
+            * 两个原型链prototype不一样,oD继承于HTMLCollection ,伪数组用有形如数组的东西但继承的爹不一样
+            * 例如oD.push(a);直接报错因为他没有Array里的push方法
+            * */
+
+            //我真的特别想吧oD变成一个真正的数组  不需要它动态的时候用这个方法
+            //方法1
+            /*var newoD = [];
+            for(var i = 0,len=oD.length; i<len;i++){
+                newoD.push(oD[i]);
+            }
+            console.log(newoD);*/
+
+            //方法2
+            var newoD = [].slice.call(oD,0);  //原理：oD原本没有slice原本this指向
+                                                //[],call吧this指向oD,slice切割取值存入新数组，
+                                                // 只和下标有关，默认从0切割，不写也行
+            console.log(newoD);
+
+        </script>
+    </body>
+</html>

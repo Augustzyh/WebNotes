@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * replace(正则,替换值)
+            *       替换值可以是function
+            * */
+            var str = "章鱼啊史，章鱼前文化的，章鱼冷空气活，章鱼动i气泡膜平方米";
+            var reg = /章鱼/g;
+            var num = 0,arr = ['航航','凑航航'];
+            //var newStr = str.replace(reg,"张宇航");
+            var newStr = str.replace(reg,function(){
+                num++;
+                return arr[num%arr.length];
+            });
+            console.log(newStr);
+        </script>
+    </body>
+</html>

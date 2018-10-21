@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        用户名：<input type="text" id="userID" name="user"><br>
+        密码：<input type="text" id="pwdID" name="pwd">
+        <input type="submit" id="btn">
+        <script>
+            /*
+            * get和post区别      两者传数据都是无限的
+            *    get  通常用于服务器查询信息，数据试拼接在接口后面的
+            *           所以可能在浏览器地址栏看到数据 放在open里   ？...
+            *           为什么网上说传输数据有上限，因为不是get方式不允许，而是get方式的数据
+            *           都在url里，然后，浏览器会有一个对url长度的限制
+            *  post 不影响接口，放在send里需设置请求头 Content-type 响应头信息
+            *
+            *  不加密都不安全 get数据在地址栏看数据
+            * */
+            //键值对
+
+
+            btn.onclick = function () {
+                var user = userID.value,
+                    pwd = pwdID.value;
+                var data = "user=" + user +"&pwd=" +pwd;
+                var xhr = new XMLHttpRequest();
+                //xhr.open('get','http://localhost:3000?user=hh&pwd=123456',true);
+                xhr.open('post','http://localhost:3000',true);
+                //xhr.send();
+                xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+                xhr.send(data);    //post方式
+                xhr.onreadystatechange = function () {
+                    if(xhr.readystate = 4){
+                        if(xhr.status >=200 && xhr.status<300 ||
+                            xhr.status === 304){
+                            //console.log(xhr.responseText);
+                            console.log(xhr.getResponseHeader("Content-type"));
+                        }
+                    }
+                };
+            }
+        </script>
+    </body>
+</html>

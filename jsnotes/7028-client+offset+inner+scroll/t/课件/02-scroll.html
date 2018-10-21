@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    *{margin:0;padding:0;}
+    li{list-style:none;}
+    #box{
+        overflow: hidden;
+        width:200px;
+        height:200px;
+        padding:10px;
+        border:15px solid #000;
+        margin:25px;
+        background-color: #f66;
+        font-size:30px;
+        color: #000;
+    }
+  </style>
+</head>
+<body style="width:2000px; height:2000px;">
+    <div id="box">
+        11111111111
+        1111111111
+        111111111111
+        111111111111
+        111
+        111111111111
+        111111111111
+        111111111111
+    </div>
+    
+    <script>
+        /*
+        *   scrollWidth   获取元素的content + padding
+        *                当元素内容超出的时候，
+        *                元素的content + padding + 超出的内容的宽，
+        *                从哪边超出，就不算哪一边的内边距
+        *                当写了overflow:hidden的时候，
+        *                元素的content + padding + 超出的内容的宽，会包括内边距
+        *   scrollHeight
+        *
+        *   scrollTop    可以获取Y轴滚动条滚动的高度
+        *   scrollLeft   可以获取X轴滚动条滚动的宽度
+        *
+        *   window.innerWidth    获取窗口的可视区域大小,包括滚动条。不兼容IE8及以下
+        *   window.innerHeight
+        *
+        *
+        * */
+        var oBox = document.getElementById("box");
+        //console.log( oBox.scrollHeight )
+        //window.onscroll  当窗口发生滚动的时候触发事件
+//        window.onscroll = function () {
+        //获取滚动值
+//            console.log(document.documentElement.scrollTop)
+//        }
+       // document.documentElement.scrollTop = 200;
+        console.log(document.documentElement.clientWidth);
+        console.log(window.innerWidth);
+    </script>  
+</body>
+</html>

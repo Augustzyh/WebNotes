@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap" class="" title="撒大青蛙"></div>     <!--标签属性-->
+        <div id="self" goudan="123"></div>
+        <script>
+            //属性：例如人的身高年龄什么的，元素的属性
+            var oWrap = document.getElementById("wrap");
+            //console.log(oWrap);  //就一个元素
+            //console.dir(oWrap);  //看元素原来的属性
+
+
+            /*
+            * JS操作标签属性
+            *           合法的属性:
+            *                获取 oWrap.title
+            *                改变 oWrap.title = "我是改变覆盖之后的"     += "我是拼接的"
+            *                class不能这样用
+            *                oWrap.className = ""  唯一的特殊，引号间有什么读什么
+            *                其他直接  . 属性名操作
+            *           自定义标签属性：        往框架里加的时候可以自定义
+            *               setAttribute  设置
+            *               getAttribute  获取
+            *               removeAttribute  移除
+            *
+            *
+            * */
+            var oSelf = document.getElementById("self");
+            //alert(oSelf.goudan); 会找不到
+            /*var x = oSelf.getAttribute("goudan");
+            alert(x);                                      获取*/
+            /*oSelf.setAttribute("goudan","w bian l ");
+            oSelf.setAttribute("mao","am mao");*/
+            //oSelf.setAttribute("id","yy");         可以这么写，但是不推荐
+            oSelf.removeAttribute("goudan");
+        </script>
+    </body>
+</html>

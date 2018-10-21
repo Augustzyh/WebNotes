@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:200px;
+                height:200px;
+                background-color:red;
+            }
+            #box{
+                width:200px;
+                height:200px;
+                background-color:green;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <div id="box"></div>
+        <script>
+            //简单但是很重要
+            var id = "window";   //全局变量相当于window的属性 即window.id
+            document.id = "document";
+            /*
+            * 当函数执行时 借助于 call apply能改变它的this指向
+            * .call(a,b);  第一个实参a相当于this指向
+            *               第二个实参b对应函数第一个形参
+            * */
+            var oWrap = document.getElementById("wrap"),
+                oBox = document.getElementById("box")
+            ;
+            oWrap.onclick = function (){f.call(this,1)}; //wrap//this不要写oWrap，因为如果在局部作用域内，会形成闭包，讲不被释放
+            oBox.onclick = function (){f.call(this,2)};
+            function f(num) {   //传参时可用匿名函数包裹
+                console.log(num);
+                console.log(this);
+            }
+            //f();//非严格模式下，函数自执行，this指向window
+        </script>
+    </body>
+</html>

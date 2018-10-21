@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * 隐式类型转换
+            * */
+
+            /*    +
+            var a = "10";
+            var d = null; //不是数字的时候也会将其强制转换成字符串，null
+            var b = 10;
+            var c = a+b;   //会在进行计算时，在加号某一边有字符串的话，会隐式转换成字符串的拼接操作
+            alert(c);*/
+            var a = 10;
+            var b = "5";
+            c = a - b;
+            alert(c);   //减号会尽力让两边转成数字进行操作，，若实在减不了，，为NaN
+            //于是可以通过 - 将字符强制转换成数字，前提是 字符串内时数字 用的就是Number()
+
+            /*
+            *    显示类型转换  上一节
+            * */
+
+        </script>
+    </body>
+</html>

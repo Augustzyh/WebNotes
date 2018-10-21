@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:384px;
+                height:160px;
+                margin:50px auto;
+                border:1px solid black;
+                user-select:none;
+            }
+            #wrap .header{
+                font-size:0;
+            }
+            #wrap .header span{
+                display:inline-block;
+                padding:5px 20px;
+                background-color:black;
+                color:#fff;
+                font-size:16px;
+                text-align:center;
+                cursor:pointer;
+            }
+            .content{
+                position:relative;
+                top:0;
+                left:0;
+            }
+            .content ul{
+                display:none;
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+            }
+            .content ul li{
+                text-align:center;
+                line-height:30px;
+                border-bottom:1px dashed #000;
+            }
+            .content ul.on{
+                display:block;
+            }
+            #wrap .header span.color{
+                background-color:#bbb;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="header">
+                <span class="color">aaaaaaaaaaa</span>
+                <span>bbbbbbbbbb</span>
+                <span>cccccccc</span>
+            </div>
+            <div class="content">
+                <ul class="on">
+                    <li>阿飞又不来上班</li>
+                    <li>小心艾又在发脾气</li>
+                    <li>潭州准备开线下旗舰店</li>
+                    <li>简直骚的不像话</li>
+                </ul>
+                <ul>
+                    <li>能遇见你就是我最大的幸福 愿得一</li>
+                    <li>最伤身体的10个生活习惯，一定要避</li>
+                    <li>儿童淘气不要急 父母巧应对</li>
+                    <li>孕妇产力不足 临产小诀窍</li>
+                </ul>
+                <ul>
+                    <li>[重磅推荐]大量涉黄场所被清剿</li>
+                    <li>[高清大图]胡兵复古大片激情四射</li>
+                    <li>[活色生香]贝嫂内衣写真玉体横陈</li>
+                    <li>[高清大图]倪妮表情鬼马俏皮可爱</li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+            var oS = document.getElementsByTagName("span"),
+                oU = document.getElementsByTagName("ul"),
+                length = oS.length,
+                index = 0;
+            for(var i = 0;i<length;i++){
+                oS[i].index = i;
+                //oS[0].index = 0;
+                //oS[1].index = 1;
+                //oS[2].index = 2;
+                oS[i].onmouseover = function(){  //这里用自定义属性
+                    oS[index].className = "";
+                    oU[index].className = "";
+                    index = this.index;//这个index为新移入的下标
+                    oS[index].className = "color";
+                    oU[index].className = "on";
+                };
+            }
+        </script>
+    </body>
+</html>

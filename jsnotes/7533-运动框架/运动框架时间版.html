@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                position: absolute;
+                width:100px;
+                height:100px;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <script>
+            let wrap = document.getElementById("wrap");
+            animation(wrap,{
+                width:300,
+                height:500,
+                top:50,
+                left:120
+            },1000);
+            function getStyle(dom) {
+                return dom.currentStyle || getComputedStyle(dom);
+            }
+            //终点值 - 起始值 = 运动目标值
+            function animation(ele,data = {},time = 500) {
+                var startTime = new Date();
+                var startValue = {}; //起始值
+                var changeValue = {}; //变化值 终点值 - 起始值
+                var eleStart = getStyle(ele); //渠道ele对象所有值
+                for(var key in data){
+                    var val = parseFloat(eleStart[key]);
+                    startValue[key] = isNaN(val) ? 0 : val;
+                    changeValue[key] = parseFloat(data[key]) - startValue[key];
+                }
+                function computed() {
+                    /*setInterval(function () {
+                    },1000/60);*/
+                }
+                run();
+                function run() {  //计算每个调用时刻 属性值
+                    var nowTime = new Date() - startTime;
+                    var t1 = nowTime / time; //拿到已花费时间在总时间的比例
+                    if(t1 >= 1){
+                        t1 = 1;
+                    }else{
+                        requestAnimationFrame(run);
+                    }
+                    for(var key in changeValue){
+                        var val = t1 * changeValue[key] + startValue[key];//每个点的目标值
+                        ele.style[key] = val + "px";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

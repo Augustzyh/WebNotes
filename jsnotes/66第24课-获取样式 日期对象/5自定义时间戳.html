@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //var day = new Date(2008,8-1,8);  形式1
+            var day = new Date(2008,8-1,8,0,0,23);  //最多接受6个参数，最少接收两个参数
+                                                    //年月日时分秒     年月
+            console.log(day);
+
+            var y = new Date(2008); //只设置一个参数   默认getTime值 毫秒数
+            console.log(y);        //1970年......在加2秒
+
+            var z = new Date("2008-08-08 08:08:08");
+            //或者 var z = new Date("08/08/2008 08:08:08");
+            console.log(z);
+        </script>
+    </body>
+</html>

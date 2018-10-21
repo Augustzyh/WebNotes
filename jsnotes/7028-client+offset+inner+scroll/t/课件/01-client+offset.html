@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    *{margin:0;padding:0;}
+    li{list-style:none;}
+      #box{
+          /*overflow: scroll;*/
+          position: absolute;
+          top:300px;
+          width:200px;
+          height:200px;
+          padding:10px;
+          /*border:15px solid #f00;*/
+          margin:25px;
+          background-color: #f66;
+      }
+    #box div{
+        position: absolute;
+        top:50px;
+        width:100px;
+        height:100px;
+        background-color: #ff0;
+    }
+      #box div p{
+          position: absolute;
+          top:30px;
+          width:50px;
+          height:50px;
+          background-color: #00f;
+      }
+  </style>
+</head>
+<body style="width:2000px; height: 1000px;">
+    <div id="box">
+        <div>
+            <p>暮雨</p>
+        </div>
+    </div>
+    
+    <script>
+        /*    clientWidth    //获取元素的content宽/高 + padding的宽/高
+              clientHeight
+
+         *    offsetWidth    //获得取元素的content宽/高 + padding的宽/高 + border的大小
+         *    offsetHeight
+         *    offsetTop    获取元素离定位父级的顶部距离
+         *    offsetLeft
+         *
+         *    scorllWidth
+         *    scorllHeight
+         *
+        */
+        var oBox = document.getElementById("box");
+        //console.log(oBox.clientWidth );
+       // console.log(document.body.clientHeight );//获取页面的实际宽/高
+       // console.log(document.documentElement.clientWidth );//获得文档的可视区域的宽/高,不包括滚动条
+        //没有兼容性问题，但是在IE8及以下的时候会有几px的误差值
+        //console.log(oBox.offsetTop)
+        function getOfffset(dom) {
+            var obj = {
+                left : 0,
+                top : 0
+            };
+            while (dom !== document.body){
+                obj.top += dom.offsetTop;
+                obj.left += dom.offsetLeft;
+                dom = dom.offsetParent;
+            }
+            return obj;
+        }
+        console.log( getOfffset( oBox.children[0].children[0] ).left );
+        /*
+        *   p
+        *   obj.top = 30;
+        *   dom = div
+        *
+        *   div
+        *   obj.top
+        */
+    </script>  
+</body>
+</html>

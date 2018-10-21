@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*document.onclick = fn(); //这里不能加括号，fn没有return加了返回undefined，但不会报错
+            fn();//反严格模式下，函数自执行，this指向window
+            function fn() {
+                console.log(this);
+                var a = 10;
+                return function () {
+                    console.log(++a);
+                }                    //点击事件闭包
+            }*/
+            document.onclick = (function () {
+                console.log(this);
+                var a = 0;
+                return function () {
+                    console.log(++a);
+                }                    //点击事件闭包,骚写法用来当计数器
+            })();
+        </script>
+    </body>
+</html>

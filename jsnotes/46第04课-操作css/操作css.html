@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:100px;
+                height:200px;
+                background:pink;
+            }
+        </style>
+        <style id="love"></style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <div id="css"></div>
+        <script>
+            /*
+            *  js操作css样式
+            *     外部样式表   js不可能操作外部文件
+            *     内部样式表   style也可以 ofcouse可以  +=在原本基础上添加  缺点，需要考虑选择器的优先级
+            *     行内样式  ！！！优先级顶呱呱
+            * */
+           /* 内部样式操作例  var oL = document.getElementById("love");
+            oL.innerHTML += "#wrap{width:100px;height:100px;background-color:pink;}";*/
+           var oW = document.getElementById("wrap");
+           // oW.style = "width:200px;";   不推荐，style对象含太多属性，可以console.dir一下看看
+            //这是改节点对象的行内样式的几何
+            oW.style.width = "200px";
+            oW.style.backgroundColor = "blue"; //遇到-用驼峰命名
+            oC = document.getElementById("css");
+            //cssText  推荐写法，允许写多条
+            oC.style.cssText += "width:300px;height:300px;background-color:green;";
+            //+=先获取内容，再拼接
+        </script>
+    </body>
+</html>

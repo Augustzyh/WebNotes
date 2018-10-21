@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:100px;
+                height:200px;
+            }
+            #wrap.red{
+                background-color: red;
+            }
+            #wrap.pink{
+                background-color:pink;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap" class="red"></div>
+        
+        <script>
+            /*
+            * if判断的一种改写
+            * */
+
+            /*var a = 10;
+            var b = 20;
+            if(a<b){
+                alert(1);
+            }else{
+                alert(2);            //形如这种可以携程一下写法
+            }*/
+            //a < b ? alert(1) : alert(2);  //三目运算
+            var oW = document.getElementById("wrap");
+            oW.onclick = function () {
+                this.className === "red" ? this.className = "pink" : this.className="red";
+            };
+            //bool = true;
+            //this.className = bool?"pink":"red";
+            //bool = !bool;
+        </script>
+    </body>
+</html>

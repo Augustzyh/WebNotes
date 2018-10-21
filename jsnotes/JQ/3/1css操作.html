@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                height:100px;
+                width:100px;
+                background-color: red;
+                margin:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            /*
+                   数值
+            * offset（）
+            *           会把margin计算进去，距离文档的距离
+            *
+            * position（）
+            *           距离父级（不是定位父级）边界的距离 不计算margin
+            *
+            * */
+            let $wrap = $("#wrap")
+            console.log($wrap.offset());  //返回一个对象，里面两个值，left  top
+            console.log($wrap.position());
+
+            //可设置
+            $wrap.offset({
+                left:50,
+                top:50
+            });   //返回 jq 对象 设置一般都返回这个
+
+            //osition不可接收参数进行设置，只能获取
+        </script>
+    </body>
+</html>

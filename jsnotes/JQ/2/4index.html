@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <p>0</p>
+        <div id="wrap">
+            <a href=""></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a><a
+                href=""></a><a href=""></a>
+            <p>1</p>
+            <p>2</p>
+            <p class="h">3</p>
+        </div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            /*
+            * index 获取当前jq对象的序号
+            * */
+            let p = $("p");
+            console.log(p.eq(1).index()); //不传参数默认获取当前元素在父级子元素的序号  8
+            console.log(p.eq(1).index("p"));  //当前jq对象在当前选择器里的序号
+            console.log(p.index($(".h")));  //传jq时，获取传的jq对象在当前对象里的序号而不是父级
+        </script>
+    </body>
+</html>

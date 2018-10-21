@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            function a() {
+                alert(1);
+            };                 //函数定义
+            var b = function () {
+
+            };                   //也可以定义函数，同时还有一个非常特殊的功能
+                                  //将一个函数变成了函数表达式
+            /*function c() {
+                
+            }();*/            //不能直接加括号执行，会报错
+            var c = function () {
+                alert(3);
+            }();               //可以加括号执行 模块化时，可以让函数内部和外部分开
+            //函数自执行,其他函数表达式写法  下两种都一样,有名不建议
+            //一元操作符
+            (function () {
+                alert(4);
+            })();
+            (function () {
+                alert(5);
+            }());
+            !function () {
+                alert(6);
+            }();
+            ~function () {
+                alert(7);
+            }();//按位取反
+            +function () {
+                alert(8);
+            }();
+            -function () {
+                alert(9);
+            }();
+        </script>
+    </body>
+</html>

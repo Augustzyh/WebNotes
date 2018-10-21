@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //人眼最多分辨60帧   js做动画
+            //requestAnimationFrame()
+            var a = new Date;
+            var x = setInterval(function () {
+                var b = new Date;
+                console.log(b-a);      //相邻两次函数执行的时间差，理论上应该是15，但是不是
+                                        //说明定时器这玩意时间不靠谱，不能保证每次都是15ms
+                a=b;
+                console.log(1);
+            },1000/60);       //15ms      越小误差越大，和浏览器有最小刷新频率电脑性能等因素有关，值大可以信赖
+                        //总之不能完全相信其时间，电脑配置不同
+            setTimeout(function () {
+                clearInterval(x);
+            },1500)
+        </script>
+    </body>
+</html>

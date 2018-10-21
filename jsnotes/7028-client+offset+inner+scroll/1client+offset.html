@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            11111111111111111111
+            11111111111111111111
+            11111111111111111111
+            11111111111111111111
+            11111111111111111111
+            11111111111111111111
+            11111111111111111111
+            11111111111111111111
+            11111111111111111111
+
+
+        </div>
+        
+        <script>
+            /*
+            * client  一般获取浏览器提供的
+            * offset 一旦出现一定和定位有关
+            *       offsetWidth
+            *       offsetHeight
+            *       offsetTop  离父级定位顶部的距离
+            *       offsetLeft
+            * scorll
+            * */
+            document.documentElement.clientWidth; //获取文档可是区域的宽 / 高 不包括滚动条
+            //没有兼容性问题 但在ie8-会有几像素的误差
+            //三层定位的盒子计算到body上侧的距离
+            function getOffset(dom) {
+                var obj = {
+                    left:0,
+                    top:0
+                };
+                while(dom !== document.body){
+                    obj.top += dom.offsetTop;
+                    obj.left += dom.offsetLeft;
+                    dom = dom.offsetParent;   //不断往父级找
+                }
+                return obj;
+            }
+            console.log(wrap.offsetWidth);
+            /*
+            * 原标签
+            * p     为例
+            * obj.top = 30
+            * dom = div
+            *
+            * div
+            * 30 = div
+            * */
+        </script>
+    </body>
+</html>

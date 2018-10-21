@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //return可以返回任何数据类型
+            /*function fn(a,b) {
+                var c = a+b;
+                //alert(c);
+                return c;
+            }
+            fn(2,3);*/
+            function fn(a,b) {
+                //code
+                return true;
+            }
+            if( fn(1,2)){}
+
+            //一个函数不写return，默认有return undefined
+            const a = document.getElementById("wrap");    //dom.obj("") 默认返回对象复值给变量a
+                                                   //同理alert()也是  内部没写return 弹出undefined
+
+            function x() {
+                c = function () {
+                    alert(1);
+                };
+                return c;
+            }
+            y = x()();
+            console.log(y);    //undefined
+
+
+            //只要函数执行到renturn，函数立即结束，后面还未执行的语句就不执行了
+        </script>
+    </body>
+</html>

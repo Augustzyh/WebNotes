@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+                修饰符
+            *   g 全局匹配
+            *   i 不区分大小写  默认区分大小写
+            *   m 换行匹配 默认不匹配第二行
+            *
+            *   new RegExp（正则，修饰词）
+            * */
+            var str = "zhangyu1234hh567aa89";
+            var reg = /\d+/igm;  //所有数字
+            console.log(str.match(reg));  //index 第一个字符出现的位置 match加g有意义
+            var reg1 = new RegExp("\\d+","ig");  //这种写法
+            console.log(str.match(reg1));
+        </script>
+    </body>
+</html>

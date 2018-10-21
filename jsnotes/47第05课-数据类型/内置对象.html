@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //内置对象
+            //document就是  各种事件
+            //节点对象 document.getElementById
+
+           /* //函数function
+            function fff() {       //必须要有名字
+                
+            }   //这个不用*/
+            var aaa = function () {         //事件函数可没名 匿名函数
+                alert("我是正规写法");
+                alert(this);             //这个this指向document，定义函数时没办法确定函数指向，只有执行的时候才能确定，
+                                            //指向事件触发的主题
+                                            //自执行时，this指向window，但在js严格模式下，指向undefined
+            };  //这最好加分号                ES6全是这种方式 并且ES6讲究顺序
+            /*function xx() {
+                alert(1);
+            }
+            document.onclick = xx;  //function可以先写调用在写函数，es6必须先写函数
+            aaa();//自执行，页面一来就直接执行了*/
+            alert(aaa);//弹出函数块 ，注释都能弹出来
+            xx.goudan = "123";//函数也可以添加自定义属性，本身有几个默认属性
+                            //函数事业个非常特殊的对象
+
+        </script>
+    </body>
+</html>

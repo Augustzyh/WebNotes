@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*垃圾回收机制
+            * JS对变量的引用没有了以后，就会自动回收变量
+            * 不同的浏览器的垃圾回收机制不一样
+            * 全局变量，绝对不会被回收，除非关闭窗口
+            * 局部变量再功能完成之后会被回收，外部无法访问此变量
+            * 用闭包来使用另一个函数作用域里面的变量
+            * */
+            var a = 10; //全局变量
+            function f() {
+                var a;
+                alert(a);//用完就被回收
+            }
+
+            //注意全局变量的引用，指针一直纯在，对象不会再堆内销毁
+            var b={
+                a:5,
+                x:10
+            };
+            alert(b.x);//到此，假设b已经完全用完了，后面不会再用了，就把b留在这，没关系，但不是最好的方式
+            b = null;    //引用完毕，释放堆内存，b还在，b不会被回收，但变量被释放,以后最好把指针断开，不用一直占用内存
+        </script>
+    </body>
+</html>

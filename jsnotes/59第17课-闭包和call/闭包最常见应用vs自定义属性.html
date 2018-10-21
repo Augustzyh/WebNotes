@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <p>000</p>
+            <p>111</p>
+            <p>222</p>
+            <p>333</p>
+        </div>
+        
+        <script>
+            var aP = document.getElementsByTagName("p"),
+                len = aP.length;
+            for(var i = 0; i<len ; i++){
+                (function(x) {  //外部函数
+                    aP[x].onclick = function () {
+                        alert(x);
+                    };//内部函数  x没有被回收  产生了四个闭包
+                })(i);//自执行，进化版，但自执行不一定是闭包,参见闭包定义
+
+                /*x(i);  //闭包
+                function x(x) {  //外部函数
+                    aP[x].onclick = function () {
+                        alert(x);
+                    };//内部函数  x没有被回收  产生了四个闭包
+                }*/
+                //性能上来讲自定义属性和闭包都一样好看个人喜好
+            }
+            /*for(var i = 0; i<len ; i++){
+                aP[i].index = i;
+                aP[i].onclick = function () {
+                    alert(this.index);
+                };
+            }*/
+        </script>
+    </body>
+</html>

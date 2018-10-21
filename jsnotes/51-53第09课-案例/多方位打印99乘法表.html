@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            .box{
+                display:inline-block;
+                width:65px;
+                height:35px;
+                border:1px solid blue;
+                margin:5px;
+                text-align:center;
+                line-height:35px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap1">
+            <!--<div class="box"></div>-->
+        </div>
+        <hr>
+        <hr>
+        <div id="wrap2"></div>
+        <hr>
+        <hr>
+        <div id="wrap3"></div>
+        <hr>
+        <hr>
+        <div id="wrap4"></div>
+        <script>
+            for(var i=1 ;i<=9;i++){
+                for(var j=1 ;j<=i;j++) {
+                    wrap1.innerHTML += "<div class='box'>"+j+"*"+i+"="+i*j+"</div>";
+                }
+                wrap1.innerHTML += "<br>";
+            }
+            for(var k=9 ;k>=1;k--){
+                for(var l=9 ;l>=k;l--) {
+                    wrap2.innerHTML += "<div class='box'>"+l+"*"+k+"="+k*l+"</div>";
+                }
+                wrap2.innerHTML += "<br>";
+            }
+            for(var m=1 ;m<=9;m++){
+                for(var n=m ;n<=9;n++) {
+                    wrap3.innerHTML += "<div class='box'>"+m+"*"+n+"="+n*m+"</div>";
+                }
+                wrap3.innerHTML += "<br>";
+            }
+            for(var a=9 ;a>=1;a--){
+                for(var b=1 ;b<=a;b++) {
+                    wrap4.innerHTML += "<div class='box'>"+a+"*"+b+"="+a*b+"</div>";
+                }
+                wrap4.innerHTML += "<br>";
+            }
+
+
+            //i，j等于10跳出
+        </script>
+    </body>
+</html>

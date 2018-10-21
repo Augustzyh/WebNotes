@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap ul li{
+                height:30px;
+                padding:10px 0 10px 20px;
+                border-bottom:1px solid red;
+                font-size:12px;
+                line-height:30px;
+            }
+            #wrap ul li span,#wrap ul li p,#wrap ul li input{
+                display:inline-block;
+            }
+            #wrap ul li input{
+                display:none;
+                color:#bbb;
+            }
+            #wrap ul li.active span{
+                display:none;
+            }
+            #wrap ul li.active input{
+                display:inline-block;
+            }
+            #wrap ul li p{
+                width:60px;
+                height:30px;
+                margin-left:30px;
+                background-color: #000;
+                color:#fff;
+                text-align:center;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul>
+                <li>
+                    <span>点击修改</span>
+                    <input type="text" value="点击修改">
+                    <p>修改</p>
+                </li>
+                <li>
+                    <span>请问大家回去</span>
+                    <input type="text" value="点击修改">
+                    <p>修改</p>
+                </li>
+                <li>
+                    <span>乔尼吗</span>
+                    <input type="text" value="点击修改">
+                    <p>修改</p>
+                </li>
+                <li>
+                    <span>而把我i</span>
+                    <input type="text" value="点击修改">
+                    <p>修改</p>
+                </li>
+            </ul>
+        </div>
+        
+        <script>
+            var oP = document.querySelectorAll("#wrap ul li p"),
+                oSp = document.querySelectorAll("#wrap ul li span"),
+                oL = document.querySelectorAll("#wrap ul li"),
+                oInput = document.querySelectorAll("#wrap ul li input"),
+                oPlen = oP.length,
+                index = 0;
+            for(var i = 0;i<oPlen;i++){
+                oP[i].bool = false;
+                oP[i].index = i;
+                oP[i].onclick = function () {
+                    oL[this.index].className = oL[this.index].className === "" ? "active":"";
+                    oP[this.index].bool = oP[this.index].bool === false ?
+                        (oP[this.index].innerHTML = "确认",oP[this.index].bool = !oP[this.index].bool)
+                        : (oP[this.index].innerHTML = "修改",oP[this.index].bool = !oP[this.index].bool);
+                    oSp[this.index].innerHTML = oInput[this.index].value;
+                }
+            }
+            /*
+              bool = [];
+            * for(var i=0;i<oPlen;i++){
+            *    oP[i].index = i;
+            *    oP[i].onclick = function(){
+            *          var index = this.index;
+            *          if ( bool[index] ){
+            *              oL[index].className = "";
+            *              oP[this.index].innerHTML = "修改";
+            *              oSp[this.index].innerHTML = oInput[this.index].value;
+            *          }else{
+            *              oL[index].className = "active";
+            *              oP[this.index].innerHTML = "确认";
+            *          }
+            *     bool[index] = !bool[index];
+            *    };
+            * }
+            * */
+        </script>
+    </body>
+</html>

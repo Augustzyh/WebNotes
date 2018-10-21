@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+
+            //delay()
+            //延迟的后面必须是一个队列
+
+            //$("#wrap").
+
+            //$("#wrap").fadeOut(1000).delay(2000).fadeIn(1000);
+            //$("#wrap").delay(2000).fadeOut(1000);
+
+            /*$("#wrap")
+                .delay(2000)
+                .queue(function () {
+                    $(this).css("background-color" , "pink");
+                })
+                .css("backgroundColor" , "green");*/
+            $("#wrap")
+                .delay(2000)
+                .queue(function () {
+                    $(this).css("background-color" , "pink");
+                    $(this).dequeue();
+                })
+                .delay(2000)
+                .queue(function () {
+                    $(this).css("backgroundColor" , "green");
+                    $(this).dequeue();
+                });
+
+            $("#wrap").fadeOut();
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

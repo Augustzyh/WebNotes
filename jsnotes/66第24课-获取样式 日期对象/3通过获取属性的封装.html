@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var oW = document.getElementById("wrap");
+            console.log(getWidth(oW, "width"));
+
+            //获取wrap的width属性封装  之前的兼容要好，因为上一个兼容只在一开始判断一次，
+            //                                      而这个使用一次判断一次，当然上一个好
+            /*function getWidth(dom,style){
+                if(dom.currentStyle){
+                    return dom.currentStyle[style];
+                }else {
+                    return getComputedStyle(dom)[style];
+                }
+            }*/
+            function getWidth(dom,style){
+                return dom.currentStyle ? dom.currentStyle[style] : getComputedStyle(dom)[style];
+            }
+        </script>
+    </body>
+</html>

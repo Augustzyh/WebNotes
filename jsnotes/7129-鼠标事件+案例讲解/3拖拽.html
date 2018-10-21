@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                position:absolute;
+                top:0;
+                left:0;
+
+                width:200px;
+                height:200px;
+                background-color:red;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var oW = document.getElementById("wrap");
+            oW.onmousedown = function (e) {
+                var mouseXOw = e.clientX,
+                    mouseYOw = e.clientY,
+                    newTop = this.offsetTop,
+                    newLeft = this.offsetLeft
+                ;
+                document.onmousemove = function(e){
+                    var mouseX = e.clientX - mouseXOw,
+                        mouseY = e.clientY - mouseYOw;
+                    oW.style.top = mouseY + newTop + "px";
+                    oW.style.left = mouseX + newLeft + "px";
+                };
+                document.onmouseup = function(){
+                    this.onmousemove = null;
+                };
+            };
+
+        </script>
+    </body>
+</html>

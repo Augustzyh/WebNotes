@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:500px;
+                height:600px;
+                margin:50px auto;
+                user-select:none;
+            }
+            #wrap h3{
+                width:100%;
+                height:50px;
+                border-bottom:2px dashed black;
+                line-height:50px;
+            }
+            #wrap ul{
+                margin-top:20px;
+                margin-left:20px;
+            }
+            #wrap ul li{
+                float:left;
+                height:20px;
+                font-size:12px;
+                padding:0 10px 0 25px;
+                margin:20px;
+                background:none no-repeat;
+                background-image:url("images/ckbg1.jpg");
+                line-height:20px;
+                cursor:pointer;
+            }
+            #wrap ul li.checked{
+                background-image:url("images/ckbg2.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <h3>你喜欢啥子水果哦：</h3>
+            <ul>
+                <li>芒果</li>
+                <li>草莓</li>
+                <li>樱桃</li>
+                <li>甜橙</li>
+                <li>火龙果</li>
+                <li class="checked">冰脉</li>
+            </ul>
+        </div>
+        
+        <script>
+            var oLi = document.querySelectorAll("#wrap ul li");
+            len = oLi.length;
+            for(var i = 0;i<len;i++){
+                oLi[i].onclick = aa;
+            }
+            function aa(){
+                /*if(this.className) {
+                    this.className = "";   //this 在执行函数后决定指向，执行前不确定
+                }else{
+                    this.className = "checked";
+                }*/
+                this.className = this.className ? "" :"checked";
+                //单个className
+            }
+        </script>
+    </body>
+</html>

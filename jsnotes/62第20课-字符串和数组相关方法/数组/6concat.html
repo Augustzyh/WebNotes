@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var arr1 = [1,2,3,4,5],
+                arr2 = [6,7,8,9];
+            //var n = arr1.concat(arr2);  //不改变原数组，返回一个两者组成的新数组,两数组合并不能用+
+
+            /*
+            * es6新写法 解构重组
+            * */
+            var n = [...arr1,...arr2];
+            console.log(n);
+        </script>
+    </body>
+</html>

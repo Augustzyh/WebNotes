@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //得到当前系统时间戳
+            var x = new Date();  //这返回的是个object不是字符串
+            console.log(x);  //Wed May 23 2018 14:13:21 GMT+0800 (中国标准时间)
+            //console.log(typeof x);  obj
+            //年月日时分秒周      布莱登。艾克发明的js
+            console.log(x.getFullYear());  //年  number
+            console.log(x.getMonth()+1);     //4  +1才是正确的月份 从0开始计数
+            console.log(x.getDay());    //周3    老外周日是0
+            console.log(x.getDate());   //日期
+            console.log(x.getHours());  //小时
+            console.log(x.getMinutes());  //分
+            console.log(x.getSeconds());  //秒
+            console.log(x.getTime());  //毫秒数   1970 1 1 0 0 0 到当前时间戳的毫秒数
+
+
+        </script>
+    </body>
+</html>

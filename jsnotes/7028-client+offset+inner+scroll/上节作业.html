@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                overflow:hidden;
+                width:800px;
+                height:600px;
+                border:2px solid black;
+                margin:auto;
+            }
+            #wrap .left,#wrap .right{
+                float:left;
+                width:50%;
+                height:100%;
+            }
+            #wrap .left{
+                background-color:yellow;
+            }
+            #wrap .left .select{
+                overflow:hidden;
+            }
+            #wrap .left li{
+                float:left;
+                padding:6px 4px;
+                margin:0 4px;
+                font-size:16px;
+            }
+            #wrap .left li.city{
+                border:1px solid red;
+            }
+            #wrap .left .result{
+                overflow:hidden;
+                margin-top:30px;
+            }
+            #wrap .right{
+                background-color:green;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="left">
+                <ul class="select">
+                    <li>想去哪:</li>
+                    <li class="city">甘宁娘</li>
+                    <li class="city">去杀时间</li>
+                    <li class="city">请问</li>
+                    <li class="city">期望地区我</li>
+                    <li class="city">请问</li>
+                </ul>
+                <ul class="result"></ul>
+            </div>
+            <div class="right"></div>
+        </div>
+        
+        <script>
+            var oW = document.getElementById("wrap"),
+                aLi = oW.querySelectorAll(".left .select .city"),
+                len = aLi.length,
+                oR = oW.querySelector(".left .result"),
+                oRight = oW.querySelector(".right")
+            ;
+            for(var i=0;i<len;i++){
+                aLi[i].bool = false;
+                aLi[i].onclick = function () {
+                    if(!this.bool){//当this.bool为false的进入
+                        var li1 = this.cloneNode(true),
+                            li2 = this.cloneNode(true),
+                            span = document.createElement("span"),
+                            that = this;
+                        span.innerHTML = "X";
+                        span.onclick = function () {
+                            oR.removeChild(li1);
+                            oRight.removeChild(li2);
+                            that.bool = !that.bool;
+                        };
+                        li1.appendChild(span);
+                        oR.appendChild(li1);
+                        oRight.appendChild(li2);
+                        this.bool = !this.bool;//开关取反
+                    }
+                };
+            }
+        </script>
+    </body>
+</html>

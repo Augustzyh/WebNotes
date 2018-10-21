@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:320px;
+                height:75px;
+                margin:50px auto;
+                line-height:75px;
+                user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                -webkit-user-select: none;
+            }
+            #wrap span,#wrap ul,#wrap p{
+                float:left;
+            }
+            #wrap ul{
+                margin-top:29px;
+                margin-left:10px;
+            }
+            #wrap span.title{
+                color:red;
+            }
+            #wrap ul li{
+                float:left;
+                width:19px;
+                height:19px;
+                background:url("img/star.png");
+                cursor:pointer;
+            }
+            #wrap ul li.on{
+                background:url("img/star.png") 0 19px;
+            }
+            #wrap p{
+                width:100px;
+                height:73px;
+                border:1px solid #bbb;
+                margin-left:30px;
+                color:#000;
+                font-size:12px;
+                line-height:20px;
+            }
+            #wrap p span{
+                display:none;
+            }
+            #wrap p span.on{
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <span class="title">星级打分:</span>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p>
+                <span class="on">提示：请认真的给当前文档打分！</span>
+                <span>很差</span>
+                <span>较差</span>
+                <span>一般</span>
+                <span>很好</span>
+                <span>超好</span>
+            </p>
+        </div>
+
+        <script>
+            (function () {
+                var oLi = document.querySelectorAll("#wrap ul li"),
+                    oUl = document.querySelector("#wrap ul"),
+                    oSpan = document.querySelectorAll("#wrap p span"),
+                    len = oLi.length,
+                    score = -1,
+                    spanIndex = 0
+                ;
+                for(var i=0;i<len;i++){
+                    var dom = oLi[i];
+                    dom.star = i;
+                    dom.onmouseenter = add;   //事件函数，不自执行，不加（）
+                    dom.onclick = stay;
+                }
+
+                //清除
+                oUl.onmouseleave = function () {
+                    servers(score);
+                };
+
+                function add() {            //封装，不然需要注册五次
+                    servers(this.star);
+                }
+
+                function servers(x){
+                    for(var j = 0;j<len;j++){
+                        oLi[j].className = j<=x? "on" : "";
+                    }
+                    oSpan[spanIndex].className = "";
+                    spanIndex = x + 1;
+                    oSpan[spanIndex].className = "on";
+                }
+
+                function stay() {
+                    score = this.star;
+                }
+            })();
+            /*(function () {
+                var oLi = document.querySelectorAll("#wrap ul li"),
+                    oUl = document.querySelector("#wrap ul"),
+                    oSpan = document.querySelectorAll("#wrap p span"),
+                    len = oLi.length,
+                    score = -1
+                ;
+                for(var i=0;i<len;i++){
+                    var dom = oLi[i];
+                    dom.star = i;
+                    dom.onmouseenter = add;   //事件函数，不自执行，不加（）
+                    dom.onclick = stay;
+                }
+
+                //清除
+                oUl.onmouseleave = function () {
+                    for(var j = 0; j<len ;j++){
+                        oLi[j].className = j<=score? "on" : "";
+                    }
+                };
+
+                function add() {            //封装，不然需要注册五次
+                    var star = this.star;
+                    for(var j = 0;j<len;j++){
+                        oLi[j].className = j<=star? "on" : "";
+                    }
+                    /!*for(var j = 0;j <= star ;j++){
+                        oLi[j].className = "on";
+                    }
+                    for(var k = star+1;k<len;k++){
+                        oLi[k].className = "";
+                    }//这个性能更好*!/
+                }
+
+                function stay() {
+                    score = this.star;
+                }
+            })();*/
+
+
+        </script>
+    </body>
+</html>

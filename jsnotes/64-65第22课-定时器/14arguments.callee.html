@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //只有a才是全局的变量
+            //b也是变量，但
+            /*var a = function b() {
+                alert("@@@@");
+                //b();死回掉，但只在函数内部有用
+            };
+            a();
+            //b();报错*/
+
+            //
+            !function(){
+                console.log(1111);
+                //在匿名函数回掉自己的时候，只能使用callee
+                console.log(arguments.callee);//严格模式不支持此api，少用
+                //严格模式就回掉直接名字
+            }();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*function () {
+                
+            }//不能直接在这放一个匿名函数，直接报错
+            document.onclick = function(){}; 这是可以的*/
+            alert(function () {
+                alert(1);
+            });                     //弹出函数体(块)
+            //可以放数组和json里
+            var arr = [
+                1,
+                2,
+                function () {
+
+                }
+            ];
+            var json = {
+                a:1,
+                b:2,
+                c:function () {
+                    
+                }
+            };
+        </script>
+    </body>
+</html>

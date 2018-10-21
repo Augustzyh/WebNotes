@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var str = "张宇航abc";    //不分单双字节，一个字符一个length   双引号创建字符串就行了
+                    //字符串一般用加号拼接 或者concat(..,..,..)  new String('')  String('')
+            var l = str.length;
+            //alert(l);  6
+            //alert(str[0]);  //不支持低版本ie
+            //alert(str.charAt(0));  //支持低版本ie     字符串第几位
+            //alert(str.charCodeAt(0));  //第一个字符的unicode码
+            //alert(String.fromCharCode(40000));  //unicode码40000对应的字符
+            /*for(var i = 0,length = 20000;i<length;i++)
+            {
+                document.write(String.fromCharCode(i));
+            }//输出前两万个unicode对应字符*/
+
+            /*
+            *       charCodeAt可以用来加密
+            * */
+            /*var newStr = "";
+            for (var i = 0, length = str.length; i < length; i++) {
+                var s = str.charCodeAt(i);
+                s += 1314;
+                newStr += String.fromCharCode(s);
+            }
+            alert(newStr);*/
+        </script>
+    </body>
+</html>

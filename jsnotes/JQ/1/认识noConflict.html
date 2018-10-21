@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * jq试由javascript编写成的一个成熟框架库
+            * 主要用来做特效，dom节点的操作，ajax等等，原生性能最好，框架试为了节省大量开发时间
+            * cdn引入推荐   快  别人的服务器快   百度cdn  bootcdn
+            * 亦可下载
+            * jQ的版本
+                1.x.x  几乎兼容所有所有浏览器，包括（6……7……8……），所以代码相对多一些，性能会低一些
+                2.x.x  不再兼容678，简化了大量的代码
+                3.x.x  不兼容678，引入了一些HTML5新的API等等
+
+                                工作min版本 一般   3.3.1完整版压缩版
+                                slim 没有ajax 做特效用
+            检测jq是否引入
+                jq 对外开放两个变量  $  jQuery   占用这两个变量  别的库占用$ 用后者
+                console.log( jQuery );
+            console.log($);    有可能被其他框架占用，引入jq就别用$做变量了
+            * */
+            jQuery.noCoflict();  //一调用就释放$
+            //好的防冲突
+            (function($){
+                console.log($);
+            })(jQuery);
+
+            jQuery.noCoflict(function () {
+
+            });//代码写其中,冲突时自动转为jQuery
+            console.log( jQuery );
+            console.log($);
+        </script>
+    </body>
+</html>

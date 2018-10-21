@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap" class="aa bb cc"></div>
+        
+        <script>
+            var oW = document.getElementById("wrap");
+            var x = oW.classList;  //类列表          兼容性差,部分兼容到ie10
+            x.add("tt");   //对oW添加类名     ("aa","bb")
+            x.remove("aa");  //移除类名移除两个("aa","bb")
+            x.toggle("cc");   //有则删，没有则加,传单参
+            x.toggle("dd");
+            var xx = x.contains("aa");  //有则true，没有则返回false
+            console.log(x);
+            console.log(xx);
+            /*
+            * add
+            * remove
+            * toggle
+            * contains
+            * */
+
+        </script>
+    </body>
+</html>

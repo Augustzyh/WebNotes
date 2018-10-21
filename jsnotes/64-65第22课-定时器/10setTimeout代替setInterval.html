@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*setInterval(function () {
+                //code  不能保证函数在10ms内完成时，并且希望该函数完成后再往下执行
+            },10)*/
+
+            var a;
+            setTimeout(fn,10);
+            function fn() {
+                //..code
+                //if(){return;}  结束方式二，结束当前函数，就不会有下一次了
+
+                a = setTimeout(fn,10);//函数结束的时候往队列里塞一个自己，
+                                // 这样可以等所有fn执行完后，再次执行
+            }
+            //结束方法1
+            //clearTimeout(a);
+        </script>
+    </body>
+</html>

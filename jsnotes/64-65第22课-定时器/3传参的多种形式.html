@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //传函数  匿名有名
+            setTimeout(function () {
+                
+            },100);
+
+            //传字符串， 会把该字符串里面的内容当js代码来读
+            setTimeout("a()",100);
+            function a() {
+                alert(1);
+            }
+
+            //以下形式不行
+            /*(function () {
+                setTimeout("a()",100);   //此处a()当全局 访问不到本作用域
+                function a() {
+                    alert(1);
+                }
+                window.a = a;//这样才可以，把a给全局
+            })();*/
+            setTimeout("alert(航);",200); //这也能读，因为传字符串， 会把该字符串里面的内容当js代码来读
+        </script>
+    </body>
+</html>

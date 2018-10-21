@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+
+            /*
+            *
+            *
+            * */
+            /*var str = "a454d6dgaa4d6";
+            var reg = /(a4)(?:54).*(ga)\2/;*/  //?:跳过此组  不捕获这一组 不给这个捕获组加序号
+
+            let str = "Window10";
+            //var reg = /Window(?=10)/;  //不是10 匹配不成功
+                                        //?= 匹配的不带上该捕获组的内容但必须满足这个规则
+                                        //匹配window 但规则是Window10才能匹配成功
+            var reg = /Window(?!10)/;    //不是10才能匹配，，与上述相反  都不会分配捕获组号
+            console.log(str.match(reg));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                height:100px;
+                width:0;
+                background-color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+                requestAnimationFrame()
+            * h5内一个新的定时器
+            * 和setTimeout比较像，也只执行一次，但是不能自主设置时间
+            *   浏览器刷新频率更不上setInterval 的刷新时间的时候，就会发生掉帧
+            *
+            *   清除
+            *   cancelAnimationframe
+            *
+            *
+            * */
+            /*requestAnimationFrame(fn);   //这个就会等浏览器准备好了在执行函数，指定不了时间
+            function fn() {
+
+            }*/
+
+            //案例 wrap宽度逐渐增加
+            var oW = document.getElementById("wrap"),
+                addWidth = 0,
+                bool = true,
+                x
+            ;
+            function click() {
+                if(bool) {
+                    !function add() {
+                        addWidth++;
+                        oW.style.width = addWidth + "px";
+                        x = requestAnimationFrame(add);
+                    }();
+                }else{
+                    cancelAnimationFrame(x);
+                }
+                bool = !bool;
+            }
+            document.onclick = click;
+
+        </script>
+    </body>
+</html>

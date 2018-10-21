@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap div{
+                float:left;
+                width:100px;
+                height:100px;
+                margin:10px 10px;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" value="点击生成是个盒子" id="btn">
+        <div id="wrap"></div>
+        
+        <script>
+            var oW = document.getElementById("wrap"),
+                oI = document.getElementById("btn");
+            /*oI.onclick = function () {
+                for (i = 0; i < 100; i++) {
+                    oW.innerHTML += "<div></div>"
+                }
+            }  */          //因为每点击一次页面会刷新一次，所以一般不用这个方法,减少js和dom操作，会快很多
+            oI.onclick = function f() {
+                var str = "";
+                for(var i = 0;i<100;i++){
+                    str += "<div></div>";
+                }
+                oW.innerHTML += str;
+            }
+
+        </script>
+    </body>
+</html>

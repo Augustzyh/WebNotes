@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:200px;
+                height:200px;
+                background-color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <span>111</span>
+            <span>222</span>
+            <span>333</span>
+            <span>444</span>
+        </div>
+        
+        <script>
+            /*
+            * createElement()  创建元素节点   只能用下面的方式加
+            * appendChild()   向obj添加此元素节点,但只能在内容最末加
+            * insertBefore(a,b)   a 需要放入节点  b 放在谁的前面
+            * removeChild(obj)  移除一个元素节点
+            * replaceChild(a,b)  用a节点替换b元素节点
+            * cloneNode  克隆一个一摸一样的节点
+            *           false 默认值 浅克隆  只复制节点本身
+            *           true  深克隆  包含节点内容
+            * */
+            var oW = document.getElementById("wrap");
+
+            oW.appendChild(oW.children[0].cloneNode(true));
+
+            //oW.innerHTML = "<p>123</p>";   //一般的创建  但这不是个节点
+            /*var oP = document.createElement("p");   //创建元素节点
+            oP.innerHTML = "我是文档创建的元素节点";
+            oP.onclick = function () {
+                alert(1);
+            };*/
+            //oW.appendChild(oP);   //向wrap添加此元素节点
+            //oW.insertBefore(oP,oW.children[1]);
+            //oW.removeChild(oW.children[0]);
+            //oW.replaceChild(oP,oW.children[2]);
+        </script>
+    </body>
+</html>

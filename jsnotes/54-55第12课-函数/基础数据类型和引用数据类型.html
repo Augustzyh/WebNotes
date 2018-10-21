@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*基础五类   值存在栈内
+            var a = [6,7,8];
+            a[4] = 9;
+            console.log(a);  //6,7,8,9 第三位undefined length:5以最长来算*/
+
+
+
+            //引用数据类型obj   值存在堆内 被指针所找到   如对obj a，b=a，则栈开辟新的b空间，指针同指向a指向的数据但不覆盖
+            var a ={
+                name:"hh",
+                age: 12
+            }
+
+            b = a;
+            b.sex = "nan";  //a，b都会有sex，指针指向同一个  两个长的相同的数据不是一个
+        </script>
+    </body>
+</html>

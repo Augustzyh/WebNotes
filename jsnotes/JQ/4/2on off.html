@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            /*
+            * on  off  派发事件的api
+            *
+            *
+            * */
+            $("#wrap").on("click",function () {   //就算是click最后也要调用这个api
+
+            })//虽然默认事件是叠加形式 为了可读一般用on加多个事件
+            $("#wrap").on({
+                "click":function () {
+
+                },
+                "mouseenter":function () {
+
+                }
+            })                       //一次性绑定多个事件
+            $("#wrap").off("click");  //直接写名字就全部解绑了
+
+            $("#wrap").on({
+                "click.click1":function () {   //可以给事件加名字  便于解绑
+
+                },
+                "click.click2":function () {
+
+                },
+                "mouseenter.one":function () {
+
+                }
+            })
+            $("#wrap").off("click.click1");  //解绑带名字的
+            $("#wrap").off("click.click1 click.click2");  //也可以解绑多个
+        </script>
+    </body>
+</html>

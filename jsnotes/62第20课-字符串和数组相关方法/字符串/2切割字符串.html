@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var str = "卢若玮你真tm的美";
+            var newStr = str.substring(1,7); //起始序号（包含），终止序号（不包含）,第几位切到第几位
+            var newStr2 = str.substr(1,6); //从第几位开始，切割几位
+            var newStr3 = str.slice(-4,-1); //和上面没什么区别，区别在可以倒着劫,用第一个就行了，正
+                                             // 数的时候和第一个一模一样
+            alert(newStr);
+            alert(newStr2);
+            alert(newStr3);
+        </script>
+    </body>
+</html>

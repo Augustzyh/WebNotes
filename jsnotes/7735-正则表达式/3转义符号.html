@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * \ 转移符号
+            *
+            * 特殊转义
+            * \s 匹配所有的空格字符
+            * \S 匹配所有的非空格字符
+            * \s + \S = 整个字符
+            *
+            * \d 数字
+            * \D 非数字
+            * \d + \D = 整个字符
+            *
+            * \w 常规字符（数字字母下划线）
+            * \W 非字符
+            * 同理
+            *
+            * \b 单词边界(除了\w不是单词边界外，其他都是单词边界，包括起始位置和终止位置)
+            * \B 非单词边界
+            *
+            * 特殊意义字符  / + ?
+            *
+            * . 符号: 匹配所有字符，除开\n\t\r等等 其他字符都能匹配 一个.不能匹配完所有字符
+            * */
+
+
+            /*var str = "\"\"\n   \t\n\r";
+            var r1 = /\n"/;   //就是匹配\n 匹配"直接写就行了，不用加转义*/
+
+            /*var str = " 1a 大章鱼_";
+            var reg = /\s/,
+                reg1 = /\d/,
+                reg2 = /\w/
+            ;
+
+            console.log(reg.test(str));
+            console.log(reg1.test(str));*/
+
+            /*var str = "what are uu啊lalala doing now";
+            //var reg = /uu/;   //能匹配到u,但不能匹配出单词uu
+            var reg = /\buu\b/;  //false 找有没有单独的uu单词  边界要两个一起用
+            console.log(reg.test(str));*/
+
+            /*var str = "/";
+            var reg = /\//;*/
+
+            /*var str=".";
+            var reg=/\./;*/
+        </script>
+    </body>
+</html>

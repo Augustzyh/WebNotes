@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            div{
+                position:absolute;
+                top:0;
+                left:0;
+
+                width:100px;
+                height:100px;
+                background:-webkit-radial-gradient(circle,deepskyblue,transparent,darkorange);
+                border-radius:50%;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <script>
+            var num = 30;
+            (function ball(num) {
+                for(var i = 0;i<num;i++){
+                    var div = document.createElement("div");
+                    div.speedX =  Math.floor(Math.random() * 10 + 5);
+                    div.speedY =  Math.floor(Math.random() * 10 + 5);
+                    document.body.appendChild(div);
+                }
+                var aDiv = document.querySelectorAll("div"),
+                    maxX = document.documentElement.clientWidth - aDiv[0].offsetWidth,
+                    maxY = document.documentElement.clientHeight - aDiv[0].offsetHeight
+                ;
+                /*function randomColor() {
+                    var str = "#";
+                    for(var i = 0;i<6;i++){
+                        str += Math.floor(Math.random()*16).toString(16);
+                    }
+                    return str;
+                }
+                for(var j = 0;j<num;j++) {
+                    aDiv[j].style.background = "-webkit-radial-gradient(circle," + randomColor() +
+                        ",transparent," + randomColor() + ")";
+                }*/
+                (function move() {
+                    for(var i=0;i<num;i++){
+                        var startTop = aDiv[i].offsetTop + aDiv[i].speedY,
+                            startLeft = aDiv[i].offsetLeft + aDiv[i].speedX
+                        ;
+                        function randomColor() {
+                            var str = "#";
+                            for(var i = 0;i<6;i++){
+                                str += Math.floor(Math.random()*16).toString(16);
+                            }
+                            return str;
+                        }
+                        aDiv[i].style.background = "-webkit-radial-gradient(circle," + randomColor() +
+                            ",transparent," + randomColor() + ")";
+                        if(startTop <= 0 || startTop >= maxY){
+                            startTop = Math.max(0,startTop);
+                            startTop = Math.min(startTop,maxY);
+                            aDiv[i].speedY = -aDiv[i].speedY;
+                        }
+                        if(startLeft <= 0 || startLeft >= maxX){
+                            startLeft = Math.max(0,startLeft);
+                            startLeft = Math.min(startLeft,maxX);
+                            aDiv[i].speedX = -aDiv[i].speedX;
+                        }
+                        aDiv[i].style.top = startTop + "px";
+                        aDiv[i].style.left = startLeft + "px";
+                    }
+                    requestAnimationFrame(move);
+                })();
+                window.onresize = function () {
+                    maxX = document.documentElement.clientWidth - aDiv[0].offsetWidth;
+                    maxY = document.documentElement.clientHeight - aDiv[0].offsetHeight;
+                };
+            })(num);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            body{
+                width:2000px;
+                height:2000px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            * e储存鼠标事件的形参 可以叫其他
+            *   .clientX 可视区域事件发生时x坐标
+            *   .clientY                        不包括滚动条   ie8+
+            *   ie8-   window.event.clientX  window.event.clientY
+            *   .pageX  获取文档内事件发生x坐标
+            *   .pageY  获取文档内事件发生坐标y 可视区域事件发生  ie8+
+            * */
+            /*document.onmousemove = function (e) {
+                e = e || window.event;        //兼容
+                console.log(e.clientX + "  " + e.clientY);
+                //或者
+                console.log(document.documentElement.scrollTop + clientY);
+            } 可视区域*/
+            //文档
+            /*document.onmousemove = function (e) {
+                e = e || window.event;
+                console.log(e.pageX + "  " + e.pageY);
+            }*/
+
+
+            //ie8-用复杂
+            document.onmousemove = function (e) {
+                e = e || window.event;        //兼容
+                console.log(e.clientX + "  " + e.clientY);
+                //ie8-
+                if(!e.pageY){
+                    console.log(document.documentElement.scrollTop + clientY);
+                }else{
+                    console.log(pageY);
+                }
+            }
+        </script>
+    </body>
+</html>

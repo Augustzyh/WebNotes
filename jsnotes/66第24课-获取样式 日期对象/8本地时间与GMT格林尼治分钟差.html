@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var d = new Date();
+
+            //拿到毫秒数
+            var len = d.getTime();
+            //本地时间与GMT时间的时间差
+            var offset = d.getTimezoneOffset() * 60 *1000;
+            //得到现在的格林尼治
+            var utcTime = len + offset;
+            //得到num时区的时间
+            var data = new Date(utcTime+60*60*1000*num);
+        </script>
+    </body>
+</html>

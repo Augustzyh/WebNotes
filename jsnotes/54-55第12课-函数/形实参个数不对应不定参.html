@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*function f(a,b) {
+                alert(a+b);
+            }
+            f(1,2,3);//没关系，实参少时，undefined*/
+
+
+
+            //弹出两个数字的和，若一个不是数字，弹出提示
+            function sum(a,b){
+                if(typeof a ==="number" && typeof b === "number" ){
+                    alert(a+b);
+                }else{
+                    alert("a或b不是数字");
+                }
+            }
+
+            //求多个数字的和个数不一定
+            function sumall() {     //每个函数都有arguments，不定参,所有实参的集合，是一个类数组
+                console.log(arguments);
+                var s = 0;
+                for(var i = 0,j = arguments.length;i<j;i++){
+                    s += arguments[i];
+                }
+                alert(s);
+            }
+            sumall(1,2,3,4,5,6);
+        </script>
+    </body>
+</html>

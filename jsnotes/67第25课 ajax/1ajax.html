@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * ajax    异步就是不等这一步  同步就是等这一步完成在继续执行下一步
+            *       asyncChronous [e'sinkornous]javascript and xml
+            *        异步js和xml
+            *     用户：是否被使用
+            *     密码：
+            *     email：一个邮箱对应一个账号
+            *     form每次提交页面都要刷新，重写蛋疼，添一栏就悄悄提交一次到后台
+            *     判断是否可以使用
+            *
+            * 功能：在页面不刷新的情况下，实现与后台交互，同时更新页面
+            *
+            * 不能跨域：同源策略  www.baidu.com 有很多子页面，其为主域名   即同一个域名的后台
+            *           后台允许才能跨域调用
+            *           jsonp
+            *
+            *  步骤：
+            *       1 ajax = new XMLHttpRquest();  创建ajax对象
+            *       2 ajax.open(method,url,true)   设置跟后台的交互方式   建立请求
+            *                                      method get post
+            *                                      url地址  true/false异步/同步 别用同步
+            *       3 ajax.send() 发送数据                         发送请求
+            *       4 监听http状态码
+            *       ajax.readystate  用来表示ajax对象跟后台交互的状态
+            *               0:表示ajax对象已创建，但是未调用open
+            *               1：open已经调用但是send（）没有启动
+            *               2：send启动，数据已经发送给后台
+            *               3：正在接受数据，http响应头已接受，但是数据没有完全接受
+            *               4：数据已经接受完成，前端爱咋咋地
+            *       着重关注4 以上事件没发生一次改变都会触发onreadystateChange
+            *
+            *       ajax.status 用于记录服务器的状态码
+            *               2开头的都成功了 关注200~300 和 缓存服务器304
+            * */
+
+            var ajax = new XMLHttpRequset();   //创建ajax
+            ajax.open('post','',true);   //打开与后台交互的地址,是一个接口
+                            // 1 get post两种方式
+            ajax.send();
+            //终止请求：
+                //可能由于网速原因，导致请求时间过长，可以设置一个时限，如果超过请求时限还没拿到，则关闭ajax
+            //ajax.abort();//立即关闭请求
+            setTimeout(function () {
+                ajax.abort();
+            },5000);        //时间到就停止
+            ajax.onreadystatechange = function () {    //监听后台状态，啥时候把数据给我
+                if(ajax.readystate === 4){
+                    //此时数据全部接受完成，前端爱咋爱咋地
+                    //如果readystate===4，通常拿到数据
+                    //              假设后端粗bug了，处理数据的人gg了就拿不到 404
+                    //所以此时要看服务器的状态码  http状态码 2开头的都成功了 关注200~300
+                    if(ajax.status >= 200 && ajax.status < 300 ||
+                        ajax.status === 304){ //进入此判断，就是能够拿到数据了
+                        //判断服务器是否好使，好使意味着能够拿数据
+                        console.log(ajax.responseText);   //传回来的数据自动放到这个上面了
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

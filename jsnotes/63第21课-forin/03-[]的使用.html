@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+
+
+            //document.getElementById()
+            //document["getElementById"]()
+
+
+            /*
+            定义json的时候，属性是可以加 "" 也可以不加 "" 的，
+            假设该json用来传送数据给后端，那么一定要加 "" ，且必须是 双引号""
+
+            定义json的时候，值可以用某个外面的变量来表示，而属性是绝对不行的
+
+             */
+
+
+            //var a = "name";
+            var b = "abc";
+
+            var json = {
+                0 : 8,                  //可以有数字属性，但只能用[]，，.0就报错
+                1 : 10,
+                2 : 8,
+                "name" : b,
+                age : 111
+            };
+
+            //console.log(json.name);
+            console.log(json[0]);
+
+
+            /*var json = {
+                "name" : "abc",
+                age : 111
+            };
+
+            var a = "name";
+
+            console.log( json[ a ] );*/
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

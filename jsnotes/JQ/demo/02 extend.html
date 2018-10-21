@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    /* 
+      扩展到jQuery实例原型上的方法：使用 $.fn.extend()
+
+      要扩展为jQuery类的静态方法：使用 $.extend()
+    
+     */
+    
+    // 这是扩展到原型上
+    $.fn.extend({
+      method: function(){
+        console.log("自定义的method")
+      },
+      fengyu: function(){
+        console.log("fengyu")
+      }
+    })
+
+
+    // 扩展为静态方法
+    $.extend({
+      fy: function(){
+        console.log("自定义的静态方法 fy")
+      }
+    })
+
+    /* 
+      $.extend()
+        可以拷贝对象
+        第一个参数是布尔值，默认为true
+
+
+    
+    */
+
+
+    const obj = {
+      a: 1,
+      b: 2
+    }
+
+    const o2 = {
+      b: 1
+    }
+
+    $.extend(true, obj, o2)
+
+    console.log(obj)
+  </script>
+</body>
+</html>

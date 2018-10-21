@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus飞机大战</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            body{
+                overflow:hidden;
+                background-color:#bbb;
+                user-select:none;
+            }
+            #wrap{
+                position: relative;
+                width:510px;
+                height:768px;
+                margin:50px auto;
+                background-color:pink;
+                background-image:url("img/bg_1.jpg");
+            }
+            #wrap.run{
+                animation:run 30s linear infinite;
+            }
+            @keyframes run {
+                from{background-position:0 0;}
+                to{background-position:0 768px;}
+            }
+            #difficult{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+            }
+            #difficult h1{
+                padding-top:80px;
+                text-align:center;
+                color:#fff;
+            }
+            #difficult ul{
+                margin-top:200px;
+            }
+            #difficult ul li{
+                width:200px;
+                height:35px;
+                margin:30px auto;
+                text-align:center;
+                font-size:20px;
+                background-color:white;
+                line-height:35px;
+                font-weight:600;
+                cursor:pointer;
+            }
+            #difficult ul li:last-child{
+                color:red;
+            }
+            #difficult ul li:hover{
+                color:#fff;
+                background-color: #ff41bf;
+            }
+            #content{
+                display:none;
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+            }
+            #content .score{
+                position:absolute;
+                top:20px;
+                left:20px;
+                color:#fff;
+                font-size:20px;
+                font-weight:600;
+                z-index:99;
+            }
+            #content .plane,#content .bullet,#content .enemy,#content .boom{
+                position: absolute;
+                top:0;
+                left:0;
+            }
+            #content .boom.enemy{
+                animation:disappear .5s;
+            }
+            @keyframes disappear {
+                from{opacity:1;}
+                to{opacity:0;}
+            }
+        </style>
+    </head>
+    <body onselectstart="return false" ondragstart="return false" oncontextmenu="return false">
+        <div id="wrap">
+            <div id="difficult">
+                <h1 class="title">飞机大战</h1>
+                <ul>
+                    <li>简单</li>
+                    <li>中等</li>
+                    <li>困难</li>
+                    <li>航哥附体</li>
+                </ul>
+            </div>
+            <div id="content">
+                 <span class="score">0000000</span>
+            </div>
+        </div>
+        
+        <script>
+            //飞机大战模块
+            {
+                let difficult = document.getElementById("difficult"),
+                    diff = document.querySelectorAll("#difficult ul li"),
+                    wrap = document.getElementById("wrap"),
+                    content = document.getElementById("content"),
+                    biuTimer,
+                    enemyTimer,
+                    score = 0,
+                    span = document.getElementsByClassName("score")[0]
+                ;
+                const {max,min,random,round,ceil,floor} = Math;
+                let bgArr = [
+                    "img/bg_1.jpg",
+                    "img/bg_2.jpg",
+                    "img/bg_3.jpg",
+                    "img/bg_4.jpg"
+                    ],
+                    len = diff.length
+                ;
+
+                //抽象化图片生成
+                class CreatImage{
+                    constructor(opt){
+                        this.src = opt.src;
+                        this.width = opt.width;
+                        this.height = opt.height;
+                        this.className = opt.className;
+                    }
+                }
+
+
+                /*
+                * layerX layerY  距父级的距离  ie中 x y
+                * */
+                //模式选择
+                for(let i = 0;i < len;i++){
+                    diff[i].onclick = function (e) {
+                        difficult.style.display = "none";
+                        wrap.style.backgroundImage = `url(${bgArr[i]})`;
+                        wrap.classList.add("run");
+                        content.style.display = "block";
+
+                        start({
+                            x: e.layerX,
+                            y: e.layerY,
+                            index: i
+                        })
+                    }
+                }
+
+                //开始游戏
+                function start(obj) {
+                    enemy(obj,plane(obj));
+                }
+
+                //我军战机和子弹生产
+                function plane(obj) {
+                    let plane = Object.assign(new Image(),new CreatImage({
+                        src : "img/plane_0.png",
+                        width : 61,
+                        height: 47,
+                        className : "plane"
+                    }));
+                    plane.hp = 5;
+                    plane.style.left = obj.x - plane.width/2 + "px";
+                    plane.style.top = obj.y - plane.height/2 + "px";
+                    content.appendChild(plane);
+
+                    //document移动
+                    document.onmousemove = function (e) {
+                        let moveX = e.clientX - plane.width/2,
+                            moveY = e.clientY  -  plane.height/2,
+                            left,
+                            top,
+                            wrapLeft = wrap.offsetLeft + wrap.offsetWidth - plane.width/2,
+                            wrapTop = wrap.offsetTop + wrap.offsetHeight - plane.height/2
+                        ;
+                        left = max(moveX,wrap.offsetLeft  - plane.width/2);
+                        left = min(left,wrapLeft);
+                        left = left  - wrap.offsetLeft;
+                        top = max(moveY,wrap.offsetTop);
+                        top = min(top,wrapTop - plane.height/2);
+                        top = top - wrap.offsetTop;
+
+                        plane.style.left = left + "px";
+                        plane.style.top = top + "px";
+                    };
+
+                    //生成子弹
+                    biuTimer = setInterval(()=>{
+                        let biu = Object.assign(new Image(),new CreatImage({
+                            src : "img/fire.png",
+                            width : 25,
+                            height: 35,
+                            className : "bullet"
+                        }));
+                        biu.style.left = plane.offsetLeft + plane.width/2 - biu.width/2 + "px";
+                        biu.style.top = plane.offsetTop + "px";
+                        function shoot(){
+                            if(!biu.parentNode)return;
+                            let top = biu.offsetTop - 20;
+                            biu.style.top = top + "px";
+                            if(top < -biu.height){
+                                content.removeChild(biu);
+                            }else{
+                                requestAnimationFrame(shoot);
+                            }
+                        }
+                        requestAnimationFrame(shoot);
+
+                        content.appendChild(biu);
+                    },[80,100,150,10][obj.index]);
+                    return plane;
+                }
+
+                //敌军战机
+                function enemy(obj,plane) {
+                    let num = 0;
+                    enemyTimer = setInterval(() => {
+                        num++;
+                        let ifBig = !(num%20);
+                        let enemy = Object.assign(new Image(),new CreatImage({
+                            src : ifBig ? "img/enemy_big.png" : "img/enemy_small.png",
+                            width : ifBig ? 120 : 54,
+                            height: ifBig ? 80 : 40,
+                            className : "enemy"
+                        }));
+                        let minLeft = -enemy.width/2;
+
+                        enemy.style.left = round(random()*content.offsetWidth + minLeft) + "px";
+                        enemy.style.top = -enemy.height + "px";
+                        enemy.hp = ifBig ? 15 : 1;
+                        enemy.score = ifBig ? 5 : 1;
+                        content.appendChild(enemy);
+                        let randomSpeed = ifBig ? 1 : floor(random()*6 + 2);
+                        (function move() {
+                            if(!enemy.parentNode)return;
+                            let top = enemy.offsetTop + randomSpeed;
+                            enemy.style.top = top + "px";
+                            if(top < content.offsetHeight - enemy.height){
+                                requestAnimationFrame(move);
+                            }else{
+                                content.removeChild(enemy);
+                            }
+                            //敌军和所有子弹碰撞检测
+                            (function(){
+                                if(!enemy.parentNode)return;
+                                let oBiu = content.getElementsByClassName("bullet");
+                                for(let val of oBiu){
+                                    if(rush(enemy,val)){
+                                        content.removeChild(val);
+                                        enemy.hp--;
+                                        if(enemy.hp <= 0){
+                                            score += enemy.score;
+                                            boom(enemy);
+                                            content.removeChild(enemy);
+                                            span.innerHTML = ("" + score).padStart(7,"0");
+                                        }
+                                        return;
+                                    }
+                                }
+                                //敌军和我军碰撞检测
+                                if(rush(enemy,plane)){
+                                    enemy.hp -= 10;
+                                    plane.hp -= 1;
+                                    if(enemy.hp <= 0){
+                                        score += enemy.score;
+                                        boom(enemy);
+                                        content.removeChild(enemy);
+                                        span.innerHTML = ("" + score).padStart(7,"0");
+                                    }
+                                    if(plane.hp <= 0){
+                                        if(plane.parentNode) {
+                                            boom(plane);
+                                            content.removeChild(plane);
+                                            clearInterval(biuTimer);
+                                            clearInterval(enemyTimer);
+                                            setTimeout(gameOver,3000);
+                                        }
+                                    }
+                                }
+                            })();
+
+                        })();
+
+
+                    },[500,300,100,20][obj.index])
+                }
+
+                //碰撞检测
+                function rush(my,en) {
+                    let myTop = my.offsetTop,
+                        myBottom = myTop + my.offsetHeight,
+                        myLeft = my.offsetLeft,
+                        myRight = my.offsetWidth + myLeft
+                    ;
+                    let enTop = en.offsetTop,
+                        enBottom = enTop + en.offsetHeight,
+                        enLeft = en.offsetLeft,
+                        enRight = en.offsetWidth + enLeft
+                    ;
+                    return !(enBottom < myTop || enRight < myLeft || enTop > myBottom || enLeft > myRight);
+                }
+                //爆炸   全部给敌军不合适 ，单独生成爆炸图片
+                function boom(obj) {
+                    let top = obj.offsetTop;
+                    let left = obj.offsetLeft;
+                    let ifEnemy = /enemy/.test(obj.src);
+                    let boom = Object.assign(new Image(),new CreatImage({
+                        src : ifEnemy ? "img/boom_small.png" : "img/boom_big.png",
+                        width : obj.width,
+                        height: obj.height,
+                        className : ifEnemy ? "boom enemy" : "boom"
+                    }));
+                    boom.style.left = left + "px";
+                    boom.style.top = top + "px";
+                    content.appendChild(boom);
+                    ifEnemy && setTimeout(() => {
+                        content.removeChild(boom);
+                    },500);
+                }
+                //游戏结束
+                function gameOver() {
+                    alert(`游戏结束，最终得分 ${score}`);
+                    location.reload();
+                }
+                //积分
+            }
+        </script>
+    </body>
+</html>

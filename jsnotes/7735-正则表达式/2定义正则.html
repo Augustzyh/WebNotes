@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*方法1
+            *       //内写东西 直接匹配的东西
+            * 方法2
+            *       new RegExp("这里写正则");  与上区别在于能够传参
+            *
+            * test方法   正则.test(字符串)  检测该字符串内有没有正则规则 返回bool 有true 无false
+            *
+            *
+            * */
+            var str = "章鱼真好次";
+            var r1 = /章鱼/;
+            console.log(r1.test(str));  //true
+
+            var r2 = new RegExp("真");
+            console.log(r2.test(str));
+
+            var x = "章鱼";
+            //var r1 = /x/;  //这不能这么写，不能传变量，错，等不到x
+            var r3 = new RegExp(x);
+            console.log(r3.test(str));
+        </script>
+    </body>
+</html>

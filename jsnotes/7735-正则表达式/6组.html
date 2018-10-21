@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            body{
+                background:-webkit-radial-gradient(circle,red,yellow,orange);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * 组()
+            *
+            * match，无g时数组内第二位是组匹配的内容 加g变成真正数组后，不会有了
+            *   exec
+            *   search  类似于indexOf 相当于match内的index
+            * */
+
+            var str = "abababababc";
+            //var reg = /ab+/;  //abbbbbbbb  只能匹配到一个ab
+
+            var reg = /(ab)+(c)/;
+            console.log(str.match(reg));
+        </script>
+    </body>
+</html>

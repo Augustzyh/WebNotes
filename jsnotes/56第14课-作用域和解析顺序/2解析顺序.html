@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            alert(a);
+            f();
+            var a = 10;
+            function f() {
+                alert(2);
+            }
+            alert(2);
+            /*
+              解析顺序
+            *      1 定义   先查找该层作用域中所有的var声明的变量，和function定义的有名函数块
+            *               但此时=不会执行 即在这一步，所有的变量var都是初始值undefined
+            *               var和var重名只留一个，var和function重名只留fn，fn重名留后面
+            *          var a;
+            *          function f() {...}
+            *      2 执行   从上到下执行代码
+            *          alert(a);
+            *          f();
+            *          a = 10;
+            *          alert(10);
+            * */
+        </script>
+    </body>
+</html>

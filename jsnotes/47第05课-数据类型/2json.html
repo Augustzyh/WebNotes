@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //json里的属性可以加引号，也可以不加，但当用来传输数据的时候，属性名一定要加上双引号
+            //js里用就不用加
+            //属性命名规则和变量命名规则一样
+            var hh = "love";
+            var x = {
+                "name": "hang",
+                "sex": "man",
+                "marry":"have",
+                height:"180cm",
+                x: "和上面不一样哦",
+                aaa: [
+                    10,
+                    {
+                        gd:"goudan"
+                    }
+                ],
+                "love": hh      //可以写变量，但属性不行
+            };     //{}json可以跨语言给后台发送数据  传输数据的常用格式 有属性，比数组清晰
+                        //数组通常存属性相同的值
+                            //可存任意数据类型
+            //取数据
+            // var n = x.name;//取值的时候，属性名绝对不加引号
+            // alert(n);
+            alert(x.aaa[1].gd);
+            //alert(x);  //不能弹对象 不会出现内容 用console.dir调试
+
+            //[]取值操作   几乎所有的对象.操作都可以使用[]来代替
+            var n = x["marry"];   //不再是属性的意思，一定要加双引号引起来变成字符串
+            /*
+            * var k = "marry";
+            * var n = x[k];      //此时就不能x.k了
+            *   可以onclick
+            * */
+            document["onclick"] = function(){
+                alert(n);
+            }
+
+
+            //若规定好了，想要新增一条属性
+            x.shabi = 50;   //自定义属性
+            console.log(x);
+            x["erbi"] = "erbi";
+            x.name ="hangahnag";  //覆盖
+
+
+            //没有办法知道属性长度
+        </script>
+    </body>
+</html>

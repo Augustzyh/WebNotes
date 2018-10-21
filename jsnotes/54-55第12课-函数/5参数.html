@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * 形参
+            *
+            * 实参   所有的数据类型都可以当实参
+            *
+            * 不定参
+            *
+            * */
+            var c = 20;
+            function fn( a,asd  ) {  //小括号里写的叫形参，相当于变量名,有和全局一样的参数名，只能用函数内部的
+                                             //
+                alert(a+asd);
+            }
+            fn(5,2);             //实参，和形参一一对应
+            fn("2",3);
+            fn(c,2);
+
+            var fn1 = function (a,b) {
+                alert(b);
+                b();
+            };
+            fn1(2,function (){alert(1)});
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * bind ie完全不支持  caniuse.com 假设不考虑低版本兼容非常好用
+            *           不会立马执行函数，而是再准备阶段先绑定bind不能传其他参数
+            *
+            * call apply 函数自执行（马上要执行）的时候，通过他们可以改变this指向
+            *           用了call和apply函数立马执行
+            * 但bind不一样，可以再准备阶段用bind绑定
+            * */
+            var j = {a:10};
+            document.onclick = fn.bind(j); //这样用函数不会自执行，而点击的时候改变this指向j
+            function fn() {
+                console.log(this);
+            }
+        </script>
+    </body>
+</html>

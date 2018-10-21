@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+
+        
+        <script>
+            /*
+            * 如果不封装，每次都要写，很累
+            * */
+            ajax({
+                method:"post",
+                url:'http://localhost:3000',
+                async:true,
+                timeout:5000,
+                data:{//发送的数据 可以没有 没有就是undefined
+                    name:'aaa',
+                    age:12
+                },
+                success:function(msg){
+                    console.log(msg)
+                },
+                error:function (msg) {
+                    console.error(msg)
+                }
+            });
+            
+            function ajax(obj) {
+                var method = obj.method || 'get',   //若没有写默认get
+                    url = obj.url,
+                    async = obj.async !== false,  //骚操作
+                    data = obj.data,
+                    timeout = typeof obj.timeout === "number" ? obj.timeout : false,
+                    success = obj.success,
+                    error = obj.error;
+                //处理data数据 post就不用管
+                var str = "";
+                if(data){
+                    for(var key in data){
+                        str += key + "=" + data[key] + "&";
+                    }
+                }
+                //处理get方式   有可能试缓存的情况,每次url一模一样才会出现缓存问题
+                if(method.indexOf('get') > -1){
+                    url += "?" + str + 't_=' + Date.now();  //那就随便拼接一个解决缓存问题
+                }
+                var xhr = new XMLHttpRequest();
+                xhr.open(method,url,async);
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                //不需要加判断的原因：试post自动用请求头，而试get跳过，str为get时为空放着没问题或传null
+                if(timeout !== false){
+                    setInterval(function () {
+                        xhr.abort();
+                    },timeout);
+                }
+                xhr.send(str || null);
+                xhr.onreadystatechange = function () {
+                    if(xhr.readystate !== 4){return;}
+                    if(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304){
+                        success && success(xhr.responseText); //若需要返回值success存在执行，不存在不执行
+                    }else{   //服务器出错
+                        error && error(xhr.status);
+                    }
+                }
+            }
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * Math  原生js提供的数学方法，这些对象里的方法，都成为属性，数据类型不一样
+            *       不知道的api立马百度！mdn               操作数字
+            * Math.max()
+            * Math.min()
+            * Math.abs()
+            * Math.pow(x,y)  x的y次方
+            * Math.sqrt(x)   x的平方根
+            * Math.sin() Math.asin()
+            * Math.cos() Math.acos()
+            * Math.tan() Math.atan()
+            * Math.floor() 向下（地板）取整   可以操作其他数据类型，最好别传其他的
+            *               无论小数部分是多少，都取得整数部分
+            * Math.ceil() 向上（天花板）取整
+            *               无论小数部分是多少 ，都取得整数部分+1
+            * Math.round() 四舍五入
+            * Math.random([0,1))  0-1的随机值，包括0，不包括1  初始区间[0,1)
+            * */
+            console.log(Math);
+            console.log(Math.PI);
+            console.log(Math.max(5,9,"77","199")); //加引号能比较，但是最好不要这么做
+            var arr = [5,7,8,9];
+            var max = Math.max.apply(Math,arr);   //apply第二个值是数组
+            console.log(max);
+            console.log(Math.floor(10.888888)); //10
+            console.log(Math.ceil(10.11111));   //11
+            console.log(Math.round(10.2)); //10
+            var a = Math.random()*10;  //0-10的随机数 Math.random()*10
+            var b = Math.random()*5 + 10; //10-15
+            var c = Math.floor(Math.random()*6 + 10); //10-15整数 取整数智能用floor
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        </script>
+    </body>
+</html>

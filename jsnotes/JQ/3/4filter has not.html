@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p class="kk"></p>
+        </div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $("p").html(123).filter(".kk").css("color","red")  //在jq对象里筛选需要的
+
+            find(expr|obj|ele)  //搜索所有与指定表达式匹配的元素。
+
+            not();//去除满足的
+            //可以传表达式（字符串（选择器）），jq对象，dom元素
+
+            //is() 判断是否存在  返回布尔值
+             hasClass()//判断是否存在类名
+
+            has() //决定儿子是不是满足要求  通过检测儿子来决定自己的去留 最终决定的还是爸爸
+            slice(0,n) //jq对象从哪个切到哪个
+        </script>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:200px;
+                height: 200px;
+                background-color:pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <p></p>
+            <p></p>
+            <p>
+
+                <i></i>
+                <i></i>
+            </p>
+        </div>
+        <div id="none"></div>
+        <p class="gg"></p>
+        <p class="gg"></p>
+        <p class="gg"></p>
+        <div class="jh"></div>
+        <!--  延迟加载
+        当script标签规定了 defer="defer" 这个标签属性时，这个script标签引入的js文件会等到html结        构加载完成后运行,引入外部js后，这个标签里就不能再写代码了-->
+        <!--<script defer="defer" src="..xx.js">-->
+        <script type="text/javascript">
+            //注释  或者  /**/
+            //弹窗 alert（""）
+            // alert("cao");
+            //console.log("cao");   //f12 里能看到
+            //console.log(1);   //快捷键 x.log  回车  日志弹窗，不影响后面代码进行 不支持ie8-         调试完 注释掉 不要留着影响后面代码的执行
+            //confirm("你确定吗");    //确定返回真值，取消返回假值
+            //prompt("请输入您的姓名");  //输入值会返回变量值
+            //js=ecsascript（ECMAS5）+dom+bom
+            //操作盒子
+            // document.getElementById("wrap").onclick = function() {  //通过id获取元素
+            //         alert("你点击了盒子");
+            // };                         //   左键单击事件  行为   function（）{}函数干什么
+
+            //操作html内容
+            //document.getElementById("wrap").innerHTML = "我从没有到有";
+
+            //点击wrap给none加文字
+            /*document.getElementById("wrap").onclick = function() {
+                document.getElementById("none").innerHTML = "哎呀wrap被点了";
+            };*/
+
+            //点击wrap，改变title
+            /*document.getElementById("wrap").onclick = function() {
+                document.title = "外你";
+            }*/
+
+            //变量定义  数字 $ _ 不能以数字开头
+            // var x = 2;
+            // var y = 3;
+            // var z;
+            // z = x+y;
+            //
+            // //点击wrap，
+            // document.getElementById("wrap").innerHTML = "i love u";
+            // document.getElementById("wrap").onclick = function () {
+            //     alert(z);
+            // }
+           /*var oWrap = document.getElementById("wrap");
+            oWrap.innerHTML = "love";
+            oWrap.onclick = function() {
+               alert(1);
+           };*/
+
+           //alert(a);     会认为a是变量，取的是变量a的值，加引号才是a字符，""为字符标识，不会弹出
+            // alert(4);  自变量
+
+
+
+
+            //变量模块
+            /*数字 字母 _ $     不能以数字开头
+            严格区分大小写
+            见名知意
+            不能使用已有的   关键字(例var function)/保留字(例class)/api*(例alert)/   可百度
+            中文命名也可以，但是别这么用
+            */
+
+
+            //js获取的html标签叫元素
+            /*document.getElementById();
+            document.getElementsByClassName();   //用s，因为类名不知一个   不兼容ie8-*/
+           /* var x="gg";
+            var aGG = document.getElementsByClassName(x); //获取的是节点集合对象，伪数组，但是不是数组
+                             //使用[数字]的形式拿出里面的某一个来操作
+            //var aGG = document.getElementsByClassName("gg");
+            for(var i=0;i<=x.length;i++)
+            {aGG[i].innerHTML = "12345";}
+            必须是个元素获取.get 集合不行
+            */
+
+
+            var Ajh = document.getElementsByClassName ("jh");
+                Ajh[0].innerHTML = "还是要一个一个取" ; //用以上方式取出来的是集合 元素自上而下
+
+            //document.getElementsByTagName()  通过标签名获取
+            //document.getElementsByName()    通过有name属性的元素获取,用的较少
+
+            //例子获取wrap内的p标签
+            /*var oP = document.getElementsByTagName("p");
+                oP[0].innerHTML = 1;
+                oP[1].innerHTML = 2; //这样会获取wrap以外的*/
+            //只获取wrap内的
+            // var aP = document.getElementById("wrap").getElementsByTagName("p");
+            // //var aP = document.getElementById("wrap");
+            // //var gP = aP.getElementsByTagName("p");   除了id其他都可以，document 里找里
+            // console.log(aP);
+
+            /*
+              能使用css选择器查找元素
+              兼容ie8及以上
+
+            * 元素.querySelector()
+            *
+            * 元素.querySelectorAll()
+            *
+            * */
+            /*var x = document.getElementById("wrap")
+                .getElementsByTagName("p")[2].getElementsByTagName("i");
+                                                            很麻烦 用下面简单*/
+            var x = document.querySelectorAll("#wrap p i");  //一般只能选一条，不能接.
+            console.log(x);
+            x[0].innerHTML = "askdjdhqquih";
+            //虽然很快，但性能没上面好，虽然慢0.几毫秒，但无伤大雅         集合
+
+            var y = document.querySelector("#wrap p i"); //单个元素，选第一个
+            alert(x[0] === y)
+
+        </script>
+
+    </body>
+</html>

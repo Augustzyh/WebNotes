@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body style="height:2000px">
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * onmousewheel  唯独不支持火狐
+            * e.wheelDelta  获取滚动方向  下负上正 值120的倍数
+            * 火狐写法
+            * DOMMouseScroll    不能document.来使用
+            *                   只能通过addEventListener
+            * e.detail   上正下负  值是三的倍数
+            * */
+            document.onmousewheel = function (e) {
+                e = e || widnow.event;
+                console.log(e.wheelDelta);
+            };
+            document.addEventListener("DOMMouseScroll",function (e) {
+                e = e || window.event;
+                console.log(e.detail);
+            });
+        </script>
+    </body>
+</html>

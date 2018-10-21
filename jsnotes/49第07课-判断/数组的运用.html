@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width:100px;
+                height:200px;
+            }
+            #wrap.red{
+                background-color: red;
+            }
+            #wrap.pink{
+                background-color:pink;
+            }
+            #wrap.green{
+                background-color:green;
+            }
+            #wrap.blue{
+                background-color:blue;
+            }
+            #wrap.black{
+                background-color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap" class="red"></div>
+        
+        <script>
+            var o = document.getElementById("wrap");
+            var index = 0;
+            var arr = ["pink","green","blue","black","red"];
+            /*o.onclick = function () {
+                /!*switch(index){
+                    case 0 :this.className = "pink";
+                        break;
+                    case 1 :this.className = "green";
+                        break;
+                    case 2 :this.className = "blue";
+                        break;
+                    case 3 :this.className = "black";
+                        break;
+                    case 4 :this.className = "red";
+                        break;
+                }    方法一*!/
+                this.className = arr[index];
+                index ++;
+                index %= 5;  方法二
+            }*/
+            o.onclick = function () {
+                this.className = arr[index];
+                index = (index+1)%5;
+            }
+        </script>
+    </body>
+</html>

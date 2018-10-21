@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * number
+            *       NaN  做了也写非法运算
+            *   isNaN() 当参数能被Number()转化为数字的话，返回false，否则true，，即是nan返回ture，喜欢NaN
+            *   NaN 不等于 NaN
+            *   {} 不等于 {}
+            *   a = {};  a===a
+            * */
+
+            /*
+            * parseInt(); 强制取整
+            * parseFloat(); 强制取数 没小数不会强制加的
+            *
+            * 规则：从第一位非空格的字符开始识别，能够取到满足数字则返回数字，不满足则NaN
+            * */
+            var a = "10.2px";
+            var b = Number(a), //NaN
+                c = parseInt(a), //10
+                d = parseFloat(a); //10.2
+            var e = "50.2px23";
+            var f = Number(e), //NaN
+                g = parseInt(e), //50
+                h = parseFloat(e); //50.2
+            var i = parseInt("abc20"),//NaN
+                j = parseInt(" -10abs"), //-10
+                k = parseInt("- 10"),  //NaN
+                l = parseFloat(" .1")   //0.1
+                ;
+            alert(b);
+            alert(c);
+            alert(d);
+            alert(f);
+            alert(g);
+            alert(h);
+
+            //ES6 此方法放入Number
+            Number.parseInt(e);
+
+        </script>
+    </body>
+</html>

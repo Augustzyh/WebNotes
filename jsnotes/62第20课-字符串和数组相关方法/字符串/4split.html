@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var str = "航航，凑航航，宝宝，凑宝宝，大行行，小航航"; //转换成数组存每一个数组
+            var arr = str.split("，");//按照中文逗号切开，按照分隔符切开
+            //           split("");   把所有东西全部间隔开  还能传正则表达式
+            //            若放入字符串内不纯在的东西，则切割不开，切出一个整体
+            console.log(arr);
+        </script>
+    </body>
+</html>

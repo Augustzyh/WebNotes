@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                overflow:hidden;
+                position:relative;
+                width:330px;
+                height:240px;
+                margin:100px auto;
+                padding-top:30px;
+                padding-bottom:30px;
+                border:1px solid #ccc;
+                text-align:center;
+            }
+            #wrap figure{
+                position:absolute;
+                /*topmax:-470px;*/
+            }
+            #wrap p{
+                position:absolute;
+                width:100%;
+                height:30px;
+                background-color:#ccc;
+                line-height:30px;
+                text-align:center;
+                cursor:pointer;
+                user-select:none;
+                z-index:1;
+            }
+            #wrap p.top{
+                top:0;
+            }
+            #wrap p.bottom{
+                bottom:0;
+            }
+            #wrap p:hover{
+                background-color:#aaa;
+                color:#fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <p class="top">上</p>
+            <figure style="top:15px">
+                <img src="img/scroll1.png" alt="">
+                <img src="img/scroll2.png" alt="">
+                <img src="img/scroll3.png" alt="">
+            </figure>
+            <p class="bottom">下</p>
+        </div>
+        
+        <script>
+            /*(function () {
+                var oF = document.querySelector("#wrap figure"),
+                    oTop = document.querySelector("#wrap .top"),
+                    oBottom = document.querySelector("#wrap .bottom"),
+                    index = 15,
+                    MAX = 15,
+                    MIN = -470,
+                    timer
+                    //minindex = -(727 - (300 - 60))+15
+                ;
+                oTop.onmousedown = function () {
+                    if(index>MAX||index===MIN)return;
+                    timer = setInterval(function () {
+                        index--;
+                        oF.style.top = index + "px";
+                        if(index<MIN){clearInterval(timer);index = MIN}
+                    },1);
+                };
+                oTop.onmouseup = function () {
+                    clearInterval(timer);
+                };
+
+                oBottom.onmousedown = function () {
+                    if(index===MAX||index<MIN)return;
+                    timer = setInterval(function () {
+                        index++;
+                        oF.style.top = index + "px";
+                        if(index>MAX){clearInterval(timer);index = MAX}
+                    },1);
+                };
+                oBottom.onmouseup = function () {
+                    clearInterval(timer);
+                };
+            })();*/
+
+
+            //封装成move
+            (function () {
+                var oF = document.querySelector("#wrap figure"),
+                    oTop = document.querySelector("#wrap .top"),
+                    oBottom = document.querySelector("#wrap .bottom"),
+                    index = 15,
+                    MAX = 15,
+                    MIN = -470,
+                    timer
+                ;
+                oTop.onmousedown = function () {
+                    move(true);
+                };
+
+                oBottom.onmousedown = function () {
+                    move(false);
+                };
+                function move(bool){
+                    var num = bool?-1:1;
+                    timer = setInterval(function () {
+                        index += num;
+                        oF.style.top = index + "px";
+                        if(index<=MIN || index>=MAX)
+                        {
+                            clearInterval(timer);
+                            index = bool?MIN:MAX;
+                        }
+                    },1);
+                }
+                document.onmouseup = function () {
+                    clearInterval(timer);
+                };
+            })();
+        </script>
+    </body>
+</html>

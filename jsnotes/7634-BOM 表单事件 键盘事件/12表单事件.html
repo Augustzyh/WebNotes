@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                position:absolute;
+                width:300px;
+                height:300px;
+                background-color: red;
+                border-radius:50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <input type="text" id="test">
+        <input type="text" id="test1">
+        <input type="checkbox" id="test2">
+        <select name="" id=""></select>
+        <script>
+            /*
+            * onfocus   获得焦点时触发
+            * onblur
+            * onchange
+            * oninput
+            * onselect   给select的option使用
+            *
+            *
+            * focus()  通过函数让其获得焦点
+            * blur()
+            * select()
+            * */
+
+            test.onfocus = function (e) {
+                console.log("in");
+            };
+            test.onblur = function f() {
+                console.log("leave");
+            };
+
+            wrap.onclick = function () {
+                test.onfocus();
+            }
+            
+            window.onblur = function () {
+                document.title = "快回来"
+            }
+            window.onfocus = function () {
+                document.title = "你回来啦"
+            }
+
+            test.onchange = function () {    //失去焦点时，若值改变，则change
+                console.log("change");
+            }
+            test2.onchange = function () {    //失去焦点时，若值改变，则change
+                console.log("change");
+            }
+            test1.oninput  = function () {    //边输入边监测
+                console.log("changing");
+            }
+            
+            
+        </script>
+    </body>
+</html>

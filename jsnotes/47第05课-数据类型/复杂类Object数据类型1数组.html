@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //基础数据类型没法存储自定义属性  undefined  null不能进行 . 操作
+            //Object
+            /*var j = {};   //对象
+            j.goudan = "aa";*/
+
+            //        1                            数组
+            var arr = [
+                10,
+                20,
+                30,
+                "章鱼",
+                true,
+                undefined,
+                [
+                    1212,            //二维数组     可以一直数组内存数组
+                    123,
+                    123,
+                    [
+                        "aaaa"
+                    ]
+                ]
+            ];          //任何数据都可以存在数组内，一般还行写    少于46亿都能存，一般没有上线
+            //数组取
+            //alert( arr[1] );        //20
+            //alert( arr[6][1] );  //123
+            alert(arr[6][3][0]);
+            alert(arr);//只会显示出所有的值
+
+
+            console.log(arr);//数组都有个默认的.length代表起存储的数量
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+        <script>      //解析顺序和放置位置有关系，获取不到后面的内容
+            window.onload = function () {       //当页面加载完后触发，放在body就不用这么写了
+                var oWrap = document.getElementById("wrap");
+                console.log(oWrap);
+            }              //要操作后面内容的时候加window.onload
+        </script>
+    </head>
+    <body>
+        <div id="wrap"></div>
+                   <!--分为四大类：
+                            鼠标事件：onclick,onmouseenter鼠标移入,onmouseleave移除
+                            键盘事件：onkeydown onkeypress按下 onkeyup抬起
+                            表单事件：
+                            系统事件：onload可以给任何人，当页面加载完后触发，defer只是延迟对此没用
+                                    onerror   onsize onscroll
+                            -->
+        <script>      //解析顺序和放置位置有关系
+            
+        </script>
+    </body>
+</html>

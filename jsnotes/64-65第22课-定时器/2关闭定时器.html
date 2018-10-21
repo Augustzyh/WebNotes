@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * API:
+            *    clearInterval()
+            *
+            *    clearSetTimeout()  举例，某网站vip充值弹窗，但是如果是vip就不弹了
+            * */
+            function fn() {
+                console.log(2);
+            }
+            var x = setInterval(fn,500); //返回数字，想要停止先拿到数字，才能停止定时器
+                                        //该返回值代表当前定时器序号的数字，但不推荐使用其做其他运算
+            document.onclick = function () {
+                clearInterval(x);     //再开定时器要再写一遍定时器
+            }
+        </script>
+    </body>
+</html>

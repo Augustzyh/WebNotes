@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * 字符集 []
+            *       只匹配一个字符,里面的每个字符或者功能
+            *       在最前面加上^之后，就是除了的意思，必须放在第一个
+            *       {}等大部分特殊字符在字符集里没有特殊意义 除了转义字符
+            *       - 在里面有意义
+            *       字段[0-5] 做多[0-9] [a-z] [A-Z] 参见ascall码
+            *           两个字符unicode码之间对应所有的字符都能匹配
+            *           只匹配中文 [\u4e00-\u9fa5]  或者只匹配其他语言百度
+            *
+            * 组() 子项
+            * | 或者  关联前面的需哦有和后面的所有 量词只管前面的一个
+            * */
+
+            /*var str = "aabcd{5}";
+            var reg = /a(h|b)/;
+            //var reg1 = /[abc]/g;   //匹配a|b|c
+            //var reg1 = /[abc]+/;
+            var reg1 = /[^abc]+[{5}]/;  // d  除了abc意外的字符
+            console.log(str.match(reg));
+            console.log(str.match(reg1));*/
+
+            var str = "123675;haet";
+            //var reg = /[0-5a-g]+/g;
+            var reg = /[0-A]/g;
+            console.log(str.match(reg));
+        </script>
+    </body>
+</html>

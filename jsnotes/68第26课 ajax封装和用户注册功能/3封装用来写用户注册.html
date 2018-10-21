@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="58-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        p{
+            display:none;
+        }
+        p.on{
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>用户注册</h1>
+    用户名：<input type="text" name="id" id="user" placeholder="请输入用户名">
+    <p >字母开头，可包含字母数字下划线</p><br>
+    密码：<input type="password" name="pwd" id="pwd" placeholder="请输入密码"><br>
+    请再次输入密码：<input type="password" id="pwd2" placeholder="请再次输入密码"><br>
+    邮箱：<input type="email" id="email" name="email" placeholder="请输入邮箱"><br>
+    手机号：<input type="tel" id="tel" name="tel" placeholder="请输入手机号"><br>
+    <button id="btn">注册</button>
+
+    <script>
+        /*
+        * 如果不封装，每次都要写，很累
+        * */
+        /*ajax({
+            method:"post",
+            url:'http://localhost:3000',
+            async:true,
+            timeout:5000,
+            data:{//发送的数据 可以没有 没有就是undefined
+                name:'aaa',
+                age:12
+            },
+            success:function(msg){
+                console.log(msg)   //msg时一个对象
+                                    //当对象里的type为0 则代表已注册 为1则未注册
+            },
+            error:function (msg) {
+                console.error(msg)
+            }
+        });*/
+
+        var reg = {
+            tel : /^1[3-9]\d{9}$/,
+            email : /^[1-9A-Za-z]\w{5,19}@[1-9a-z]{2,7}\.[a-z]{2,5}$/,
+            user : /^[a-z]\w{5,19}$/,
+            pwd : /^[\w!@#$%^&*()_+\-=/{}\[\]:";',.\/]{6,20}$/
+        };
+
+        var p = document.getElementsByTagName('p');
+        btn.onclick = function () {
+            var data = {
+                    id:user.value,
+                    pwd:pwd.value,
+                    email:email.value,
+                    tel:tel.value
+                };
+            ajax({
+                method:'post',
+                url:'http://localhost:3000',
+                data:data,
+                success:function (msg) {
+                        alert(msg.msg);
+                }
+            });
+        };
+
+        user.onblur = function () {
+            var val = this.value;
+
+            var data = {
+                id:val
+            };
+            if(reg.user.test(val)){
+                ajax({
+                    url:'http://localhost:3000',
+                    data:data,
+                    success:function (msg) {
+                        if(msg.type === 0){
+                            user.focus();
+                            p[0].className = "on";
+                            p[0].innerHTML = msg.msg;
+                        }else{
+                            p[0].className = "on";
+                            p[0].innerHTML = msg.msg;
+                            setTimeout(function () {
+                                p[0].className = "";
+                            },2000)
+                        }
+                    }
+                });
+            }else{
+                p[0].className = "on";
+                p[0].innerHTML = "字母开头，可包字母数字下划线";
+                this.focus();
+            }
+
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function ajax(obj) {
+            var method = obj.method || 'get',   //若没有写默认get
+                url = obj.url,
+                async = obj.async !== false,  //骚操作
+                data = obj.data,
+                timeout = typeof obj.timeout === "number" ? obj.timeout : false,
+                success = obj.success,
+                error = obj.error;
+            //处理data数据 post就不用管
+            var str = "";
+            if(data){
+                for(var key in data){
+                    str += key + "=" + data[key] + "&";
+                }
+            }
+            //处理get方式   有可能试缓存的情况,每次url一模一样才会出现缓存问题
+            if(method.indexOf('get') > -1){
+                url += "?" + str + 't_=' + Date.now();  //那就随便拼接一个解决缓存问题
+            }
+            var xhr = new XMLHttpRequest();
+            xhr.open(method,url,async);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            //不需要加判断的原因：试post自动用请求头，而试get跳过，str为get时为空放着没问题或传null
+            if(timeout !== false){
+                setInterval(function () {
+                    xhr.abort();
+                },timeout);
+            }
+            xhr.send(str || null);
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState !== 4){return;}
+                if(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304){
+                    success && success(JSON.parse(xhr.responseText)); //若需要返回值success存在执行，不存在不执行
+                }else{   //服务器出错
+                    error && error(xhr.status);
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>

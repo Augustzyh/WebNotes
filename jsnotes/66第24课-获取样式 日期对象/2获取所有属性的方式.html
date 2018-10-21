@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+                border:10px solid green;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">asddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+        
+        <script>
+            //兼容
+            window.getComputedStyle = window.getComputedStyle || function (dom) {
+                return dom.currentStyle;
+            };
+            //或
+            function getStyle(dom) {
+                return dom.currentStyle || getComputedStyle(dom);
+            }
+            //次兼容后的二次封装
+            function getWidth(dom,style) {
+                return getComputedStyle(dom)[style];
+            }
+
+            wrap.onclick = function () {
+                this.style.display = "none";
+            };
+
+            var oW = document.getElementById("wrap");
+            var cssObj = getComputedStyle(oW);   //传一个节点对象     只读属性
+            console.log(cssObj);
+            console.log(cssObj.width);        //此api含的是带单位的属性值
+            console.log(cssObj.backgroundColor);
+            //颜色特例，返回rgb  若写的rgba则返回rgba
+            //getComputedStyle 支持ie8+
+
+            //ie8及以下   所有ie都支持  但是其他浏览器不支持  主流浏览器用getComputedStyle
+            var cssobj = oW.currentStyle;  //作用同上，但是谷歌等其他浏览器不能使用
+        </script>
+    </body>
+</html>

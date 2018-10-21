@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var cookie = {
+                SET : function(json,time){
+                    var date = new Date(new Date().getTime() + time*24*60*60*1000);
+                    for(var key in json){
+                        document.cookie = key+"="+json[key]+";expires="+date;
+                    }
+                },
+                GET : function (key) {
+                    //name var reg = /(^|\s)name=([^;]*)[;$]/;
+                    return document.cookie.match( new RegExp("(^|\\s)"+key+"=([^;]*)(;|$)") )[1];
+                }
+            };
+
+            cookie.SET({
+                name : 'hang',
+                age : 18
+            },1);
+            console.log(document.cookie);
+            console.log(cookie.GET('name'));
+            console.log(cookie.GET('age'));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            *  兼容性
+            *       ie9+ sifar5.1+
+            *       因为他和setTimeout很像，所以做兼容用setTimeout
+            */
+            if(!window.requestAnimationFrame){
+                window.requestAnimationFrame = function (fn) {
+                    return setTimeout(fn,1000/60);
+                };
+                window.cancelAnimationFrame = clearTimeout;
+            }   //用window. 不能直接判断会报错   如上做兼容 1s/60帧
+
+            //另一种写法
+            window.requestAnimationFrame = window.requestAnimationFrame || function (fn) {return setTimeout(fn,1000/60);};
+            window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
+        </script>
+    </body>
+</html>

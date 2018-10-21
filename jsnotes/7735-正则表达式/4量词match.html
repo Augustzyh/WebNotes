@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * 量词 特殊意义字符{} 同样的规则重复出现多少次
+            *       {n}  n个连续的相同规则字符
+            *       {n,m} 最少n个,最多m个  包含n包含m
+            *       {n,} 最少n个，最大没限制
+            *
+            * 匹配{}需要转义
+            *
+            * 几个特殊量词简写
+            *       {1,}  =  +
+            *       {0,1} 要么不匹配，要么匹配一个  =  ?
+            *       {0,}  有没有都行= *
+            *
+            * 贪婪,惰性
+            * {2,}匹配的更多,不会匹配2，量词默认贪婪
+            * {2,}? 惰性匹配,量词后跟? 匹配2
+            * */
+
+            /*
+            * match
+            *       字符串.match(正则)
+            *           返回匹配成功的内容放到数组里，否则返回null
+            * */
+
+            var str = "4581111111111111111111111123";
+            //var reg = /\d\d\d\d/; 匹配四个连着的数字
+            //var reg = /\d*4/;
+            //var reg = /\d{4}/;
+            var reg = /\d{2,8}/;
+            //console.log(reg.test(str));
+            console.log(str.match(reg));
+        </script>
+    </body>
+</html>

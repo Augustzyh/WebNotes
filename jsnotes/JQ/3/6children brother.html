@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <p></p>
+            <p></p>
+            <p class="kk"></p>
+            <div>
+                <p></p>
+            </div>
+        </div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            //儿子动态伪数组 只选中儿子
+            //console.log($("#wrap").children());
+            //$("#wrap").children("p").html("123").css("color","red")
+
+            //find必须传参  找所有后代传"*"
+            $("#wrap").find("p").html("123").css("color")  //找所有后代的p
+
+            next()  //下一个元素 兄弟间
+            nextAll("p")//同兄弟之间的后面所有
+            nextUntil("p","a")// 同兄弟之间指定终点的next
+
+            prev
+            prevAll
+            prevUntil
+
+            $("p.kk").sibling() //选中所有兄弟 可以传参筛选
+        </script>
+    </body>
+</html>

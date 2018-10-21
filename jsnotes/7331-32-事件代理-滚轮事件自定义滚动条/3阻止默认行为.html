@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body style="height:2000px">   <!--都属于浏览器的默认行为-->
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * 阻止默认事件
+            * e.preventDefault();
+            * */
+
+            document.onscroll = function(){  //监听滚动条的位置变化
+                console.log(1);
+            };
+            /*document.onmousewheel = function () {  //监听鼠标滚轴
+                console.log(2);
+                //return false;  //阻止方案1，但最好不要去用 因为只针对DOM 0级事件有效 2级失效
+            };*/
+
+            //以下为通用写法 方案2
+            document.addEventListener("mousewheel",function (e) {
+                e = e || window.event;
+                e.preventDefault();
+                console.log(2);
+            });
+
+            //阻止右键菜单出现
+            document.addEventListener("contextmenu",function (e) {
+                e = e || window.event;
+                e.preventDefault();
+            });
+
+            //ie8-
+            document.attachEvent("contextmenu",function (e) {
+                e = e || window.event;
+                e.returnValue = false;
+                console.log(2);
+            })
+        </script>
+    </body>
+</html>

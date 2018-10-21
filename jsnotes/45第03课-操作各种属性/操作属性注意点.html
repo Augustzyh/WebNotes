@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <img id="ii" src="1.png" alt="">
+        <img id="jj" src="" alt="">
+        <script>
+            /*
+            * 注意
+            *   1 js获取的路径是绝对路径
+            *   2 可以先获取id，oImg就一直对这个对象操作，
+            *           oImg.id = "ii";
+            *           oImg.title = "这样还是能改"
+            * */
+            var oImg = document.getElementById("ii");
+            var oImg1 = document.getElementById("jj")
+            var s = oImg.src;
+            alert(s);
+            oImg1.src = s;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"><p>asdasdqw</p>
+            <p>12123</p>
+            <p>qweqw</p>
+            <p>qweqp <p>aaa</p></p></div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            /*
+                  jq只能用自己的api，不能和dom等api穿插
+            * $
+            *   可传
+            *       字符串
+            *       dom对象  $(oW)
+            *
+            * */
+
+
+            //$("#wrap p").css("color","red");  //单个
+            /*$("#wrap p").css({
+                color: "red",
+                fontSize: "20px"
+            })  多个*/
+            //$("#wrap p").css("color","red");  //多个元素自动遍历，全变红
+            //$("#wrap p").eq(0).css("color","red");  //只改变第一个  eq(n)改变第n个
+
+
+            /*
+            * jq和 dom对象的互相转换
+            *       DOM -》jq  $("")
+            *       jq -》DOM  jQuery对象.get(n) 只能一个一个的转  或者 jQ对象[n]
+            *        eq(-1)  倒数第一个
+            * */
+            //$("#wrap p").get(1).style.color = "red";
+            //$("#wrap p")[1].style.color = "red";
+
+
+            $(document).ready(function () {
+                //DOM文档加载完触发的事件 和window.onload很像后者是页面加载完
+            })
+
+            $(function () {
+                /*
+                * 意义：跟一个事件一样  以上事件的简写
+                *
+                * */
+            })
+
+            var $wrap = $("#wrap");
+            //$("p" , $wrap).css("color","red");   //选择p在wrap里面  $wrap可以为dom获取
+            //同
+            $wrap.find("p").css("color","red");
+        </script>
+    </body>
+</html>

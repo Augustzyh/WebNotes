@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width:200px;
+                height:200px;
+                background-color: rgb(41,10,255);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * 别入我拿别人的代码，中间也想加个点击事件
+            * DOM 0级，最原始的事件  onclick
+            * 优点：兼容所有的浏览器
+            * 缺点：一个对象只能绑定一个事件 不能绑定多个相同事件
+            *
+            * DOM 2级事件，没有一级  addEventListener  事件监听  不建议使用匿名函数
+            * 优点： 能给一个对象绑定多个相同的事件
+            * 事件类型不能带on
+            * 缺点：ie8-不支持
+            *
+            * attachEvent
+            * 先绑定的后执行
+            * */
+            //兼容 见滚轮事件封装
+            window.addEventListener = window.addEventListener || attachEvent;
+            window.removeEventListener = window.removeEventListener || detachEvent;
+
+
+            wrap.addEventListener("click",fn1);
+            wrap.addEventListener("click",fn2);
+            wrap.removeEventListener("click",fn1);
+
+
+            function fn1() {
+                console.log(1);
+            }
+            function fn2() {
+                console.log(2);
+            }
+            //ie写法   必须带on
+            wrap.attachEvent("onclick",fn3);
+            wrap.attachEvent("onclick",fn4);
+            wrap.detachEvent("onclick",fn4);
+
+            function fn3() {
+                console.log(3);
+            }
+            function fn4() {    //先执行
+                console.log(4);
+            }
+
+            /*wrap.onclick = function () {
+                console.log(1);
+            };*/
+            /*wrap.onclick = function () {
+                console.log(2);
+            };*/
+        </script>
+    </body>
+</html>

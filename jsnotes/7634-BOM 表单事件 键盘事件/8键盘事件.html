@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap
+
+            {
+
+                width:200px;
+                height:200px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <input type="text">
+        <input type="radio">
+        <a href="">aaa</a>
+        <script>
+            /*
+            * 按下  onkeydown   所有按键都触发
+            *       onkeypress
+            *
+            *
+            * 抬起  onkeyup
+            *
+            *
+            * 不是所有元素都能有键盘事件  div就没有
+            *
+            * 只有能获得焦点的元素才有键盘事件   input a document div+contenteditable就可以
+            *
+            * */
+            /*let size = 200;
+            document.onkeydown = function () {
+                size++;
+                wrap.style.width = size + "px";
+                console.log(1);
+            }*/
+            document.onkeyup = function () {
+                console.log(2);
+            }
+            //document.onkeypress;   只响应能键入值的按键和回车
+        </script>
+    </body>
+</html>

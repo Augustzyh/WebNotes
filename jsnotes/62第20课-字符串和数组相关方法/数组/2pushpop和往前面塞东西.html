@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var arr = [1,2,2,3];
+            arr.push(8,5,6,7,8); //往屁股（数组后面）后面塞东西  改变原数组
+                                //x = arr.push(8,5,6,7,8); x返回值为新数组的length
+            console.log(arr);
+            arr.pop();  //拿出屁股，一次只能拿一个  改变原数组
+                        //x = arr.pop();  x返回被删除的数据
+            console.log(arr);  //8被拿掉
+
+            var arrx = [1,2,3];
+            arrx.unshift(44,22,33);   //往前增加
+            console.log(arrx);
+            arrx.shift();       //删除头部           与上类似
+            console.log(arrx);
+
+        </script>
+    </body>
+</html>

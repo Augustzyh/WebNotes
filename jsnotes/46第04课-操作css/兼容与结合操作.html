@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            .fl{float:left;}
+            .fr{float:right;}
+            /*预先规定好样式，只需操作calssName*/
+            #wrap{
+                width:100px;
+                height:100px;
+                background-color:red;
+                transition:0.5s;
+            }
+            #wrap.click{
+                width:300px;
+                height:300px;
+                background-color:pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var oW = document.getElementById("wrap");
+            /*oW.style.width = '200px';
+            oW.style.cssFloat = "left"; //兼容ie
+            oW.style.styleFloat = "left";  //兼容其他浏览器*/
+            //float不能直接点操作，
+            //oW.className += " fl";  //注意 要加空格！！！！！！！！！！
+            oW.onclick = function(){
+                /*this.style.width = "300px";
+                this.style.heigth = "300px";
+                this.style.backgroundColor = "pink";*/
+                //this.style.cssText = "width:300px;height:300px;background-color:pink;"
+            //如果要操作的属性很多，这个写法也不建议   用预定义的类改类名 如下
+                this.className = "click";    //很少操作id，多操作class
+            }
+        </script>
+    </body>
+</html>

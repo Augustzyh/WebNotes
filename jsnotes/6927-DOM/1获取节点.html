@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                position:relative;
+                width:200px;
+                height:200px;
+                background-color:#00C896;
+                color:#fff;
+                font-size:30px;
+            }
+            #wrap p{
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <p></p>
+            <ul>
+                <li>aa</li>
+                <li>阿斯顿</li>
+            </ul>
+            <div></div>
+        </div>
+        
+        <script>
+            /*
+                常用的：children，nodeName，tagName
+
+
+            * childNodes  返回子节点，包括换行与空格(文本节点text)
+            *               它是个集合 ie8+   ie8-返回元素节点不认空格和换行
+            * children   重点最常用 一个属性 返回子元素节点 都兼容  动态获取
+            * nodeType   返回节点类型编号 见图 1元素节点  2属性节点 3文本节点  8注释
+            * nodeName   返回节点的名称
+            * tagName    返回标签名字
+            * getAttributeNode("")  返回属性节点  若.nodeName 这位属性名  不常用
+            * createAttribute()  创建一个属性节点
+            * obj.setAttributeNode()  给obj添加属性
+            * firstElementChild  获取第一个元素节点  ie8+  ie8-firstChild
+            * firstChild 主流浏览器会返回文本  ie8-不会返回空格换行
+            * lastElementChild  同上  获取最后一个子元素节点
+            * previousSibling    获取上一个兄弟节点
+            * previousElementSibling    获取上一个元素节点
+            * nextSibling 获取下一个兄弟节点
+            * nextElementSibling 获取下一个元素节点
+            * parentNode  获取父级节点   都能用
+            * offsetParent 带定位的父级  都能用
+            * childElementCount  返回儿子个数 ie8+
+            * children.length
+            * */
+
+            var  oW = document.getElementById("wrap");
+            //console.log(oW.childNodes);   //获取子节点
+            //console.log(oW.children);    //返回子元素节点
+            //console.log(oW.childNodes[0].nodeType);   //1
+            //console.log(oW.childNodes[1].nodeName);  //p
+            //console.log(oW.tagName);   //标签名
+            //console.log(oW.getAttributeNode("id"));   //属性节点
+            /*var attr = document.createAttribute("title");
+            oW.setAttributeNode(attr);
+            console.log(attr);*/                 //给oW加一个title属性
+            //console.log(oW.firstElementChild);  //获取第一个元素节点
+            //console.log(oW.lastElementChild);
+            //console.log(oW.children[0].nextSibling + "节点");
+            //console.log(oW.children[0].nextElementSibling.nodeName + "元素节点");
+            //console.log(oW.children[1].previousSibling);
+            //console.log(oW.children[1].previousElementSibling);
+            //console.log(oW.parentNode);  //获取父级节点
+            //console.log(oW.children[0].offsetParent);  //带定位的父级节点
+            //console.log(oW.childElementCount);//返回儿子个数
+            //console.log(oW.children.length);//同上，兼容性高
+
+
+            /*
+            * js 三大组成
+            * dom   文档的对象模型  不算js，属于浏览器，通过js操控
+            * bom
+            * ecmascript   es,js语法规范
+            *
+            * 节点：
+            *       document 文档节点
+            *       html 元素节点   标签都是
+            *       文本节点   文字，空格和换行都是
+            *       html标签属性 属性节点
+            *       注释节点
+            *
+            * */
+        </script>
+    </body>
+</html>

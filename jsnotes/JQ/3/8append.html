@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <div id="r"></div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $("wrap").append("123")   //推荐用这个添加文本，1 不覆盖 2 不会覆盖事件 str|ele|expr|
+
+            var $ele = $("<ul></ul>")  //创建一个ul标签 并封装成jq
+            $("#wrap").append($ele).css();
+
+            //若是添加页面中已有的对象，则会将其移动到命令指定位置
+            $("#wrap").append($("#r"));
+
+            //prepend  加在最前面
+
+            //appendTo
+            $("#wrap").appendTo($("#r"));   //把wrap添加到r中
+
+            //prependTo
+
+            //a.after(b)  a放到b的后面   兄弟间的
+            //insertAfter  b 到a前面
+            //before
+            //insertBefore  反向操作
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                height:400px;
+                width:400px;
+                background-color:red;
+                border:20px solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            * scrollWidth  content+padding
+            *           超出时content + padding + 超出元素宽高 从哪一边超出就不算那一边的内边距
+            * scrollTop   可获取Y滚条滚动的高度  可写
+            * scrollLeft  可获取X轴滚动条的高度
+            *
+            * window.onscroll 当窗口发生滚动的时候触发事件
+            *
+            * innerWidth
+            * */
+            /*window.onscroll = function () {
+                console.log(document.documentElement.scrollTop);
+            }*/
+            //document.documentElement.scrollTop = 200;
+            console.log(window.innerWidth);//获取可视区域宽度包括滚动条宽度
+        </script>
+    </body>
+</html>

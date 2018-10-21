@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+
+        #wrap{
+            position:absolute;
+            width:300px;
+            height:300px;
+            background-color: red;
+            border-radius:50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+
+    <script>
+        let wrap = document.getElementById("wrap");
+        let arrBool = [];
+        document.onkeydown = function (e) {
+            let kCode = e.keyCode;
+            arrBool[kCode] = true;
+            arrBool[37] && (wrap.style.left = wrap.offsetLeft - 10 +'px');
+            arrBool[38] && (wrap.style.top = wrap.offsetTop - 10 +'px');
+            arrBool[39] && (wrap.style.left = wrap.offsetLeft + 10 +'px');
+            arrBool[40] && (wrap.style.top = wrap.offsetTop + 10 +'px');
+        };
+
+        document.onkeyup = function (e) {
+            let kkCode = e.keyCode;
+            arrBool[kkCode] = false;
+        }
+    </script>
+</body>
+</html>

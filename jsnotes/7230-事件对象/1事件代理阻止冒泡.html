@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width:300px;
+                height:300px;
+                background-color: black;
+            }
+            #box{
+                width:100px;
+                height:100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="box"></div>
+        </div>
+        
+        <script>
+            var oWrap = document.getElementById("wrap");
+            oWrap.children[0].onclick = function (e) {
+                e = e || window.event;
+                //e.stopPropagation();    //阻止冒泡事件  stopPropagation  不兼容ie8-
+                e.cancelBubble = true;   //默认false（不阻止）    通用
+                //兼容
+                if(e.stopPropagation){
+                    e.stopPropagation();
+                }else{
+                    e.cancelBubble = true;
+                }
+                console.log("box");
+            };
+            oWrap.onclick = function () {
+                console.log("wrap");
+            };
+            document.onclick = function(){
+                console.log("document");
+            };
+            /*
+            事件从自己一级级往父级传递的过程叫冒泡事件    跟脱离文档流没关系
+            在事件源上阻止冒泡事件
+             */
+        </script>
+    </body>
+</html>

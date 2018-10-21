@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                overflow:hidden;
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+                border:10px solid green;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">asddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+        
+        <script>
+            var oW = document.getElementById("wrap");
+            var x = oW.clientWidth,    //实际宽度 width + padding
+                y = oW.scrollWidth,     //超出部分的宽度，即使隐藏也能获得，
+                                        // 如果不超出和client一样，若超出，则代表超出部分整体宽度
+                                    //若隐藏，算上超出边的padding和border
+                z = oW.offsetWidth;     //width+padding+border
+            //不能有document....Width  只有元素节点可以  .body就可以了
+            //document.boy.clientWidth
+            console.log(x);
+            console.log(y);
+            console.log(z);
+            /*
+            * 对应的有clientheight.......三个
+            * */
+        </script>
+    </body>
+</html>

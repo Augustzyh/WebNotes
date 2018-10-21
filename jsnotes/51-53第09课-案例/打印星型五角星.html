@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap" style="text-align:center;"></div>
+        
+        <script>
+            var oW = document.getElementById("wrap");
+            var length = 29;
+            /*for(var i=0;i<n;i++){
+                for(var j=0;j<i;j++){
+                    oW.innerHTML += "*";
+                }
+                oW.innerHTML +="<br>";
+            }*/
+            //n行
+
+            var y = length/2;
+            for(var n=1;n<=length;n++){    //跑几天    双层循环逻辑
+                var x;
+                if(n<y) {
+                    x = 2 * (n-1) + 1;
+                }else{
+                    x = (length-n)*2+1;         //每天跑几圈
+                }
+                var str = "<p>";
+                for(var i = 0;i<x;i++){
+                    if(i===0 || i===x-1 ) {
+                        str += "*";
+                    }else{
+                        str += "&nbsp;";
+                    }
+                }
+                str += "</p>";
+                oW.innerHTML += str;
+            }
+        </script>
+    </body>
+</html>

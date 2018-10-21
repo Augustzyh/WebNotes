@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="58-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            var oW = document.getElementById("wrap"),
+                str = ""
+            ;
+            var json = {
+                name:"航",
+                age:18,
+                height:180,
+                marry:true,
+                "helle":"by"    //"helle"不是字符串
+            };
+            //for in用来遍历对象所有属性的循环  键:值  键值对一般起名叫key，叫啥都行
+            var key;
+            for(key in json){
+                //console.log(key);   //属性，keyString类型
+                //console.log(json[key]); //值
+                str += "<p>"+key+"----"+json[key]+"</p>";  //json属性和变量是不同的,这时候不能用.西面例子
+            }
+            oW.innerHTML = str;
+
+            /*
+            * 例子
+            * */
+            var a = "name";
+            var b = json[a];//不能.
+            //或者
+            document["getElementById"]();
+        </script>
+    </body>
+</html>
