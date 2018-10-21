@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <div> </div>
+  <div> </div>
+  <script>
+    let arr = ['a', 'b', 'c'];
+    let iter = arr[Symbol.iterator]();
+
+    // console.log(iter.next()) // { value: 'a', done: false }
+    // console.log(iter.next()) // { value: 'b', done: false }
+    // console.log(iter.next()) // { value: 'c', done: false }
+    // console.log(iter.next()) // { value: undefined, done: true }
+    // console.log(iter.next()) // { value: undefined, done: true }
+    
+    
+
+    /* function myIter(obj){
+      let i = 0;
+      return {
+        next(){
+          let done = (i>=obj.length);
+          let value = !done ? obj[i++] : undefined;
+          return {
+            value,
+            done,
+          }
+        }
+      }
+    } */ 
+
+    const obj = {
+      0: 'a',
+      1: 'b',
+      2: 'c'
+    }
+    Object.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator]
+
+    Object.prototype.length = 3
+    
+    for(let key of obj){
+      console.log(key)
+    }
+    
+
+  </script>
+</body>
+</html>

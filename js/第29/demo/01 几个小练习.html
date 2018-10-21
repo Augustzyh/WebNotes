@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    /* function fn(){
+      for (var i = 0; 4 > i; i++){ // 0 1 2 3
+        var k = 100
+        aMrg += "." + (k + i)  // 1.100.101.102.1031
+      }
+    }
+    
+    var k = 1, aMrg = 1;
+    fn()
+    aMrg += k
+
+    console.log(aMrg) */
+    
+
+    var str = " b ook   , de sk,  pag,bag, a ni moa, food, pag, page,  desk, bag, animoa  "
+
+    //要求：去重单词， 去单词两端空格，  单词排序
+    
+    /* let arr = str.replace(/\s/g, "").split(",")
+    console.log(arr) */
+    
+    // 对数组去重  es5 
+    /* for (let i = arr.length - 1; i >= 0; i--){
+      // i 是被比较值
+      for (let j = i - 1; j >= 0; j--){
+        // j是  i 之前的数据
+        if(arr[i] === arr[j]){
+          arr.splice(i,1)
+          break
+        }
+      }
+    } */
+    // ES6 去重
+    /* let arr2 = [...new Set(arr)]
+
+    arr2.sort()
+
+    console.log(arr2) */
+    
+
+
+    //[1,2,3,4,5].changes()  // [1,2,3,4,5,1,2,3,4,5]
+    
+    /* Array.prototype.changes = function(){
+      return this.concat(this)
+    }
+    
+
+    console.log([1,2].changes()) */
+
+
+    // reduce
+    
+    let arr = ["我", '风屿', "我", "还是", "有点", "东西","我", "我", '风屿', "我", "还是", "东西","我","我", '风屿', "处男", "处男", "处男"]
+
+    // let result = arr.reduce((a,b) => a + b, 0)
+    // a = 0  b = 1  =  1
+    // a = 1  b = 4  =  5
+    // a = 5  b = 6  =  11
+    // a = 11 b = 9
+    
+    // 要求：统计数组每个数据出现的次数
+    
+    console.log(arr.reduce( (a, b) => {
+      return a[b] = a[b] ? ++a[b] : 1,a
+    }, {}))
+    
+
+   
+
+
+    
+    
+  </script>
+</body>
+</html>

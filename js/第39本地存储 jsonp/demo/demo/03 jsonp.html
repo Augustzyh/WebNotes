@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <script>
+    /* 
+      ajax 
+        跨域：CORS  反向代理   jsonp
+
+      jsonp作用：跨域获取数据
+
+      jsonp 是啥？ 是json的一种使用模式
+
+      script的 src 属性具备 跨域请求资源的能力
+      
+     */
+     /*"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=fy&wd=" + input.value
+    
+    "https://www.baidu.com/s?wd=" + li.innerHTML*/
+    function fy(obj) {
+      // console.log(`前端数据`)
+
+       console.log(obj)
+      // 遍历obj.s 
+      //location.href = "https://www.baidu.com/s?wd=" + li.innerHTML
+    }
+
+
+    document.onclick = function () {
+      const script = document.createElement('script')
+      script.src = "http://localhost:3000?cb=fy"
+      document.body.appendChild(script)
+    }
+
+  </script>
+
+</body>
+
+</html>

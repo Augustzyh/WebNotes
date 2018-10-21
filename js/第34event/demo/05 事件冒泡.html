@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    #box{
+      width: 100px;
+      height: 100px;
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    /* 
+      事件冒泡
+
+      可能某些情况下，不需要事件冒泡的这个特性：
+        取消事件冒泡、阻止冒泡
+
+      event 
+        stopPropagation() // 就阻止冒泡了  不兼容低版本ie
+
+        cancelBubble = true // 低版本ie用于阻止冒泡的
+
+     */
+    box.onclick = function (e){
+      e = e || window.event
+      //e.stopPropagation()
+
+      if(e.stopPropagation){
+        e.stopPropagation()
+      }else{
+        e.cancelBubble = true
+      }
+
+
+      console.log("box clicked")
+    }
+
+    document.onclick = function () {
+      console.log("document clicked")
+    }
+  
+  
+  </script>
+</body>
+</html>

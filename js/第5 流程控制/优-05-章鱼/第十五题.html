@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        
+        <script>
+            let arr=[1,2,5],
+                count=0,
+                sum=0
+            ;
+
+            for(let one=1;one<=93;one++){
+                for(let two=1;two<=47;two++){
+                    for(let five=1;five<=20;five++){
+                        sum=one*arr[0]+two*arr[1]+five*arr[2];
+                        if(sum===100){
+                            count++;
+                            console.log(one+"张1元,"+two+"张2元,"+five+"张5元以组成100元");
+                        }
+                    }
+                }
+            }
+            alert("一共有"+count+"总方法");
+
+        </script>
+    </body>
+</html>

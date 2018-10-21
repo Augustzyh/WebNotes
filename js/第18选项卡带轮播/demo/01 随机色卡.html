@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    #box{
+      border:1px solid;
+      padding:0 20px;
+    }
+    #box span{
+      display: inline-block;
+      text-align: center;
+      line-height: 30px;
+      width: 200px;
+      
+    }
+  </style>
+</head>
+<body>
+  <button id="run">run</button>
+  <button id="stop">stop</button>
+  <div id="box"></div>
+  <script>
+    let box = document.getElementById("box")
+    let run = document.getElementById("run")
+    let stopRun = document.getElementById("stop")
+    let timer = null
+
+    //保留n位小数   银行专用的四舍五入
+    /*let n = 1.213141;
+    n.toFixed(3); //1.213*/
+    //括号调用(0.84).toFixed
+    // 随机一个区间（左右都是闭区间）  [3,15][a,b]
+    const random = (a, b) => Math.floor(Math.random() * (b + 1 - a) + a);
+    
+    //rgb(r, g, b)  [0, 255]
+    const rgb = () => `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+    
+    const rgba = () => `rgba(${random(0, 255)},${random(0, 255)},${random(0, 255)},${Math.random().toFixed(1)})`;
+    
+    const h16 = () => {
+      let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", 'b', 'c', 'd', 'e', 'f']
+      let color = "#"
+      for (let i = 0; i < 6; i++){
+        color += arr[random(0, arr.length - 1)]
+      }
+      return color
+    }
+
+
+    let handle = () => {
+      let color = rgba()
+      box.innerHTML += `<span style="background-color:${color};">${color}</span>`
+    }
+
+
+    clearInterval(timer)
+    timer = setInterval(handle, 800)
+    
+    run.onclick = () => {
+      clearInterval(timer)
+      timer = setInterval(handle, 800) 
+    }
+    
+    stopRun.onclick = () => {
+      clearInterval(timer) 
+    }
+    
+
+   
+  </script>
+</body>
+</html>

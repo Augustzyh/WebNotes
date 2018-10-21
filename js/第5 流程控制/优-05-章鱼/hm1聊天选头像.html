@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="58-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        .clearfix{}
+        #wrap{
+            width:500px;
+            margin:20px auto;
+            padding-bottom:35px;
+            border:1px solid #888;
+            user-select: none;
+        }
+        #wrap #input{
+            width:100%;
+            height:200px;
+            box-sizing:border-box;
+            border:2px solid deeppink;
+            resize:none;
+            outline:none;
+        }
+        .subumit:after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+        .pic{
+            position:relative;
+            left:0;
+            top:0;
+            float:left;
+            width:30px;
+            height:30px;
+            background-color: red;
+            cursor:pointer;
+        }
+        .pic #head-pic{
+            display:none;
+            position:absolute;
+            width:100px;
+            padding:5px 0 0 5px;
+            background-color: #eee;
+        }
+        .pic #head-pic.on{
+            display:block;
+        }
+        .pic #head-pic .img{
+            float:left;
+            width:20px;
+            height:20px;
+            margin-right:5px;
+            margin-bottom:5px;
+        }
+        .subumit p{
+            float:left;
+            line-height:30px;
+        }
+        #btn{
+            float:right;
+        }
+        .content{
+            margin-top:20px;
+            overflow:hidden;
+        }
+
+        .pic2{
+            float:left;
+            width:20px;
+            height:20px;
+            background-color:red;
+        }
+        .content p{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <textarea id="input"></textarea>
+        <div class="subumit">
+            <p>请选择头像：&nbsp;</p>
+            <div class="pic">
+                <div id="head-pic">
+                    <div class="img" style="background-color: aqua;"></div>
+                    <div class="img" style="background-color: #ff525c;"></div>
+                    <div class="img" style="background-color: #73ff51;"></div>
+                    <div class="img" style="background-color: #ff9304;"></div>
+                    <div class="img" style="background-color: #08ff06;"></div>
+                    <div class="img" style="background-color: #001cfe;"></div>
+                    <div class="img" style="background-color: #b300ff;"></div>
+                </div>
+            </div>
+            <input type="button" id="btn" value="发送">
+        </div>
+        <div class="content">
+            <!--<div class="pic2"></div><p>:shab</p>
+            <div class="pic2"></div><p>:shab</p>
+            <div class="pic2"></div><p>:shab</p>-->
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            let oCon = document.querySelector("#wrap .content"),
+                oPic1 = document.querySelector(".pic"),
+                oHead = document.getElementById("head-pic"),
+                oImg = document.getElementsByClassName("img"),
+                index,
+                headerPic = "red",
+                oPic2 = document.getElementsByClassName("pic2"),
+                num = 0
+            ;
+
+            oPic1.onclick = function(){
+                oHead.className = "on";
+            };
+            for(let i = 0;i<oImg.length;i++){
+                let dom = oImg[i];
+                dom.index = i;
+                dom.onclick = function (e) {
+                    e = e || window.event;
+                    index = this.index;
+                    e.stopPropagation();
+                    headerPic = getComputedStyle(oImg[index]).backgroundColor;
+                    oHead.className = "";
+                    console.log(oHead);
+                    oPic1.style.backgroundColor = headerPic;
+                }
+            }
+            btn.onclick = function () {
+                if(input.value === ""){
+                    return;
+                }
+                oCon.innerHTML += "<div class='pic2'></div>" + "<p>:" + input.value + "</p>";
+                for(let j = num; j<oPic2.length;j++){
+                    oPic2[j].style.backgroundColor = headerPic;
+                }
+                num++;
+                input.value = '';
+            };
+        })();
+    </script>
+</body>
+</html>

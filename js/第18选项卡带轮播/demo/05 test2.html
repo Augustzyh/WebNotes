@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    div{
+      width: 200px;
+      height: 30px;
+      margin:10px;
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <script>
+    let div = document.getElementsByTagName("div")
+
+
+
+    for (var i = 0; i < div.length; i++){
+      (function(i){
+        div[i].onclick = function () {
+          console.log(i)
+        }
+      }(i))
+    }
+    
+    
+    
+    
+
+  
+  
+  
+  </script>
+</body>
+</html>

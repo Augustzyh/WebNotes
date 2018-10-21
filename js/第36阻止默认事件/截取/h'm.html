@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            *{margin:0;padding:0;}
+            body{
+                background: #333;
+                user-select: none;
+                height: 2000px;
+            }
+            .clearfix::after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            [id*=box]{
+                position: relative;
+                width: 500px;
+                height: 500px;
+                margin:50px 50px;
+                float: left;
+            }
+            [id*=img]{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            #img1{
+                opacity: 0.2;
+
+                filter: alpha(opacity=20);
+            }
+            #img2{
+                clip: rect(0px,100px,100px,0px);
+            }
+            #img3{
+                top: 0;
+                left: 0;
+                clip: rect(0px,100px,100px,0px);
+            }
+            #clip{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                border:1px solid white;
+                box-sizing: border-box;
+                cursor: move;
+                z-index: 3;
+                background: url(2.png);
+            }
+            #clip>div{
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: white;
+            }
+            #clip>.LeftTop{
+                top: -5px;
+                left: -5px;
+                cursor: nw-resize;
+            }
+            #clip>.RightTop{
+                top: -5px;
+                right: -5px;
+                cursor: ne-resize;
+            }
+            #clip>.RightBottom{
+                bottom: -5px;
+                right: -5px;
+                cursor: se-resize;
+            }
+            #clip>.LeftBottom{
+                bottom: -5px;
+                left: -5px;
+                cursor: sw-resize;
+            }
+            #clip>.top{
+                top: -5px;
+                left: 50%;
+                cursor: n-resize;
+                margin-left: -5px;
+            }
+            #clip>.right{
+                right: -5px;
+                top: 50%;
+                cursor: e-resize;
+                margin-top: -5px;
+            }
+            #clip>.bottom{
+                bottom: -5px;
+                left: 50%;
+                cursor: s-resize;
+                margin-left: -5px;
+            }
+            #clip>.left{
+                left: -5px;
+                top: 50%;
+                cursor: w-resize;
+                margin-top: -5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box" ondragstart="return false" >
+            <img src="1.png" id="img1">
+            <img src="1.png" id="img2">
+            <div id="clip" class="clip">
+                <!-- 中划线（连词符）   烤串命名法 -->
+                <div class="LeftTop"></div>
+                <div class="RightTop"></div>
+                <div class="RightBottom"></div>
+                <div class="LeftBottom"></div>
+                <div class="top"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+                <div class="left"></div>
+            </div>
+        </div>
+        <div id="box2">
+            <img src="1.png" alt="" id="img3">
+        </div>
+        
+        <script>
+            const {max,min} = Math;
+
+            document.onmousedown = function (e) {
+                let downX = e.clientX;
+                let downY = e.clientY;
+                const that = e.target || e.srcElement;
+                //相关值
+                const clipRect = clip.getBoundingClientRect();
+                let downClipWidth = clipRect.width;
+                let downClipHeight = clipRect.height;
+                let downClipTop = clipRect.top - 50;
+                let downClipLeft = clipRect.left - 50;
+
+                let boxRect = box.getBoundingClientRect();
+                let downBoxHeight = boxRect.height;
+                let downBoxWidth = boxRect.width;
+
+                document.onmousemove = function (e) {
+                    //变化量
+                    let moveX = e.clientX - downX;
+                    let moveY = e.clientY - downY;
+
+                    switch(that.className){
+                        case "clip" :
+                            let top = moveY + downClipTop;
+                            let left = moveX + downClipLeft;
+                            top = max(0,top);
+                            top = min(top,downBoxHeight - downClipHeight);
+                            left = max(0,left);
+                            left = min(left,downBoxWidth - downClipWidth);
+                            clip.style.top = top + "px";
+                            clip.style.left = left + "px";
+                            break;
+
+                        case "top":
+                            moveY = max(moveY, -downClipTop);
+                            moveY = min(moveY, downClipHeight + 1 - 100);
+                            clip.style.height = downClipHeight - moveY + "px";
+                            clip.style.top = downClipTop + moveY + "px";
+                            break;
+
+                        case "right" :
+                            moveX = max(moveX,100 - downClipWidth);
+                            moveX = min(moveX,downBoxWidth - downClipWidth - downClipLeft);
+                            clip.style.width = downClipWidth + moveX + "px";
+                            break;
+
+                        case "bottom":
+                            moveY = max(moveY,100 - downClipHeight);
+                            moveY = min(moveY,downBoxHeight - downClipHeight - downClipTop);
+                            clip.style.height = downClipHeight + moveY + "px";
+                            break;
+
+                        case "left" :
+                            moveX = max(moveX, -downClipLeft);
+                            moveX = min(moveX, downClipWidth + 1 - 100);
+                            clip.style.width = downClipWidth - moveX + "px";
+                            clip.style.left = downClipLeft + moveX + "px";
+                            break;
+
+                        case "LeftTop":
+                            moveY = max(moveY, -downClipTop);
+                            moveY = min(moveY, downClipHeight + 1 - 100);
+                            clip.style.height = downClipHeight - moveY + "px";
+                            clip.style.top = downClipTop + moveY + "px";
+                            moveX = max(moveX, -downClipLeft);
+                            moveX = min(moveX, downClipWidth + 1 - 100);
+                            clip.style.width = downClipWidth - moveX + "px";
+                            clip.style.left = downClipLeft + moveX + "px";
+                            break;
+
+                        case "RightTop" :
+                            moveY = max(moveY, -downClipTop);
+                            moveY = min(moveY, downClipHeight + 1 - 100);
+                            clip.style.height = downClipHeight - moveY + "px";
+                            clip.style.top = downClipTop + moveY + "px";
+                            moveX = max(moveX,100 - downClipWidth);
+                            moveX = min(moveX,downBoxWidth - downClipWidth - downClipLeft);
+                            clip.style.width = downClipWidth + moveX + "px";
+                            break;
+
+                        case "LeftBottom":
+                            moveX = max(moveX, -downClipLeft);
+                            moveX = min(moveX, downClipWidth + 1 - 100);
+                            clip.style.width = downClipWidth - moveX + "px";
+                            clip.style.left = downClipLeft + moveX + "px";
+                            moveY = max(moveY,100 - downClipHeight);
+                            moveY = min(moveY,downBoxHeight - downClipHeight - downClipTop);
+                            clip.style.height = downClipHeight + moveY + "px";
+                            break;
+
+                        case "RightBottom" :
+                            moveX = max(moveX,100 - downClipWidth);
+                            moveX = min(moveX,downBoxWidth - downClipWidth - downClipLeft);
+                            clip.style.width = downClipWidth + moveX + "px";
+                            moveY = max(moveY,100 - downClipHeight);
+                            moveY = min(moveY,downBoxHeight - downClipHeight - downClipTop);
+                            clip.style.height = downClipHeight + moveY + "px";
+                            break;
+                    }
+                    //clip:rect(top,right,bottom,left)  图片裁剪
+                    const clipTop = clip.offsetTop;
+                    const clipLeft = clip.offsetLeft;
+                    const clipWidth = clip.offsetWidth;
+                    const clipHeight = clip.offsetHeight;
+
+                    img2.style.clip = `rect(
+                        ${clipTop}px,
+                        ${clipLeft + clipWidth}px,
+                        ${clipTop + clipHeight}px,
+                        ${clipLeft}px
+                    )`;
+                    img3.style.clip = `rect(
+                        ${clipTop}px,
+                        ${clipLeft + clipWidth}px,
+                        ${clipTop + clipHeight}px,
+                        ${clipLeft}px
+                    )`;
+                    img3.style.top = -clipTop + "px";
+                    img3.style.left = -clipLeft + "px";
+                }
+            };
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        </script>
+    </body>
+</html>

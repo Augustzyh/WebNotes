@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body oncontextmenu="return false" style="height:2000px;">
+  <div>1231231</div>
+  <script>
+    // 默认行为
+    // 干掉
+    
+    /*
+        e.preventDefault()   阻止默认行为 不兼容低版本IE
+        低版本ie使用下面的
+          e.returnValue = false
+
+        在dom 0级事件里：可以使用return false 阻止行为
+
+    */
+
+
+    document.oncontextmenu = function (e){
+      //e.preventDefault()
+      //e = e || window.event
+      //e.returnValue = false
+
+
+      console.log("右键触发了")
+
+     // return false
+    }
+  
+  
+  
+  
+  </script>
+</body>
+</html>

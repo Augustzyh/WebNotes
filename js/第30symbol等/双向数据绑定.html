@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <input type="text" :value="a">
+            <div :text="a">
+                <p :text="a"></p>
+            </div>
+            <span :text="a"></span>
+        </div>
+        
+        <script>
+            function Vue(o) {
+                Vue.vm = this;
+                this.el = document.getElementById(o.el.slice(1));
+                this.data = this.proxyData(o.data);
+                this.init();
+                for(let key in o.data){
+                    this.data[key] = o.data[key];
+                }
+            }
+
+            Vue.prototype = {
+                constructor:Vue,
+                init(){
+                    let _ele = [];
+                    this._value = [];
+                    this._text = [];
+                    element(this.el);
+                    getEle.call(this,_ele);
+                    changeValue(this._value);
+                    //console.log(this._value);
+
+                    function changeValue(el) {
+                        for (var i = 0, length = el.length; i < length; i++) {
+                            el[i].addEventListener("input",function () {
+                                Vue.vm.data[this.getAttribute(":value")] = this.value;
+                            })
+                        }
+                    }
+                    
+                    function getEle(_ele) {
+                        for (let i = 0, length = _ele.length; i < length; i++) {
+                            let eleElement = _ele[i].attributes;
+                            for (var j = 0, len = eleElement.length; j < len; j++) {
+                                var attr = eleElement[j].nodeName;
+                                if(/^:/.test(attr)){
+                                    this["_" + attr.slice(1)].push(_ele[i]);
+                                }
+                            }
+                        }
+                    }
+
+                    function element(el) {
+                        let child = el.children;
+                        for(let i = 0,len = child.length;i < len;i++){
+                            _ele.push(child[i]);
+                            if(child[i].children.length !== 0){
+                                element(child[i]);
+                            }
+                        }
+                    }
+                },
+                proxyData(obj){
+                    return new Proxy(obj,{
+                        set(target,key,value){
+                            for (var i = 0, length = Vue.vm._value.length; i < length; i++) {
+                                if(Vue.vm._value[i].getAttribute(":value") === key){
+                                    Vue.vm._value[i].value = value;
+                                }
+                            }
+                            for (var j = 0, len = Vue.vm._text.length; j < len; j++) {
+                                if(Vue.vm._text[j].getAttribute(":text") === key){
+                                    Vue.vm._text[j].innerHTML = value;
+                                }
+                            }
+                        }
+                    })
+                }
+            };
+            new Vue({
+                el:"#wrap",
+                data:{
+                    a:1
+                }
+            })
+        </script>
+    </body>
+</html>

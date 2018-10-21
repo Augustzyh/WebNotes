@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+
+        #wrap{
+            position:relative;
+            width:500px;
+            margin:50px auto;
+        }
+        input{
+            width:450px;
+            height:40px;
+            outline:none;
+            text-indent:20px;
+            font-size:16px;
+        }
+        ul{
+            position:absolute;
+            left:0;
+            top:45px;
+            width:450px;
+            border:1px solid #bbb;
+        }
+        ul .name a{
+            display:block;
+            width:100%;
+            height:40px;
+            border-bottom:1px dashed #bbb;
+            color:#000;
+            line-height:40px;
+            text-indent:20px;
+            font-size:18px;
+            text-decoration:none;
+            cursor:pointer;
+        }
+        ul .name:hover{
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="text" id="txt">
+        <ul id="about">
+            <!--<li class="name">asdasd</li>-->
+        </ul>
+    </div>
+
+    <script>
+        let oTxt = document.getElementById("txt");
+        oTxt.oninput = function () {
+            let val = this.value.trim();
+            if(val){
+                let oS = document.createElement("script");
+                oS.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=" + val +"&cb=search";
+                document.body.appendChild(oS);
+                oS.onload = function () {
+                    document.body.removeChild(this);
+                }
+            }else{
+                about.innerHTML = "";
+            }
+
+        };
+        oTxt.onfocus = function () {
+            let val = this.value.trim();
+            if(val){
+                let oS = document.createElement("script");
+                oS.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=" + val +"&cb=search";
+                document.body.appendChild(oS);
+                oS.onload = function () {
+                    document.body.removeChild(this);
+                }
+            }else{
+                about.innerHTML = "";
+            }
+        };
+        function search(obj) {
+            let arr = obj.s;
+            let str = "";
+            for(let i = 0;i<arr.length;i++){
+                str += `<li class="name"><a href="https://www.baidu.com/s?wd=${arr[i]}">${arr[i]}</a></li>`;
+            }
+            about.innerHTML = str;
+        }
+    </script>
+    <!--<script src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E5%BC%A0%E5%AE%87%E8%88%AA&cb=search"></script>-->
+</body>
+</html>

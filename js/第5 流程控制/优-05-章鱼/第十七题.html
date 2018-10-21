@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width:100%;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            请输入：<br>
+            n: <input type="text" id="floor">层楼梯<br>
+            j: <input type="text" id="jTimes">每次上<br>
+            k: <input type="text" id="kTimes">或每次上 <br>
+            <button id="sure">确定</button>
+            <p>一共有这么多走法: <span id="result"></span></p>
+        </div>
+        <script>
+            let floor = document.getElementById("floor"),
+                oR = document.getElementById("result"),
+                count = -1,
+                sum
+            ;
+            sure.onclick = function () {
+                let floorNum = floor.value,
+                    jNum = jTimes.value,
+                    kNum = kTimes.value,
+                    num1 = floorNum/jNum,
+                    num2 = floorNum/kNum
+                ;
+
+                for(let i=0 ; i<parseInt(num1) ;i++){
+                    for(let j=0; j<parseInt(num2); j++){
+                        sum = i*jNum + j*kNum;
+                        if(sum == floorNum){
+                            count++;
+                            console.log("j步伐上"+i+"步,k步伐上"+j+"步");
+                            console.log(count);
+                        }
+                    }
+                }
+                if(count === 0){
+                    count = -1;
+                }
+            oR.innerHTML = count;
+            };
+        </script>
+    </body>
+</html>

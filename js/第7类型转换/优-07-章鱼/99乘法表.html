@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .wrap{
+                display:inline-block;
+                width:70px;
+                height:30px;
+                border:1px solid red;
+                margin-right:5px;
+                margin-bottom:5px;
+                text-align:center;
+                line-height:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap1"></div>
+        <hr>
+        <div id="wrap2"></div>
+        <hr>
+        <div id="wrap3"></div>
+        <hr>
+        <div id="wrap4"></div>
+        <!--<div class="wrap">9 * 9</div>
+        <br>
+        <div class="wrap">9 * 9</div>
+        <div class="wrap">9 * 9</div>
+        <br>
+        <div class="wrap">9 * 9</div>
+        <div class="wrap">9 * 9</div>
+        <div class="wrap">9 * 9</div>-->
+        
+        <script>
+            (function f() {
+                for(let i = 1;i<=9;i++){
+                    for(let j=1;j<=i;j++){
+                        wrap1.innerHTML += `<div class='wrap'>${j}X${i}=${i*j}</div>`;
+                    }
+                    wrap1.innerHTML += "<br>";
+                }
+                for(let i = 1;i<=9;i++){
+                    for(let j=1;j<=9-i+1;j++){
+                        wrap2.innerHTML += `<div class='wrap'>${i}X${j}=${i*j}</div>`;
+                    }
+                    wrap2.innerHTML += "<br>";
+                }
+                for(let i = 9;i>=1;i--){
+                    for(let j=9;j>=i;j--){
+                        wrap3.innerHTML += `<div class='wrap'>${i}X${j}=${i*j}</div>`;
+                    }
+                    wrap3.innerHTML += "<br>";
+                }
+                for(let i = 9;i>=1;i--){
+                    for(let j=9;j>=9-i+1;j--){
+                        wrap4.innerHTML += `<div class='wrap'>${i}X${j}=${i*j}</div>`;
+                    }
+                    wrap4.innerHTML += "<br>";
+                }
+            })();
+        </script>
+    </body>
+</html>

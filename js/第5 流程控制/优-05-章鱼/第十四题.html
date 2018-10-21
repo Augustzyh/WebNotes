@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        
+        <script>
+            /*
+            * 8440m   1mm = 0.001m  最好别用浮点数
+            * */
+            /*let paper = 0.001,
+                ZhuMu = 8440,
+                num = 0
+            ;
+            do{
+                paper *= 2;
+                num++;
+            }while(paper<ZhuMu);
+            alert("至少需要折"+num+"次");*/
+
+            let a = 1,
+                b = 8848000,
+                i = 0
+            ;
+            while(true){
+                a*=2;
+                i++;
+                console.log(`第${i}次对着厚度为${a/1000}`);
+                if(a>b) break;
+            }
+        </script>
+    </body>
+</html>

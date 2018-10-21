@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body style="height: 2000px;">
+  <script>
+    window.onscroll = function(){
+      console.log("滚动事件")
+    }
+  
+    // onmousewheel   滚轮事件
+
+    /*
+      onmousewheel  不兼容火狐
+      火狐使用：DOMMouseScroll
+    
+      滚轮的滚动方向   主流浏览器使用 e.wheelDelta : 120 代表向前滚
+                                                -120 向后滚
+         火狐里使用：e.detail  滚动方向的值： -3  代表向前滚
+                                            3   向后滚动
+
+
+
+
+    */
+
+    document.addEventListener("mousewheel", (e) => {
+      e.preventDefault()
+
+
+
+      console.log(e.wheelDelta)
+    }) 
+
+  </script>
+</body>
+</html>

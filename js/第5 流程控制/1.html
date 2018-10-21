@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width:100px;
+                height:100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <script>
+            let mark = true;
+            wrap.onclick = function () {
+                if(mark){
+                    wrap.style.width = "500px";
+                    wrap.style.height = "500px";
+                    mark = false;
+                }else{
+                    wrap.style.width = "100px";
+                    wrap.style.height = "100px";
+                    mark = true;
+                }
+            };
+        </script>
+    </body>
+</html>

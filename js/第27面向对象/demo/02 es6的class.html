@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    /* 
+      class 在es6之前是保留字，es6里升级成了关键字（有特殊意义）
+      用于定义类
+     */
+    
+    // es5 写法
+    function Person(name, age){
+      this.name = name
+      this.age = age
+    }
+    
+    Person.prototype = {
+      sayName(){alert(this.name)},
+      sayAge(){alert(this.name)}
+    }
+
+    const obj = new Person("fy", 18)
+
+    // es6
+    class Person2{
+      // 私有属性
+      constructor(name, age){
+        this.name = name
+        this.age = age
+      }
+      // constructor之外的方法都是 公有方法
+      sayName(){
+        alert(this.name)
+      }
+
+      sayAge(){
+        alert(this.age)
+      }
+    }
+
+    const obj2 = new Person2("cx", 27)
+
+    console.log({})
+    
+
+
+  </script>
+</body>
+</html>

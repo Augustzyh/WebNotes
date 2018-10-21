@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap{
+            width:430px;
+            height:204px;
+            margin:50px auto;
+        }
+        #wrap .left{
+            float:left;
+            width:100px;
+        }
+        #wrap .left ul li{
+            width:100%;
+            height:30px;
+            background-color: #000;
+            margin-top:10px;
+            color:#fff;
+            text-align:center;
+            line-height:30px;
+            cursor:pointer;
+        }
+        #wrap .left ul li.on{
+            background-color: #d41dff;
+        }
+        #wrap .right{
+            float:right;
+            position:relative;
+            width:326px;
+            height:204px;
+        }
+        #wrap .right .part{
+            display:none;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+        #wrap .right .part.on{
+            display:block;
+        }
+        #wrap .right .img{
+            position:absolute;
+            width:100%;
+            height:100%;
+        }
+        #wrap .right .img li{
+            display:none;
+            position:absolute;
+        }
+        #wrap .right ul li.on{
+            display:block;
+        }
+        #wrap .right .part .tab{
+            position:absolute;
+            bottom:0;
+            left:10px;
+        }
+        #wrap .right .part .tab li{
+            display:inline-block;
+            width:25px;
+            height:25px;
+            background-color:#000;
+            color:#fff;
+            text-align:center;
+            line-height:25px;
+            cursor:pointer;
+        }
+        #wrap .right .part .tab li.on{
+            background-color: #e6a5ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="left">
+            <ul>
+                <li class="on">豪车</li>
+                <li>美味</li>
+                <li>风景美女</li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="part on">
+                <ul class="img">
+                    <li class="on"><img src="img/1.jpg" alt=""></li>
+                    <li><img src="img/2.jpg" alt=""></li>
+                    <li><img src="img/3.jpg" alt=""></li>
+                    <li><img src="img/4.jpg" alt=""></li>
+                </ul>
+                <ul class="tab">
+                    <li class="on">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+            <div class="part">
+                <ul class="img">
+                    <li class="on"><img src="img/m1.jpg" alt=""></li>
+                    <li><img src="img/m2.jpg" alt=""></li>
+                    <li><img src="img/m3.jpg" alt=""></li>
+                    <li><img src="img/m4.jpg" alt=""></li>
+                    <li><img src="img/m5.jpg" alt=""></li>
+                </ul>
+                <ul class="tab">
+                    <li class="on">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+            <div class="part">
+                <ul class="img">
+                    <li class="on"><img src="img/s1.jpg" alt=""></li>
+                    <li><img src="img/s2.jpg" alt=""></li>
+                    <li><img src="img/s3.jpg" alt=""></li>
+                    <li><img src="img/s4.jpg" alt=""></li>
+                    <li><img src="img/s5.jpg" alt=""></li>
+                </ul>
+                <ul class="tab">
+                    <li class="on">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let aLeftLi = document.querySelectorAll("#wrap .left li"),
+            aRightPart = document.querySelectorAll("#wrap .right .part")
+        ;
+        choiceBorn([aLeftLi,"","on"],[aRightPart,"part","part on"]);
+        for (let i = 0, length = aRightPart.length; i < length; i++) {
+            let rightDom = aRightPart[i],
+                aRightTab = rightDom.querySelectorAll(".tab li"),
+                aRightImg = rightDom.querySelectorAll(".img li");
+            choiceBorn([aRightTab,"","on"] , [aRightImg,"","on"]);
+        }
+        function choiceBorn(tabArr,contentArr) {
+            let domTab = tabArr[0],
+                domContent = contentArr[0],
+                len = domTab.length;
+            let index = 0;
+            for(let i = 0;i<len;i++){
+                let dom = domTab[i];
+                dom.index = i;
+                dom.onclick = function () {
+                    if(index === this.index)return;
+                    domTab[index].className = tabArr[1];
+                    domContent[index].className = contentArr[1];
+                    index = this.index;
+                    this.className = tabArr[2];
+                    domContent[index].className = contentArr[2];
+                }
+            }
+        }
+    </script>
+</body>
+</html>

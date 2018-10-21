@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    /* 
+      
+      call
+      apply
+          前两个是主动执行调用函数
+
+          
+
+      bind：不兼容低版本IE
+        这个不会主动执行调用函数
+
+
+      以上三个方法的第一个参数，都是修改调用函数的this指向的对象
+      调用函数的实参依次写在后面
+     */
+    var a = 1;
+
+    var obj = {
+      a: 2
+    }
+
+    var obj2 = {
+      a: 3
+    }
+    
+    function fn(a, b, c){
+      //console.log(this.a)
+      console.log(a+b+c)
+      console.log(this)
+      
+    }
+
+    //var arr = [1,2,3]
+    //fn.call(obj, ...arr)
+
+    //fn.apply(obj2, arr)
+  
+    //fn.bind(obj, 1,2,3,4)()
+    
+    //document.onclick = fn.bind(obj, 1, 2, 3)
+
+    
+    // setTimeout("fn.call(obj, 1,2,3)", 1000);
+
+
+
+
+  </script>
+</body>
+</html>

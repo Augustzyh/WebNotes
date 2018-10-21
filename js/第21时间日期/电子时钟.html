@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #box{
+                width:329px;
+                margin:300px auto;
+                user-select:none;
+            }
+
+            ul {
+                overflow: hidden;
+                height: 61px;
+                margin: 100px auto;
+            }
+
+            ul>li {
+
+                list-style: none;
+                float: left;
+                width: 41px;
+                height: 122px;
+                text-align: center;
+            }
+
+        </style>
+        <script src="./animation.js"></script>
+    </head>
+
+    <body>
+        <div id="box">
+            <ul>
+                <li class="list">
+                    <img class="time" src="images/0.png" alt="">
+                    <img class="sub" src="images/1.png" alt="">
+                </li>
+                <li class="list">
+                    <img class="time" src="images/0.png" alt="">
+                    <img class="sub" src="images/0.png" alt="">
+                </li>
+                <li>
+                    <img src="images/d.png" alt="">
+                </li>
+                <li class="list">
+                    <img class="time" src="images/0.png" alt="">
+                    <img class="sub" src="images/0.png" alt="">
+                </li>
+                <li class="list">
+                    <img class="time" src="images/0.png" alt="">
+                    <img class="sub" src="images/0.png" alt="">
+                </li>
+                <li>
+                    <img src="images/d.png" alt="">
+                </li>
+                <li class="list">
+                    <img class="time" src="images/0.png" alt="">
+                    <img class="sub" src="images/0.png" alt="">
+                </li>
+                <li class="list">
+                    <img class="time" src="images/0.png" alt="">
+                    <img class="sub" src="images/0.png" alt="">
+                </li>
+            </ul>
+        </div>
+        
+        <script>
+            const list = document.getElementsByClassName("list"),
+                  time = document.getElementsByClassName("time"),
+                  sub = document.getElementsByClassName("sub")
+            ;
+            const len = time.length;
+
+            for(let i = 0;i<len;i++){
+                time[i].num = 0;
+            }
+
+            const fn = () => {
+                let dateStr = new [...Date().toTimeString().slice(0,8).split(":")]
+                dateStr.forEach(v)
+                //let dateStr = new Date().toTimeString().slice(0,8).split(":").join("");
+                /*for(let i = 0;i < len;i++){
+                    if(dateStr[i] === time[i].num)continue
+                    sub[i].src = `images/${dateStr[i]}.png`
+                    time[i].num = dateStr[i]
+                    animation(list[i], {
+                        data: {
+                            "margin-top" : -65
+                        }
+                    },500,()=>{
+                        time[i].src = `images/${dateStr[i]}.png`
+                        list[i].style.marginTop = 0
+                    })
+                }*/
+            }
+
+            setInterval(fn,1000)
+
+        </script>
+    </body>
+</html>

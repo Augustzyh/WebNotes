@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            body {
+                background: #ddd;
+                font-size: 24px;
+                user-select: none;
+            }
+
+            #calc {
+                width: 350px;
+                height: 500px;
+                margin: 50px auto;
+                box-shadow: 0px 10px 25px 6px rgba(0, 0, 0, .3);
+                border-radius: 10px;
+            }
+
+            #screen {
+                height: 20%;
+                border-radius: 10px 10px 0 0;
+                background: #999;
+            }
+
+            #screen p {
+                overflow: hidden;
+                padding: 0 16px;
+                height: 50%;
+                font-size: 40px;
+                color: #fff;
+                line-height: 50px;
+                text-align: right;
+                white-space: nowrap;
+            }
+
+            #screen p:hover {
+                overflow: visible;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                height: 80%;
+                border-radius: 0 0 10px 10px;
+                /* 多条轴线对齐方式 */
+                align-content: flex-start;
+            }
+
+            ul li {
+                width: 25%;
+                height: 20%;
+                text-align: center;
+                border: 1px solid #999;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+
+            /* 使用伪元素让文字垂直居中 */
+
+            ul li::before {
+                display: inline-block;
+                content: "";
+                height: 100%;
+                vertical-align: middle;
+            }
+
+            .clear,
+            .zero {
+                width: 50%;
+            }
+
+            ul li:nth-child(4n+4) {
+                background: #ff972b;
+                color: #fff;
+            }
+
+            .add {
+                border-bottom-left-radius: inherit;
+            }
+
+            .point {
+                border-bottom-right-radius: inherit;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="calc">
+            <div id='screen'>
+                <p class="expression"></p>
+                <p class="result">0</p>
+            </div>
+            <ul id="Keyboard">
+                <li class="clear">C</li>
+                <li class="percent">%</li>
+                <li class="equal">=</li>
+                <li class="symbol">/</li>
+                <li class="num">7</li>
+                <li class="num">8</li>
+                <li class="num">9</li>
+                <li class="symbol">*</li>
+                <li class="num">4</li>
+                <li class="num">5</li>
+                <li class="num">6</li>
+                <li class="symbol">-</li>
+                <li class="num">1</li>
+                <li class="num">2</li>
+                <li class="num">3</li>
+                <li class="symbol add">+</li>
+                <li class="num zero">0</li>
+                <li class="num point">.</li>
+            </ul>
+        </div>
+
+        <script>
+            /*
+                指数运算符： **
+             */
+
+            /*
+              解决浮点数运算精度：
+
+             */
+            const express = document.getElementsByClassName("expression")[0]
+            const result = document.getElementsByClassName("result")[0]
+            const num = document.getElementsByClassName("num")
+            const clear = document.getElementsByClassName("clear")[0]
+            const symbol = document.getElementsByClassName("symbol")
+            const equal = document.getElementsByClassName("equal")[0]
+            const percent = document.getElementsByClassName("percent")[0]
+            
+        </script>
+    </body>
+</html>

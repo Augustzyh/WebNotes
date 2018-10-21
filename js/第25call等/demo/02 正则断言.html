@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    // (?:模式)  不捕获匹配 
+    // 正常的子集是 捕获匹配
+    /* 
+      (?=模式)
+      先行断言也叫做零宽度正预测先行断言 也也叫做 正向肯定预查
+        这也是不捕获匹配
+
+      (?!模式)  正向否定预查
+      
+
+      (?<=模式)
+        反向肯定
+
+      (?<!模式)
+        反向否定
+    
+     */
+
+
+    let str1 = "123fengyu"
+    let str2 = "456fengyu"
+    let str3 = "789fengyu"
+
+    let reg = /(?<=123|456)fengyu/
+ 
+
+
+
+    console.log(reg.test(str2))
+    
+  
+  
+  </script>
+</body>
+</html>

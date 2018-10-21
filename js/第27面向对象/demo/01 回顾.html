@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    /* 
+      new
+        1.生成一个对象
+        2.new执行的这一次，函数内部的this指向这个new创建的对象
+        3.new执行的本次函数调用结束，默认返回这个new创建的对象
+    
+    
+     */
+  
+    function fn(){
+      this.name = arguments[0]
+    }
+    
+    fn.prototype = Function.prototype
+
+
+    const obj = new fn("fy") 
+    
+    // fn 是构造函数
+    // fn.prototype = 类的原型（是给实例提供公有的属性）
+    // new fn()   类的实例化
+    // obj = new fn()  obj 就是fn类的实例
+
+    // 原型也是一个对象，所有它也有对应的类的原型
+    // obj.__proto__ === fn.prototype
+    // 一层一层的原型的链式关系，就是原型链
+
+    // for in 性能及其差  因为in操作符会遍历原型  
+    
+    // 如果判断一个属性是否是原型上的。 hasOwnProperty
+
+    // console.log(obj.hasOwnProperty("name"))
+    // console.log(obj.hasOwnProperty("age"))
+  
+    // obj1 instanceof obj2 
+    // 用于确定obj2对象是否存在obj1对象的原型链上
+    
+    /* function fn2(){}
+
+    console.log(obj instanceof fn)
+    console.log(obj instanceof Array)
+    console.log(obj instanceof Function)
+    
+    console.log(obj) */
+    
+
+
+
+
+  </script>
+</body>
+</html>

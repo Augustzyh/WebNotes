@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    let n = 1.2
+
+    //console.log(Math.ceil(n))
+    //
+
+    //console.log(Math.floor(n))
+    
+    //console.log(Math.floor(-1.2))
+    
+    
+    // console.log(Math.max(1,5,15,2,3))
+    
+    // console.log(Math.min(0,5,15,2,3))
+    
+    // console.log(Math.pow(10, 2))
+    
+    // 10 ** 2
+
+    //console.log(Math.random())
+    
+
+    // [0, 1) // 左闭右开区间： 随机值 可能随机到0， 但是永远随机不到1
+    
+    //[4, 35) 
+
+    // [0, 1) * 50 => [0, 50) ==> 49.9999999
+    
+    //[0, 1) + 5 =>> [5, 6)
+    
+    //[0, 1) * 31 =>> [0, 31) + 4 ==》 [4, 35)
+
+
+    //console.log(Math.random() * 31 + 4)
+    
+    //console.log(Math.round(1.5))
+    
+    
+    //[13, 24) // [0, 1)
+
+    //[0, 5] // 0.0001 * 5 = 0.0005 = 1
+
+    // [0, 5]
+      
+    //[0, 1) * 2 = [0, 2)  1.01
+
+    //[5, 13] => [1, 14) => + 1 => [0, 13)  => [0, 1) * 13
+    //[5, 13] => [5, 14) => [0, 9) + 5 => [0 ,1) * 9
+
+    
+    function fn(a, b){
+      return Math.floor(Math.random() * ((b + 1) - a) + a)
+    }
+
+    // for (let i = 0; i < 10; i++){
+    //   console.log(fn(3, 7))
+    // }
+
+    
+  </script>
+</body>
+</html>

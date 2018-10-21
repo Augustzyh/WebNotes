@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap{
+            overflow:hidden;
+            width:700px;
+            height:500px;
+            background:red;
+            margin:50px auto;
+            user-select:none;
+        }
+        #box1{
+            float:left;
+            width:350px;
+            height:100%;
+            box-sizing:border-box;
+            padding:40px;
+            background:-webkit-linear-gradient(top, #11fc54, #1e1ee5, #fffb11);
+            color:#fff;
+        }
+        #box1 .title{
+            float:left;
+            color:yellow;
+        }
+        #box1 .where{
+            cursor:pointer;
+        }
+        #box1 #choosed{
+            width:100%;
+            margin-top:20px;
+        }
+        #box1 #choosed span{
+            display:inline-block;
+            margin-right:10px;
+            cursor:pointer;
+        }
+        #box2{
+            float:right;
+            width:350px;
+            height:100%;
+            box-sizing:border-box;
+            padding:40px;
+            background:-webkit-linear-gradient(top, #4dfb57, #cc4d3e, #e830fe);
+        }
+        #box2 span{
+            display:inline-block;
+            height:25px;
+            background-color: #bb21b6;
+            color:#fff;
+            border-radius:5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box1">
+            <p class="title">热门目的地：</p>
+            <span class="where">泰国</span>
+            <span class="where">新加坡</span>
+            <span class="where">印度尼西亚</span>
+            <span class="where">巴厘岛</span>
+            <span class="where">马来西亚</span>
+            <div id="choosed">
+                <!--<p>马来西亚 | <span>X</span></p>
+                <p>泰国 | <span>X</span></p>-->
+            </div>
+        </div>
+        <div id="box2">
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            let oBox1 = document.getElementById("box1"),
+                oBox2 = document.getElementById("box2"),
+                oSpan = document.querySelectorAll("#box1 .where"),
+                oChoosed = document.getElementById("choosed"),
+                oChildren1 = oBox1.children,
+                len1 = oChildren1.length
+            ;
+            for(let i = 0;i < len1-2;i++) {
+                (function (x) {
+                    oSpan[x].onclick = function () {
+                        let oS1 = oSpan[x].cloneNode(true),
+                            oS2 = oSpan[x].cloneNode(true),
+                            oS = document.createElement("span")
+                        ;
+                        if (oSpan[x].style.color !== "orange") {
+                            oChoosed.appendChild(oS1);
+                            oBox2.appendChild(oS2);
+                            oS.innerHTML = "&nbsp; | " + "X";
+                            oS1.appendChild(oS);
+                            oSpan[x].style.color = "orange";
+                        }
+                        oS.onclick = function () {
+                            oChoosed.removeChild(oS1);
+                            oBox2.removeChild(oS2);
+                            oSpan[x].style.color = "#fff";
+                        };
+                    };
+                })(i);
+            }
+        })();
+    </script>
+</body>
+</html>

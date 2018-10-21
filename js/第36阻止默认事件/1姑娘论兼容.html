@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body style="height:2000px">
+        <div id="wrap"></div>
+        
+        <script>
+            var wrap = document.getElementById("wrap")
+            mouseWheel(document,function (e) {
+                console.log(this);
+                e.preventDefault();
+                if(e.direction > 0){
+                    console.log("向前推");
+                }else{
+                    console.log("向后推");
+                }
+            },0)
+
+
+            function mouseWheel(dom,cb,bool){
+                function typeFn(e) {
+                    e = e || window.event;
+                    e.direction = e.wheelDelta / 120 || -e.detail / 3;
+                    cb.call(this,e)
+                    if(!!bool){
+                        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+                    }
+                }
+
+                var type = "mousewheel";
+                if(dom.onmousewheel === undefined){
+                    type = "DOMMouseScroll"
+                }
+
+                if(dom.addEventListener){
+                    dom.addEventListener(type,typeFn)
+                }else{
+                    dom.attachEvent("on" + type,typeFn)
+                }
+            }
+        </script>
+    </body>
+</html>

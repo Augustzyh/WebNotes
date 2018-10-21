@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>40js</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: Microsoft YaHei, serif;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		#box {
+			width: 1000px;
+			margin: 50px auto;
+		}
+
+		#top {
+			width: 100%;
+			background: #f8f8f8;
+			border: 1px solid #ddd;
+			height: 40px;
+		}
+
+		#top li {
+			position: relative;
+			float: left;
+			width: 80px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+
+		#top li span.red {
+			color: red;
+		}
+
+		#top li div {
+			position: absolute;
+			z-index: 99;
+			top: -1px;
+			left: 0;
+			width: 100px;
+			height: 120px;
+			font-size: 14px;
+			border: 1px solid #ddd;
+			background: #ffffff;
+		}
+
+		#top li div.hide {
+			display: none;
+		}
+
+		#content {
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		#content li {
+			position: relative;
+			float: left;
+			margin: 5px 14px;
+			width: 200px;
+			height: 230px;
+			padding: 10px;
+			border: 1px solid #eee;
+
+		}
+
+		#content li img {
+			width: 200px;
+			height: 200px;
+		}
+
+		#content li p {
+			font-size: 14px;
+		}
+
+		#content li div {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 50px;
+			height: 50px;
+			background: url("images/price.png");
+			text-align: center;
+			line-height: 50px;
+			color: #fff318;
+			font-size: 14px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box">
+		<ul id="top">
+			<li>流行</li>
+			<li>热销</li>
+			<li>上新</li>
+			<li class="price">
+				<span>价格</span>
+				<div class="hide">
+					<p>从高到底</p>
+					<p>从低到高</p>
+					<p>随机</p>
+				</div>
+			</li>
+		</ul>
+		<ul id="content">
+			<!-- <li>
+        <img src="images/xh_img8.jpg" alt="">
+        <p>甜美七分袖荷叶边条纹设</p>
+        <div>
+          ￥
+          <span>99.5</span>
+        </div>
+      </li> -->
+		</ul>
+	</div>
+
+	<script>
+
+		let arr = [
+			{
+				url: 'images/xh_img1.jpg',
+				title: '甜美七分',
+				price: 500
+			},
+			{
+				url: 'images/xh_img2.jpg',
+				title: '甜美七分袖荷叶边条纹设',
+				price: 100
+			},
+			{
+				url: 'images/xh_img3.jpg',
+				title: '甜美七分袖荷叶',
+				price: 300
+			},
+			{
+				url: 'images/xh_img4.jpg',
+				title: '甜美七分袖荷叶边条',
+				price: 700
+			},
+			{
+				url: 'images/xh_img5.jpg',
+				title: '甜美七分',
+				price: 130
+			},
+			{
+				url: 'images/xh_img6.jpg',
+				title: '甜美七分',
+				price: 210
+			},
+			{
+				url: 'images/xh_img7.jpg',
+				title: '甜美七分袖荷叶',
+				price: 178
+			},
+			{
+				url: 'images/xh_img8.jpg',
+				title: '甜美七分',
+				price: 50
+			}
+		];
+		
+		let price = document.getElementsByClassName("price")[0]
+		let priceBtn = price.getElementsByTagName("div")[0]
+		let sortBtn = priceBtn.getElementsByTagName('p')
+		let list = document.getElementById('content')
+
+		// 把初始数组 渲染出来
+		function view(arr) { // 渲染arr里的数据 -》》 页面上
+			list.innerHTML = ""
+			arr.forEach(v => {
+				list.innerHTML += `<li>
+          <img src="${v.url}" alt="">
+          <p>${v.title}</p>
+          <div>
+            ￥
+            <span>${v.price}</span>
+          </div>
+        </li>`
+			})
+		}
+
+		view(arr) // 渲染初始数据
+
+		// price hover
+		price.onmouseenter = function () {
+			priceBtn.classList.remove("hide")
+		}
+
+		price.onmouseleave = function () {
+			priceBtn.classList.add("hide")
+		}
+
+		// sortBtn  onclick
+		for (let i = 0; i < sortBtn.length; i++) {
+			sortBtn[i].onclick = function () {
+				if (i===1) { // 1 == 从低到高
+					arr.sort((a, b) => a.price - b.price)
+				} else if(i===0) { // 0 == 从高到底
+					arr.sort((a, b) => b.price - a.price)
+				}else{
+				    arr.sort(() => (Math.random()-0.5))
+				}
+				view(arr)
+			}
+		}
+
+	
+
+		/* document.onclick = function(){
+			this.inenrHTML = ""
+			
+			tx.innerHTML = ""
+		}
+		 */
+
+		
+		
+		
+		
+
+	</script>
+</body>
+
+</html>

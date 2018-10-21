@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //安装
+            npm install/i -g webpack
+            有packgjson时  cnpm i 自动安装对应模块
+
+
+            1.项目初始化  npm init
+            2.安装webpack (--save-dev      --save / -S 安装模块上线时使用  --dev 本地开发 -D)
+                   cnpm i -S webpack          //此时packgjson多一项
+            3.新建一个配置文件 touch webpack.config.json
+            4.编译 webpack -d 编辑模式  默认上传模式   -p 压缩  --watch 监听
+                       或者打包文件加   mode: 'production',  //development
+
+            html插件 html-webpack-plugin    用require引入所有插件
+                    cnpm i -D html-webpack-plugin
+
+            css loader sass less
+                    cnpm i -D css-loader style-loader
+                    在入口文件app.js   import导入
+                    sass cnpm i -D sass-loader node-sass
+                    分开插件  cnpm i -D extract-text-webpack-plugin@next c处理sass  在改下rules即可 github搜索
+
+            se6-es5  npm install --save--dev babel-loader babel-core babel-preset-es2015
+
+            SSS:插件webpack-dev-server  代替-D --watch 就不用每次使用了  打包就用这个名字自动开启一个服务器
+                   还能跨域 代理  命令可以存在package里面 script属性下  （dev） 用npm run dev执行
+                    cnpm i webpack-dev-server --save-dev -g
+
+
+
+
+            删除旧hash只保留最新的 clean-webpack-plugin
+                    cnpm i -D clean-webpack-plugin
+
+            图片资源处理 cnpm i -D file-loader  //仅背景图片
+                     处理img  cnpm i -D html-loader
+
+            热更新：SSS或watch监听时改变一个地方会加载所有模块，没有必要，只需变哪改哪
+        </script>
+    </body>
+</html>

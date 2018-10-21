@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    // 造人
+    // 共性  个性
+    // 生产工厂 ---》 构造函数/类
+    function Person(opt){
+      // 个性东西  私有属性
+      this.name = opt.name
+      this.age = opt.age
+      this.length = opt.length
+    }
+    // 共性 --》 公有的属性   
+    // prototype ===> 原型
+    Person.prototype = {
+      eat(value){alert(value)},
+      playgame(value){alert(value)}
+    }
+
+  
+
+    // 小仓库 ==》 存放对象的共性
+    const p1 = new Person({name: "大帅比1", age: 18, length: 18})
+    const p2 = new Person({name: "帅比2", age: 30, length: 5})
+    
+    console.log(p1)
+    
+
+    
+
+
+  </script>
+</body>
+</html>

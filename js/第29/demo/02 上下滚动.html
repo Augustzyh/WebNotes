@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    #box{
+      overflow: hidden;
+      width: 268px;
+      height: 400px;
+      margin: 50px auto;
+    }
+    #box p{
+      height: 10%;
+      background: skyblue;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    #box div{
+      overflow: hidden;
+      position: relative;
+      height: 80%;
+    }
+    #box div img{
+      position: absolute;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <p id="up">向上滚动</p>
+    <div id="clientBox">
+      <img src="./1.png" alt="" id="img" width="268" height="854">
+    </div>
+    <p id="down">向下滚动</p>
+  </div>
+
+  <script>
+    let util = (el, prop) => Number.parseFloat(getComputedStyle(el)[prop])
+
+    let timer = null
+    
+    let listTop = util(img, "top")
+    let num = 2
+    
+    
+
+    let topMin = util(clientBox, "height") - util(img, "height")
+    
+    
+    
+    up.onmousedown = () => {
+      clearInterval(timer)
+      timer = setInterval(() => {
+        listTop -= num
+        
+        listTop = Math.max(topMin, listTop)
+
+        img.style.top = listTop + "px"
+      }, 1000/60)
+    }
+    
+    document.onmouseup = () => {
+      //停止
+      clearInterval(timer)
+    }
+    
+    
+    down.onmousedown = () => {
+      clearInterval(timer)
+      timer = setInterval(() => {
+        listTop += num
+        
+        listTop = Math.min(0, listTop)
+
+        img.style.top = listTop + "px"
+      }, 1000/60)
+    }
+    
+    
+
+  
+  
+  
+  
+  </script>
+</body>
+</html>

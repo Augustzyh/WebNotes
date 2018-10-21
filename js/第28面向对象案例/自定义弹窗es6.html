@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            *{margin:0;padding:0;}
+            #alert{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,.3);
+            }
+            #info{
+                position: absolute;
+                left:50%;
+                top: 10%;
+                margin-left: -250px;
+                width: 500px;
+                height: 200px;
+                background: #eee;
+                border-radius: 5px;
+            }
+            #info p{
+                height: 20%;
+                background: pink;
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+                color: #fff;
+                text-indent: 20px;
+                font-size: 20px;
+            }
+
+            #info div{
+                height: 80%;
+                text-align: center;
+                font-size: 30px;
+            }
+
+            /* get: 文字居中方式 */
+            #info p::before, #info div::before{
+                display: inline-block;
+                content: "";
+                height: 100%;
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="alert">
+            <div id="info">
+                <p>title</p>
+                <div>body</div>
+            </div>
+        </div>
+        
+        <script>
+            class Es6_Alert{
+                constructor(opt){
+                    this._el = document.getElementById(opt.el.slice(1));
+                    this._title = this._el.getElementsByTagName("p")[0];
+                    this._info = document.getElementById("info");
+                    this._content = document.querySelector("#info div");
+                    this._autoClose = !!opt.autoClose;
+                    this._title.innerHTML = opt.title || "默认弹窗名";
+                    this._content.innerHTML = opt.content || "默认内容";
+
+                    this._el.onclick = function (e) {
+                        e.stopPropagation();
+                        this.close();
+                    }.bind(this);
+
+                    this._info.onclick = e => {
+                        e.stopPropagation();
+                    };
+
+                    this.close();
+                }
+
+                close(){
+                    this._el.style.display = "none";
+                    return this;
+                }
+                open(){
+                    this._el.style.display = "block";
+                    if(this._autoClose){
+                        setTimeout(this.close.bind(this),5000);
+                    }
+                    return this;
+                }
+            }
+
+            class Es6_Alert_Child extends Es6_Alert {
+                constructor(opt){
+                    super(opt);
+                    this.props = opt.props;
+                }
+
+                render(){
+                    let str = JSON.stringify(this.props).replace(/\s|\n|\t/,"");
+                    if(str.length === 2){
+                        console.error("你没有修改颜色，还new我干什么")
+                    }else{
+                        for(var key in this.props){
+                            var value = this.props[key];
+
+                            var newArr = key.split("_");
+                            var elements = "_" + newArr[0];
+                            var change = newArr[1];
+
+                            this[elements].style[change] = value;
+                        }
+                        return this;
+                    }
+                }
+            }
+
+            const alert1 = new Es6_Alert({
+                el:"#alert",
+                title:"弹窗标题",
+                content:"弹窗内容",
+                autoClose:true
+            });
+
+            const alert2 = new Es6_Alert_Child({
+                el:"#alert",
+                title:"我敲尼玛",
+                content:"敲不敲",
+                autoClose:true,  //默认自动关闭
+                props: {
+                    title_background: "rgba(111,112,112,.8)",
+                    content_background: "red"
+                }
+            });
+
+            document.onclick = () => {
+                alert2.render().open();
+            }
+        </script>
+    </body>
+</html>

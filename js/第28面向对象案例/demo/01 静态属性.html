@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    /* 
+      静态属性： 只能被  类   调用的属性 就是静态属性
+
+     */
+    /* function MyClass(){
+
+    }
+    // es5 静态属性写法
+    MyClass.say = function (){
+      console.log("这是一个静态方法")
+    } */
+    
+    
+    //const obj = new MyClass()
+    class FatherClass{
+
+    }
+    
+    
+    
+
+    class MyClass2 extends FatherClass{
+      constructor(){
+        super() // ===> 父类()  
+        //super.say()  //=== FatherClass.prototype.say()
+        
+      }
+
+      // 静态方法  没有静态属性
+      static say(){
+        // super  ===> FatherClass.staticMethods
+      }
+      // 这是原型方法
+      add(){
+        // super  ===>  FatherClass.prototype
+      }
+    }
+
+
+  
+  </script>
+</body>
+</html>

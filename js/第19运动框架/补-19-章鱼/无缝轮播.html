@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		#wrap {
+			position: relative;
+			width: 640px;
+			height: 360px;
+			margin: 50px auto;
+		    overflow: hidden;
+		}
+
+		#wrap .pic {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 1000%;
+		}
+
+		.pic li {
+			float: left;
+		}
+
+
+		.tab {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			margin-left: -100px;
+			width: 150px;
+			height: 30px;
+			padding-left: 10px;
+			background: rgba(0, 0, 0, .2);
+			border-radius: 15px;
+			transition: .5s;
+			transform: scale(.8);
+		}
+
+		.tab:hover {
+			background: rgba(0, 0, 0, .5);
+			transform: scale(1.2);
+		}
+
+		.tab li {
+			width: 20px;
+			height: 20px;
+			float: left;
+			background: #fff;
+			border-radius: 50%;
+			margin: 5px 10px 0 0;
+			opacity: .35;
+			cursor: pointer;
+		}
+
+		.tab li.on {
+            position:absolute;
+			background: rgba(72, 16, 15, 0.5);
+			opacity: 1;
+			z-index: 99;
+		}
+
+		#wrap>div {
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+			width: 30px;
+			height: 60px;
+			background: rgba(0, 0, 0, .2);
+			text-align: center;
+			font-size: 18px;
+			line-height: 60px;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		#wrap>div:hover {
+			background: rgba(0, 0, 0, .5);
+		}
+
+		.next {
+			right: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<ul class="pic">
+			<li>
+				<img src="img/1.png">
+			</li>
+			<li>
+				<img src="img/2.png">
+			</li>
+			<li>
+				<img src="img/3.png">
+			</li>
+			<li>
+				<img src="img/4.png">
+			</li>
+			<li>
+				<img src="img/5.png">
+			</li>
+            <li>
+                <img src="img/1.png">
+            </li>
+		</ul>
+		<ul class="tab">
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+            <li></li>
+		</ul>
+		<div class="prev"> < </div>
+		<div class="next"> > </div>
+		</div>
+		<script>
+			const wrap = document.getElementById("wrap")
+			const picList = document.getElementsByClassName("pic")[0]
+			const tabList = document.getElementsByClassName("tab")[0]
+			const imgList = picList.getElementsByTagName("li")
+			const btnLi = [...tabList.getElementsByTagName("li")]
+            const tabLiOn = btnLi.shift()
+			const prev = document.getElementsByClassName("prev")[0]
+			const next = document.getElementsByClassName("next")[0]
+
+            let index = 0
+            let len = imgList.length
+            let imgWidth = 640
+            let time = new Date()
+            let timerId = null
+
+            next.onclick = () => {
+			    if(new Date() - time < 500)return;
+			    date = new Date();
+                index++;
+
+                if(index === len - 1){
+                    animation(tabLiOn,{
+                        opacity:0
+                    },250,()=>{
+                            tabLiOn.style.left = "10px";
+                            animation(tabLiOn,{
+                                opacity:1
+                            },250)
+                    });
+                }else{
+                    animation(tabLiOn,{
+                        left:index * 30 + 10
+                    },500);
+                }
+
+                animation(picList,{
+                    left: -index * imgWidth
+                },500,() => {
+                    if(index === len - 1) {
+                        picList.style.left = 0;
+                        index = 0;
+                    }
+                });
+            };
+
+            prev.onclick = () => {
+                if(new Date() - time < 500)return;
+                date = new Date();
+
+                //tab
+                if(index === 0){
+                    animation(tabLiOn,{
+                        opacity:0
+                    },250,()=>{
+                        tabLiOn.style.left = 10 + 30 * (len - 2) + "px";
+                        animation(tabLiOn,{
+                            opacity:1
+                        },250)
+                    });
+                }else{
+                    animation(tabLiOn,{
+                        left:(index-1) * 30 + 10
+                    },500);
+                }
+
+                if(index === 0){
+                    picList.style.left = -(len - 1) * imgWidth + "px";
+                    index = len - 1;
+				}
+				index--;
+                animation(picList,{
+                    left: -index * imgWidth
+                },500);
+
+            };
+
+            let timer = setInterval(next.onclick,2000);
+
+            wrap.onmouseenter = () => {
+                clearInterval(timer);
+			};
+			wrap.onmouseleave = () => {
+                clearInterval(timer);
+                timer = setInterval(next.onclick,2000);
+			};
+
+			function animation(ele, data = {}, time = 500, cb = () => {}) {
+				var startValue = {} 
+				var changeValue = {}
+				var startTime = new Date() 
+
+				var eleStart = getStyle(ele) 
+
+				for (var key in data) {
+					var val = parseFloat(eleStart[key])
+					startValue[key] = isNaN(val) ? 0 : val
+					changeValue[key] = parseFloat(data[key]) - startValue[key] // 目
+				}
+
+				run()
+				function run() { 
+					var nowTime = new Date() - startTime
+					var t1 = nowTime / time 
+
+					if (t1 >= 1) {
+						t1 = 1
+					} else {
+						requestAnimationFrame(run)
+					}
+
+					for (var key in changeValue) {
+						var val = t1 * changeValue[key] + startValue[key]
+                        if(key === "opacity"){
+                            ele.style[key] = val
+                        }else{
+                            ele.style[key] = val + "px"
+                        }
+
+					}
+					if(t1 === 1)cb()
+				}
+
+				function getStyle(ele){
+					return ele.currentStyle || getComputedStyle(ele)
+				}
+			}
+		</script>
+</body>
+
+</html>

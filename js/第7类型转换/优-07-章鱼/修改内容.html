@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap ul li{
+            width:50%;
+            height:30px;
+            padding:10px 0 10px 20px;
+            border-bottom:1px solid red;
+            margin:auto;
+            font-size:12px;
+            line-height:30px;
+        }
+        #wrap ul li span,#wrap ul li p,#wrap ul li input{
+            display:inline-block;
+        }
+        #wrap ul li input{
+            display:none;
+            color:#bbb;
+        }
+        #wrap ul li.active span{
+            display:none;
+        }
+        #wrap ul li.active input{
+            display:inline-block;
+        }
+        #wrap ul li p{
+            width:60px;
+            height:30px;
+            margin-left:30px;
+            background-color: #000;
+            color:#fff;
+            text-align:center;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            <li>
+                <span>点击修改</span>
+                <input type="text" value="点击修改">
+                <p>修改</p>
+            </li>
+            <li>
+                <span>请问大家回去</span>
+                <input type="text" value="请问大家回去">
+                <p>修改</p>
+            </li>
+            <li>
+                <span>乔尼吗</span>
+                <input type="text" value="乔尼吗">
+                <p>修改</p>
+            </li>
+            <li>
+                <span>而把我i</span>
+                <input type="text" value="而把我i">
+                <p>修改</p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        (function () {
+            let oP = document.querySelectorAll("#wrap ul li p"),
+                oSp = document.querySelectorAll("#wrap ul li span"),
+                oL = document.querySelectorAll("#wrap ul li"),
+                oInput = document.querySelectorAll("#wrap ul li input"),
+                oPlen = oP.length,
+                index = 0;
+            /*for(let i = 0;i<oPlen;i++){
+                oP[i].index = i;
+                oP[i].bool = false;
+                oP[i].onclick = function () {
+                    index = this.index;
+                    oL[index].className = oL[index].className === "" ? "active":"";
+                    oP[index].bool = oP[index].bool === false?
+                        (oP[index].innerText = "确定",oP[index].bool = !oP[index].bool)
+                        :(oP[index].innerText = "修改",oP[index].bool = !oP[index].bool)
+                    ;
+                    oSp[index].innerText = oInput[index].value;
+                };
+            }*/
+            //老师写
+            let arr = ["确认","修改"];
+            for(let i = 0;i<oPlen;i++){
+                oP[i].bool = false;
+                oP[i].onclick = function () {
+                    oP[i].innerHTML = arr[oP[i].bool*1];
+                    oSp[i].contentEditable = oP[i].bool = !oP[i].bool;
+                };
+            }
+            /*let arr = ["确认","修改"];
+            for(let i = 0;i<oPlen;i++){
+                oP[i].bool = false;
+                oP[i].onclick = function () {
+                    /!*if(oP[i].bool){  //不可修改
+                        oSp[i].contentEditable = false;
+                        oP[i].innerHTML = "修改"
+                    }else{  //可修改
+                        oSp[i].contentEditable = true;
+                        oP[i].innerHTML = "确定";
+                    }*!/
+                    oP[i].innerHTML = arr[oP[i].bool*1];
+                    /!*oSp[i].contentEditable = !oP[i].bool;
+                    oP[i].bool = !oP[i].bool;*!/
+                    oSp[i].contentEditable = oP[i].bool = !oP[i].bool;
+                };
+            }*/
+        })();
+    </script>
+</body>
+</html>

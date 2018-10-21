@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                overflow: hidden;
+                width:800px;
+                height:500px;
+                border:1px solid #000;
+                margin:50px auto 0;
+            }
+            .flower{
+                position:relative;
+                float:left;
+                width:200px;
+                height:250px;
+            }
+            .title{
+                position: absolute;
+                overflow: hidden;
+                bottom:0;
+                left:0;
+                width:90%;
+            }
+            .price{
+                float:right;
+                color:red;
+            }
+            .choice{
+                overflow: hidden;
+                width:800px;
+                margin:10px auto;
+            }
+            .choice div{
+                float:right;
+                height:30px;
+                width:50px;
+                background-color: #2d78f4;
+                margin-right:20px;
+                color:#fff;
+                line-height:30px;
+                text-align:center;
+                user-select:none;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="flower">
+                <p class="title"><span class="price">10</span></p>
+            </div>
+            <div class="flower">
+                <p class="title"><span class="price">30</span></p>
+            </div>
+            <div class="flower">
+                <p class="title"><span class="price">50</span></p>
+            </div>
+            <div class="flower">
+                <p class="title"><span class="price">100</span></p>
+            </div>
+            <div class="flower">
+                <p class="title"><span class="price">60</span></p>
+            </div>
+            <div class="flower">
+                <p class="title"><span class="price">500</span></p>
+            </div>
+            <div class="flower">
+                <p class="title"><span class="price">550</span></p>
+            </div>
+            <div class="flower">
+                <p class="title"><span class="price">320</span></p>
+            </div>
+        </div>
+        <div class="choice">
+            <div id="random">随机</div>
+            <div id="up">升序</div>
+            <div id="dec">降序</div>
+        </div>
+        <script>
+            alert("今天比较忙，就排个数字序，不建议的哈");
+            let price = document.getElementsByClassName("price");
+            [...arr] = price;
+            let arr1 = [];
+            for(let i = 0;i<arr.length;i++){
+                arr1.push(arr[i].innerHTML);
+            }
+            up.onclick = function () {
+                arr1.sort((a,b)=>a-b);
+                for(let i = 0;i<arr.length;i++){
+                    arr[i].innerHTML = arr1[i];
+                }
+            };
+            dec.onclick = function () {
+                arr1.sort((a,b)=>b-a);
+                for(let i = 0;i<arr.length;i++){
+                    arr[i].innerHTML = arr1[i];
+                }
+            };
+            random.onclick = function () {
+                arr1.sort((a,b)=>Math.random()-0.5);
+                for(let i = 0;i<arr.length;i++){
+                    arr[i].innerHTML = arr1[i];
+                }
+            };
+        </script>
+    </body>
+</html>

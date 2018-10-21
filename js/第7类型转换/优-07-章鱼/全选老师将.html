@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap{
+            width:500px;
+            margin:100px auto;
+            padding-top:30px;
+            border:1px solid #bbb;
+            border-radius:30px;
+            user-select: none;
+        }
+        #wrap ul{
+            margin-bottom:40px;
+        }
+        #wrap ul li{
+            height:60px;
+            width:100%;
+            border-bottom: 1px solid #fff;
+            background:url("img/ck.png") no-repeat 5% 50%;
+            line-height:60px;
+            text-indent:80px;
+            color:#000;
+            font-weight:600;
+            cursor:pointer;
+        }
+        #wrap ul li.cked{
+            background:url("img/cked.jpg") no-repeat 5% 50%;
+            text-indent:50px;
+        }
+        /*  不使用js生成颜色或项目个数时的css
+        #wrap ul li:nth-child(3n-2){
+            background-color:#333;
+        }
+        #wrap ul li:nth-child(3n-1){
+            background-color:#666;
+        }
+        #wrap ul li:nth-child(3n){
+            background-color:#999;
+        }*/
+        #wrap .quanxuan{
+            width:100%;
+            height:60px;
+            background:url("img/ck.png") no-repeat 5% 50%;
+            line-height:60px;
+            text-indent:80px;
+            font-weight:600;
+            cursor:pointer;
+        }
+        #wrap .quanxuan.cked{
+            background:url("img/cked.jpg") no-repeat 5% 50%;
+            text-indent:50px;
+        }
+        button.active{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul id="bornli">
+            <li>项目1</li>
+
+            <li>项目1</li>
+
+            <li>项目1</li>
+
+            <li>项目1</li>
+
+            <li>项目1</li>
+
+            <li>项目1</li>
+
+            <li>项目1</li>
+        </ul>
+        <button>全选</button>
+        <button class="active">全部选</button>
+        <button>反选</button>
+    </div>
+
+    <script>
+        let list = document.getElementsByTagName("li"),
+            btn = document.getElementsByTagName("button"),
+            count = 0
+        ;
+        //循环 迭代 遍历
+        for (let i = 0, length = list.length; i < length; i++) {
+            let listElement = list[i];
+            listElement.mark = false;
+            listElement.onclick = function () {
+                if(listElement.mark){//选中遍布选中
+                    //listElement.classList.remove("cked");
+                    count--;
+                }else{
+                    //listElement.classList.add("cked");
+                    count++;
+                }
+                listElement.classList.toggle("cked");
+                listElement.mark = !listElement.mark;
+
+                cked(count);
+            };
+            btn[0].onclick = function () {
+                for (var j = 0; j < length; j++) {
+                    list[j].mark = true;
+                    list[j].classList.add("cked");
+                }
+                cked(length);
+            };
+            btn[1].onclick = function () {
+                for (var j = 0; j < length; j++) {
+                    list[j].mark = true;
+                    list[j].classList.remove("cked");
+                }
+                cked(0);
+            };
+            btn[2].onclick = function () {
+                for (var j = 0; j < length; j++) {
+                    if(list[j].mark){
+                        count--;
+                    }else {
+                        count++;
+                    }
+                    list[j].classList.toggle("cked");
+                    list[j].mark = !list[i].mark;
+                }
+            };
+        }
+        function cked(c) {
+            switch(c){
+                case length:
+                    btn[0].classList.add("active");
+                    btn[1].classList.remove("active");
+                    break;
+                case 0:
+                    btn[0].classList.remove("active");
+                    btn[1].classList.add("active");
+                    break;
+                default:
+                    btn[0].classList.remove("active");
+                    btn[1].classList.remove("active");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

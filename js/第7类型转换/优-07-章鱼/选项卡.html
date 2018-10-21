@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width:300px;
+                margin:20px auto;
+                background-color:deeppink;
+                user-select:none;
+            }
+            .first{
+                width:100%;
+                text-align:center;
+            }
+            .second{
+                height:50px;
+                width:100%;
+                border-bottom:3px solid #001cfe;
+                line-height:50px;
+                cursor:pointer;
+            }
+            .thirdCon{
+                display:none;
+            }
+            .thirdCon.on{
+                display:block;
+            }
+            .third{
+                width:100%;
+                height:30px;
+                border-bottom:1px solid #bbb;
+                background-color: pink;
+                line-height:30px;
+                cursor:pointer;
+            }
+            .third:hover{
+                background-color:hotpink;
+            }
+            .thirdCon .third:last-child{
+                border:none;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="first">
+                <h3 class="second">什么玩意儿</h3>
+                <div class="thirdCon">
+                <div class="third">这个玩意</div>
+                <div class="third">那个玩意</div>
+                <div class="third">不知道</div></div>
+            </div>
+            <div class="first">
+                <h3 class="second">干啥玩意儿</h3>
+                <div class="thirdCon">
+                <div class="third">啥也不干</div>
+                <div class="third">干架啊</div>
+                <div class="third">乔尼吗</div>
+                <div class="third">弄弯你</div>
+                <div class="third">不知道</div></div>
+            </div>
+            <div class="first">
+                <h3 class="second">这是哪</h3>
+                <div class="thirdCon">
+                <div class="third">鬼知道</div>
+                <div class="third">谁tm知道</div>
+                <div class="third">别问我</div>
+                <div class="third">不知道</div></div>
+            </div>
+            <div class="first">
+                <h3 class="second">走</h3>
+                <div class="thirdCon">
+                <div class="third">去哪</div>
+                <div class="third">不去</div>
+                <div class="third">不想动</div></div>
+            </div>
+            <div class="first">
+                <h3 class="second">累啊</h3>
+                <div class="thirdCon">
+                <div class="third">活该</div>
+                <div class="third">你说啥？</div>
+                <div class="third">去死吧</div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            (function f() {
+                let oSecond = document.getElementsByClassName("second"),
+                    oThirdCon = document.getElementsByClassName("thirdCon"),
+                    len = oSecond.length,
+                    index = 0
+                ;
+                /*for(let i = 0; i < len;i++){
+                    let dom = oSecond[i];
+                    dom.index = i;
+                    dom.onclick  = function () {
+                        if(index !== this.index){
+                            oThirdCon[index].className = "thirdCon";
+                        }
+                        index = this.index;
+                        oThirdCon[index].className = oThirdCon[index].className === "thirdCon" ? "thirdCon on" : "thirdCon";
+                    };
+                }*/
+                //老师写 1
+                /*for(let i = 0;i<len;i++){
+                    oSecond[i].mark = false;
+                    oSecond[i].onclick = function () {
+                        if(oSecond[i].mark){
+                            oThirdCon[i].className = "thirdCon";
+                        }else{
+                            for(let j = 0;j<len;j++){
+                                oThirdCon[j].className = "thirdCon";
+                                oSecond[j].mark = false;
+                            }
+                            oThirdCon[i].className = "thirdCon on";
+                        }
+                        oSecond[i].mark = !oSecond[i].mark;
+                    };
+                }*/
+                //老师写 2
+                let lastIndex = -1;
+                for(let i = 0;i<len;i++){
+                    oSecond[i].onclick = function () {
+                        if(lastIndex !== -1){
+                            oThirdCon[lastIndex].className = "thirdCon";
+                            if(lastIndex === i){
+                                lastIndex = -1;
+                                return;
+                            }
+                        }
+                        oThirdCon[i].className = "thirdCon on";
+                        lastIndex = i;
+                    };
+                }
+            })();
+        </script>
+    </body>
+</html>

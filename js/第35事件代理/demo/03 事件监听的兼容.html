@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    
+    function on(dom, type, cb, bool){
+      if(dom.addEventListener){
+        dom.addEventListener(type, cb, !!bool)
+      }else{
+        // 
+        dom.attachEvent("on"+type, cb)
+      }
+    }
+
+    function off(dom, type, cb, bool){
+      if(dom.removeEventListener){
+        dom.removeEventListener(type, cb, !!bool)
+      }else{
+        // 
+        dom.detachEvent("on"+type, cb)
+      }
+    }
+  
+    const fn = () => {console.log("clicked")}
+
+    on(document, "click", fn)
+
+    off(document, "click", fn)
+  </script>
+</body>
+</html>

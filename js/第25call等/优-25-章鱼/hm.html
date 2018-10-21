@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="44期-章鱼">
+    <meta name="Keywords" content="大章鱼">
+    <meta name="Description" content="章鱼网页">
+    <title>账号注册</title>
+    <style type="text/css">
+        body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+        ul,ol,dl{padding:0; }
+        li{list-style:none;}
+        a{text-decoration:none; color:#000;}
+        img{border:none;}
+        #login{
+            width:325px;
+            height:400px;
+            border:1px solid #bbb;
+            margin:100px auto;
+            border-radius:20px;
+            box-shadow:0 0 15px #bbb;
+        }
+        #login ul{
+            margin:10px auto;
+        }
+        #login ul li{
+            position:relative;
+            padding-top:30px;
+        }
+        #login ul li span{
+            display:inline-block;
+            width:90px;
+            height:20px;
+            color:#7f7fff;
+            text-align:center;
+        }
+        #login span:hover{
+            color:#bbb;
+        }
+        #login ul li input{
+
+            width:190px;
+            height:30px;
+            border:1px solid #bbb;
+            border-radius:3px;
+        }
+        #login ul li .tip{
+            display:none;
+            position:absolute;
+            left:300px;
+            top:22px;
+            width:500px;
+            height:50px;
+            background:rgba(0,0,255,0.5);
+            border-radius:5px;
+        }
+        #login ul li .tip i{
+            display:block;
+            position:absolute;
+            left:-20px;
+            top:16px;
+            width:0;
+            height:0;
+            border:10px solid transparent;
+            border-right-color:rgba(0,0,255,0.5);
+        }
+        #login ul li .tip p{
+            color:#fff;
+            text-align:center;
+            line-height:50px;
+        }
+        #login ul li input:focus + .tip{
+            display:block;
+        }
+        #login .btn{
+            float:right;
+            margin:5px 35px auto auto;
+        }
+        #login .btn input{
+            height:30px;
+            border:none;
+            background:rgba(0,0,255,0.5);
+            color:#fff;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        #login .btn input:hover{
+            background-color:#bbb;
+            color:#7f7fff;
+        }
+        #login li .error{
+            display:none;
+            color:red;
+            font-size:12px;
+            text-align:center;
+        }
+        #login li .error.on{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <form>
+            <ul>
+                <li>
+                    <span>QQ</span>
+                    <input type="text" placeholder="QQ" id="qq"/>
+                    <div class="tip">
+                        <i></i>
+                        <p>最小五位，最大十位</p>
+                    </div>
+                    <div class="error">格式不对，请重新输入！</div>
+                </li>
+                <li>
+                    <span>Telephone</span>
+                    <input type="text" placeholder="Telephone" id="tel"/>
+                    <div class="tip">
+                        <i></i>
+                        <p>手机号11位</p>
+                    </div>
+                    <div class="error">格式不对，请重新输入！</div>
+                </li>
+                <li>
+                    <span>UserName</span>
+                    <input type="text" placeholder="UserName" id="username"/>
+                    <div class="tip">
+                        <i></i>
+                        <p>数字字母下划线，不以数字开头，6-16位</p>
+                    </div>
+                    <div class="error">格式不对，请重新输入！</div>
+                </li>
+                <li>
+                    <span>Password</span>
+                    <input type="text" placeholder="Password" id="pwd"/>
+                    <div class="tip">
+                        <i></i>
+                        <p>无中文符号</p>
+                    </div>
+                    <div class="error">格式不对，请重新输入！</div>
+                </li>
+                <li>
+                    <span>Email</span>
+                    <input type="text" placeholder="Email" id="email"/>
+                    <div class="tip">
+                        <i></i>
+                        <p>请输入邮箱</p>
+                    </div>
+                    <div class="error">格式不对，请重新输入！</div>
+                </li>
+            </ul>
+            <div class="btn">
+                <input type="submit" value="注册" id="sure"/>
+                <input type="button" onclick="window.location.href='../hm12.html'" value="我有账号直接登陆"/>
+            </div>
+        </form>
+    </div>
+    <script>
+        let error = document.getElementsByClassName("error"),
+            input = document.getElementsByTagName("input")
+        ;
+        /*let reg = {
+            qq: /^[1-9]\d{4,9}$/,   //最小五位，最大十位
+            tel: /^1[3-9]\d{9}$/,    //手机号11
+            user: /^[a-z_]\w{5,15}$/i, //用户名 数字字母下划线，不以数字开头  6-16位为例
+            pwd:/^[\w\.\\\-\]?,/|+*&^%$#@!;<>'`~=:[{}]{6,18}$/, //6-18位  无中文符号
+            email:/^[1-9a-z_]\w*@[a-z0-9]{2,}\.[a-z]{2,6}(\.cn)?$/i    //
+        };*/
+        let reg = [
+            /^[1-9]\d{4,9}$/,
+            /^1[3-9]\d{9}$/,
+            /^[a-z_]\w{5,15}$/i,
+            /^[\w\.\\\-\]?,/|+*&^%$#@!;<>'`~=:[{}]{6,18}$/,
+            /^[1-9a-z_]\w*@[a-z0-9]{2,}\.[a-z]{2,6}(\.cn)?$/i
+        ];
+        let value;
+        for(let i = 0,len = error.length;i < len;i++){
+            input[i].oninput = function () {
+                input[i].onblur = function () {
+                    value = this.value;
+
+                    if(reg[i].test(value) === false){
+                        input[i].focus();
+                        error[i].classList.add("on")
+                    }else{
+                        input[i].blur();
+                        error[i].classList.remove("on")
+                    }
+                };
+            }
+        }
+    </script>
+</body>
+</html>

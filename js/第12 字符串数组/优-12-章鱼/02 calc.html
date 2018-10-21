@@ -1,0 +1,291 @@
+<html>
+
+<head>
+  <title>44-js</title>
+  <meta charset="utf-8">
+  <meta name="author" content="FengYu">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    body {
+      background: #ddd;
+      font-size: 24px;
+      user-select: none;
+    }
+
+    #calc {
+      width: 350px;
+      height: 500px;
+      margin: 50px auto;
+      box-shadow: 0px 10px 25px 6px rgba(0, 0, 0, .3);
+      border-radius: 10px;
+    }
+
+    #screen {
+      height: 20%;
+      border-radius: 10px 10px 0 0;
+      background: #999;
+    }
+
+    #screen p {
+      overflow: hidden;
+      padding: 0 16px;
+      height: 50%;
+      font-size: 40px;
+      color: #fff;
+      line-height: 50px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    #screen p:hover {
+      overflow: visible;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      height: 80%;
+      border-radius: 0 0 10px 10px;
+      /* 多条轴线对齐方式 */
+      align-content: flex-start;
+    }
+
+    ul li {
+      width: 25%;
+      height: 20%;
+      text-align: center;
+      border: 1px solid #999;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    /* 使用伪元素让文字垂直居中 */
+
+    ul li::before {
+      display: inline-block;
+      content: "";
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .clear,
+    .zero {
+      width: 50%;
+    }
+
+    ul li:nth-child(4n+4) {
+      background: #ff972b;
+      color: #fff;
+    }
+
+    .add {
+      border-bottom-left-radius: inherit;
+    }
+
+    .point {
+      border-bottom-right-radius: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="calc">
+    <div id='screen'>
+      <p class="expression"></p>
+      <p class="result">0</p>
+    </div>
+    <ul id="Keyboard">
+      <li class="clear">C</li>
+      <li class="percent">%</li>
+      <li class="equal">=</li>
+      <li class="symbol">/</li>
+      <li class="num">7</li>
+      <li class="num">8</li>
+      <li class="num">9</li>
+      <li class="symbol">*</li>
+      <li class="num">4</li>
+      <li class="num">5</li>
+      <li class="num">6</li>
+      <li class="symbol">-</li>
+      <li class="num">1</li>
+      <li class="num">2</li>
+      <li class="num">3</li>
+      <li class="symbol add">+</li>
+      <li class="num zero">0</li>
+      <li class="num point">.</li>
+    </ul>
+  </div>
+
+  <script>
+    /* 
+        指数运算符： **  
+     */
+
+    /* 
+      解决浮点数运算精度：
+    
+     */
+    const express = document.getElementsByClassName("expression")[0]
+    const result = document.getElementsByClassName("result")[0]
+    const num = document.getElementsByClassName("num")
+    const clear = document.getElementsByClassName("clear")[0]
+    const symbol = document.getElementsByClassName("symbol")
+    const equal = document.getElementsByClassName("equal")[0]
+    const percent = document.getElementsByClassName("percent")[0]
+
+    const arr = [] // 存表达式
+    
+    let num1 = ""
+    let num2 = ""
+    let sym = null
+
+    // clear
+    clear.onclick = function(){
+      express.innerHTML = ''
+      result.innerHTML = 0
+
+      num1 = ""
+      num2 = ""
+      sym = null
+      arr.length = 0
+    }
+
+    // num onclick
+    for (let i = 0; i < num.length; i++){
+      num[i].onclick = function(){
+        if(sym){ // 输入第二个运算数
+          result.innerHTML = num2 += this.innerHTML
+        }else{ // 输入第一个运算数
+          result.innerHTML = num1 += this.innerHTML
+        }
+      }
+    }
+
+    // symbol click
+    for (let i = 0; i < symbol.length; i++){
+      symbol[i].onclick = function(){
+        if(sym){ // 第二次输入符号
+          arr.push(num2)
+          num2 = ""
+        }else{ // 第一次输入符号
+          arr.push(num1)
+        }
+        sym = this.innerHTML
+        arr.push(sym)
+      }
+    }
+    
+    // equal click
+    equal.onclick = function(){
+      arr.push(num2)
+      // 拿一个副本去运算
+      let target = arr.slice()
+      let res = evaluation(target)
+      let exp = arr.join("")
+      
+      num1 = ''
+      num2 = ""
+      sym = null
+      express.innerHTML = exp
+      result.innerHTML = res
+    }
+
+
+    // percent click
+    percent.onclick = function(){
+      if(num2){ // 
+        result.innerHTML = num2 /= 100
+      }else{
+        result.innerHTML = num1 /= 100
+      }
+    }
+
+    
+
+
+
+
+    
+    
+
+
+    
+
+    // 用于计算的工具函数
+    function evaluation(arr, s = 0, e = arr.length - 1){
+      // 创建一个arr的副本用于计算
+      let arr2 = arr.slice(s, e + 1) // 10 11
+      // 第一优先级运算符   filter  * /
+      let symArr1 = arr2.filter(v => (v === "*" || v === "/"))
+      let symArr2 = arr2.filter(v => (v === "+" || v === "-"))
+      
+      while(true){
+        let idx, base, sym, res;
+        let first = symArr1.shift() || symArr2.shift()
+        if(!first){ // 如果first不能在取到符号，就表示运算结束，跳出循环
+          break
+        }
+        idx = arr2.indexOf(first) // 符号序号
+        sym = first
+        base = floatBase(arr2[idx - 1], arr2[idx + 1])
+        res = computed(arr2[idx - 1], arr2[idx + 1], sym, base)
+        arr2.splice(idx - 1, idx + 2, res)   
+        arr.splice(s, e + 1, res)
+      }
+      return arr2.shift()
+    }
+
+    // 解决浮点数精度问题  进制  0.1 + 0。2 =》 10
+    function floatBase(a, b){
+      let aIsInt = Number.isInteger(a*1)
+      let bIsInt = Number.isInteger(b*1)
+      let aLastIndex = String(a).length - 1
+      let bLastIndex = String(b).length - 1
+      if(aIsInt && bIsInt){
+        return 1
+      }
+      let aFLen = aLastIndex - (aIsInt ? aLastIndex : String(a).indexOf("."))
+      let bFLen = bLastIndex - (bIsInt ? bLastIndex : String(b).indexOf("."))
+      return 10 ** ( aFLen >= bFLen ? aFLen : bFLen)
+    }
+
+    // 计算
+    function computed(x, y, s, b){
+      // x 第一个运算数
+      // y 第二个运算数
+      // s 运算符号
+      // b 浮点数运算进制
+      switch (s) {
+        case "*":
+          return (x * b * (y * b)) / b ** 2
+          break;
+        
+        case "/":
+          return x * b / (y * b)
+          break;
+        
+        case "+":
+          return (x * b + y * b) / b
+          break;
+        
+        case "-":
+          return (x * b - y * b) / b
+          break;
+        // not default
+      }
+
+
+    }
+    
+  </script>
+</body>
+
+</html>

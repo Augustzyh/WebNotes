@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            div{
+                width:300px;
+                height:200px;
+                margin:20px auto;
+                border:1px solid #bbb;
+                text-align:center;
+                line-height: 200px;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>div1</div>
+        <div>div2</div>
+        
+        <script>
+            let oD = document.getElementsByTagName("div"),
+                arr = ["-webkit-radial-gradient(circle,red,yellow,orange)",""]
+            ;
+            oD[0].onmouseenter = function () {
+                oD[1].style.background = arr[0];
+            };
+            oD[1].onmouseenter = function () {
+                oD[0].style.background = arr[0];
+            };
+            oD[0].onmouseleave = function () {
+                oD[1].style.background = arr[1];
+            };
+            oD[1].onmouseleave = function () {
+                oD[0].style.background = arr[1];
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Microsoft YaHei, serif;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            #box {
+                width: 426px;
+                height: 104px;
+                margin: 50px auto;
+
+            }
+
+            #tab {
+                width: 100px;
+                height: 100%;
+                float: left;
+
+            }
+
+            #tab ul li {
+                width: 100px;
+                height: 50px;
+                margin-bottom: 1px;
+                background: #000;
+                font-size: 18px;
+                text-align: center;
+                line-height: 50px;
+                color: #fff;
+            }
+
+            #tab ul li.on {
+                background: #f60;
+            }
+
+            #content {
+                position: relative;
+                width: 326px;
+                height: 203px;
+                float: right;
+
+            }
+
+            #content .pic {
+                display: none;
+            }
+
+            #content .pic.on {
+                display: block;
+            }
+
+            #content .pic ul li {
+                display: none;
+                width: 100%;
+                height: 203px;
+            }
+
+            #content .pic ul li.on {
+                display: block;
+            }
+
+            #content .btn {
+                display: none;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 35px;
+                width: 100%;
+                background: rgba(0, 0, 0, .5);
+            }
+
+            #content .btn.on {
+                display: block;
+            }
+
+            #content .btn ul {
+                float: right;
+            }
+
+            #content .btn ul li {
+                float: left;
+                width: 35px;
+                height: 35px;
+                background: #ddd;
+                text-align: center;
+                line-height: 35px;
+                margin-left: 2px;
+            }
+
+            #content .btn ul li.on {
+                background: #f60;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="box" class="wrap">
+            <div id="tab">
+                <ul>
+                    <li class="on">选项卡一</li>
+                    <li>选项卡二</li>
+                    <li>选项卡三</li>
+                    <li>选项卡四</li>
+                </ul>
+            </div>
+            <div id="content">
+                <div class="pic on">
+                    <ul>
+                        <li class="on" style="background: url(images/c1.jpg);"></li>
+                        <li style="background: url(images/c2.jpg);"></li>
+                        <li style="background: url(images/c3.jpg);"></li>
+                        <li style="background: url(images/c4.jpg);"></li>
+                    </ul>
+                </div>
+                <div class="btn on">
+                    <ul>
+                        <li class="on">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+
+                <div class="pic">
+                    <ul>
+                        <li class="on" style="background: url(images/m1.jpg);"></li>
+                        <li style="background: url(images/m2.jpg);"></li>
+                        <li style="background: url(images/m3.jpg);"></li>
+                        <li style="background: url(images/m4.jpg);"></li>
+                        <li style="background: url(images/m5.jpg);"></li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <ul>
+                        <li class="on">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </div>
+
+                <div class="pic">
+                    <ul>
+                        <li class="on" style="background: url(images/c1.jpg);"></li>
+                        <li style="background: url(images/c2.jpg);"></li>
+                        <li style="background: url(images/c3.jpg);"></li>
+                        <li style="background: url(images/c4.jpg);"></li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <ul>
+                        <li class="on">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+
+                <div class="pic">
+                    <ul>
+                        <li class="on" style="background: url(images/s1.jpg);"></li>
+                        <li style="background: url(images/s2.jpg);"></li>
+                        <li style="background: url(images/s3.jpg);"></li>
+                        <li style="background: url(images/s4.jpg);"></li>
+                        <li style="background: url(images/s5.jpg);"></li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <ul>
+                        <li class="on">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            const box = document.getElementById("box")
+            const tabLi = document.querySelectorAll("#tab li")
+            const pic = document.getElementsByClassName("pic")
+            const btn = document.getElementsByClassName("btn")
+
+            let timer = null
+
+            let idx = 0
+            for(let i = 0;i < tabLi.length;i++){
+                tabLi[i].onmouseenter = function () {
+                    tabLi[idx].classList.remove("on")
+                    pic[idx].classList.remove("on")
+                    btn[idx].classList.remove("on")
+                    idx = i;
+                    this.classList.add("on")
+                    pic[idx].classList.add("on")
+                    btn[idx].classList.add("on")
+                }
+                const picLi = pic[i].getElementsByTagName("li")
+                const btnLi = btn[i].getElementsByTagName("li")
+                btnLi.index = 0
+                for(let j = 0;j < btnLi.length;j++){
+                    btnLi[j].onmouseenter = () =>{
+                        btnLi[btnLi.index].classList.remove("on")
+                        picLi[btnLi.index].classList.remove("on")
+                        btnLi.index = j;
+                        picLi[btnLi.index].classList.add("on")
+                        btnLi[btnLi.index].classList.add("on")
+                    }
+                }
+
+            }
+
+            let autoFn = (idx) => {
+                let btnLi = btn[idx].getElementsByTagName("li")
+                let picLi = pic[idx].getElementsByTagName("li")
+
+                btnLi[btnLi.index].classList.remove("on")
+                picLi[btnLi.index].classList.remove("on")
+                btnLi.index++
+                btnLi.index %= btnLi.length
+                picLi[btnLi.index].classList.add("on")
+                btnLi[btnLi.index].classList.add("on")
+            }
+            timer = setInterval(autoFn,1000,idx)
+            box.onmouseenter = () => {
+                clearInterval(timer)
+            }
+            box.onmouseleave = () => {
+                clearInterval(timer)
+                timer = setInterval(autoFn,1000,idx)
+            }
+        </script>
+    </body>
+</html>

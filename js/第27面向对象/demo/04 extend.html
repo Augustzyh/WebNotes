@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    /* 
+      关于对象的深浅拷贝
+
+     */
+    
+    const obj = {
+      a: 1,
+      b: ["a", {
+        c: ["f"]
+      }],
+    }
+
+
+    function extend(o1, deep){
+      // deep true  启动深拷贝
+      // false  浅拷贝
+      var obj = {}
+      // 数组对象
+      if(o1 instanceof Array){
+        // true 数组  obj 就得是数组
+        obj = []
+      }
+      for(var key in o1){
+        var value = o1[key]
+        // 确定value是不是引用型，前提是deep 是true
+        obj[key] = (!!deep && typeof value === "object" && value !== null) ? extend(value, deep) : value
+      }
+      return obj
+    }
+    
+    
+    const obj2 = extend(obj)
+    
+    obj2.b[1].c.push("y")
+    console.log(obj)
+    console.log(obj2,true)
+    
+    
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+
+    /*document.onclick = function(){
+      $.ajax({
+        method: "GET",
+        url: "http://localhost:8000",
+        success(msg){
+          console.log(msg.pwd)
+        }
+      })*/
+
+
+
+
+       const xhr = new XMLHttpRequest()
+      
+      xhr.open("GET", "http://localhost:8000")
+
+      xhr.send()
+
+      xhr.onload = () => {
+        if(xhr.readyState !== 4)return
+        if(200 <= xhr.status && xhr.status < 300 || xhr.status === 304){
+          console.log(JSON.parse(xhr.responseText))
+        }
+      }
+    
+  
+  </script>
+
+
+</body>
+</html>

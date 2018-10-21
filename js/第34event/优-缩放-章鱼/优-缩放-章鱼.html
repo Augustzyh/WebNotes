@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            *{margin:0;padding:0;}
+            #wrap{
+                overflow: hidden;
+                position: relative;
+                width:1000px;
+                height:600px;
+                margin:10px auto;
+                background: url("1.png") no-repeat 0 0/1000px 600px;
+            }
+            #box{
+                max-width:992px;
+                max-height:592px;
+                min-width:20px;
+                min-height:20px;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                width: 400px;
+                height: 400px;
+                background: url("1.png") no-repeat;
+                background-size:1000px 600px;
+                background-position: -4px -4px ;
+                z-index:99;
+            }
+            #cover{
+                width:100%;
+                height:100%;
+                background-color:rgba(0,0,0,0.7);
+            }
+            #box div{
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: radial-gradient(circle,gray,white,black);
+                border-radius: 50%;
+                cursor:pointer;
+            }
+            #rightBottom{
+                bottom: -4px;
+                right: -4px;
+            }
+            #leftBottom{
+                left:-4px;
+                bottom:-4px;
+            }
+            #leftTop{
+                left:-4px;
+                top:-4px;
+            }
+            #rightTop{
+                top:-4px;
+                right:-4px;
+            }
+            #topMiddle{
+                top:-4px;
+                left:50%;
+                margin-left:-4px;
+            }
+            #rightMiddle{
+                right:-4px;
+                top:50%;
+                margin-top:-4px;
+            }
+            #bottomMiddle{
+                bottom:-4px;
+                left:50%;
+                margin-left:-4px;
+            }
+            #leftMiddle{
+                left:-4px;
+                top:50%;
+                margin-top:-4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="cover"></div>
+            <div id="box">
+                <div id="rightBottom"></div>
+                <div id="leftTop"></div>
+                <div id="leftBottom"></div>
+                <div id="rightTop"></div>
+                <div id="topMiddle"></div>
+                <div id="rightMiddle"></div>
+                <div id="bottomMiddle"></div>
+                <div id="leftMiddle"></div>
+            </div>
+        </div>
+        <script>
+            const minWidth = 20;
+            const minHeight = 20;
+            const wrapTop = wrap.offsetTop;
+            const wrapLeft = wrap.offsetLeft;
+            const wrapWidth = wrap.offsetWidth;
+            const wrapHeight = wrap.offsetHeight
+            box.onmousedown = function(e){
+                e = e || window.event
+                // 鼠标按下  获取鼠标的初始坐标
+                const downX = e.clientX
+                const downY = e.clientY
+                // 被拖动元素的定位置
+                const eleDownTop = box.offsetTop
+                const eleDownLeft = box.offsetLeft
+
+                document.onmousemove = function(e){
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveX = e.clientX
+                    const moveY = e.clientY
+                    // 鼠标的真实移动距离
+                    const x_ = moveX - downX
+                    const y_ = moveY - downY
+                    // 鼠标移动距离 + 盒子的初始top left（不知道为什么要+的看视频）
+                    let top = Math.max(y_ + eleDownTop,4)
+                    top = Math.min(top,wrapHeight - box.offsetHeight - 4)
+                    let left = Math.max(x_ + eleDownLeft,4)
+                    left = Math.min(left,wrapWidth - box.offsetWidth - 4)
+
+                    box.style.top = top + "px"
+                    box.style.left = left + "px"
+                    if(top+wrapTop > wrapTop && left+wrapLeft > wrapLeft) {
+                        box.style.backgroundPosition = `-${left}px -${top}px`
+                    }
+                }
+            }
+            // 右下缩放
+            rightBottom.onmousedown = function (e){
+                e = e || window.event
+                // 取消事件冒泡
+                if(e.stopPropagation){
+                    e.stopPropagation()
+                }else{
+                    e.cancelBubble = true
+                }
+
+
+                // 鼠标按下  获取鼠标的初始坐标
+                const downX = e.clientX
+                const downY = e.clientY
+                // 被缩放元素的初始宽高
+                const eleDownWidth = box.clientWidth
+                const eleDownHeight = box.clientHeight
+
+                document.onmousemove = function(e){
+                    // 计算鼠标移动距离   +  box初始的width height
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveX = e.clientX
+                    const moveY = e.clientY
+                    // 鼠标的真实移动距离
+                    const x_ = moveX - downX
+                    const y_ = moveY - downY
+
+                    const width = x_ + eleDownWidth
+                    const height = y_ + eleDownHeight
+
+                    box.style.width = width + "px"
+                    box.style.height = height + "px"
+
+                }
+            }
+
+            // 左上缩放
+            leftTop.onmousedown = function (e){
+                e = e || window.event
+                // 取消事件冒泡
+                if(e.stopPropagation){
+                    e.stopPropagation()
+                }else{
+                    e.cancelBubble = true
+                }
+
+
+                // 鼠标按下  获取鼠标的初始坐标
+                const downX = e.clientX
+                const downY = e.clientY
+                // 被缩放元素的初始宽高
+                const eleDownWidth = box.clientWidth
+                const eleDownHeight = box.clientHeight
+                const eleTop = box.offsetTop
+                const eleLeft = box.offsetLeft
+
+                document.onmousemove = function(e){
+                    // 计算鼠标移动距离   +  box初始的width height
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveX = e.clientX
+                    const moveY = e.clientY
+                    // 鼠标的真实移动距离
+                    const x_ = downX - moveX
+                    const y_ = downY - moveY
+
+                    const width = x_ + eleDownWidth
+                    const height = y_ + eleDownHeight
+                    const top = eleTop - height + eleDownHeight
+                    const left = eleLeft - width + eleDownWidth
+
+                    if(width > minWidth && height > minHeight) {
+                        box.style.width = width + "px"
+                        box.style.height = height + "px"
+                        box.style.top = top + "px"
+                        box.style.left = left + "px"
+                        box.style.backgroundPositionX = `-${left}px`
+                        box.style.backgroundPositionY = `-${top}px`
+                    }else if(width >= minWidth && height < minHeight) {
+                        box.style.width = width + "px"
+                        box.style.left = left + "px"
+                    }else if(width < minWidth && height >= minHeight){
+                        box.style.height = height + "px"
+                        box.style.top = top + "px"
+                    }
+                }
+            }
+
+            // 右上缩放
+            rightTop.onmousedown = function (e){
+                e = e || window.event
+                // 取消事件冒泡
+                if(e.stopPropagation){
+                    e.stopPropagation()
+                }else{
+                    e.cancelBubble = true
+                }
+
+
+                // 鼠标按下  获取鼠标的初始坐标
+                const downX = e.clientX
+                const downY = e.clientY
+                // 被缩放元素的初始宽高
+                const eleDownWidth = box.clientWidth
+                const eleDownHeight = box.clientHeight
+                const eleTop = box.offsetTop
+
+                document.onmousemove = function(e){
+                    // 计算鼠标移动距离   +  box初始的width height
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveX = e.clientX
+                    const moveY = e.clientY
+                    // 鼠标的真实移动距离
+                    const x_ = moveX - downX
+                    const y_ = downY - moveY
+
+                    const width = x_ + eleDownWidth
+                    const height = y_ + eleDownHeight
+                    const top = eleTop - height + eleDownHeight
+
+                    if(width > minWidth && height > minHeight) {
+                        box.style.width = width + "px"
+                        box.style.height = height + "px"
+                        box.style.top = top + "px"
+                        box.style.backgroundPositionY = `-${top}px`
+                    }else if(width >= minWidth && height < minHeight) {
+                        box.style.width = width + "px"
+                    }else if(width < minWidth && height >= minHeight){
+                        box.style.height = height + "px"
+                        box.style.top = top + "px"
+                    }
+                }
+            }
+
+            // 左下缩放
+            leftBottom.onmousedown = function (e){
+                e = e || window.event
+                // 取消事件冒泡
+                if(e.stopPropagation){
+                    e.stopPropagation()
+                }else{
+                    e.cancelBubble = true
+                }
+
+
+                // 鼠标按下  获取鼠标的初始坐标
+                const downX = e.clientX
+                const downY = e.clientY
+                // 被缩放元素的初始宽高
+                const eleDownWidth = box.clientWidth
+                const eleDownHeight = box.clientHeight
+                const eleLeft = box.offsetLeft
+
+                document.onmousemove = function(e){
+                    // 计算鼠标移动距离   +  box初始的width height
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveX = e.clientX
+                    const moveY = e.clientY
+                    // 鼠标的真实移动距离
+                    const x_ = downX - moveX
+                    const y_ = moveY - downY
+
+                    const width = x_ + eleDownWidth
+                    const height = y_ + eleDownHeight
+                    const left = eleLeft - width + eleDownWidth
+
+                    if(width > minWidth && height > minHeight) {
+                        box.style.width = width + "px"
+                        box.style.height = height + "px"
+                        box.style.left = left + "px"
+                        box.style.backgroundPositionX = `-${left}px`
+                    }else if(width >= minWidth && height < minHeight) {
+                        box.style.width = width + "px"
+                        box.style.left = left + "px"
+                    }else if(width < minWidth && height >= minHeight){
+                        box.style.height = height + "px"
+                    }
+                }
+            }
+
+            // 上中缩放
+            topMiddle.onmousedown = function (e){
+                e = e || window.event
+                // 取消事件冒泡
+                if(e.stopPropagation){
+                    e.stopPropagation()
+                }else{
+                    e.cancelBubble = true
+                }
+
+
+                // 鼠标按下  获取鼠标的初始坐标
+                const downY = e.clientY
+                // 被缩放元素的初始宽高
+                const eleDownHeight = box.clientHeight
+                const eleTop = box.offsetTop
+
+                document.onmousemove = function(e){
+                    // 计算鼠标移动距离   +  box初始的width height
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveY = e.clientY
+                    // 鼠标的真实移动距离
+                    const y_ =  downY - moveY
+
+                    const height = y_ + eleDownHeight
+                    const top = eleTop - height + eleDownHeight
+
+                    if(height > minHeight) {
+                        box.style.height = height + "px"
+                        box.style.top = top + "px"
+                        box.style.backgroundPositionY = `-${top}px`
+                    }
+                }
+            }
+
+            // 下中缩放
+            bottomMiddle.onmousedown = function (e){
+                e = e || window.event
+                // 取消事件冒泡
+                if(e.stopPropagation){
+                    e.stopPropagation()
+                }else{
+                    e.cancelBubble = true
+                }
+
+
+                // 鼠标按下  获取鼠标的初始坐标
+                const downY = e.clientY
+                // 被缩放元素的初始宽高
+                const eleDownHeight = box.clientHeight
+
+                document.onmousemove = function(e){
+                    // 计算鼠标移动距离   +  box初始的width height
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveY = e.clientY
+                    // 鼠标的真实移动距离
+                    const y_ = moveY - downY
+
+                    const height = y_ + eleDownHeight
+
+                    if(height > minHeight) {
+                        box.style.height = height + "px"
+                    }
+                }
+            }
+
+            // 右中缩放
+            rightMiddle.onmousedown = function (e){
+                e = e || window.event
+                // 取消事件冒泡
+                if(e.stopPropagation){
+                    e.stopPropagation()
+                }else{
+                    e.cancelBubble = true
+                }
+
+
+                // 鼠标按下  获取鼠标的初始坐标
+                const downX = e.clientX
+                // 被缩放元素的初始宽高
+                const eleDownWidth = box.clientWidth
+
+                document.onmousemove = function(e){
+                    // 计算鼠标移动距离   +  box初始的width height
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveX = e.clientX
+                    // 鼠标的真实移动距离
+                    const x_ = moveX - downX
+
+                    const width = x_ + eleDownWidth
+
+                    if(width > minWidth) {
+                        box.style.width = width + "px"
+                    }
+                }
+            }
+
+            // 左中缩放
+            leftMiddle.onmousedown = function (e){
+                e = e || window.event
+                // 取消事件冒泡
+                if(e.stopPropagation){
+                    e.stopPropagation()
+                }else{
+                    e.cancelBubble = true
+                }
+
+
+                // 鼠标按下  获取鼠标的初始坐标
+                const downX = e.clientX
+                // 被缩放元素的初始宽高
+                const eleDownWidth = box.clientWidth
+                const eleLeft = box.offsetLeft
+
+                document.onmousemove = function(e){
+                    // 计算鼠标移动距离   +  box初始的width height
+                    e = e || window.event
+                    // 移动时的鼠标坐标
+                    const moveX = e.clientX
+                    // 鼠标的真实移动距离
+                    const x_ =  downX - moveX
+
+                    const width = x_ + eleDownWidth
+                    const left = eleLeft - width + eleDownWidth
+
+                    if(width > minWidth) {
+                        box.style.width = width + "px"
+                        box.style.left = left + "px"
+                        box.style.backgroundPositionX = `-${left}px`
+                    }
+                }
+            }
+            document.onmouseup = function(){
+                // 让move事件消失
+                document.onmousemove = null
+            }
+        </script>
+    </body>
+</html>

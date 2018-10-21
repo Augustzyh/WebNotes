@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    #box{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background: pink;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    // 垂直和水平方向的运动速度
+    let SPEED_X = 3
+    let SPEED_Y = 3
+    
+    // 运动的最大距离
+    let MAX_X = document.documentElement.clientWidth - box.offsetWidth
+    let MAX_Y = document.documentElement.clientHeight - box.offsetHeight
+    
+    window.onresize = () => {
+      MAX_X = document.documentElement.clientWidth - box.offsetWidth
+      MAX_Y = document.documentElement.clientHeight - box.offsetHeight
+    }
+
+    // 初始定位置
+    let sTop = box.offsetTop
+    let sLeft = box.offsetLeft
+
+    const run = function () {
+      // 每个时刻点的top和left值（需要检测是否到最大距离）
+      sTop += SPEED_Y
+      sLeft += SPEED_X
+
+      if(sTop <= 0 || sTop >= MAX_Y){
+        // 真 就是到边界
+        SPEED_Y = -SPEED_Y
+        sTop = Math.max(0, sTop)
+        sTop = Math.min(MAX_Y, sTop)
+      }
+      
+      if(sLeft <= 0 || sLeft >= MAX_X){
+        // 真 就是到边界
+        SPEED_X = -SPEED_X
+        sLeft = Math.max(0, sLeft)
+        sLeft = Math.min(MAX_X, sLeft)
+      }
+      
+      box.style.top = sTop + "px"
+      box.style.left = sLeft + "px"
+      
+      requestAnimationFrame(run)
+    }
+    
+    run()
+  
+  </script>
+</body>
+</html>

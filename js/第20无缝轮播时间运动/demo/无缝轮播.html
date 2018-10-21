@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="Anthor" content="FengYu">
+	<title>FengYu</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		#wrap {
+			position: relative;
+			width: 640px;
+			height: 360px;
+			margin: 50px auto;
+			overflow: hidden;
+		}
+
+		#wrap .pic {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 1000%;
+		}
+
+		.pic li {
+			float: left;
+		}
+
+
+		.tab {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			margin-left: -100px;
+			width: 150px;
+			height: 30px;
+			padding-left: 10px;
+			background: rgba(0, 0, 0, .2);
+			border-radius: 15px;
+			transition: .5s;
+			transform: scale(.8);
+		}
+
+		.tab:hover {
+			background: rgba(0, 0, 0, .5);
+			transform: scale(1.2);
+		}
+
+		.tab li {
+			width: 20px;
+			height: 20px;
+			float: left;
+			background: #fff;
+			border-radius: 50%;
+			margin: 5px 10px 0 0;
+			opacity: .35;
+			cursor: pointer;
+		}
+
+		.tab li.on {
+			position: absolute;
+			top: 0px;
+			background: #f60;
+			opacity: 1;
+			z-index: 99;
+		}
+
+		#wrap>div {
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+			width: 30px;
+			height: 60px;
+			background: rgba(0, 0, 0, .2);
+			text-align: center;
+			font-size: 18px;
+			line-height: 60px;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		#wrap>div:hover {
+			background: rgba(0, 0, 0, .5);
+		}
+
+		.next {
+			right: 0;
+		}
+	</style>
+	<script src="./animation.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<ul class="pic">
+			<li>
+				<img src="img/1.png">
+			</li>
+			<li>
+				<img src="img/2.png">
+			</li>
+			<li>
+				<img src="img/3.png">
+			</li>
+			<li>
+				<img src="img/4.png">
+			</li>
+			<li>
+				<img src="img/5.png">
+			</li>
+			<li>
+				<img src="img/1.png">
+			</li>
+		</ul>
+		<ul class="tab">
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="prev">
+			<</div>
+				<div class="next">></div>
+		</div>
+		<script>
+			const wrap = document.getElementById("wrap")
+			const picBox = document.getElementsByClassName("pic")[0]
+			const picLi = picBox.getElementsByTagName("li")
+			const tabBox = document.getElementsByClassName("tab")[0]
+			const tabLi = [...tabBox.getElementsByTagName("li")]
+			const tabLiOn = tabLi.shift()
+            const prev = document.getElementsByClassName("prev")[0]
+			const next = document.getElementsByClassName("next")[0]
+			// 一张图片的宽度是640
+			const wth = 640
+
+			let index = 0
+
+			let date = new Date()
+
+			// next
+			next.onclick = () => {
+				// 两次相邻点击间隔小于 500 则 return 啥都不干
+				if (new Date() - date < 800) return
+				date = new Date()
+				// next的逻辑 
+				index++
+				if (index === picLi.length - 1) {
+					// 最后一张  注意：第二个第一张  需要当这一张图片动画结束的时候，瞬间ul.style.left = 0
+					animation(tabLiOn, {
+						data: {
+							opacity: 0
+						}
+					}, 250, () => {
+						tabLiOn.style.left = "10px"
+						animation(tabLiOn, {
+							data: {
+								opacity: 1
+							}
+						}, 250)
+					})
+				} else {
+					animation(tabLiOn, {
+						data: {
+							left: index * 30 + 10,
+						}
+					}, 500)
+				}
+				
+				animation(picBox, {
+					data: {
+						left: -index * wth
+					},
+					options: {
+						easing: "Back"
+					}
+				}, 500, () => {
+					if(index !== picLi.length - 1)return
+
+					picBox.style.left = 0
+					index = 0
+				})
+			}
+
+			prev.onclick = () => {
+				// 两次相邻点击间隔小于 500 则 return 啥都不干
+				if (new Date() - date < 800) return
+				date = new Date()
+				
+				// 是不是在第一张点击的prev，如果是 应该先拉倒最后一张（也是第一张）
+				if(index === 0){
+					picBox.style.left = -(picLi.length - 1) * wth + "px"
+					index = picLi.length - 1 // 是 第二个 第一张
+					animation(tabLiOn, {
+						data: {
+							opacity: 0
+						}
+					}, 250, () => {
+						tabLiOn.style.left = (tabLi.length - 1) * 30 + 10 + "px" 
+						animation(tabLiOn, {
+							data: {
+								opacity: 1
+							}
+						}, 250)
+					})
+				}
+
+				index--
+				if(index !== picLi.length - 2){
+					animation(tabLiOn, {
+						data: {
+							left: index * 30 + 10 + "px"
+						}
+					}, 250)
+				}
+
+				animation(picBox, {
+					data: {
+						left: -index * wth
+					},
+					options: {
+						easing: "Back"
+					}
+				}, 500) 
+			}
+
+			for (let i = 0; i < tabLi.length; i++){
+				tabLi[i].onclick = () => {
+					if(new Date() - date < 800) return
+
+					date = new Date()
+
+
+					// 图片的运动
+					animation(picBox, {
+						data: {
+							left: -i * wth
+						}
+					}, 500)
+					
+					let num = Math.abs(index - i)
+					
+					if(num > 1){ // 本次的tab的i 跟 点击之前的index 至少差一个位置，使用淡入淡出
+						// 淡出
+						animation(tabLiOn, {
+							data: {
+								opacity: 0
+							}
+						}, 250, () => {
+							tabLiOn.style.left = i * 30 + 10 + "px"
+							// 淡入
+							animation(tabLiOn, {
+								data: {
+									opacity: 1
+								}
+							}, 250)
+						})
+						
+					}else{
+						animation(tabLiOn, {
+							data: {
+								left: i * 30 + 10 + "px"
+							}
+						}, 500)
+					}
+					index = i
+				}
+			}
+
+			let timer = null
+
+			timer = setInterval(next.onclick, 1000)
+
+			wrap.onmouseenter = () => {
+				clearInterval(timer)
+			}
+			
+			wrap.onmouseleave = () => {
+				clearInterval(timer)
+				timer = setInterval(next.onclick, 1000)
+			}
+
+
+
+		</script>
+</body>
+
+</html>

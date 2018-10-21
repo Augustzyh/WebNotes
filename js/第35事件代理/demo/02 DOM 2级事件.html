@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    #box{
+      width: 100px;
+      height: 100px;
+      background: pink;
+    }
+    p{
+      height: 50px;
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <p id="p"></p>
+  </div>
+  <script>
+    /* 
+      DOM 2
+        添加事件监听：
+        addEventListener(type, cb, boolean)
+          type: 事件类型
+          cb: 时间函数
+          boolean: 设置冒泡还是捕获（默认是冒泡模式 = false）
+
+
+          低版本IE: attachEvent(’on‘+type, cb)
+
+        解绑事件监听：
+          box.removeEventListener(type, cb, boolean)
+
+          低版本IE：
+            detachEvent("on"+type, fn)
+
+
+
+
+
+     */
+    
+    // DOM 0级 事件
+    
+    var fn = function (e){
+      console.log(e)
+    }
+
+    box.attachEvent("onclick", function (e){
+      e = e||winndow.eb
+    }) // 1
+
+    
+    /* box.onclick = function (e){
+      e = e || window.event
+      console.log(e)
+    }
+ */
+    //box.detachEvent("onclick", fn)
+
+  </script>
+</body>
+</html>

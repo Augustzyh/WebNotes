@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-张宇航">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            let little = 1,  //1对
+                small = 0,
+                ripe = 0,
+                month = 8
+            ;
+
+            /*
+              1:  little 1  small 0 ripe 0
+            * 2:  little 0  small 1 ripe 0
+            * 3:  little 1  small 0 ripe 1
+            * 4:  little 1  small 1 ripe 1
+            * 5:  little 2  small 1 ripe 2
+            * */
+            for(let i = 0; i <= month; i++){
+                if(i===1){
+                    little = 1;
+                    small = 0;
+                    ripe = 0;
+                }else{
+                    ripe += little;
+                    small = little;
+                    little = ripe;
+                }
+            }
+            alert("8个月后，一共有"+(little+small+ripe)*2 + "只兔子");
+        </script>
+    </body>
+</html>

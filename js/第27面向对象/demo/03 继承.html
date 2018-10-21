@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    // 可继承
+    
+    /* 
+      继承：
+        儿子继承老子 
+
+      自有属性
+      公有属性
+     */
+    
+    // 基类 父类
+    function P1(opt){
+      this.name = opt.name
+      this.age = opt.age
+    }
+
+    P1.prototype.sayName = function () {
+      console.log(this.name)
+    }
+    
+    
+    // 子类  需要继续父类P1
+
+    function P2(opt){
+      // obj2 = this
+      // 继承 基类 私有
+      P1.call(this, opt)
+      // 自行扩展
+      this.sex = opt.sex
+    }
+    // 方案1 pass
+    //P2.prototype = P1.prototype // 是对象  引用型数据
+
+    // 方案2 right
+    // P2.prototype = new P1({})
+    
+    // 方案3  借助一个无用的构造函数
+    // function c(){}
+    // c.prototype = P1.prototype
+    // P2.prototype = new c()
+
+
+    // 跟前面三个毫无瓜葛的方案4
+    for(var key in P1.prototype){
+      P2.prototype[key] = P1.prototype[key]
+    }
+
+  
+    
+
+
+
+
+    P2.prototype.sayAge = function(){
+      console.log(this.age)
+    }
+
+
+    const O1 = new P1({
+      name: "o1_name",
+      age: 18
+    })
+
+    const O2 = new P2({
+      name: "大帅比",
+      age: "23",
+      sex: "man"
+    })
+    
+    
+    
+    O2.sayAge()
+    
+    
+
+  </script>
+</body>
+</html>

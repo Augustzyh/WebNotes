@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    let arr = [1,5,2,10,25,52,32,23,21,0,78,50]
+    const len = arr.length
+    //sort((a, b) => a - b)
+    // 冒泡排序
+    /* for (let i = 0; i < len - 1; i++){ // 决定趟数
+      for (let j = len - 1; j > i; j--){ // 次数/趟  4 > 0
+        // 前一个数 > 当前的  就交换位置
+        if(arr[j] > arr[j - 1]){ 
+          // 交换位置
+          [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]]
+        }
+      }
+    } */
+    
+    
+    // 选择
+    /* 
+      未排序部分  初始是整个数组  最值 （小 or 大）
+      已排序部分  空的 
+    
+     */
+
+    
+    
+    /* for (let i = 0; i < len - 1; i++){
+      let minIdx = i  // 记录  未排序部分的第一个参考物的序号
+      for (let j = i + 1; j < len; j++){
+        if(arr[j] < arr[minIdx]){
+          // 未排序部分有比 参考物要小的值， 这时应该记录这个小值得序号
+          minIdx = j
+        }
+      }
+      // 内层循环结束时，minidx的序号对应的值就是未排序部分里的最值
+      [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]]
+    } */
+    
+    //console.log(arr)
+    
+
+    //[8,3,2,5,10,25,52,32,23,21,0,78,50]  
+    // 8 参考  < 8  
+    // index 0 
+   
+
+
+    /* 
+      插入排序：
+        已排序部分，视为有一个初始值
+
+        未排序依次取值到已排序部分，进行从后向前的比较，如果已排序部分大于待排序数值，继续向前，直到已排序部分有第一个值小于待排序值，就把待排序值放在这个小于它的值得后面
+
+      
+     */
+     
+    /* for (var i = 1; i < len; i++){
+      var c = arr[i] // 存待排序值
+      for (var j = i - 1; j >= 0; j--){
+        if(arr[j] > c){
+          // 已排序部分大于 待排序值  就继续向前
+          arr[j + 1] = arr[j]
+        }else{
+          break
+        }
+      }
+      // while
+      var j = i - 1
+      while (j >= 0 && arr[j] > c) {
+        arr[j + 1] = arr[j]
+        j--
+      }
+
+
+      arr[j + 1] = c
+    }
+     */
+    console.log(arr)
+    
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    div{
+      width: 300px;
+      height: 30px;
+      margin:5px;
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <div>123</div>
+  <p>pppp</p>
+  <span>span</span>
+  <ul>
+    <li>123</li>
+    <li>123</li>
+    <li>123</li>
+  </ul>
+  <script>
+    /* 
+      事件代理、事件委托
+      
+      事件的冒泡行为
+
+     */
+    const box = document.getElementsByTagName("div")
+    
+
+    
+    // 代理子元素的div 和 li的事件行为
+    document.addEventListener("click", (e) => {
+      const that = e.target
+      const TagName = that.tagName.toLowerCase()
+    
+      if(TagName === "div" || TagName === "li"){
+        console.log(`我是${TagName}标签`)
+      } 
+    })
+   
+    
+
+
+
+
+  </script>
+</body>
+</html>

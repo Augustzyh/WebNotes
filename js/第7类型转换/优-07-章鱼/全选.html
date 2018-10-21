@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap{
+            width:500px;
+            margin:100px auto;
+            padding-top:30px;
+            border:1px solid #bbb;
+            border-radius:30px;
+            user-select: none;
+        }
+        #wrap ul{
+            margin-bottom:40px;
+        }
+        #wrap ul li{
+            height:60px;
+            width:100%;
+            border-bottom: 1px solid #fff;
+            background:url("img/ck.png") no-repeat 5% 50%;
+            line-height:60px;
+            text-indent:80px;
+            color:#fff;
+            font-weight:600;
+            cursor:pointer;
+        }
+        #wrap ul li.cked{
+            background:url("img/cked.jpg") no-repeat 5% 50%;
+            text-indent:50px;
+        }
+        /*  不使用js生成颜色或项目个数时的css
+        #wrap ul li:nth-child(3n-2){
+            background-color:#333;
+        }
+        #wrap ul li:nth-child(3n-1){
+            background-color:#666;
+        }
+        #wrap ul li:nth-child(3n){
+            background-color:#999;
+        }*/
+        #wrap .quanxuan{
+            width:100%;
+            height:60px;
+            background:url("img/ck.png") no-repeat 5% 50%;
+            line-height:60px;
+            text-indent:80px;
+            font-weight:600;
+            cursor:pointer;
+        }
+        #wrap .quanxuan.cked{
+            background:url("img/cked.jpg") no-repeat 5% 50%;
+            text-indent:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul id="bornli">
+            <li>项目1</li>
+        </ul>
+        <div class="quanxuan"><span>全选</span></div>
+    </div>
+
+    <script>
+        //length为项目个数
+        (function(length) {
+            let oUl = document.getElementById("bornli"),
+                arrcolor = ["#333","#666","#999"],
+                oLi = oUl.getElementsByTagName("li"),
+                All = document.getElementsByClassName("quanxuan")
+            ;
+            // 添加li
+            let str = "";
+            for(let i = 0;i<length;i++){
+                str += `<li style='background-color:${arrcolor[i%3]};'>项目${i+1}</li>`;
+            }
+            oUl.innerHTML = str;
+
+            //事件
+            (function() {
+                let num = 0
+                ;
+                for(let i = 0;i<length;i++){
+                    oLi[i].index = i;
+                    oLi[i].onclick = function () {
+                        this.className = this.className ? "":"cked";
+                        this.className?num++:num--;  //有名字则一个被选中，++1，没有--1
+                        All[0].className = num === length?"quanxuan cked" : "quanxuan";
+                    };
+                }
+                All[0].onclick = function () {
+                    let liName;
+                    if(this.className === "quanxuan") {
+                        this.className = "quanxuan cked";  //有className时别用三目判断是否有classNmae
+                        liName = "cked";
+                        num = length;
+                    } else{
+                        this.className = "quanxuan";
+                        liName = "";
+                    }
+                    for(let k = 0;k<length;k++) {
+                        oLi[k].className = liName;
+                    }
+                };
+            })();
+        })(10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+   
+    #box{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      margin: 50px;
+      width: 200px;
+      height: 300px;
+      border:10px solid;
+      padding: 20px;
+      background: pink;
+    }
+   
+  </style>
+</head>
+<body style="height: 2000px; width:2000px;">
+  <div id="box">
+    
+  </div>
+  <script>
+
+
+    /* 
+      *** document.documentElement.scrollTop  
+      *** document.documentElement.scrollLeft
+        返回文档的滚动top方向和left方向的距离 
+
+      * getBoundingClientRect()
+        获取对象到可视区左上角的距离（除了width和height）
+      * scrollIntoView()
+        让元素滚动到可视区
+
+
+      ** offsetWidth  水平方向  width + 左右padding + 左右border-width
+      ** offsetHeight  垂直方向  height + 上下padding + 上下border-width
+
+      clientWidth  width + 左右padding
+      clientHeight  height + 上下 padding
+
+      *** offsetTop   获取当前元素到定位父节点的top方向的距离
+      *** offsetLeft  获取当前元素到定位父节点的left方向的距离
+   
+      
+      window.innerWidth    浏览器窗口可视区宽度
+      window.innerHeight   浏览器窗口可视区高度
+
+      ** document.documentElement.clientWidth    获取文档的可视区宽度
+      ** document.documentElement.clientHeight   获取文档的可视区高度
+
+
+      ** document.documentElement.offsetHeight  获取文档真是高度
+      ** document.documentElement.offsetWidth  获取文档真是宽度 
+
+
+
+      scrollWidth
+      scrollHeight
+        content-height < style-height
+
+
+        超出不隐藏
+        content width === 481 + 左边padding == 501    
+
+        超出隐藏
+        content width === 481 + 左右边padding === 521 
+
+        height方向同理
+
+     */
+    
+
+
+    //console.log(document.documentElement.offsetWidth)
+    //console.log(document.body.offsetWidth)
+    //console.log(window.innerHeight)
+    box.scrollIntoView();
+    console.log(box.getBoundingClientRect())
+    
+
+
+  </script>
+</body>
+</html>

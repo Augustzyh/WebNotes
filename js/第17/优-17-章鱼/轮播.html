@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-张宇航">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap{
+            width:600px;
+            height:500px;
+            margin:50px auto;
+            user-select: none;
+        }
+        .show{
+            position:relative;
+            width:100%;
+            height:400px;
+        }
+        .img{
+            width:100%;
+            height:100%;
+        }
+        .img img{
+            display:none;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:-1;
+            width:100%;
+            height:100%;
+        }
+        .img img.on{
+            display:block;
+        }
+        p{
+            position:absolute;
+            bottom:0;
+            width:100%;
+            height:25px;
+            background-color:rgba(0,0,0,0.5);
+            color:#fff;
+            font-size:16px;
+            text-align:center;
+            /*line-height:25px;*/
+        }
+        .top{
+            top:0;
+        }
+        i{
+            position:absolute;
+            top:50%;
+            right:0;
+            display:block;
+            width:40px;
+            height:40px;
+            margin-top:-20px;
+            background-color:rgba(0,0,0,0.5);
+            color:#fff;
+            font-size:20px;
+            text-align:center;
+            line-height:40px;
+            font-style:normal;
+            cursor:pointer;
+        }
+        .left{
+            left:0;
+        }
+        .botton{
+            width:160px;
+            height:40px;
+            background-color: green;
+            margin:20px auto;
+        }
+        button{
+            float:left;
+            height:100%;
+            width:80px;
+            outline:none;
+            cursor:pointer;
+        }
+        button.bt{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="show">
+            <p class="top"><span>1</span>/5</p>
+            <p class="bottom"><span>000</span></p>
+            <i class="left">&lt;</i>
+            <i class="right">&gt;</i>
+            <div class="img">
+                <img src="images/1.jpg" class="on" alt="">
+                <img src="images/2.jpg" alt="">
+                <img src="images/3.jpg" alt="">
+                <img src="images/4.jpg" alt="">
+                <img src="images/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="botton">
+            <button id="bt1" class="bt">正常模式</button>
+            <button id="bt2">循环模式</button>
+        </div>
+    </div>
+
+    <script>
+        var oLeft = document.querySelector("#wrap .show .left"),
+            oRight = document.querySelector("#wrap .show .right"),
+            oP = document.querySelector("#wrap .show .top span"),
+            oP2 = document.querySelector("#wrap .show .bottom span"),
+            oImg = document.querySelectorAll("#wrap .show .img img"),
+            oBtn1 = document.getElementById("bt1"),
+            oBtn2 = document.getElementById("bt2");
+        var index = 0,
+            len = oImg.length,
+            judge = 0,
+            nameText = [
+                '植物',
+                '大战',
+                '植物大战',
+                '植物大战僵尸',
+                '植物大战僵尸殷文版'
+            ];
+        oBtn1.onclick = function () {
+            oBtn1.className = "bt";
+            oBtn2.className = "";
+            judge = 0;
+        };
+        oBtn2.onclick = function(){
+            oBtn2.className = "bt";
+            oBtn1.className = "";
+            judge = 1;
+        };
+        oRight.botton = 0;
+        oLeft.botton = 1;
+        oRight.onclick = click;
+        oLeft.onclick = click;
+        function click() {
+            oImg[index].className = "";
+            this.botton === 0 ? index++ : index--;
+            if(index<0){
+                index = judge === 1? len-1 : 0;
+            }
+            if(index >= len) {
+                index = judge === 1? 0 : len-1;
+            }
+            oP.innerText = index+1;
+            oP2.innerText = nameText[index];
+            oImg[index].className = "on";
+        }
+        setInterval(function () {
+            oImg[index].className = "";
+            index++;
+            if(index >= len) {
+                index = judge === 1? 0 : len-1;
+            }
+            oP.innerText = index+1;
+            oP2.innerText = nameText[index];
+            oImg[index].className = "on";
+        },3000);
+    </script>
+</body>
+</html>

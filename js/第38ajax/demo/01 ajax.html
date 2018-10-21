@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <form action="http://www,baidu.com"  method="GET"></form>
+  <script>
+    /* 
+      ajax
+        异步的javascript 和 XML
+        fengyu  
+        123456
+        245204@qq.com
+      
+      http1.0  GET  POST  HEAD
+      http:1.1 DELETE  PUT
+
+      http://www.baidu.com
+
+      www.baidu.com/article
+
+      xhr.readyState  是xhr的自身的状态码： 0 1 2 3 4
+
+      xhr.status   --> http状态 
+
+    */
+    
+    
+    
+    
+    const xhr = new XMLHttpRequest()
+    // 通过open方法，设置跟后台交互的一些行为
+    xhr.open("GET", 'http://www.baidu.com', true)
+    // 请求需要正式发送
+    xhr.send()
+    // 监听 结束行为
+    
+    xhr.onreadystatechange = () => {
+      if(xhr.readyState === 4){
+        // 确定 http状态码 2开头和304
+        if(200 <= xhr.status && xhr.status < 300 || xhr.status === 304){
+          // 请求成功！
+          
+          xhr.responseText
+
+        }
+      }
+    }
+    
+
+   
+    
+    
+ 
+
+  </script>
+</body>
+</html>

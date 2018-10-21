@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    p{
+      display: none;
+      color: red;
+    }
+    p.error{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  用户名：<input type="text" name="username"><br>
+  <p>用户名应该  4到16位（字母，数字，下划线，减号）</p>
+  密码：<input type="text" name="pwd"><br>
+  <p>最少6位，至少1个大写字母，1个小写字母，1个数字，1个特殊字符</p>
+  确认密码：<input type="text"><br>
+  <p>两次密码输入不匹配</p>
+  email：<input type="text" name='email'><br>
+  <p>邮箱格式不正确</p>
+  tel：<input type="text" name="tel"><br>
+  <p>手机格式不正确</p>
+  <button>注册</button>
+
+  <script>
+    const reg = {
+      email: /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/,
+      tel: /^13(\d){9}$/,
+      pId: /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/,
+      //用户名正则，4到16位（字母，数字，下划线，减号）
+      username: /^[a-zA-Z0-9_-]{4,16}$/,
+      //密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+      pwd: /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/
+    }
+  
+    const input = [...document.getElementsByTagName("input")]
+    const p = [...document.getElementsByTagName("p")]
+    const btn = document.getElementsByTagName('button')[0]
+    
+    
+
+
+    input.forEach((v, i) => {
+      v.onblur = function (){
+        if(i === 2){
+          let val = v.value
+          
+          let oldVal = input[i-1].value
+
+          if(val === oldVal){
+            p[i].classList.remove("error")
+          }else{
+            p[i].classList.add("error")
+            v.value = ""
+          }
+
+
+
+        }else{
+          let val = v.value
+          if(val){
+            // 值存在  验证
+            if(reg[v.name].test(val)){
+              // input值验证通过
+              p[i].classList.remove("error")
+            }else{
+              //v.focus() // 验证失败 不让失去焦点
+              p[i].classList.add("error")
+            }
+          }
+        }
+      }
+
+      v.onfocus = function (){
+        p[i].classList.remove("error")
+      }
+    })
+    
+
+
+  </script>
+</body>
+</html>

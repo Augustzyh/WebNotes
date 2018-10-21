@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <div class="box">01</div>
+  <div class="box">02</div>
+  <div class="box">03</div>
+  <div class="box">04</div>
+  <div class="box">05</div>
+  <script>
+    /* 
+        静态获取方式：
+          通过Id获取
+          query开头的获取方式 也是静态
+          
+          
+        动态获取：
+          每次使用集合都会使用集合的最新状态
+     */
+  
+    const box = document.getElementsByClassName("box")[0]
+    
+    box.className = "wrap"
+    
+    box.innerHTML = "123216378618"
+    /* document.onclick = () => {
+      document.body.innerHTML += `<div class="box">05</div>`
+
+      console.log(box)
+      
+    } */
+    
+    
+
+  </script>
+</body>
+</html>

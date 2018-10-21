@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    /* 
+      原型：本质就是个JSON格式的对象
+
+      对象是被这个对象对应的类实例出来的。那么。原型也是个对象。
+
+      原型这个对象---》这个原型对象 对应的类 实例出来的
+
+      原型链：
+
+      实例的__proto__  指向了  这个实例对应的类的prototype
+     */
+    // 继承 原型
+    // 私有属性的继承  是 模仿一个相似的
+
+    function Person(name){
+      this.name = name
+      //this.__proto__ = Person.prototype
+      // 交出的是  对象的内存地址
+    }
+    
+    Person.prototype.age = 18
+
+
+    const p1 = new Person("fy")
+    const o1 = new O()
+    // console.log(p1)
+    
+    // p1.__proto__
+    // 爸爸  小仓库   打标记（房产证）    ==  我  
+    
+    // const Person的原型.__proto__ = Person的原型 --> 类.prototype
+
+    
+    /* Object.prototype.fengyu = function(){
+      console.log(this)
+    }; */
+    
+
+    
+    
+    
+
+
+    // console.log("age" in p1)
+    
+
+   
+  </script>
+</body>
+</html>

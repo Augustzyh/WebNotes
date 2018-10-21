@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box"></div>
+  <script>
+    var box = document.getElementById("box")
+
+
+
+    animation(box, {
+      width: 300,
+      height: "500px",
+      top: 50,
+      left: 120
+    }, 1000, function(){
+      console.log('动画执行结束')
+      
+    })
+    // 起始值   终点值  =  运动的目标值   
+    function animation(ele, data = {}, time = 500, cb = () => {}) {
+      var startValue = {} // 存放起始值
+      var changeValue = {}  // 终点 - 起始
+      var startTime = new Date()  // 起始时间
+
+      var eleStart = getStyle(ele) // 取到ele对象的所有样式
+
+      for (var key in data) {
+        var val = parseFloat(eleStart[key])
+        startValue[key] = isNaN(val) ? 0 : val
+        changeValue[key] = parseFloat(data[key]) - startValue[key] // 目标值 - 起始值  =  变化量
+      }
+
+      run()
+      function run() { // 计算每个调用时刻的  属性值
+        var nowTime = new Date() - startTime
+        var t1 = nowTime / time // 拿到已花费时间在总时间的比例
+
+        if (t1 >= 1) {// 时间用完了，应该到终点了
+          t1 = 1
+        } else {
+          requestAnimationFrame(run)
+        }
+
+        for (var key in changeValue) {
+          var val = t1 * changeValue[key] + startValue[key] // 每个时刻点的目标值
+          ele.style[key] = val + "px"
+        }
+
+        // 这才是真正的结束了
+        if(t1 === 1){
+          cb()
+        }
+      }
+    }
+
+
+    //let styleObj = getComputedStyle(box)
+
+    //let widthNum = styleObj.width
+
+    //box.currentStyle.width
+
+
+
+
+    function getStyle(ele) {
+      return ele.currentStyle || getComputedStyle(ele)
+    }
+
+
+  </script>
+</body>
+
+</html>

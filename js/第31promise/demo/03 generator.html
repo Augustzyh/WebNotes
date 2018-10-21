@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    function* foo() {
+      yield "异步1"
+      yield 'b';
+    }
+
+    
+
+   
+   const iter = foo()
+
+   iter.next()
+   iter.next()
+
+   
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <button>按钮1（值为4）</button>
+  <button>按钮2（值为2）</button>
+  <button>按钮3（值为1）</button>
+  <script>
+    const btn = document.getElementsByTagName("button")
+    
+    let value = 0
+    // 问题？ 如果最终值value = 17， 那么需要怎样的点击顺序
+    btn[0].addEventListener("click", () => {
+      value += 4
+
+      btn[1].addEventListener("click", () => {
+        value += 2
+
+        btn[2].addEventListener("click", () => {
+          value += 1
+
+          console.log(value)
+        })
+        console.log(value)
+      })
+      console.log(value)
+    }) 
+    
+    
+
+
+  </script>
+</body>
+</html>

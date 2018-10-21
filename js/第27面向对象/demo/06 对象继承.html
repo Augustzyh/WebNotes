@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  <script>
+    // 父类
+    class P1{
+      constructor(opt){
+        this.x = opt.x
+      }
+
+      say(){
+        console.log(this.x)
+      }
+    }
+  
+    
+    class P2 extends P1{
+      constructor(opt){
+        // super 必须调用  没得商量 语法规定 , 如果不调用，报语法错误
+        super(opt)
+        this.y = opt.y
+      }
+
+      hi(){
+        console.log(this.y)
+      }
+    }
+
+    const o1 = new P1({
+      x: 0
+    })
+
+    const o2 = new P2({
+      x: 1,
+      y: 2
+    })
+    o2.say()
+   
+    
+  </script>
+</body>
+</html>

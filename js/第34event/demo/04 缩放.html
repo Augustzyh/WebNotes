@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    #box{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background: pink;
+    }
+    #rightBottom{
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      width: 8px;
+      height: 8px;
+      background: red;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div id="rightBottom"></div>
+  </div>
+  <script>
+    box.onmousedown = function(e){
+      e = e || window.event
+      // 鼠标按下  获取鼠标的初始坐标
+      const downX = e.clientX
+      const downY = e.clientY
+      // 被拖动元素的定位置
+      const eleDownTop = box.offsetTop
+      const eleDownLeft = box.offsetLeft
+      //console.log(eleDownTop)
+      
+      // const eleRect = box.getBoundingClientRect()
+      // const eleDownTop = eleRect.y
+      // const eleDownLeft = eleRect.x
+
+      document.onmousemove = function(e){
+        e = e || window.event
+        // 移动时的鼠标坐标
+        const moveX = e.clientX
+        const moveY = e.clientY
+        // 鼠标的真实移动距离
+        const x_ = moveX - downX
+        const y_ = moveY - downY
+        // 鼠标移动距离 + 盒子的初始top left（不知道为什么要+的看视频）
+        const top = y_ + eleDownTop
+        const left = x_ + eleDownLeft
+
+        box.style.top = top + "px"
+        box.style.left = left + "px"
+      }
+    }
+    
+    document.onmouseup = function(){
+      
+      // 让move事件消失
+      document.onmousemove = null
+      console.log("抬起")
+    }
+
+
+    // 缩放
+    rightBottom.onmousedown = function (e){
+      e = e || window.event
+      // 取消事件冒泡
+      if(e.stopPropagation){
+        e.stopPropagation()
+      }else{
+        e.cancelBubble = true
+      }
+
+
+      // 鼠标按下  获取鼠标的初始坐标
+      const downX = e.clientX
+      const downY = e.clientY
+      // 被缩放元素的初始宽高
+      const eleDownWidth = box.clientWidth
+      const eleDownHeight = box.clientHeight
+
+      document.onmousemove = function(e){
+        // 计算鼠标移动距离   +  box初始的width height
+        e = e || window.event
+        // 移动时的鼠标坐标
+        const moveX = e.clientX
+        const moveY = e.clientY
+        // 鼠标的真实移动距离
+        const x_ = moveX - downX
+        const y_ = moveY - downY
+
+        const width = x_ + eleDownWidth
+        const height = y_ + eleDownHeight
+
+        box.style.width = width + "px"
+        box.style.height = height + "px"
+
+      }
+    }
+
+  </script>
+</body>
+</html>

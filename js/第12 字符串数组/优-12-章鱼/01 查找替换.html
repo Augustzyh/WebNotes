@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>40js</title>
+	<style>
+		#box{
+			width: 500px;
+			height: 400px;
+			margin:50px auto;
+			padding:10px;
+			border:solid #ccc;
+		}
+		span{
+			color:#f60;
+			font-size:18px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<input type="text" placeholder="匹配项">
+		<input type="text" placeholder="替换项">
+		<button>查找</button>
+		<button>替换</button>
+		<p>苍井空，1983年11月11日出生于日本东京。日本AV女演员、成人模特，兼电视、电影演员。日本女子组合惠比寿麝香葡萄的初代首领，现成员、OG首领。2010年3月毕业并将组合首领之位交托给麻美由真，同年10月复归。
+入行前曾是泳装写真女星，2002年进入AliceJapan公司，开始性感影片的拍摄生涯。因为其“童颜巨乳”的特色，开始获得人气，并连续在2003年及2004年蝉联日本《VideoBoy》杂志年度性感女艺人第一名。  从2003年起，开始参加一般电视戏剧及综艺节目中演出，  2004年11月移籍到S1，成功转型，大牌杂志模特及电影演员。
+2018年1月1日，苍井空发微博晒出婚戒，宣布已结婚。</p>
+	</div>
+	<script>
+		let pTag = document.getElementsByTagName("p")[0]
+		let btn = document.getElementsByTagName("button")
+		let input = document.getElementsByTagName("input")
+		
+		let txt = pTag.innerHTML
+		
+		// 查找
+		btn[0].onclick = function(){
+			let value = input[0].value.trim()
+			
+			if(value){
+				pTag.innerHTML = txt.split(value).join(`<span>${value}</span>`)
+			}
+		}
+
+		// 替换
+		btn[1].onclick = function(){
+			let value1 = input[0].value.trim()
+			let value2 = input[1].value.trim()
+
+			if(value1){
+				let arr = txt.split(value1)
+				pTag.innerHTML = arr.join(`<span>${value2}</span>`)
+				txt = arr.join(value2)
+			}
+		}
+			
+
+
+	
+	
+	
+	
+	
+	</script>
+</body>
+</html>

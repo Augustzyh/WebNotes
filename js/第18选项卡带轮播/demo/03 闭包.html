@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    
+  </style>
+</head>
+<body>
+  
+  <script>
+    
+    /* 
+      闭包形成的条件：
+        1：函数嵌套函数
+        2：内部函数使用父函数的 变量或者参数
+
+        如果满足以上两点，那么可以把这个内部函数称作闭包。
+
+      闭包特性：
+        闭包使用的父函数的变量或者参数，会被永久保存！
+        生命周期跟全局变量一样，会常驻内存，程序关闭才会回收
+     */
+    
+    // var b = 0 // 全局变量 长生不老
+    
+    /* document.onclick = function(){
+      var a = 0
+      console.log(`当前是第${++a}次点击页面`)
+    } */
+
+    //let a = 1 // 常驻内存
+    
+
+
+
+    /* document.onclick = (function(n){
+      return function (){
+        console.log(`当前是第${++n}次点击页面`)
+      }
+    }(0)) */
+
+    let fn = () => {
+      var a = 1
+      return function (){
+        ++a
+        return a
+      }
+    }
+
+  
+    
+  
+  
+  
+  </script>
+</body>
+</html>

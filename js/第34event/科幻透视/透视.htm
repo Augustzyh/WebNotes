@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DY制作QQ980408597转载请声明</title>
+    <style>
+      body{
+          margin:0;
+          padding:0;
+          text-align:center;
+      }
+      .web{
+          width:925px;
+          height:549px;
+          margin:100px auto;
+          background-image:url(images/2.png);
+          background-size:100% 100%;
+          position:relative;
+      }
+      .webone{
+          width:200px;
+          height:200px;
+          border:1px solid #0ffff0;
+          border-radius:100%;
+          background-image:url(images/1.png);
+          background-size:925px 549px;
+          background-position:0px,0px;
+          background-repeat : no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='web'>
+      <div class='webone'>
+      </div>
+    </div>
+    <span>想要什么透视自己换背景图</span>
+    <script>
+      var web = document.getElementsByClassName('web')[0];
+      var shubiao = document.getElementsByClassName('webone')[0];
+      var x,y,w=50,h=50;
+      function shubiaoxy(x,y){
+          shubiao.style.cssText = 'position:absolute;left:' + x + 'px;top:' + y + 'px;background-position:'+ -x + 'px '+ -y +'px;';
+      }
+      web.addEventListener('mousemove',function(e){
+          shubiaoxy(e.offsetX,e.offsetY)
+      });
+    </script> 
+  </body>
+</html>

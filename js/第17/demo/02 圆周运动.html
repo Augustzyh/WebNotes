@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    #box{
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border:1px solid;
+      margin:50px auto;
+    }
+    #bar{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:10px;
+      height: 10px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div id="bar"></div>
+  </div>
+  <button id='run'>run</button>
+
+  <button id="tingzhi">stop</button>
+
+  <script>
+    let deg = 0 // 角度  
+    let r = 200
+    let {PI, cos, sin} = Math  //解构赋值
+
+    let timer = null;
+
+    function fn(){
+      let rad = PI/180 * deg
+      let top = r - Math.sin(rad) * r
+      let left = r + Math.cos(rad) * r
+
+      bar.style.top = top - 5 + 'px'
+      bar.style.left = left - 5 + 'px'
+
+      deg += 0.5
+      
+    }
+  
+
+    //setInterval(fn, 50)
+    
+    run.onclick = () => {
+      timer = setInterval(fn, 13)
+    }
+
+  
+   
+    
+    tingzhi.onclick = function(){
+      clearInterval(timer)
+      
+    }
+
+
+  </script>
+
+</body>
+</html>

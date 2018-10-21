@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+    #box{
+      width: 100px;
+      height: 100px;
+      background: pink;
+    }
+  </style>
+</head>
+<body style="height:1000px;">
+  <div id="box"></div>
+  <script>
+    /* 
+      event  事件信息对象
+        主流浏览器：事件函数的第一个形参
+        低版本IE: window.event
+      跟鼠标相关：  
+        clientX
+        clientY
+          clientX/Y  相对于当前的文档可视区窗口的左上角的坐标
+
+
+        pageX
+        pageY
+          pageX/Y  是相对于文档顶部左上角的坐标
+
+
+        target  事件源
+          不兼容低版本ie   低版本ie使用  srcElement
+
+        type：click
+     */
+    
+    /* document.onclick = function (e) {
+      // 事件对象的兼容
+      e = e || window.event
+    } */
+
+    /* 
+      键盘事件对象没有clientX y 也没有pageX Y
+      key   按键的键
+      keyCode   68 键对应的键值
+
+      target
+
+
+      
+
+     */
+    document.onclick = function (e){
+      e = e || window.event
+      console.log(e)
+    }
+
+  </script>
+</body>
+</html>
