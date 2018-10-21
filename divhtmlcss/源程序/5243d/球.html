@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>Octopus</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    body{
+        background-color:#6600ff;
+    }
+    .wrap{
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+
+        margin:auto;
+        width:200px;
+        height:200px;
+        perspective:1000px;
+
+    }
+    .wrap .box{
+        width:200px;
+        height:200px;
+        transform-style:preserve-3d;
+        animation:run 12s linear infinite;
+    }
+    .wrap .box div{
+        position:absolute;
+        width:200px;
+        height:200px;
+        background:-webkit-radial-gradient(circle,#ffff00 10%,transparent 50%,rgba(252,0,76,0.8));
+        /* border:1px solid rgba(255,254,1,0.3); */
+        border-radius:50%;
+    }
+    .wrap .box div:nth-child(1){
+        transform:rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(2){
+        transform:rotateY(10deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(3){
+        transform:rotateY(20deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(4){
+        transform:rotateY(30deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(5){
+        transform:rotateY(40deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(6){
+        transform:rotateY(50deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(7){
+        transform:rotateY(60deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(8){
+        transform:rotateY(70deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(9){
+        transform:rotateY(80deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(10){
+        transform:rotateY(90deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(11){
+        transform:rotateY(100deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(12){
+        transform:rotateY(110deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(13){
+        transform:rotateY(120deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(14){
+        transform:rotateY(130deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(15){
+        transform:rotateY(140deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(16){
+        transform:rotateY(150deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(17){
+        transform:rotateY(160deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(18){
+        transform:rotateY(170deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(19){
+        transform:rotateY(180deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(20){
+        transform:rotateY(190deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(21){
+        transform:rotateY(200deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(22){
+        transform:rotateY(210deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(23){
+        transform:rotateY(220deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(24){
+        transform:rotateY(230deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(25){
+        transform:rotateY(240deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(26){
+        transform:rotateY(250deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(27){
+        transform:rotateY(260deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(28){
+        transform:rotateY(270deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(29){
+        transform:rotateY(280deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(30){
+        transform:rotateY(290deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(31){
+        transform:rotateY(300deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(32){
+        transform:rotateY(310deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(33){
+        transform:rotateY(320deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(34){
+        transform:rotateY(330deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(35){
+        transform:rotateY(340deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(36){
+        transform:rotateY(350deg) rotateZ(45deg);
+    }
+    .wrap .box div:nth-child(37){
+        overflow:hidden;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:-300px;
+        right:0;
+        margin:auto;
+        width:800px;
+        height:800px;
+        border:none;
+        background:-webkit-radial-gradient(circle,transparent 15%,red,yellow,transparent,transparent,transparent,orange);
+        /* 
+        border:200px solid rgba(255,51,51,0.5);
+        border-image:-webkit-linear-gradient(red,yellow,orange) 30 stretch; */
+        transform:rotateX(90deg) rotateY(350deg) rotateZ(45deg);
+        border-radius:50%;
+    }
+    @keyframes run{
+        to{
+            transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+    }
+  </style>
+ </head>
+ <body>
+    <div class="wrap">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+ </body>
+</html>

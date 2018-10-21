@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>Octopus</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    .se:first-line{     /* 第一排变色 */
+        color:red;
+    }
+    .se:first-letter{     /* 第一个字符变色都只对块级元素有效 */
+        color:green;
+    }
+    /* [class]
+    [class=""]
+    [class~="box"]
+    [class^="box"]    以。。。开始
+    [class$="x"]     以x结尾
+    [class*="xoc"]     包含xoc */
+    .aaa p:nth-of-type(n){} /* p类型标签的第n个 */
+    .aaa p:nth-last-of-type(n){}   /* p类型的倒数第n个 */
+    .aaa p:first-of-type{}   /* p类型的第一个 */
+    .aaa p:last-of-type{}  /* p类型的倒数第一个，最后一个 */
+    .aaa :nth-child(2){
+        width:100px;
+        height:100px;
+        background-color:green;}    /* 这个父下面的第n个，不区分标签类型 */
+    .aaa :nth-last-child(2){  /* 倒数第n个，.aaa间要有空格 */
+        width:100px;
+        height:100px;
+        background-color:red;
+     
+    }
+    .aaa :first-child{
+        width:100px;
+        height:100px;
+        background-color:blue;
+    }
+    .aaa :last-child{
+        width:100px;
+        height:100px;
+        background-color:skyblue;
+    }
+    .bbb div{
+        width:300px;
+        height:100px;
+    }
+    .bbb :nth-child(2n-1){       /* 奇数个 单词odd */
+        background-color:skyblue;
+    }
+    .bbb :nth-child(2n){       /* 偶数个 单词even */
+    background-color:red;
+    }
+    .ccc p:only-child{        /* 父级下只有一个类型，匹配p两个.ccc盒子只有包含一个p的会加上 */
+        width:400px;
+        height:100px;
+        background-color:pink;
+    }
+    .ccc div:only-of-type{}   /* 父级下有多个类型，值匹配含一个div的给此div加样式 */
+    .empty:empty{
+        /* 匹配所有空元素，有空格都不行， */
+    }
+  </style>
+ </head>
+ <body>
+    <section class="se">
+        asdasdiqwhi卡和电话Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
+
+如果你想在深入学习 Vue 之前对它有更多了解，我们制作了一个视频，带您了解其核心概念和一个示例工程。
+
+如果你已经是有经验的前端开发者，想知道 Vue 与其它库/框架有哪些区别，请查看对比其它框架。
+
+起步
+    </section>
+    <section class="aaa">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section class="bbb">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section class="ccc">
+        <p></p>
+        <div></div>
+    </section>
+    <section class="ccc">
+        <p></p>
+        <p></p>
+    </section>
+    <!-- 常用的结构性伪类
+        nth-child(n);
+        first-child;
+        last-child;
+        nth-of-type
+    -->
+    <section class="empty"></section>
+    <section class="empty"></section>
+ </body>
+</html>

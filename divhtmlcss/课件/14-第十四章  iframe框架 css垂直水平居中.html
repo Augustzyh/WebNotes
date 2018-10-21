@@ -1,0 +1,175 @@
+<!DOCTYPE html><html><head><title>14-第十四章  iframe框架 css垂直水平居中</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="14-第十四章-iframe框架-css垂直水平居中">14-第十四章  iframe框架 css垂直水平居中</h1>
+
+<p></p>
+
+
+
+<h2 id="一iframe内联框架">一、iframe内联框架</h2>
+
+<p>1、iframe的属性</p>
+
+<blockquote>
+  <ul><li>width        定义iframe的宽度；</li>
+  <li>height        定义iframe的高度；</li>
+  <li>frameborder       规定是否显示框架周围的边框 <br>
+  <ul>
+  <li>0无</li>
+  <li>1有</li></ul></li>
+  <li>src           规定在框架中显示的文档的 URL。</li>
+  <li>scrolling     规定是否在框架中显示滚动条。 <br>
+  <ul>
+  <li>yes       显示滚动条           </li>
+  <li>no        无</li>
+  <li>auto  根据内容自动显示滚动条</li></ul></li>
+  <li>name      规定框架的名称 </li>
+  </ul>
+</blockquote>
+
+<p>2、您可以把需要的文本放置在 <code>&lt;iframe&gt;</code>和 <code>&lt;/iframe&gt;</code> 之间，这样就可以应对无法理解 iframe 的浏览器。</p>
+
+<hr>
+
+
+
+<h2 id="二演示以下框架">二、演示以下框架</h2>
+
+<blockquote>
+  <p>1、导航框架 <br>
+  2、带节点的框架</p>
+</blockquote>
+
+<hr>
+
+
+
+<h2 id="三自适应框架实例">三、自适应框架实例</h2>
+
+<blockquote>
+  <p>iframe结合display:table ,dissplay:table-cell 做一个自适应内联框架</p>
+</blockquote>
+
+<hr>
+
+
+
+<h2 id="四css实现垂直居中水平居中">四、CSS实现垂直居中水平居中</h2>
+
+<p>参考文献：<a href="http://blog.csdn.net/freshlover/article/details/11579669" target="_blank">http://blog.csdn.net/freshlover/article/details/11579669</a></p>
+
+
+
+<h4 id="1absolute-margin">1、Absolute  margin</h4>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{  
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>  <span class="hljs-attribute">margin</span>: auto;  
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>  <span class="hljs-attribute">position</span>: absolute;  
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>; <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>; <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>; <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;  
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>}  
+</div></code></pre>
+
+<p>缺点： <br>
+1.必须声明高度</p>
+
+<hr>
+
+
+
+<h4 id="2浏览器窗口居中">2、浏览器窗口居中</h4>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    <span class="hljs-attribute">margin</span>: auto;
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>    <span class="hljs-attribute">position</span>: fixed;
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>    <span class="hljs-attribute">left</span>:<span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>    <span class="hljs-attribute">right</span>:<span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span> }
+</div></code></pre>
+
+<hr>
+
+
+
+<h4 id="3边栏居中">3、边栏居中</h4>
+
+<blockquote>
+  <p>如果你要设置一个固顶的头或增加其他的边栏，只需要在内容块的样式中加入像这样的CSS样式代码：top:70px;bottom:auto;由于已经声明了margin:auto;，该内容块将会垂直居中于你通过top,left,bottom和right属性定义的边界框内。 <br>
+  你可以将内容块固定与屏幕的左侧或右侧，并且保持内容块垂直居中。</p>
+</blockquote>
+
+<p>使用left:<code>0</code>;right:<code>auto</code>;固定与屏幕左侧</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>   <span class="hljs-attribute">margin</span>: auto;
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>    <span class="hljs-attribute">position</span>: absolute;
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>    <span class="hljs-attribute">top</span>:<span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>    <span class="hljs-attribute">left</span>:<span class="hljs-number">20px</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">20px</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span>    <span class="hljs-attribute">right</span>:auto;
+</div><div class="hljs-line"><span class="hljs-comment line-number">9.</span>}
+</div></code></pre>
+
+<hr>
+
+<p>使用right:<code>0</code>;left:<code>auto</code>;固定于屏幕右侧</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>   <span class="hljs-attribute">margin</span>: auto;
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>    <span class="hljs-attribute">position</span>: absolute;
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>    <span class="hljs-attribute">top</span>:auto;
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>    <span class="hljs-attribute">left</span>:<span class="hljs-number">20px</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">20px</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span>    <span class="hljs-attribute">right</span>:<span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">9.</span>}
+</div></code></pre>
+
+<hr>
+
+<p>修改给top:<code>auto</code>也能定义顶部，bottom:<code>auto</code>定义底部</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    <span class="hljs-attribute">margin</span>: auto;
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>    <span class="hljs-attribute">position</span>: fixed;
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>    <span class="hljs-attribute">top</span>:auto;
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>    <span class="hljs-attribute">left</span>:auto;
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">20px</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>    <span class="hljs-attribute">right</span>:<span class="hljs-number">30px</span>;
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span> }
+</div></code></pre>
+
+<hr>
+
+
+
+<h4 id="4负外边距negative-margins">4、负外边距(Negative Margins)</h4>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span><span class="hljs-attribute">position</span>: absolute;  
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span> <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>; <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;  
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span> <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">170px</span>; <span class="hljs-comment">/* (width + padding)/2 */</span>  
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span> <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">120px</span>; <span class="hljs-comment">/* (height + padding)/2 */</span> 
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>  }
+</div></code></pre></div></body></html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>Octopus</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    .box{
+        position:relative;
+        width:800px;
+        height:500px;
+        margin:100px auto;
+        border:1px solid red;
+    }
+    .box p{
+        position:absolute;
+        top:0;
+        left:0;
+
+        width:100px;
+        height:100px;
+        background-color:red;
+        animation:play 5s 1s linear infinite alternate;
+        /* 值
+            animation-name:play;  动画名
+            animation-duration:3s; 动画时间
+            animation-delay:1s; 延迟
+            animation-timing-function:linear;
+            animation-iteration-count:2; 动画次数 infinite
+            animation-direction:reverse; 控制动画的方向反向
+                    normal正常方向  alternate先正后返 alternate-reverse
+            animation-fill-mode:none; 默认原始状态>动画>原始状态
+                    forwards停留在100%帧
+                    backwards（忽略原始状态）直接进入0%帧，最后回到原始状态
+                    both 直接进0%，最后停在100%
+            animation-timing-function:steps(); 只读指定帧数，期间动画取消
+        */
+    }
+    .box p:hover{
+        animation-play-state:paused;  /* 动画执行的状态
+                                            running运动*/
+    }
+    @keyframes play{     /* 控制动画的帧 */
+        0%{
+            left:0px;
+            top:0;
+        }
+        25%{
+            left:700px;
+            top:0;
+        }
+        50%{
+            left:700px;
+            top:400px;
+        }
+        75%{
+            left:0;
+            top:400px;
+        }
+        100%{
+            left:0;
+            top:0;
+        }
+    }
+    @keyframes play1{
+        from{
+            top:100px;
+            left:100px;
+        }
+        to{
+            top:200px;
+            left:200px;
+        }
+    }
+    @keyframes play2{   
+        0%,20%{   /* 在指定区间来回动 */
+        
+        }
+        50%,80%{
+        
+        }
+        100%{
+        
+        }
+    }
+  </style>
+ </head>
+ <body>
+    <div class="box">
+        <p></p>
+    </div>
+ </body>
+</html>

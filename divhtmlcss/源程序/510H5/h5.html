@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <script type="text/javascript">
+    document.createElement("header");                      //解决兼容性   ie9以下不兼容
+    document.createElement("article");                      //创建标签即可
+    document.createElement("nav");
+    document.createElement("section");
+    document.createElement("aside");
+    document.createElement("figure");
+  </script>
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>Octopus</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    header{
+        width:100%;
+        height:40px;
+        background-color:#000;
+        color:#fff;
+        text-align:center;
+        line-height:40px;
+    }
+    article{
+        position:relative;
+        width:1226px;
+        border:1px solid #000;
+        margin:auto;
+    }
+    nav{
+        overflow:hidden;
+        margin:40px auto;
+    }
+    nav a{
+        float:left;
+        width:100px;
+        height:40px;
+        margin-left:20px;
+        background-color:orange;
+    }
+    .menu{
+        height:300px;
+        background-color:skyblue;
+        margin-bottom:40px;
+    }
+    .menu .m-left{
+        float:left;
+        width:234px;
+        height:300px;
+        background-color:yellow;
+    }
+    .menu .m-right{
+        float:right;
+        width:992px;
+        height:300px;
+        background-color:#cc33ff;
+    }
+    aside{
+        position:absolute;
+        top:50%;
+        right:-30px;
+        width:30px;
+        height:330px;
+        margin-top:-15px;
+        background-color:#66cc33;
+    }
+    aside a{
+        display:block;
+        width:30px;
+        height:50px;
+        margin-bottom:5px;
+        background-color:#0066cc;
+        text-align:center;
+        line-height:28px;
+    }
+    footer{
+        width:100%;
+        height:600px;
+        background-color:#996600;
+    }   
+    .mark{
+        background-color:#33ffff;
+        font-weight:bold;
+        font-size:32px;
+    }
+    dialog{
+        position:absolute;
+        bottom:20px;
+        left:100px;
+        border-radius:20px;
+    }
+    address{
+        border:1px solid #000;
+    }
+  </style>
+ </head>
+ <body>
+    <header>
+        这里是网页头部,定义严格网页头部或者一块区域的头部
+    </header>
+    <article>            <!-- 定义一块独立的文章内容  博客  新闻 -->
+        <nav>             <!-- 定义导航 -->
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+            <a href="">7</a>
+            <a href="">8</a>
+            <a href="">9</a>
+            <a href="">10</a>
+        </nav>
+        <section class="menu">               <!-- 定义一块区域 一般用来写主体部分 -->
+            <section class="m-left"></section>
+            <section class="m-right"></section>
+        </section>
+        <section class="menu">               <!-- 定义一块区域 一般用来写主体部分 -->
+            <section class="m-left"></section>
+            <section class="m-right"></section>
+        </section>
+        <aside>                         <!-- 定义侧边栏 -->
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </aside>
+        <!-- <footer></footer> -->
+        <figure>            <!-- 定义一块独立的区域用来展示图片 -->
+            <img src="img/b1.jpg" alt="" />
+            <figcaption>我是一张图</figcaption>         <!-- 用来描述图片 -->
+        </figure>
+        <section class="mark">
+            这段文字很<mark>特别的</mark>
+        </section>
+        <ruby>                         
+        杨<rt>[yáng]</rt>
+        <rp>浏览器不支持ruby标签苏苏升级</rp>
+        </ruby>                  <!-- ruby内容加注释 -->
+        <br />
+        <meter id="meter" value="2" min="0" max="10"></meter><br />
+        <meter value="2" min="0" max="10" low="5" high="8"></meter><br />
+        <meter value="5" min="0" max="10" low="5" high="8"></meter><br />
+        <meter value="9" min="0" max="10" low="5" high="8"></meter><br />
+        <meter value="5" min="0" max="10" low="5" high="8" optimum="8"></meter><br />
+        <meter value="3" min="0" max="10" low="5" high="8" optimum="9"></meter><br />
+        <progress value="50" max="100">     <!-- 进度条 -->
+            
+        </progress>
+        <hgroup>
+            <h1>上课了</h1>
+            <h2>balabala</h2>
+        </hgroup>
+        <details open>
+            <summary>小米笔记本</summary>
+            <dl>
+                <dt>屏幕</dt>
+                <dd>aaa</dd>
+            </dl>
+            <dl>
+                <dt>屏幕</dt>
+                <dd>aaa</dd>
+            </dl>
+        </details>
+        <dialog open>
+            <dl>
+                <dt>WTF</dt>
+                <dd>什么玩意</dd>
+            </dl>
+            <dl>
+                <dt>WTF</dt>
+                <dd>什么玩意</dd>
+            </dl>
+            <dl>
+                <dt>WTF</dt>
+                <dd>什么玩意</dd>
+            </dl>
+        </dialog>
+        <address>
+            email:<a href="">747869432@qq.com</a><br />
+            QQ:747869432 <br />
+            住址:中国 
+
+        </address>
+    </article> 
+    <footer>                    <!-- 定义严格网页的底部  一块区域的底部-->
+    
+    </footer>
+    <script type="text/javascript">
+        meter.value = 0;
+        var timer = setInterval(()=>{
+            meter.value += 1;
+            if(meter.value>=70)clearInterval(timer);
+        },1000)
+    </script>
+ </body>
+</html>

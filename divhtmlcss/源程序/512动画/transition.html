@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>Octopus</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    .box{
+        transition:width 1s 1s,height 1s 1s;
+        /* 控制属性：all全选 none啥都选不中
+            过度时间：
+            延迟时间（几秒后启动）：    
+            动画函数，运动曲线：默认esea 快慢快
+        */
+        transition-property:width;
+        transition-duration:1s;
+        transition-delay:1s;
+        transition-timing-function:ease; 
+    }
+    .timing{
+        border:2px solid black;   
+    }
+    .timing p{
+        width:100px;
+        height:100px;
+        background-color:red;
+        margin-bottom:10px;
+        transition:3s;
+        transition-timing-function:ease; /* 默认快慢快 */
+    }
+    .timing:hover p{
+        margin-left:800px;
+    }
+    .timing:hover p:nth-child(1){
+        transition-timing-function:linear; /* 匀速 */
+    }
+    .timing:hover p:nth-child(2){
+        transition-timing-function:ease; /* 默认 */
+    }
+    .timing:hover p:nth-child(3){
+        transition-timing-function:ease-in; /* 慢入 逐渐加快 */
+    }
+    .timing:hover p:nth-child(4){
+        transition-timing-function:ease-out; /* 快如 逐渐减慢*/
+    }
+    .timing:hover p:nth-child(5){
+        transition-timing-function:ease-in-out; /* 慢入慢出*/
+    }
+    .timing:hover p:nth-child(6){
+        transition-timing-function:cubic-bezier(.49,.45,.67,.7); /* 被萨尔*/
+    }
+  </style>
+ </head>
+ <body>
+    <div class="box"></div>
+    <div class="timing">
+        <p id="p">linear</p>
+        <p>ease</p>
+        <p>ease-in</p>
+        <p>ease-out</p>
+        <p>ease-in-out</p>
+        <p>cubic贝萨尔曲线百度</p>
+        <p></p>
+    </div>
+    <script type="text/javascript">
+        var oP = document.getElemtById("p");
+        obj.addEventListener("transitionend",function(){
+            this.style.background = "green";
+        });
+    </script>
+ </body>
+</html>

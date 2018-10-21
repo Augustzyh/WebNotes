@@ -1,0 +1,42 @@
+<!doctype html><!--s申明文档类型：html-->
+<html lang="en"><!--网页的根标签 lang=“”语言类型-->
+	<head><!--网页的头部，不可视化区域-->
+		<meta charset="UTF-8" /><!--编码格式 utf-8(国际编码) gbk gb2312 -->
+		<title>网站标题-我的第一个网页</title>
+		<meta name="author" content="前端VIP-小浪老师"><!--作者-->
+		<meta name="keywords" content="关键字" /><!--关键字-->
+		<meta name="description" content=""><!--网站描述，简介-->
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			div{
+				width:400px;
+				height:400px;
+				margin:50px auto;
+				border:1px solid #000;
+				border-radius:50%;
+				background:radial-gradient(20% 20% at 50% 75%,#000 50%,transparent 50%),radial-gradient(10% 10% at 50% 25%,#fff 50%,transparent 50%),radial-gradient(50% 50% at 50% 75%,#fff 50%,transparent 50%),radial-gradient(50% 50% at 50% 25%,#000 50%,transparent 50%),-webkit-linear-gradient(left,#000 0%,#000 50%,#fff 50%);
+				/* animation:run 1s linear infinite; */
+			}
+			@keyframes run{
+				form{
+					transform:rotate(0deg)
+				}to{
+					transform:rotate(360deg)
+				}
+			}
+		</style>
+	</head>
+	<body><!--可视化区域-->
+		<div id="box">
+		
+		</div>
+		<script type="text/javascript">
+				box.onclick=()=>{
+					alert(1)
+				}
+		</script>
+	</body>
+<html>

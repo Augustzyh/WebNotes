@@ -1,0 +1,160 @@
+<!DOCTYPE html><html><head><title>16-第十六章 css3 选择器</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="16-第十六章-css3-选择器">16-第十六章 css3 选择器</h1>
+
+<p></p>
+
+<hr>
+
+
+
+<h2 id="一css3-选择器-属性选择器">一、Css3 选择器 –属性选择器</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="left">语法</th>
+  <th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left"><code>[att]</code></td>
+  <td align="left">匹配所有具有att属性的</td>
+</tr>
+<tr>
+  <td align="left"><code>[att=val]</code></td>
+  <td align="left">匹配所有att属性等于“val”的</td>
+</tr>
+<tr>
+  <td align="left"><code>[att~=val]</code></td>
+  <td align="left">匹配所有att属性包含“val”或者等于“val”的(val必须是一个完整词)</td>
+</tr>
+<tr>
+  <td align="left"><code>[attl=val]</code></td>
+  <td align="left">匹配所有att属性以val- 开头的或等于“val”（比如说zh-cn）</td>
+</tr>
+<tr>
+  <td align="left"><code>[att*=val]</code></td>
+  <td align="left">匹配所有att属性 包含’val’的  (val可以是字母)</td>
+</tr>
+<tr>
+  <td align="left"><code>[att^=val]</code></td>
+  <td align="left">匹配所有att属性 ‘val’开头的</td>
+</tr>
+<tr>
+  <td align="left"><code>[att$=val]</code></td>
+  <td align="left">匹配所有att属性 ‘val’结束的</td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+
+
+<h2 id="二css3-选择器-结构性伪类">二、Css3 选择器 –结构性伪类</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="left">语法</th>
+  <th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left"><code>E:nth-child(n)</code></td>
+  <td align="left">表示选择E父级中所有子元素中第n个子节点</td>
+</tr>
+<tr>
+  <td align="left"><code>E:nth-last-child(n)</code></td>
+  <td align="left">表示选择E父级中所有子元素中第n个字节点，从后向前计算</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="left">——&gt;<code>需E选择器能选中此元素</code></td>
+</tr>
+<tr>
+  <td align="left"><code>E:nth-of-type(n)</code></td>
+  <td align="left">表示选择E父级中子元素是E类型的集合中的，第n个子节点</td>
+</tr>
+<tr>
+  <td align="left"><code>E:nth-last-of-type(n)</code></td>
+  <td align="left">表示选择E父级中子元素是E类型的集合中的，从后向前计算</td>
+</tr>
+<tr>
+  <td align="left"></td>
+  <td align="left">——-&gt;<code>需E选择器能选中此元素,且区分标签类型</code></td>
+</tr>
+<tr>
+  <td align="left"><code>E:nth-child(odd)</code></td>
+  <td align="left">匹配奇数行 同p:nth-child(2n-1)</td>
+</tr>
+<tr>
+  <td align="left"><code>E:nth-child(even)</code></td>
+  <td align="left">匹配偶数行 同p:nth-child(2n)</td>
+</tr>
+<tr>
+  <td align="left"><code>E:empty</code></td>
+  <td align="left">表示E元素中没有子节点（不能有空格,回车）。注意：子节点包含文本节点</td>
+</tr>
+</tbody></table>
+
+
+<hr>
+
+
+
+<h2 id="三css3-选择器-伪类">三、Css3 选择器 –伪类</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="left">语法</th>
+  <th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="left"><code>E:target</code></td>
+  <td align="left">当a标签获取焦点href=”所对应的 E元素锚点</td>
+</tr>
+<tr>
+  <td align="left"><code>E：disabled</code></td>
+  <td align="left">表示不可点击的表单控件</td>
+</tr>
+<tr>
+  <td align="left"><code>E：enabled</code></td>
+  <td align="left">表示可点击的表单控件</td>
+</tr>
+<tr>
+  <td align="left"><code>E:：checked</code></td>
+  <td align="left">表示已选中的checkbox或radio</td>
+</tr>
+<tr>
+  <td align="left"><code>E：first-line</code></td>
+  <td align="left">表示E元素中的第一行</td>
+</tr>
+<tr>
+  <td align="left"><code>E：first-letter</code></td>
+  <td align="left">表示E元素中的第一个字符</td>
+</tr>
+<tr>
+  <td align="left"><code>E：：selection</code></td>
+  <td align="left">表示E元素在用户选中文字时</td>
+</tr>
+<tr>
+  <td align="left"><code>E：not(selector)</code></td>
+  <td align="left">选择非 selector 选择器的每个元素。</td>
+</tr>
+<tr>
+  <td align="left"><code>E~F</code></td>
+  <td align="left">表示E元素后的所有兄弟F元素</td>
+</tr>
+</tbody></table>
+</div></body></html>

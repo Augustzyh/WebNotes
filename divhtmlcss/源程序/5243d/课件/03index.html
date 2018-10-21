@@ -1,0 +1,88 @@
+<!doctype html><!--s申明文档类型：html-->
+<html lang="en"><!--网页的根标签 lang=“”语言类型-->
+	<head><!--网页的头部，不可视化区域-->
+		<meta charset="UTF-8" /><!--编码格式 utf-8(国际编码) gbk gb2312 -->
+		<title>网站标题-我的第一个网页</title>
+		<meta name="author" content="前端VIP-小浪老师"><!--作者-->
+		<meta name="keywords" content="关键字" /><!--关键字-->
+		<meta name="description" content=""><!--网站描述，简介-->
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background-color:purple;
+			}
+			.wrap{
+				position:absolute;
+				top:0;
+				left:0;
+				bottom:0;
+				right:0;
+				margin:Auto;
+				width:300px;
+				height:300px;
+				perspective:1000px;
+			}
+			.box{
+				
+				width:300px;
+				height:300px;
+				/* border:1px solid red; */
+				
+				text-align:center;
+				line-height:300px;
+				font-size:30px;
+				transition:5s;
+				transform-style:preserve-3d;/*呈现3d效果*/
+				animation:run 6s linear infinite;
+			}
+		/* 	.wrap:hover .box{
+				transform:rotateY(360deg);
+			} */
+			.box div{
+				position:absolute;
+				width:300px;
+				height:300px;
+				/* border:1px solid green; */
+				background:-webkit-repeating-linear-gradient(red 0px,yellow 2px,transparent 2px,transparent 30px),-webkit-repeating-linear-gradient(left,red 0px,yellow 2px,transparent 2px,transparent 30px)
+			}
+			.box .front{
+				transform:translateZ(150px);
+			}
+			.box .back{
+				transform:translateZ(-150px)
+			}
+			.box .left{
+				transform:translateX(150px) rotateY(90deg);
+			}
+			.box .right{
+				transform:translateX(-150px) rotateY(90deg);
+			}
+			.box .top{
+				transform:translateY(-150px) rotateX(90deg);
+			}
+			.box .bottom{
+				transform:translateY(150px) rotateX(90deg);
+			}
+			@keyframes run{
+				to{
+					transform:rotateX(360deg) rotateY(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body><!--可视化区域-->
+	<div class="wrap">
+		<div class="box">
+			<div class="front">front</div>
+			<div class="left">left</div>
+			<div class="right">right</div>
+			<div class="top">top</div>
+			<div class="bottom">bottom</div>
+			<div class="back">back</div>
+		</div>
+	</div>
+	</body>
+<html>

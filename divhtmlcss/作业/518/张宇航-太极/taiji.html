@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <title>Octopus</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    body{}
+    .taiji{
+        position:relative;
+        left:0;
+        top:0;
+        width:800px;
+        height:800px;
+        border:none;
+        border-left:400px solid #fff;
+        border-right:400px solid #000;
+        margin:50px auto;
+        box-sizing:border-box;
+        border-radius:50%;
+        animation:rotate 3s linear infinite;
+        box-shadow:0 0 80px #bbb,0 0 70px #333,0 0 50px yellow;
+        -webkit-animation:rotate 3s linear infinite;
+        -moz-animation:rotate 3s linear infinite;
+        -ms-animation:rotate 3s linear infinite;
+        -o-animation:rotate 3s linear infinite;
+        cursor:pointer;
+    }
+    .taiji:hover{
+        animation:rotate .2s linear infinite;
+        -webkit-animation:rotate .2s linear infinite;
+        -moz-animation:rotate .2s linear infinite;
+        -ms-animation:rotate .2s linear infinite;
+        -o-animation:rotate .2s linear infinite;
+    }
+
+    .taiji:after{
+        position:absolute;
+        top:0;
+        right:-200px;
+
+        content:"";
+        display:block;
+        height:400px;
+        width:400px;
+        background-color:#fff;
+        border-radius:50%;
+        box-shadow:0 400px 0 #000;
+    }
+    .taiji:before{
+        position:absolute;
+        top:100px;
+        left:-100px;
+        content:"";
+        display:block;
+        height:200px;
+        width:200px;
+        background-color:#000;
+        z-index:1;
+        border-radius:50%;
+        box-shadow:0 400px 0 #fff;
+    }
+    @keyframes rotate{
+        0%{transform:rotate(0deg);}
+        100%{transform:rotate(360deg);}
+    }
+  </style>
+ </head>
+ <body>
+ <div class="taiji"></div>
+ </body>
+</html>

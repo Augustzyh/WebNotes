@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="58期-张宇航">
+  <meta name="Keywords" content="大章鱼">
+  <meta name="Description" content="章鱼网页">
+  <link rel="shortcut icon" href="images/octopus.ico">
+  <title>Octopus</title>
+  <style type="text/css">
+    body,p,h1,h2,h3,h4,h5,h6,dt,dd,ul,ol,dl{margin:0; }
+    ul,ol,dl{padding:0; }
+    li{list-style:none;}
+    a{text-decoration:none; color:#000;}
+    img{border:none;}
+    .box{
+        width:800px;
+        height:600px;
+        border:1px solid red;
+        margin:50px auto;
+    }
+    .box .list1{
+        width:400px;  /* 旋转中心为list1的上中心 */
+        /* height:200px;  不至顶 */
+        transform-origin:50px;
+    }
+    .box .list1:after{
+        content:"list1";
+        display:block;
+        width:100px;
+        height:100px;
+        background-color:pink;
+    }
+    .box:hover .list1{
+        transform:rotate(-180deg); /* 没给list1加宽度时旋转中心，父盒子的上中心 */
+        transition:2s;
+    }
+  </style>
+ </head>
+ <body>
+    <div class="box">
+        <div class="list1"></div>
+    </div>
+ </body>
+</html>

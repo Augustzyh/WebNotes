@@ -1,0 +1,44 @@
+*{margin:0px; padding:0px;}
+
+body	{
+	background:url('../images/bj2.png');
+}
+
+.container	{
+	width:900px;
+	height:200px;
+	margin-top:200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.login	{
+	width:300px;
+	height:60px;
+	margin-top:200px;
+	margin-left:auto;
+	margin-right:auto;
+/*	background-color:yellow;*/
+	text-align:center;
+	padding-top:40px;
+	font-weight:bold;
+/*	border:1px solid #000;*/
+}
+
+.container_input	{
+	width:300px;
+	height:50px;
+/*	background-color:green;*/
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.container_input input	{
+	width:180px;
+	margin-top:10px;
+	margin-left:60px;
+}
+
+.login input	{
+	margin-left:10px;
+}

@@ -1,0 +1,715 @@
+@charset "UTF-8";
+
+#leftsideBar{
+	position:absolute;
+	top:0;
+	left:0;
+	width:236px;
+	height:460px;
+	background-color:rgba(3,4,5,0.7);
+}
+#leftsideBar .leftsideBar-ul{
+	position:absolute;
+	top:50%;
+	left:0;
+	width:100%;
+	height:430px;
+	margin-top:-215px;
+}
+#leftsideBar .leftsideBar-li{
+	width:100%;
+	height:43px;
+}
+#leftsideBar .leftsideBar-a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+#leftsideBar .leftsideBar-a:hover{
+	background-color:rgba(255,119,0,0.9);
+}
+#leftsideBar .leftsideBar-li span{
+	display:inline-block;
+	font-family:"serif","楷体","Mcrosoft yahei";
+	color:#eeeded;
+	font-size:14px;
+	line-height:40px;
+}
+#leftsideBar .leftsideBar-li .span-title{
+	margin-left:30px;
+}
+#leftsideBar .leftsideBar-li .span-gt{
+	float:right;
+	margin-right:20px;
+	font-size:20px;
+	font-weight:600;
+}
+#leftsideBar .leftsideBar-li .submenu{
+	display:none;
+	position:absolute;
+	left:100%;
+	top:-3.4%;
+	height:458px;
+	border:1px solid #bbb;
+	border-left:none;
+	background-color:#fff;
+	box-shadow:1px 5px 5px #bbb;
+}
+#leftsideBar .leftsideBar-li:hover .submenu{
+	display:block;
+}
+#leftsideBar .leftsideBar-li .enough{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+	width:100%;
+	height:100%;
+}
+#leftsideBar .leftsideBar-li .lack{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content:flex-start;
+	width:100%;
+	height:100%;
+}
+#leftsideBar .leftsideBar-li .submenu-800{
+	/* display:none; */
+	width:800px;
+}
+#leftsideBar .leftsideBar-li .submenu-800 li{
+	width:266px;
+	height:75px;
+}
+#leftsideBar .leftsideBar-li .submenu-1000{
+	width:1000px;
+}
+
+#leftsideBar .leftsideBar-li .submenu-1000 li{
+	width:249px;
+	height:75px;
+}
+#leftsideBar .leftsideBar-li .submenu li a{
+	display:inline-block;
+}
+#leftsideBar .leftsideBar-li .submenu .a-img{
+	width:40px;
+	height:40px;
+	margin:17px 10px 17px 20px;
+	vertical-align:middle;
+}
+#leftsideBar .leftsideBar-li .submenu .a-link{
+	color:#333;
+	font-size:12px;
+}
+#leftsideBar .leftsideBar-li .submenu .a-link:hover{
+	color:#ff8a3b;
+	transition:0.2s;
+}
+
+/* 手机 电话卡 */
+#leftsideBar .leftsideBar-li .submenu1 .phone1 .a-img{
+	background:url("../images/link/phone/mix2s80-80white.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone2 .a-img{
+	background:url("../images/link/phone/max2_80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone3 .a-img{
+	background:url("../images/link/phone/80-4a.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone4 .a-img{
+	background:url("../images/link/phone/heisha-80.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone5 .a-img{
+	background:url("../images/link/phone/note5-80-80.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone6 .a-img{
+	background:url("../images/link/phone/80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone7 .a-img{
+	background:url("../images/link/phone/note3-80-2.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone8 .a-img{
+	background:url("../images/link/phone/redmi5P-80-80.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone9 .a-img{
+	background:url("../images/link/phone/compare.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone10 .a-img{
+	background:url("../images/link/phone/mix2-80.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone11 .a-img{
+	background:url("../images/link/phone/redmi5-80-80.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone12 .a-img{
+	background:url("../images/link/phone/mifenka-1.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone13 .a-img{
+	background:url("../images/link/phone/xm6_80.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone14 .a-img{
+	background:url("../images/link/phone/80-5a.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone15 .a-img{
+	background:url("../images/link/phone/mimobile.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone16 .a-img{
+	background:url("../images/link/phone/80pc-5x.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone17 .a-img{
+	background:url("../images/link/phone/805a.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu1 .phone18 .a-img{
+	background:url("../images/link/phone/weixiu80-80.png") no-repeat center/100%;
+}
+
+/* 电视 盒子 */
+#leftsideBar .leftsideBar-li .submenu2 .tv1 .a-img{
+	background:url("../images/link/tv/4C508080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv2 .a-img{
+	background:url("../images/link/tv/xp80_55.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv3 .a-img{
+	background:url("../images/link/tv/80_8055tv.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv4 .a-img{
+	background:url("../images/link/tv/hezibai480_80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv5 .a-img{
+	background:url("../images/link/tv/zuodaohang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv6 .a-img{
+	background:url("../images/link/tv/xp80_65.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv7 .a-img{
+	background:url("../images/link/tv/80xmds_49.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv8 .a-img{
+	background:url("../images/link/tv/heihezi4c80_80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv9 .a-img{
+	background:url("../images/link/tv/4a4080.80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv10 .a-img{
+	background:url("../images/link/tv/xin55.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv11 .a-img{
+	background:url("../images/link/tv/80xmds_55.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv12 .a-img{
+	background:url("../images/link/tv/hezi3zenqiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv13 .a-img{
+	background:url("../images/link/tv/4A43.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv14 .a-img{
+	background:url("../images/link/tv/xin43.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv15 .a-img{
+	background:url("../images/link/tv/80xmds_65.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv16 .a-img{
+	background:url("../images/link/tv/hezi80-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv17 .a-img{
+	background:url("../images/link/tv/xp80_49.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv18 .a-img{
+	background:url("../images/link/tv/80_8032tv.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv19 .a-img{
+	background:url("../images/link/tv/4S55-80-80.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv20 .a-img{
+	background:url("../images/link/tv/hezi80-80 (1).jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv21 .a-img{
+	background:url("../images/link/tv/4A5080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv22 .a-img{
+	background:url("../images/link/tv/tiyu4380_80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv23 .a-img{
+	background:url("../images/link/tv/324S80.80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu2 .tv24 .a-img{
+	background:url("../images/link/tv/dianshipeijian.jpg") no-repeat center/100%;
+}
+
+/* 笔记本 */
+#leftsideBar .leftsideBar-li .submenu3 .pc1 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc2 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc3 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc4 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc5 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc6 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc7 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc8 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc9 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc10 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc11 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc12 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc13 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc14 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc15 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu3 .pc16 .a-img{
+	background:url("../images/link/pc/80x80youxichuantu.png") no-repeat center/100%;
+}
+
+/* 智能 家电 */
+#leftsideBar .leftsideBar-li .submenu4 .jiadian1 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian2 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian3 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian4 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian5 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian6 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian7 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian8 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian9 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian10 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian11 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian12 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian13 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian14 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian15 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian16 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian17 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian18 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian19 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu4 .jiadian20 .a-img{
+	background:url("../images/link/jiadian/jinghuaqi2-80.jpg") no-repeat center/100%;
+}
+
+/* 健康 家居 */
+#leftsideBar .leftsideBar-li .submenu5 .health1 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health2 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health3 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health4 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health5 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health6 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health7 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health8 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health9 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health10 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health11 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health12 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health13 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health14 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health15 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health16 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health17 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health18 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health19 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health20 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health21 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health22 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu5 .health23 .a-img{
+	background:url("../images/link/health/shouhuan.jpg") no-repeat center/100%;
+}
+
+/* 出行 儿童 */
+#leftsideBar .leftsideBar-li .submenu6 .child1 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child2 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child3 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child4 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child5 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child6 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child7 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child8 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child9 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child10 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child11 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child12 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child13 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child14 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child15 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child16 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child17 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu6 .child18 .a-img{
+	background:url("../images/link/child/scooter-80.jpg") no-repeat center/100%;
+}
+
+/* 路由器手机配件 */
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi1 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi2 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi3 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi4 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi5 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi6 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi7 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi8 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi9 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi10 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi11 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi12 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi13 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi14 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi15 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi16 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu7 .luyouqi17 .a-img{
+	background:url("../images/link/router/miwifi3-80.jpg") no-repeat center/100%;
+}
+
+/* 移动电源 插线板 */
+#leftsideBar .leftsideBar-li .submenu8 .source1 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source2 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source3 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source4 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source5 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source6 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source7 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source8 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source9 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source10 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source11 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source12 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source13 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu8 .source14 .a-img{
+	background:url("../images/link/source/dianyuan2100080.jpg") no-repeat center/100%;
+}
+
+/* 耳机 音箱 */
+#leftsideBar .leftsideBar-li .submenu9 .earphone1 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone2 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone3 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone4 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone5 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone6 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone7 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone8 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone9 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone10 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone11 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone12 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone13 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone14 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone15 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone16 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone17 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone18 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone19 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone20 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone21 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu9 .earphone22 .a-img{
+	background:url("../images/link/earphone/80xiangquan.jpg") no-repeat center/100%;
+}
+
+/* 生活 米兔 */
+#leftsideBar .leftsideBar-li .submenu10 .mitu1 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu2 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu3 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu4 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu5 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu6 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu7 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu8 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu9 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu10 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu11 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu12 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu13 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu14 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu15 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu16 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu17 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu18 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu19 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu20 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu21 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu22 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu23 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}
+#leftsideBar .leftsideBar-li .submenu10 .mitu24 .a-img{
+	background:url("../images/link/mitu/lvxingxiang.jpg") no-repeat center/100%;
+}

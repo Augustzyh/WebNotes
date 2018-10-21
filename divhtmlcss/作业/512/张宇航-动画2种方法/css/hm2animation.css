@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body{
+	background-color:#222;
+}
+#border{
+	overflow:hidden;
+	position:relative;
+	top:0;
+	left:0;
+
+	width:550px;
+	height:550px;
+	margin:50px auto;
+	border-radius:20px;
+	cursor:pointer;
+}
+#border:hover #cover div{
+	animation:photo 4s linear 1 forwards;
+}
+.border{
+	position:absolute;
+	transition:6s;
+	background-color:#33ffff;
+}
+.border1{
+	top:0;
+	left:0;
+	width:0;
+	height:10px;
+}
+#border:hover .border1{
+	animation:widthch 4s linear 1 forwards;
+}
+.border2{
+	top:0;
+	right:0;
+	width:10px;
+	height:0;
+}
+#border:hover .border2{
+	animation:heightch 4s linear 1 forwards;
+}
+.border3{
+	bottom:0;
+	right:0;
+	width:0;
+	height:10px;
+}
+#border:hover .border3{
+	animation:widthch 4s linear 1 forwards;
+}
+.border4{
+	left:0;
+	bottom:0;
+	width:10px;
+	height:0;
+}
+#border:hover .border4{
+	animation:heightch 4s linear 1 forwards;
+}
+#border section{
+	position:absolute;
+	top:50%;
+	left:50%;
+
+	width:400px;
+	height:400px;
+	margin-top:-200px;
+	margin-left:-200px;
+	border-radius:20px;
+}
+#pic img{
+	width:100%;
+	height:100%;
+	border-radius:25px;
+}
+#cover{
+	overflow:hidden;
+}
+#cover div{
+	float:left;
+	width:80px;
+	height:80px;
+	background-color:#222;
+	opacity:1;
+}
+@keyframes photo{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+@keyframes widthch{
+	from{width:0;}
+	to{width:100%;}
+}
+@keyframes heightch{
+	from{height:0;}
+	to{height:100%;}
+}

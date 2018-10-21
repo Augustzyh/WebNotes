@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+body{
+	background-color:#222;
+}
+#border{
+	overflow:hidden;
+	position:relative;
+	top:0;
+	left:0;
+
+	width:550px;
+	height:550px;
+	margin:50px auto;
+	border-radius:20px;
+	transition:1s;
+	cursor:pointer;
+}
+.border{
+	position:absolute;
+	transition:1s;
+}
+.border1{
+	top:0;
+	left:0;
+	width:0;
+	height:10px;
+	background-color:#33ffff;
+}
+#border:hover .border1{
+	width:100%;
+	transition:10s;
+}
+.border2{
+	top:0;
+	right:0;
+	width:10px;
+	height:0;
+	background-color:#33ffff;
+}
+#border:hover .border2{
+	height:100%;
+	transition:10s;
+}
+.border3{
+	bottom:0;
+	right:0;
+	width:0;
+	height:10px;
+	background-color:#33ffff;
+}
+#border:hover .border3{
+	width:100%;
+	transition:10s;
+}
+.border4{
+	left:0;
+	bottom:0;
+	width:10px;
+	height:0;
+	background-color:#33ffff;
+}
+#border:hover .border4{
+	height:100%;
+	transition:10s;
+}
+#border:hover #cover div{
+	opacity:0;
+	transition:3s;
+}
+#border:hover #cover div:nth-child(1){
+	transition-delay:0s;
+}
+#border:hover #cover div:nth-child(2),#border:hover #cover div:nth-child(6){
+	transition-delay:1s;
+}
+#border:hover #cover div:nth-child(3),#border:hover #cover div:nth-child(7),#border:hover #cover div:nth-child(11){
+	transition-delay:2s;
+}
+#border:hover #cover div:nth-child(4),#border:hover #cover div:nth-child(8),#border:hover #cover div:nth-child(12),
+#border:hover #cover div:nth-child(16){
+	transition-delay:3s;
+}
+#border:hover #cover div:nth-child(5),#border:hover #cover div:nth-child(9),#border:hover #cover div:nth-child(13),
+#border:hover #cover div:nth-child(17),#border:hover #cover div:nth-child(21){
+	transition-delay:4s;
+}
+#border:hover #cover div:nth-child(10),#border:hover #cover div:nth-child(14),#border:hover #cover div:nth-child(18),
+#border:hover #cover div:nth-child(22){
+	transition-delay:5s;
+}
+#border:hover #cover div:nth-child(15),#border:hover #cover div:nth-child(19),#border:hover #cover div:nth-child(23){
+	transition-delay:6s;
+}
+#border:hover #cover div:nth-child(20),#border:hover #cover div:nth-child(24){
+	transition-delay:7s;
+}
+#border:hover #cover div:nth-child(25){
+	transition-delay:8s;
+}
+#border section{
+	position:absolute;
+	top:50%;
+	left:50%;
+
+	width:400px;
+	height:400px;
+	margin-top:-200px;
+	margin-left:-200px;
+	border-radius:20px;
+}
+#pic img{
+	width:100%;
+	height:100%;
+	border-radius:25px;
+}
+#cover{
+	overflow:hidden;
+}
+#cover div{
+	float:left;
+	width:80px;
+	height:80px;
+	background-color:#222;
+	opacity:1;
+	transition:1s;
+}

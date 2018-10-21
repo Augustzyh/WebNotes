@@ -1,0 +1,59 @@
+<!doctype html><!--s申明文档类型：html-->
+<html lang="en"><!--网页的根标签 lang=“”语言类型-->
+	<head><!--网页的头部，不可视化区域-->
+		<meta charset="UTF-8" /><!--编码格式 utf-8(国际编码) gbk gb2312 -->
+		<title>网站标题-我的第一个网页</title>
+		<meta name="author" content="前端VIP-小浪老师"><!--作者-->
+		<meta name="keywords" content="关键字" /><!--关键字-->
+		<meta name="description" content=""><!--网站描述，简介-->
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#333c43 url("img/bg_head.jpg") repeat-x top center;
+			}
+			.box{
+				overflow:hidden;
+				width:650px;
+				height:50px;
+			/* 	border:1px solid red; */
+				margin:50px auto;
+				border-radius:10px;
+				background:linear-gradient(#fdfdfd 0%,#e6e6e6 50%,#fdfdfd 100%);
+			}
+			.box ul li:hover{
+				background:-webkit-linear-gradient(left,#cecece 0%,#fff 50%,#cecece 100%);
+			}
+			.box ul li{
+				list-style:none;
+				float:left;
+				border-right:1px solid #cacaca;
+				padding:0 40px;
+				line-height:48px;
+			}
+			.box ul li a{
+				color:#965d5d;
+				font-size:20px;
+				text-decoration:none;
+			}
+			.box ul li.first{
+				padding:0 10px;
+			}
+		</style>
+	</head>
+	<body><!--可视化区域-->
+		<div class="box">
+			<ul>
+				<li class="first"><a href="">
+					<img src="img/home.png" alt="" />
+				</a></li>
+				<li><a href="">资讯</a></li>
+				<li><a href="">关于我们</a></li>
+				<li><a href="">服务信息</a></li>
+				<li style="border:none"><a href="">联系我们</a></li>
+			</ul>
+		</div>
+	</body>
+<html>

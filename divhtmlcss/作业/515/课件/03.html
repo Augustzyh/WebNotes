@@ -1,0 +1,61 @@
+<!doctype html><!--s申明文档类型：html-->
+<html lang="en"><!--网页的根标签 lang=“”语言类型-->
+	<head><!--网页的头部，不可视化区域-->
+		<meta charset="UTF-8" /><!--编码格式 utf-8(国际编码) gbk gb2312 -->
+		<title>网站标题-我的第一个网页</title>
+		<meta name="author" content="前端VIP-小浪老师"><!--作者-->
+		<meta name="keywords" content="关键字" /><!--关键字-->
+		<meta name="description" content=""><!--网站描述，简介-->
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			div{
+				position:relative;
+				width:400px;
+				height:200px;
+				border:2px solid #000;
+				background-color:#fff;
+				margin:50px auto;
+				border-radius:50%;
+				border-bottom:200px solid #000;
+				/* animation:run 1s linear infinite; */
+			}
+			div:before{
+				position:Absolute;
+				content:"";
+				left:0;
+				top:50%;
+				width:40px;
+				height:40px;
+				border:80px solid #000;
+				background-color:#fff;
+				border-radius:50%;
+			}
+			div:after{
+				position:absolute;
+				content:"";
+				top:50%;
+				right:0;
+				width:40px;
+				height:40px;
+				border:80px solid #fff;
+				background-color:#000;
+				border-radius:50%;
+			}
+			@keyframes run{
+				form{
+					transform:rotate(0deg)
+				}to{
+					transform:rotate(360deg)
+				}
+			}
+		</style>
+	</head>
+	<body><!--可视化区域-->
+		<div>
+		
+		</div>
+	</body>
+<html>

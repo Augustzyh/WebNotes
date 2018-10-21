@@ -1,0 +1,301 @@
+<!DOCTYPE html><html><head><title>17-第十七章 过渡 动画 颜色 文本</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="17-第十七章-过渡-动画-颜色-文本">17-第十七章 过渡 动画 颜色 文本</h1>
+
+<p></p>
+
+<hr>
+
+
+
+<h2 id="一transition过渡">一、Transition过渡</h2>
+
+
+
+<h4 id="1复合语法">1、复合语法：</h4>
+
+<blockquote>
+  <p>Transition：none | property duration [delay] [timing-function ]</p>
+</blockquote>
+
+
+
+<h4 id="2单样式写法">2、单样式写法</h4>
+
+<blockquote>
+  <p><code>transition-property</code>：     属性的名称：  （当指定CSS 属性改变时，过渡效果将开始）</p>
+  
+  <ul><li>all   所有属性都将获得过渡效果( 默认)</li>
+  <li>attr  过渡效果的 CSS 属性名称列表，列表以逗号分隔。   </li>
+  <li>none  没有属性会获得过渡效果。</li>
+  </ul>
+  
+  <p><code>transition-duration</code>  过渡时间：完成过渡效果需要的时间    （以秒或毫秒计） <br>
+  <code>transition-delay</code>      延迟时间：等~（以秒或毫秒计）之后再变化 <br>
+  <code>transition-timing-function</code> 运动形式 ：(速度曲线)</p>
+  
+  <ul><li>linear：       匀速</li>
+  <li>ease：（默认值）    慢快慢</li>
+  <li>ease-in：      慢入</li>
+  <li>ease-out：     慢出</li>
+  <li>ease-in-out：  慢入慢出</li>
+  <li>cubic-bezier 贝塞尔曲线（ x1, y1, x2, y2 ）  <br>
+  <ul>
+  <li>X1 起点在X轴的坐标,为0~1</li>
+  <li>Y1 起点在Y轴的坐标,最大0.6-1.65    </li>
+  <li>X2 终点在X轴的坐标,为0~1</li>
+  <li>Y2 终点在Y轴的坐标,最大-0.6-1.65</li></ul></li>
+  </ul>
+</blockquote>
+
+<p>起点:对应的 y=x 为匀速， y&gt;x 为加速   y&lt;x 为减速 <br>
+终点:对应的 y=x 为匀速， y&gt;x 为减速   y&lt;x 为加速</p>
+
+<p>参考：<a href="http://matthewlein.com/ceaser/" target="_blank">http://matthewlein.com/ceaser/</a></p>
+
+
+
+<h4 id="3多样式写法">3、多样式写法</h4>
+
+<p>Transition：property duration [delay] [timing-function ],property duration [delay] [timing-function ],….</p>
+
+<hr>
+
+
+
+<h2 id="二transition过渡完成事件课程三里面讲">二、Transition过渡完成事件(课程三里面讲)</h2>
+
+<blockquote>
+  <p>Webkit内核：  obj.addEventListener(‘webkitTransitionEnd’,function(){},false); <br>
+  firefox:        obj.addEventListener(‘transitionend’,function(){},false);</p>
+</blockquote>
+
+<hr>
+
+
+
+<h2 id="三animation动画">三、animation动画</h2>
+
+<p>animation必须与@keyframes一起使用</p>
+
+<blockquote>
+  <p>复合样式：animation: name duration [timing-function] [delay] [iteration-count] [direction] [play-state] [fill-mode]; </p>
+</blockquote>
+
+<p>单样式:</p>
+
+<blockquote>
+  <p><code>animation-name</code>: 动画名称 </p>
+  
+  <ul><li>none：不引用任何动画名称</li>
+  <li>name: 指定的动画名</li>
+  </ul>
+  
+  <p><code>animation-duration</code>: 动画执行时间 (单位：s ms) <br>
+  <code>animation-delay</code>:  动画效果延迟时间(单位：s ms) <br>
+  <code>animation-timing-function</code>:    动画速度曲线,同 transition-timing-function</p>
+  
+  <ul><li>linear </li>
+  <li>ease （默认）</li>
+  <li>ease-in </li>
+  <li>ease-out</li>
+  <li>ease-in-out </li>
+  <li>cubic-bezier()</li>
+  </ul>
+  
+  <p><code>animation-iteration-count</code>:   动画执行循环次数 </p>
+  
+  <ul><li>infinite  无限次 | <code>&lt;number&gt;</code>（默认 1）</li>
+  </ul>
+  
+  <p><code>animation-direction</code>: 动画是否反向运动</p>
+  
+  <ul><li>normal：   （默认）        正常方向 </li>
+  <li>reverse：          反方向运行 </li>
+  <li><code>alternate</code>：      动画先正后反方向运行  </li>
+  <li>alternate-reverse：    先反后正方向运行</li>
+  </ul>
+  
+  <p><code>animation-play-state</code>:    动画执行状态</p>
+  
+  <ul><li>running：运动（默认）</li>
+  <li>paused：暂停</li>
+  </ul>
+  
+  <p><code>animation-fill-mode</code>: 动画对象动画时间之外的状态</p>
+  
+  <ul><li>none （默认） 原始状态&gt;动画&gt;原始状态</li>
+  <li>forwards      原始状态&gt;动画&gt;停在动画帧100%</li>
+  <li>backwards (忽略原始状态)进入动画帧0%&gt;动画&gt;原始状态</li>
+  <li>both      (忽略原始状态)进入动画帧0%&gt;动画&gt;停在动画帧100%</li>
+  </ul>
+</blockquote>
+
+<hr>
+
+
+
+<h2 id="四keyframes规定动画帧">四、@keyframes:规定动画帧</h2>
+
+
+
+<h4 id="1语法">1、语法：</h4>
+
+<blockquote>
+  <p><code>@keyframes</code>:  animationname {  <br>
+          keyframes-selector {  css-styles   } <br>
+          keyframes-selector {  css-styles  }  <br>
+   }</p>
+  
+  <ul><li>animationname     animation的名称。</li>
+  <li>keyframes-selector     动画时间的百分比。 <br>
+  <ul>
+  <li>合法值：0-100% |   from  to       </li>
+  <li>可以用一个动画keyframes-selectors。</li></ul></li>
+  <li>css-styles    一个或多个合法的CSS样式属性 <br>
+  例如：</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>@<span class="hljs-keyword">keyframes</span>  run {
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    0%{<span class="hljs-attribute">width</span>:<span class="hljs-number">0px</span>,background:red;}
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>    100%{<span class="hljs-attribute">width</span>:<span class="hljs-number">500px</span>,background:greend;}
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>}
+</div></code></pre>
+
+<hr>
+
+
+
+<h4 id="2当帧动画一样的时候">2、当帧动画一样的时候</h4>
+
+<p>例如：</p>
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>@<span class="hljs-keyword">keyframes</span>  run {
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    0%{<span class="hljs-attribute">width</span>:<span class="hljs-number">0px</span>,background:red;}
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>    20%{<span class="hljs-attribute">width</span>:<span class="hljs-number">0px</span>,background:red;}
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>    80%{<span class="hljs-attribute">width</span>:<span class="hljs-number">500px</span>,background:greend;}
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>    100%{<span class="hljs-attribute">width</span>:<span class="hljs-number">500px</span>,background:greend;}
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>}
+</div></code></pre>
+
+<p>可以写成</p>
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>@<span class="hljs-keyword">keyframes</span>  run {
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    0%，20%{<span class="hljs-attribute">width</span>:<span class="hljs-number">0px</span>,background:red;}
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>    80%，100%{<span class="hljs-attribute">width</span>:<span class="hljs-number">500px</span>,background:greend;}
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>}
+</div></code></pre>
+
+<hr>
+
+
+
+<h2 id="五新增颜色模式">五、新增颜色模式</h2>
+
+<p>rgba(R,G,B,A) 透明颜色值 <br>
+HSL：</p>
+
+<blockquote>
+  <ul><li><p>H:Hue(色调)。   </p>
+  
+  <ul>
+  <li>0(或360)表示红色，           </li>
+  <li>120表示绿色，</li>
+  <li>240表示蓝色，取值为：0 - 360</li></ul></li>
+  <li><p>S：Saturation(饱和度)</p>
+  
+  <ul>
+  <li>取值为：0% - 100%      值越大颜色越纯</li></ul></li>
+  <li>L:</li>
+  </ul>
+</blockquote>
+
+<p>Lightness（亮度） <br>
+    * 取值为（0%-100%）      变暗 &lt; 50%最纯  &gt;变亮</p>
+
+<p>例如：background:hsl(360,100%,50%);</p>
+
+<p>HSLA：</p>
+
+<blockquote>
+  <p>A： <br>
+      Alpha透明度。   取值0~1之间。</p>
+</blockquote>
+
+<p>currentcolor 当前色      currentcolor等于当前的color值</p>
+
+<hr>
+
+
+
+<h2 id="六text-shadow-文字阴影">六、text-shadow 文字阴影</h2>
+
+
+
+<h4 id="1语法-1">1、语法：</h4>
+
+<blockquote>
+  <p>text-shadow：x y blur color；        </p>
+  
+  <ul><li>h-shadow      必需。水平阴影的位置。允许负值。</li>
+  <li>v-shadow      必需。垂直阴影的位置。允许负值。</li>
+  <li>blur          可选。模糊的半径。</li>
+  <li>color         可选。阴影的颜色</li>
+  </ul>
+</blockquote>
+
+<p>阴影叠加:text-shadow:2px 2px 0px red, 2px 2px 4px green;  先渲染后面的，再渲染前面的</p>
+
+<hr>
+
+
+
+<h4 id="2案例">2、案例：</h4>
+
+<p>层叠：</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{<span class="hljs-attribute">color</span>:red; <span class="hljs-attribute">font-size</span>:<span class="hljs-number">100px</span>; <span class="hljs-attribute">font-weight</span>:bold; <span class="hljs-attribute">text-shadow</span>:<span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-number">0px</span> white, <span class="hljs-number">4px</span> <span class="hljs-number">4px</span> <span class="hljs-number">0px</span> red;}
+</div></code></pre>
+
+<p>光晕：</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{<span class="hljs-attribute">color</span>:white; <span class="hljs-attribute">font-size</span>:<span class="hljs-number">100px</span>; <span class="hljs-attribute">text-shadow</span>:<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">#fff</span>, <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20px</span> <span class="hljs-number">#fff</span>, <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">30px</span> <span class="hljs-number">#fff</span>, <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">40px</span> <span class="hljs-number">#ff00de</span>, <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">70px</span> <span class="hljs-number">#ff00de</span>, <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">80px</span> <span class="hljs-number">#ff00de</span>, <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100px</span> <span class="hljs-number">#ff00de</span>, <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">150px</span> <span class="hljs-number">#ff00de</span>;}
+</div></code></pre>
+
+<p>火焰文字：</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>{<span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20px</span> <span class="hljs-number">#fefcc9</span>, <span class="hljs-number">10px</span> -<span class="hljs-number">10px</span> <span class="hljs-number">30px</span> <span class="hljs-number">#feec85</span>, -<span class="hljs-number">20px</span> -<span class="hljs-number">20px</span> <span class="hljs-number">40px</span> <span class="hljs-number">#ffae34</span>, <span class="hljs-number">20px</span> -<span class="hljs-number">40px</span> <span class="hljs-number">50px</span> <span class="hljs-number">#ec760c</span>, -<span class="hljs-number">20px</span> -<span class="hljs-number">60px</span> <span class="hljs-number">60px</span> <span class="hljs-number">#cd4606</span>, <span class="hljs-number">0</span> -<span class="hljs-number">80px</span> <span class="hljs-number">70px</span> <span class="hljs-number">#973716</span>, <span class="hljs-number">10px</span> -<span class="hljs-number">90px</span> <span class="hljs-number">80px</span> <span class="hljs-number">#451b0e</span>; <span class="hljs-attribute">font-family</span>:Verdana, Geneva, sans-serif; <span class="hljs-attribute">font-size</span>:<span class="hljs-number">100px</span>; <span class="hljs-attribute">font-weight</span>:bold; <span class="hljs-attribute">color</span>:white;
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>}
+</div></code></pre>
+
+
+
+<h2 id="六contenteditable-属性规定是否可编辑元素的内容">六、contenteditable 属性规定是否可编辑元素的内容。</h2>
+
+<p><code>&lt;element contenteditable="value"&gt;</code></p>
+
+<blockquote>
+  <p><code>true</code> 规定可以编辑元素内容。 <br>
+  <code>false</code>  规定无法编辑元素内容。</p>
+</blockquote>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs applescript"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"box"</span> contenteditable=<span class="hljs-string">"true"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</div></code></pre></div></body></html>

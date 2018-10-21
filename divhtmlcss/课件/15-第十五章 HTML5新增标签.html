@@ -1,0 +1,316 @@
+<!DOCTYPE html><html><head><title>15-第十五章 HTML5新增标签</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="15-第十五章-html5新增标签">15-第十五章 HTML5新增标签</h1>
+
+<p></p>
+
+
+
+<h2 id="一html5概述">一、HTML5概述</h2>
+
+
+
+<h4 id="1简介">1.简介</h4>
+
+<blockquote>
+  <p>HTML5万维网的核心语言、标准通用标记语言下的一个应用超文本标记语言的第五次大修改.HTML5将成为 HTML、XHTML 以及 HTML DOM 的新标准。</p>
+</blockquote>
+
+
+
+<h4 id="2设计目的">2.设计目的</h4>
+
+<blockquote>
+  <p>HTML5的设计目的是为了在移动设备上支持多媒体。</p>
+</blockquote>
+
+
+
+<h4 id="3新特性只介绍特性具体内容自己了解">3.新特性(只介绍特性,具体内容自己了解)</h4>
+
+<p>1) 语义特性（Class：Semantic）</p>
+
+<blockquote>
+  <p>HTML5赋予网页更好的意义和结构。</p>
+</blockquote>
+
+<p>2) 本地存储特性（Class: OFFLINE &amp; STORAGE）</p>
+
+<blockquote>
+  <p>基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度，这些全得益于HTML5 APP Cache，以及本地存储功能。</p>
+</blockquote>
+
+<p>3) 设备兼容特性 (Class: DEVICE ACCESS)</p>
+
+<blockquote>
+  <p>HTML5为网页应用开发者们提供了更多功能上的优化选择，带来了更多体验功能的优势。HTML5提供了前所未有的数据与应用接入开放接口。使外部应用可以直接与浏览器内部的数据直接相连，例如视频影音可直接与microphon es及摄像头相联。</p>
+</blockquote>
+
+<p>4) 连接特性（Class: CONNECTIVITY）</p>
+
+<blockquote>
+  <p>HTML5拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特性能够帮助我们实现服务器将数据“推送”到客户端的功能。</p>
+</blockquote>
+
+<p>5) 网页多媒体特性(Class: MULTIMEDIA)</p>
+
+<blockquote>
+  <p>支持网页端的Audio、Video等多媒体功能， 与网站自带的APPS，摄像头，影音功能相得益彰。</p>
+</blockquote>
+
+<p>6)三维、图形及特效特性（Class: 3D, Graphics &amp; Effects）</p>
+
+<blockquote>
+  <p>基于SVG、Canvas、WebGL及CSS3的3D功能 </p>
+</blockquote>
+
+<p>7) 性能与集成特性（Class: Performance &amp; Integration）</p>
+
+<blockquote>
+  <p>HTML5通过XMLHttpRequest2等技术，解决以前的跨域等问题 8)CSS3特性(Class: CSS3) <br>
+      在不牺牲性能和语义结构的前提下，CSS3中提供了更多的风格和更强的效果</p>
+</blockquote>
+
+
+
+<h4 id="4浏览器支持">4.浏览器支持</h4>
+
+<p>1.HTML5有部分内容兼容到IE9，IE8及以下对H5完全不兼容后面的内容不再考虑此类浏览器。最新版本的 Safari、Chrome、Firefox 以及 Opera 支持某些 HTML5 特性。</p>
+
+<p>2.部分内容需要加兼容前缀，</p>
+
+<blockquote>
+  <p><code>-webkit-</code> 常用于兼容chrome <br>
+  <code>-moz-</code> 常用于兼容firfox <br>
+  <code>-o-</code>       常用于兼容opera <br>
+  <code>-ms-</code>  常用于兼容IE</p>
+</blockquote>
+
+<p>3.兼容性查询网站：<a href="http://caniuse.com/" target="_blank">http://caniuse.com/</a></p>
+
+<hr>
+
+
+
+<h2 id="二html5结构性标签">二、HTML5结构性标签</h2>
+
+<p><code>&lt;header&gt;&lt;/header&gt;</code> 页眉 ,也可用于板块头部</p>
+
+<p><code>&lt;nav&gt;&lt;/nav&gt;</code> 导航 （链接的的一个列表）</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">“#”</span>&gt;</span>链接<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">“#”</span>&gt;</span>链接<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</div></code></pre>
+
+<p><code>&lt;section&gt; &lt;section&gt;</code> 页面上的版块 <br>
+<code>&lt;article&gt;&lt;/ article &gt;</code> 用来在页面中表示一套结构完整且独立的内容部分</p>
+
+<blockquote>
+  <p>如：杂志或报纸中的一篇文章，用户提交的评论内容，可互动的页面模块挂件等</p>
+</blockquote>
+
+<p><code>&lt;aside&gt;&lt;/ aside&gt;</code> 侧边栏、广告、nav元素组，以及其他类似的内容部分 <br>
+<code>&lt;footer&gt;&lt;/footer&gt;</code>   页面的底部 或者 版块底部</p>
+
+<hr>
+
+
+
+<h2 id="三html5语义化标签">三、HTML5语义化标签</h2>
+
+<p><code>&lt;hgroup&gt;&lt;/hgroup&gt;</code> 一个标题和一个子标题，或者标语的组合</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">hgroup</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>潭州教育<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>付出不亚于任何人的努力<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span><span class="hljs-tag">&lt;/<span class="hljs-name">hgroup</span>&gt;</span>
+</div></code></pre>
+
+<p><code>&lt;figure&gt; &lt; figure &gt;</code> 用于对元素进行组合。一般用于图片或视频 <br>
+ <code>&lt;figcaption&gt; &lt;/figcaption&gt;</code>元素为元素组添加标题</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">“”/</span>&gt;</span>(注意没有alt)
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>     <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span> 说明文字<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span><span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+</div></code></pre>
+
+<p><code>&lt;time&gt;&lt;/time&gt;</code>用来表现时间或日期</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> 早上 <span class="hljs-tag">&lt;<span class="hljs-name">time</span>&gt;</span>9:00<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span> 开始营业。 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>参数
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2008-02-14"</span>&gt;</span>情人节<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span> 有个约会。 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</div></code></pre>
+
+<hr>
+
+<p><code>&lt;datalist&gt;&lt;/datalist&gt;</code>标签定义选项列表。请与 input 元素配合使用该元素，来定义 input 可 <br>
+能的值。请使用 input 元素的 list 属性来绑定 datalist ID。</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">list</span>=<span class="hljs-string">"valList"</span> /&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span><span class="hljs-tag">&lt;<span class="hljs-name">datalist</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"valList"</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"javascript"</span>&gt;</span>javascript<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"html"</span>&gt;</span>html<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"css"</span>&gt;</span>css<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span><span class="hljs-tag">&lt;/<span class="hljs-name">datalist</span>&gt;</span>
+</div></code></pre>
+
+<p><code>&lt;details&gt;&lt;/details&gt;</code>用于描述文档或文档某个部分的细节该元素用于摘录引用等  ，与 标签 配合使用 <br>
+    Open 属性默认展开 <br>
+<code>&lt; summary&gt;&lt;/summary&gt;</code> details 元素的标题</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">details</span>  <span class="hljs-attr">open</span>=<span class="hljs-string">"open"</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>    <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>潭州教育<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>国内将知名的IT培训机构<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span><span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+</div></code></pre>
+
+<hr>
+
+<p><code>&lt;dialog&gt;&lt;/dialog&gt;</code>定义一段对话, 默认展开需要添加 open属性</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">dialog</span> <span class="hljs-attr">open</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>老师<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>2+2 等于？<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>学生<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>老师<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>答对了！<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span><span class="hljs-tag">&lt;/<span class="hljs-name">dialog</span>&gt;</span>
+</div></code></pre>
+
+<p><code>&lt;address&gt;&lt;/address&gt;</code> 定义文章 或页面作者的详细联系信息</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs dts"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-params">&lt;address&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span><span class="hljs-symbol">    email:</span><span class="hljs-params">&lt;a href="mailto:<span class="hljs-number">68603587</span>@qq.com"&gt;</span><span class="hljs-number">68603587</span>@qq.com<span class="hljs-params">&lt;/a&gt;</span>.<span class="hljs-params">&lt;br&gt;</span> 
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span><span class="hljs-symbol">    web:</span>Example.com<span class="hljs-params">&lt;br&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span><span class="hljs-symbol">    QQ:</span><span class="hljs-number">68603587</span><span class="hljs-params">&lt;br&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span><span class="hljs-params">&lt;/address&gt;</span>
+</div></code></pre>
+
+<hr>
+
+<p><code>&lt;meter&gt;</code>  定义已知范围或分数值内的标量测量。也被称为 gauge（尺度）。 <br>
+比如磁盘用量、查询结果的相关性。</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">meter</span> <span class="hljs-attr">min</span>=<span class="hljs-string">”0”</span> <span class="hljs-attr">max</span>=<span class="hljs-string">”10”</span> <span class="hljs-attr">value</span>=<span class="hljs-string">'3'</span>  <span class="hljs-attr">low</span>=<span class="hljs-string">''</span> <span class="hljs-attr">high</span>=<span class="hljs-string">''</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">meter</span>&gt;</span>
+</div></code></pre>
+
+<p><code>&lt;progress&gt;&lt;progress&gt;</code>定义进度条</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>&lt;progress max=<span class="hljs-string">"100"</span> value=<span class="hljs-string">"76"</span>&gt;
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>76<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>%
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">progress</span>&gt;</span></span>
+</div></code></pre>
+
+<p><code>&lt;mark&gt;&lt;/mark&gt;</code> 需要标记的词或句子，默认黄色背景</p>
+
+<hr>
+
+
+
+<h2 id="四html5结构标签ie低版兼容">四、HTML5结构标签IE低版兼容</h2>
+
+<p>针对IE6-8这些不支持HTML5语义化标签的浏览器我们可以使用javascript来解决他们 方法如下：</p>
+
+
+
+<h4 id="一-js动态创建标签">一 js动态创建标签</h4>
+
+<blockquote>
+  <p>a  在页面的头部加下：</p>
+</blockquote>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+</span></div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>        <span class="hljs-built_in">document</span>.createElement(“header”);
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>        <span class="hljs-built_in">document</span>.createElement(“nav”);
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>        <span class="hljs-built_in">document</span>.createElement(“footer”);
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+
+<blockquote>
+  <p>b   要对新创建的标签定义display:block属性</p>
+</blockquote>
+
+
+
+<h4 id="二-引入tml5shivjs-兼容插件">二 引入tml5shiv.js 兼容插件</h4>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
+</span></div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>         &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span> &lt;![endif]--&gt;
+</div></code></pre>
+
+<hr>
+
+
+
+<h2 id="五-ie条件注释语句非必须有兴趣的了解下">五、 IE条件注释语句(非必须，有兴趣的了解下)</h2>
+
+<p>针对的浏览器版本</p>
+
+<blockquote>
+  <p><code>&lt;!--[if lt IE 7]&gt; 内容 &lt;![endif]--&gt;</code>    IE7 以下版本    （小于IE7）</p>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p><code>&lt;!--[if lte IE 7]&gt;内容&lt;![endif]--&gt;</code> IE7及以下版本    （包含IE7）</p>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p><code>&lt;!--[if gt IE 7]&gt;内容&lt;![endif]--&gt;</code>   IE7 以上版本   （大于IE7）</p>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p><code>&lt;!--[if gte IE 7]&gt;内容&lt;![endif]--&gt;</code>   IE7及以上版本      （包含IE7）</p>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p><code>&lt;!--[if !IE 7]&gt;内容&lt;![endif]--&gt;</code>       非IE7版本</p>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p><code>&lt;!--[if !IE]&gt;&lt;!--&gt;</code>    非IE版本      <code>&lt;!--&lt;![endif]--&gt;</code>     </p>
+</blockquote></div></body></html>

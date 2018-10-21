@@ -1,0 +1,204 @@
+<!DOCTYPE html><html><head><title>18-第十八章-css3 渐变 倒影 背景</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="18-第十八章-css3-渐变-倒影-背景">18-第十八章-css3 渐变 倒影 背景</h1>
+
+<p></p>
+
+<hr>
+
+<blockquote>
+  <p>gradient渐变,可以应用在所有接受图像的属性上</p>
+</blockquote>
+
+
+
+<h2 id="一linear-gradient-线性渐变">一、linear-gradient() 线性渐变</h2>
+
+<blockquote>
+  <p>语法: <br>
+  <code>linear-gradient(</code> 起点，[position] color，[position color]，…<code>)</code> </p>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p>起点：从什么方向开始渐变（顺时针）</p>
+  
+  <ul><li>角度：从什么角度开始渐变，单位（deg）</li>
+  <li>关键词： <br>
+  <ul>
+  <li>to left：  设置渐变为从右到左。  相当于: 270deg</li>
+  <li>to right： 设置渐变从左到右。   相当于: 90deg</li>
+  <li>to top：   设置渐变从下到上。   相当于: 0deg</li>
+  <li>to bottom（默认）：设置渐变从上到下。相当于: 180deg。这是默认值，等同于留空不写。  <br>
+  对角渐变 to top left | to top right | to bottom right  | to bottom left <br>
+  position:</li></ul></li>
+  <li>位置：%|px <br>
+  如：red 50%, blue 100%(红色从50%渐变到100%为蓝色)</li>
+  <li>颜色 ：任何颜色值</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs lsl"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>linear-gradient（<span class="hljs-number">30</span>deg, red <span class="hljs-number">10</span>%, green <span class="hljs-number">10</span>%）
+</div></code></pre>
+
+<hr>
+
+
+
+<h2 id="二多背景及兼容">二、多背景及兼容</h2>
+
+<p>1、多背景：（用逗号分开）</p>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs less"><div class="hljs-line"><span class="hljs-comment line-number">1.</span><span class="hljs-attribute">background</span>: url(<span class="hljs-string">a.jpg</span>) <span class="hljs-number">0</span> <span class="hljs-number">0</span>, url(<span class="hljs-string">b.jpg</span>) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+</div></code></pre>
+
+<p>2、带图片和透明度的渐变        </p>
+
+<blockquote>
+  <p><code>background: linear-gradient(to right, rgba(255,255,255,0),    rgba(255,255,255,1)),url(abc.jpg);</code></p>
+</blockquote>
+
+<p>3、兼容：</p>
+
+<blockquote>
+  <p><code>-webkit-linear-gradient()</code> <br>
+      <code>-webkit-linear-gradient()</code> <br>
+      <code>-moz-linear-gradient()</code>        </p>
+</blockquote>
+
+<p>4、 IE低版本渐变(滤镜)：</p>
+
+<blockquote>
+  <p><code>filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',end Colorstr='#ff0000',GradientType='1');</code></p>
+</blockquote>
+
+<hr>
+
+
+
+<h2 id="三repeating-linear-gradient-线性渐变重复平铺">三、repeating-linear-gradient() 线性渐变重复平铺</h2>
+
+<p>1、线性渐变重复平铺: repeating-linear-gradient ()     </p>
+
+<hr>
+
+
+
+<h2 id="四radial-gradient向渐变">四、radial-gradient()向渐变</h2>
+
+<p>radial-gradient( shape [size ] at[position ],color position,color position…)</p>
+
+<blockquote>
+  <p>shape： <code>circle</code>（圆） |  <code>ellipse</code> （椭圆） <br>
+  shape size:  半径 </p>
+  
+  <ul><li>圆形的半径圆只有一个值，椭圆有两个值，<code>px</code>  | <code>关键词</code> </li>
+  <li>关键词： <br>
+  <ul>
+  <li><code>closest-side</code>：   圆心到最近的边</li>
+  <li><code>closest-corner</code>： 圆心到最近的角</li>
+  <li><code>farthest-side</code>：  圆心到离圆心最远的边</li>
+  <li><code>farthest-corner</code>(默认)：    圆心到离圆心最远的角</li></ul></li>
+  </ul>
+  
+  <p><code>position</code> 确定圆心的位置，X坐标，Y纵坐标；如果只提供一个，第二值默认为50%，即center</p>
+  
+  <ul><li>值为：关键词  length percentage  <br>
+  <ul>
+  <li>X关键词 ：left：左   center：中 right：右</li>
+  <li>Y关键词 ：top：上  center：中  bottom：下</li></ul></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs lsl"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>radial-gradient(ellipse <span class="hljs-number">100</span>% <span class="hljs-number">100</span>% at <span class="hljs-number">300</span>px  <span class="hljs-number">300</span>px, #f00 <span class="hljs-number">10</span>%, #ff0 <span class="hljs-number">20</span>%, #<span class="hljs-number">080</span> <span class="hljs-number">100</span>%)
+</div></code></pre>
+
+<hr>
+
+
+
+<h2 id="五-repeating-radial-gradient-线性渐变重复平铺">五、 repeating-radial-gradient () 线性渐变重复平铺</h2>
+
+<hr>
+
+
+
+<h2 id="六-box-reflect-倒影">六、 box-reflect() 倒影</h2>
+
+<p>语法</p>
+
+<blockquote>
+  <p>box-reflect：none | direction offset  mask-box-image <br>
+  none :无倒影（默认） <br>
+  direction: 倒影在对象的位置      </p>
+  
+  <ul><li><code>above</code>   上  </li>
+  <li><code>below</code>   下  </li>
+  <li><code>left</code>    左  </li>
+  <li><code>right</code>   右</li>
+  </ul>
+  
+  <p>offset:用长度值来定义倒影与对象之间的间隔,可以为负值<code>length</code> | <code>percentage</code> <br>
+  mask-box-image: 遮罩图像</p>
+  
+  <ul><li><code>&lt;url&gt;</code>：         使用绝对或相对地址指定遮罩图像。</li>
+  <li><code>linear-gradient</code>：        使用线性渐变创建遮罩图像。</li>
+  <li><code>radial-gradient</code>：        使用径向(放射性)渐变创建遮罩图像。</li>
+  <li><code>repeating-linear-gradient</code>：  使用重复的线性渐变创建背遮罩像。</li>
+  <li><code>repeating-radial-gradient</code>：  使用重复的径向(放射性)渐变创建遮罩图像。</li>
+  <li><code>none</code>：无遮罩图像</li>
+  </ul>
+</blockquote>
+
+
+
+<h2 id="七-masks遮罩蒙版">七、 MASKS遮罩/蒙版</h2>
+
+<p>-webkit-mask-image  遮罩图片</p>
+
+<blockquote>
+  <ul><li>：url(”);</li>
+  <li>linear-gradient</li>
+  <li>radial-gradient</li>
+  </ul>
+</blockquote>
+
+<p>-webkit-mask-repeat 遮罩平铺</p>
+
+<blockquote>
+  <ul><li>repeat</li>
+  <li>no-repeat</li>
+  <li>repeat-x</li>
+  <li>repeat-y</li>
+  </ul>
+</blockquote>
+
+<p>-webkit-mask-position   遮罩位置</p>
+
+<blockquote>
+  <ul><li>关键词 | % | length </li>
+  </ul>
+</blockquote>
+
+<p>-webkit-mask-size       遮罩尺寸</p>
+
+<blockquote>
+  <ul><li>% | length</li>
+  </ul>
+</blockquote>
+
+<p>现阶段仅chrome支持, 参考网址：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask#" target="_blank">https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask#</a>浏览器兼容性</p></div></body></html>

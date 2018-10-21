@@ -1,0 +1,98 @@
+<!DOCtype html>					<!--声明文档类型 -->
+<html lang='EN'>				<!--根标签：lang规定翻译的语言-->
+	<head>						<!--网页头部-->
+		<meta charset='UTF-8'/>	<!--规定字符编码：UTF-8国际编码-->
+		<meta name="Author" content="">			<!--作者-->
+		<meta name="Keywords" content="">		<!--关键词：给搜索引擎用的-->
+		<meta name="Description" content="">	<!--网站概述：给搜索引擎用的-->
+		<title>第十三章 form表单 作业</title>							<!--网页标题-->
+		<link rel='stylesheet' type='text/css' href='iconfont/iconfont.css'/>
+		<style>
+			*{margin:0;padding:0;}
+			html{}
+			body{font:12px/1.4 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;}
+			a{text-decoration:none;color:inherit;outline:none;}
+			.fl-L{float:left;}
+			.fl-R{float:right;}
+			.clearfix:after{
+				content:'';
+				display:block;
+				clear:both;
+			}
+			.pos-r{
+				position:relative;
+			}
+			.pos-a{
+				position:absolute;
+			}
+			.triangle{
+				font-size:0;
+				line-height:0;
+				position:absolute;
+				border:3px solid transparent;
+				border-bottom:none;
+				border-top-color:#bbb;
+				top:50%;
+				right:2px;
+				margin-top:-1.5px;
+
+			}
+			a:hover .triangle{
+				transition:0.3s;
+				transform:rotate(180deg);
+			
+			}
+			.hov-cc40:hover{color:#c40000;}
+			.hov-txt-und:hover{text-decoration:underline;}
+			.header{background:#f2f2f2;min-width:1230px;border-bottom:1px solid #ddd;}
+			#navWrap{width:1230px;margin:auto;padding:5px 0;color:#999;}
+			#navWrap a{padding:0 10px;}
+			.iconfont{padding:0 2px;color:#c40000;}
+			
+		
+		
+		</style>
+
+	</head>
+	<body>										<!--网页主体-->
+		<div class='header'>
+			<div id='navWrap' class='clearfix'>
+				<div class='login fl-L'>
+					<a href='#'>喵，欢迎来天猫</a>
+					<a class='hov-cc40' href='#'>请登录</a>
+					<a class='hov-cc40' href='#'>免费注册</a>
+				</div>
+				<div class='rig-nav fl-R'>
+					<a class='pos-r  ' href='#'>
+						<span class='hov-cc40 hov-txt-und'>我的淘宝</span>
+						<i class='triangle'></i>
+					</a>
+					<a href='#' class='hov-cc40'>
+						<i class='iconfont icon-xiai'></i>
+						我关注的品牌
+					</a>
+					<a href='#' class='hov-cc40'>
+						<i class='iconfont icon-gouwucheman'></i>
+						购物车
+						<span class='num'>0</span>件
+					</a>
+					<a class='pos-r hov-cc40 hov-txt-und' href='#'>收藏夹
+						<i class='triangle'></i></a>
+					<a href='#'>
+						<i class='iconfont icon-shouji'></i>手机版
+					</a>
+					<a class='hov-cc40' href='#'>淘宝网</a>
+					<a class='hov-cc40' href='#'>企业购</a>
+					<a class='pos-r hov-cc40 hov-txt-und' href='#'>商家支持
+						<i class='triangle'></i>
+					</a>
+					<a class='pos-r hov-cc40' href='#'>
+						<i class='iconfont icon-liebiao'></i>网站导航
+						<i class='triangle'></i>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
