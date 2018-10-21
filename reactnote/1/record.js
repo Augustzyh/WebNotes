@@ -7,3 +7,8 @@
 cnpm i live-server -g
 //打开 默认index
 live-server
+
+
+//机构规范开发
+
+//alt+j 选中全部一样的  ctrl+w 选中一行 end置末

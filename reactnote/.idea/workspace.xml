@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84226329-597b-43e6-9a5d-3aa692959820" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template" beforeDir="false" afterPath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/app.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/1/record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/node_modules/.package_versions.json" beforeDir="false" afterPath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/node_modules/.package_versions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/node_modules/_todomvc-common@1.0.5@todomvc-common/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/node_modules/_todomvc-common@1.0.5@todomvc-common/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/app.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -82,38 +84,45 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.14" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="editorconfig" value="1" />
+          <entry key="css" value="1" />
+          <entry key="editorconfig" value="2" />
           <entry key="gitattributes" value="1" />
-          <entry key="html" value="6" />
-          <entry key="js" value="1" />
-          <entry key="json" value="2" />
-          <entry key="md" value="3" />
-          <entry key="tpl" value="1" />
+          <entry key="html" value="7" />
+          <entry key="js" value="4" />
+          <entry key="json" value="3" />
+          <entry key="md" value="5" />
+          <entry key="tpl" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="6" />
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="1" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="7" />
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="4" />
+          <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="10" />
+          <entry key="html" value="82" />
+          <entry key="js" value="222" />
+          <entry key="jsx" value="493" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="10" />
+          <entry key="HTML" value="82" />
+          <entry key="JSX Harmony" value="493" />
+          <entry key="JavaScript" value="222" />
         </counts>
       </usages-collector>
     </session>
@@ -123,58 +132,88 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1/record.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/app-readme.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-31" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/.editorconfig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-31" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/readme.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/package.json">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/2基础语法/6-无状态组组件.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/2基础语法/7-函数式组件.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="79" column="20" lean-forward="true" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pro/2基础语法/1-注释.html">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/app.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="287">
+              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1/react.md">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/node_modules/_todomvc-common@1.0.5@todomvc-common/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+            <state relative-caret-position="2090">
+              <caret line="249" lean-forward="true" selection-start-line="249" selection-end-line="249" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/1-面向对象.html">
+        <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/component/tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="-789">
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -189,8 +228,17 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>learn</find>
+      <find>input</find>
+      <find>checked</find>
+      <find>value</find>
+      <find>learn.json</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -212,12 +260,17 @@
         <option value="$PROJECT_DIR$/pro/3class基本语法/5-import.html" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import/import.js" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import/5-import.html" />
-        <option value="$PROJECT_DIR$/1/record.js" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/src/component/tpl.js" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/exls/xlsx.core.min.js" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/exls/1.html" />
         <option value="$PROJECT_DIR$/pro/2基础语法/7-函数式组件.html" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/index.html" />
+        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/index.html" />
+        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/main.js" />
+        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/app.js" />
+        <option value="$PROJECT_DIR$/1/record.js" />
+        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/node_modules/_todomvc-common@1.0.5@todomvc-common/base.js" />
+        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/app.jsx" />
       </list>
     </option>
   </component>
@@ -296,7 +349,33 @@
               <item name="pro" type="462c0819:PsiDirectoryNode" />
               <item name="3class基本语法import和todolist" type="462c0819:PsiDirectoryNode" />
               <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="todomvc-app-template" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
+              <item name="pro" type="462c0819:PsiDirectoryNode" />
+              <item name="3class基本语法import和todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
+              <item name="pro" type="462c0819:PsiDirectoryNode" />
+              <item name="3class基本语法import和todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
+              <item name="pro" type="462c0819:PsiDirectoryNode" />
+              <item name="3class基本语法import和todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,16 +432,18 @@
       <workItem from="1539825905538" duration="9825000" />
       <workItem from="1540123943214" duration="161000" />
       <workItem from="1540124390948" duration="4717000" />
+      <workItem from="1540131124497" duration="3967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29672000" />
+    <option name="totallyTimeSpent" value="33639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24181548" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17113096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -374,7 +455,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29228243" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2955665" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -457,9 +538,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/exls/xlsx.core.min.js" />
     <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/exls/1.html" />
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/static/css/app.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/static/css/app.css" />
     <entry file="file://$PROJECT_DIR$/pro/2基础语法/4-列表渲染.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -467,37 +546,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/src/component/tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/app-readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-563" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/src/app.js" />
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/src/component/tpl" />
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/app-readme.md" />
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/readme.md" />
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/package.json" />
     <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/import.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -519,63 +572,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/2基础语法/1-注释.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1/react.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1/record.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/index.html" />
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/.editorconfig" />
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/.gitattributes" />
     <entry file="file://$PROJECT_DIR$/pro/2基础语法/6-无状态组组件.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="644">
           <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/2基础语法/7-函数式组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1817">
+          <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/2基础语法/7-函数式组件.html">
+    <entry file="file://$PROJECT_DIR$/1/react.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="79" column="20" lean-forward="true" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
+        <state relative-caret-position="2392">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/1-面向对象.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="644">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/index.html">
+    <entry file="file://$PROJECT_DIR$/pro/2基础语法/1-注释.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="329">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/static/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/app-readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/component/tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-789">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1/record.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/node_modules/_todomvc-common@1.0.5@todomvc-common/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2090">
+          <caret line="249" lean-forward="true" selection-start-line="249" selection-end-line="249" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/app.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
