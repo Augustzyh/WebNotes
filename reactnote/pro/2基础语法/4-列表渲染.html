@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<div id="app2"></div>
+<script src="../node_modules/babel-standalone/babel.js"></script>
+<script src="../node_modules/react/umd/react.development.js"></script>
+<script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+<script type="text/babel">
+    const arr = [1,2,3]
+    //绑定key提升diff算法性能
+    const arr2 = [
+        <li key="1">1</li>,
+        <li key="2">2</li>,
+        <li key="3">3</li>
+    ]
+    const arr3 = [
+        {
+            name: "august1",
+            age: 12
+        },
+        {
+            name: "august2",
+            age: 13
+        },
+        {
+            name: "august3",
+            age: 14
+        },
+        {
+            name: "august4",
+            age: 15
+        }
+    ]
+    let arr4 = []
+    arr3.forEach((v,i) => {
+        arr4.push(<li key={i}>name:{v.name}---age: {v.age}</li>)
+    })
+    const ele = (
+        <div>
+            <ul>
+                {arr4}
+            </ul>
+        </div>
+    )
+    //不能直接渲染object数据结构
+    ReactDOM.render(ele, document.querySelector("#app"))
+</script>
+</body>
+
+</html>

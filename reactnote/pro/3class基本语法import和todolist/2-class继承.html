@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(a,b) {
+                this.a = a
+                this.b = b
+            }
+            show () {
+                console.log(1);
+            }
+        }
+
+        class Stu extends Person {
+            constructor(a,b,c) {
+                super(a,b)
+                this.c = c
+            }
+
+            close() {
+                console.log(this.c);
+            }
+        }
+
+        let b = new Stu(1,2,3).close()
+    </script>
+</body>
+</html>

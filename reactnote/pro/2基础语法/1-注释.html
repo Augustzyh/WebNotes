@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app"></div>
+    <div id="app2"></div>
+    <script src="../node_modules/babel-standalone/babel.js"></script>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+        const ele = <div>
+                        //此注释不行
+                        /* 这个注释也不行*/
+                        {
+                            //这里要这么注释
+                            /* 要用大括号抱起来哦
+                                明白了吗  JSX注释
+                             */
+                        }
+                        <h1>大家好呀</h1>
+                        <h2>我是大章鱼</h2>
+                        <h3>我想干什么都可以</h3>
+                    </div>
+        ReactDOM.render(ele, document.querySelector("#app"))
+
+        function tem () {
+            return (<div>123</div>)   //一般用小括号包起
+        }
+        let ele2 = tem()
+        ReactDOM.render(ele2, document.querySelector("#app2"))
+    </script>
+</body>
+</html>

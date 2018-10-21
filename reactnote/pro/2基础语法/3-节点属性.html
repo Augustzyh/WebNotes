@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<div id="app2"></div>
+<script src="../node_modules/babel-standalone/babel.js"></script>
+<script src="../node_modules/react/umd/react.development.js"></script>
+<script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+<script type="text/babel">
+    const ele = (
+        <div>
+            <h2 className="active">我是class改变的</h2>
+            {
+                //class -> className
+                //单标签必须闭合  value -> defaultValue    checked -> defaultChecked
+            }
+            <input type="text" defaultValue="123"></input>
+        </div>
+    )
+    ReactDOM.render(ele, document.querySelector("#app"))
+</script>
+</body>
+
+</html>

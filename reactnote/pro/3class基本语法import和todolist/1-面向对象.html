@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(a,b) {
+        this.a = a
+        this.b = b
+    }
+
+    let app = new Person()
+
+    //es6
+    const Human = class {
+        constructor(a,b) {
+            this.a = a
+            this.b = b
+        }
+
+        show() {
+            console.log(123)
+        }
+    }
+    let a = new Human()
+    a.show()
+</script>
+</body>
+</html>

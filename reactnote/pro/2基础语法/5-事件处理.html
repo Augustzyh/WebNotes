@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<div id="app2"></div>
+<script src="../node_modules/babel-standalone/babel.js"></script>
+<script src="../node_modules/react/umd/react.development.js"></script>
+<script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+<script type="text/babel">
+    //推荐handle开头
+    function click() {
+        alert(1)
+    }
+    const ele = (
+        <div>
+            {
+                //事件驼峰命名
+                //事件处理函数 一般就click
+            }
+            <input type="button" defaultValue="123" onClick={click}></input>
+            <input type="button" defaultValue="456" onClick={()=>{alert(2)}}></input>
+            <input type="button" defaultValue="789" onLoad={alert(3)}></input>
+        </div>
+    )
+    ReactDOM.render(ele, document.querySelector("#app"))
+</script>
+</body>
+
+</html>

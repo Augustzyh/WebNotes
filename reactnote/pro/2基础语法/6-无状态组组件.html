@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<div id="app2"></div>
+<script src="../node_modules/babel-standalone/babel.js"></script>
+<script src="../node_modules/react/umd/react.development.js"></script>
+<script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+<script type="text/babel">
+    let a = 123
+    const ele = (
+        <div>
+            <h2 className="active">我是class改变的: {a}</h2>
+        </div>
+    )
+    ReactDOM.render(ele, document.querySelector("#app"))
+
+    //a只是普通变量 是没有状态的  不会改变  仅渲染一次  单项数据流
+    //状态其实就是让数据驱动视图的响应式数据
+    setTimeout(() => {
+        a = 456
+    }, 1000)
+</script>
+</body>
+
+</html>

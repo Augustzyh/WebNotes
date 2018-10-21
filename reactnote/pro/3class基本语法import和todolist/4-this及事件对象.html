@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+<script src="../node_modules/babel-standalone/babel.js"></script>
+<script src="../node_modules/react/umd/react.development.js"></script>
+<script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+<script type="text/babel" src="./3component.jsx"></script>
+<script type="text/babel">
+    class Com extends React.Component{  //暴露出去复用
+        constructor(){
+            super()
+            this.state = {
+                msg: "hello world",
+                age: 111
+            }
+        }
+        fn1 (e) {  //默认接受事件对象  并且是最后一个形参  但是箭头函数一一对应
+            console.log(e.target);
+            console.log(this);  // undefined  组件调用执行需用bind 或者箭头函数
+            this.setState({
+                msg: 123
+            })
+        }
+        render() {
+            return (
+                <div>
+                    {
+                        //数组需循环
+                    }
+                    <h1>{this.state.msg},{this.state.age}</h1>
+                    <input type="button" defaultValue="事件1" onClick={this.fn1.bind(this)}></input>
+                    <input type="button" defaultValue="事件1" onClick={(e) => {this.fn1(e)}}></input>
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(
+        <Com/>,
+        document.querySelector("#app")
+    )
+</script>
+</body>
+</html>

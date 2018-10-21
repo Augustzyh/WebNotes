@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="../node_modules/babel-standalone/babel.js"></script>
+    <script>
+        //手动调用babel转换比较麻烦
+        let es6 = `let {name, age} = {name: 'hang', age: 18}`
+        let es5 = Babel.transform(es6, {presets:["es2015"]}).code
+        console.log(es5);
+        console.log(es6);
+    </script>
+    <!--如下声明script直接转-->
+    <script type="text/babel">
+        const a=10
+        console.log(a);
+    </script>
+</body>
+</html>

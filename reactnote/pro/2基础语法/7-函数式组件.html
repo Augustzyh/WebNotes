@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<div id="app2"></div>
+<script src="../node_modules/babel-standalone/babel.js"></script>
+<script src="../node_modules/react/umd/react.development.js"></script>
+<script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+<script type="text/babel">
+    const header = (
+        <h2>头部</h2>
+    )
+    const main = (
+        <h2>主体</h2>
+    )
+    const foot = (
+        <h2>底部</h2>
+    )
+    const ele = (
+        <div>
+            {header}
+            {main}
+            {foot}
+        </div>
+    )
+    //组件名字首字母必须大写 并且别用h5新标签   函数式组件  易复用
+    function Zyh(){
+        return (
+            <h2 className="active">头部</h2>
+        )
+    }
+    //组件传值  elefn也是无状态组件
+    function Zyh2(props) {
+        return (
+            <h2>主体内容 {props.name}</h2>
+        )
+    }
+
+
+    //有状态组件 class
+    class Zyh3 extends React.Component{
+        constructor(){
+            super()   //调用父组件构造函数
+            //state 就是组件的状态
+            //从后端请求的数据都挂在到state上
+            // 相当于vue内的data
+            this.state = {
+                name: "hang"
+            }
+            setTimeout(() => {
+                //this.state.name = "octopus"  不可以 必须set
+                this.setState({
+                    name: "august"
+                })
+            }, 3000)
+        }
+        render() {
+            return (
+                <div>
+                    <h3>名字 ： {this.state.name}</h3>
+                </div>
+            )
+        }
+    }
+
+    const elefn = (
+        <div>
+            <Zyh/>
+            <Zyh/>
+            <Zyh2 name="函数式声明"/>
+            <Zyh3 />
+        </div>
+    )
+
+
+    ReactDOM.render(elefn, document.querySelector("#app"))
+</script>
+</body>
+
+</html>

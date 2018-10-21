@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app"></div>
+    <div id="app2"></div>
+    <script src="../node_modules/babel-standalone/babel.js"></script>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+        const person = {
+            name : "hang",
+            age: 20,
+            sex: "man",
+            ifSex: 0
+        }
+        function juge() {
+            // 也可以返回jsx 现在在开发模式
+            return person.ifSex ? "man" : "woman"
+        }
+        const ele = (
+            <div>
+                <h2>姓名： {person.name}</h2>
+                <h2>age： {person.age}</h2>
+                <h2>性别: {person.sex}</h2>
+                <h2>性别: {juge()}{/*可以调用函数或者三目或者自执行*/}</h2>
+                <h2>性别: {person.ifSex ? "man" : "woman"}</h2>
+            </div>
+        )
+        ReactDOM.render(ele, document.querySelector("#app"))
+    </script>
+</body>
+
+</html>
