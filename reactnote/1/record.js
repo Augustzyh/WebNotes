@@ -2,6 +2,10 @@
 2 cnpm init //初始化  -y 名称必须小写
 3 cnpm i react react-dom babel-standalone -S  //下载这三个包
 
+//创建项目
+create-react-app filename
+//运行项目
+npm start
 
 //热更新
 cnpm i live-server -g
