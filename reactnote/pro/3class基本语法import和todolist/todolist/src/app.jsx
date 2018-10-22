@@ -37,18 +37,25 @@ class App extends React.Component {
 		})
 	}
 
-	addLabel(){
-		console.log(123);
+	addLabel(e){
+		const {target,keyCode} = e
+		//console.log(target, keyCode);  回车13
+		if(keyCode !== 13) return
+		const txt = target.value.trim()
+		if(!txt.length) return
+		this.state.dataList.push({
+			name:txt
+		})
+		this.setState(this.state)
+		target.value = ''
 	}
 
 	render () {
 		return (
 			<div>
 				<section className="todoapp">
-					<header className="header">
-						<h1>todos</h1>
-						<input onKeyDown={this.addLabel} className="new-todo" placeholder="What needs to be done?" autoFocus/>
-					</header>
+					{/*把父属性传给子节点,名字随便起*/}
+					<Header keyDown={this.addLabel}/>
 					{/*!-- This section should be hidden by default and shown when there are todos --*/}
 					<section className="main">
 						<input id="toggle-all" className="toggle-all" type="checkbox"/>
@@ -107,14 +114,7 @@ class App extends React.Component {
 						<button className="clear-completed">Clear completed</button>
 					</footer>
 				</section>
-				<footer className="info">
-					<p>Double-click to edit a todo</p>
-					{/*!-- Remove the below line �� --*/}
-					<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
-					{/*!-- Change this out with your name and url �� --*/}
-					<p>Created by <a href="http://todomvc.com">you</a></p>
-					<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-				</footer>
+				<FootInfo />
 			</div>
 		)
 	}
