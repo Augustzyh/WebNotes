@@ -6,6 +6,9 @@
 create-react-app filename
 //运行项目
 npm start
+/*
+* index 程序启动入口
+* */
 
 //热更新
 cnpm i live-server -g
