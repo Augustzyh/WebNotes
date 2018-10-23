@@ -6,3 +6,16 @@ What is life cycle?
 
 
 dom 绑定 ref    componentDidMount中操作dom   this.refs 对象内
+
+constructor
+componentWillMount
+render
+componentDidMount
+
+componentWillReceiveProps(a)
+shouldComponentUpdate(a,b)
+componentWillUpdate(a,b)
+render
+compnentDidUpdate
+
+componentWillUnmount
