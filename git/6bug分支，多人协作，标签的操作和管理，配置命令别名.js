@@ -1,4 +1,4 @@
-//bug 分支管理  bug分支通常创建新的分支修改
+//bug修复 分支管理  bug分支通常创建新的分支修改
 
 //现状 现在编写部分有bug还没改完，但要现存起来
 git stash
@@ -11,9 +11,18 @@ git stash list
 //重回dev  恢复stash并删除这个环境  继续开发
 git stash pop
 
+//恢复方法2
+//1   恢复
+git stash apply
+//2   删除stash
+git stash drop
+
+//恢复指定stash
+git stash apply stash@{0}
 
 
-//feature 分支  开发新功能最好新建一个分支
+
+//feature 分支  开发新功能最好新建一个分支 起名feture-  同bug类似
 
 //多人协作
 
@@ -21,11 +30,14 @@ git stash pop
 git remote -v
 
 //2 本地推送分支
-git push origin branch-name  // 若失败 则先 git pull抓取远程分支/新提交
+git push origin branch-name  // 若失败 则先 git pull抓取远程分支合并或解决冲突/然后重新推送
 
-//3 本地创建和远程一样的分支
+//3 本地创建和远程一样的分支进行开发
 git checkout -b branch-name origin/branch-name  //最好名字一样
 
+//4 pull 问题 若失败 设置本地与远程连接再 git pull
+git branch --set-upstream-to=origin<branch>branch-name
+git pull
 
 
 //标签 commit数量过多时，推荐打标签
