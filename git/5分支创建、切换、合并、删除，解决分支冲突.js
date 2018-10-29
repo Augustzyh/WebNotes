@@ -18,7 +18,7 @@ git branch -d test2
 //6 合并  test1开发完之后合并到主分支，把test1合并到当前分支,然后就可以push啦  合并完成后再把test1删除掉
 git merge test1
 
-
+// git log --graph 查看分支合并图
 
 //7 分支冲突情况 合并时同时修改了主分支和test1 文件内多出：
 <<<<<<< HEAD
@@ -28,5 +28,5 @@ git merge test1
 >>>>>>> test1
 //手动解决 以上全部换成555
 
-//7 分支合并时加上--no--ff 可产生历史记录 建议使用
+//7 分支合并时加上--no--ff 可产生历史记录 建议使用  -m 意为合并并建立一次新的提交
 git merge --no--ff test1

@@ -3,6 +3,8 @@
 git log
 //精简版
 git reflog   //还可接参
+//更好查看
+git log --graph --pretty=oneline --abbrev-commit
 //master 主分支 主副本  head相当于指针停留在最近一次
 //所以版本回退只需将head指向以前版本
 //版本回退
