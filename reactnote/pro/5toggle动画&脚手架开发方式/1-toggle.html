@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            h2{
+                background-color: skyblue;
+            }
+            ul{
+                background-color: palegreen;
+                margin:0 10px;
+            }
+            .toggle {
+                height:0;
+                overflow: hidden;
+                margin:10px 0;
+                transition: .5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script src="../node_modules/babel-standalone/babel.js"></script>
+        <script src="../node_modules/react/umd/react.development.js"></script>
+        <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+        <script src="./data.js"></script>
+        <script type="text/babel">
+            class List extends React.Component {
+                render() {
+                    //console.log(this.props.list);
+                    return(
+                        this.props.list.map((val,idx) => {
+                            return (
+                                <ul key={idx}>
+                                    <li>
+                                        <p>{val.name}</p>
+                                        <p>{val.gender}</p>
+                                        <p>{val.introduce}</p>
+                                    </li>
+                                </ul>
+                            )
+                        })
+                    )
+                }
+            }
+            class Con extends React.Component{
+                constructor (props) {
+                    super(props)
+                    this.state = {
+                        onOff: this.props.show
+                    }
+                    this.handleClick = this.handleClick.bind(this)
+                }
+
+                toggleList(onoff) {
+                    const toggle = this.refs.toggle
+                    console.log(toggle);
+                    if(onoff){
+                        toggle.style.height = toggle.scrollHeight + "px"
+                    }else {
+                        toggle.style.height = "0"
+                    }
+                }
+                componentDidMount () {
+                    this.toggleList(this.state.onOff)
+                }
+                shouldComponentUpdate(nextProps, nextState){
+                    console.log(nextProps, nextState)
+                    if(this.state.onOff !== nextProps.show){
+                        this.setState({
+                            onOff: nextProps.show
+                        })
+                    }
+                    if(this.state.onOff !== nextState.onOff){
+                        this.toggleList(nextState.onOff)
+                    }
+                    return true
+                }
+                handleClick(){
+                    let onOff = !this.state.onOff
+                    this.setState({
+                        onOff
+                    })
+                    if(onOff){
+                        this.props.change(this.props.index)
+                    }
+                    /*
+                    * 1 点击当前 隐藏其他
+                    * 2 隐藏当前不影响其他
+                    * */
+                }
+                render() {
+                    //console.log(this.props);
+                    return(
+                        <div>
+                            <h2 onClick={this.handleClick}>{this.props.name}</h2>
+                            <div className="toggle" ref="toggle">
+                                <List list={this.props.list}/>
+                            </div>
+                        </div>
+                    )
+                }
+            }
+
+            class Wrap extends React.Component {
+                constructor () {
+                    super()
+                    //让父组件集中管理子组件状态
+                    this.state = {
+                        arr: [true,false,false]
+                    }
+                }
+                getData() {
+                    return dataList
+                }
+                handleChangeList = (i) => {
+                    console.log(i);
+                    let arr = this.state.arr.map((item,idx) => {
+                        if(i===idx) {
+                            return true
+                        }
+                        return false
+                    })
+                    console.log(arr);
+                    this.setState({
+                        arr
+                    })
+                }
+                render() {
+                    const data = this.getData()
+                    return(
+                        <div>
+                            {
+                                Object.keys(data).map((val, idx) => {
+                                    return (
+                                        <Con key={idx} {...data[val]}
+                                             show={this.state.arr[idx]}
+                                             change={this.handleChangeList}
+                                             index={idx}
+                                        />
+                                    )
+                                })
+                            }
+                        </div>
+                    )
+                }
+            }
+            ReactDOM.render(
+                <Wrap />,
+                app
+            )
+        </script>
+    </body>
+</html>
