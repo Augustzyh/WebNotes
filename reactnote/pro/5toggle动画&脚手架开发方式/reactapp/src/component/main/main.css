@@ -1,0 +1,110 @@
+@charset "UTF-8";
+#banner{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+    margin-top: 71px;
+}
+#banner .b-part{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#banner .b-part .part{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#banner .b-part .part1{
+}
+#banner .b-part .part1 .img1{
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    width: 300px;
+    height: 125px;
+}
+#banner .b-part .part1 .img2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 970px;
+    height: 730px;
+}
+#banner .b-part .part2{
+    background: radial-gradient(rgb(0,173,239),rgb(0,82,124));
+}
+#banner .b-part .part2 .img1{
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    width: 300px;
+    height: 120px;
+}
+#banner .b-part .part2 .img1 p{
+    width: 100%;
+    margin: 10px 0;
+}
+#banner .b-part .part2 .img1 p img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#banner .b-part .part2 .img2{
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    width: 930px;
+    height: 635px;
+}
+#banner .b-part .part3{
+}
+#banner .b-part .part3 .img1{
+    position: absolute;
+    top: 115px;
+    left: 70px;
+    width: 777px;
+    height: 600px;
+}
+#banner .b-part .part3 .img2{
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    width: 300px;
+    height: 120px;
+}
+#banner .b-part .part3 .img2 p{
+    width: 100%;
+    margin: 10px 0;
+}
+#banner .b-part .part3 .img2 p img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#banner .b-tab ul li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #006597;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#banner .b-tab{
+    position: absolute;
+    left: 50%;
+    bottom: 27px;
+    width: 62px;
+    height: 10px;
+    margin-left: -30px;
+}
+#banner .b-tab ul li.on{
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border: 2px solid #9eb737;
+}

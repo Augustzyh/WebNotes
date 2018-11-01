@@ -14,7 +14,8 @@ class MyComponent extends Component {
     // 一般异步请求数据
       console.log("第二步 componentWillMount 异步请求数据");
   }
-  handleClick() {
+  handleClick(e) {
+      // 点击事件的e
       this.setState({
           msg: "world"
       })
@@ -32,6 +33,9 @@ class MyComponent extends Component {
     //window.onload 所有组件加载完成
       console.log("最后一步 所有组件加载完成 初始化阶段完成",this.refs);
       this.refs.abc.style.color = "red"
+      //操作dom其他方法
+      // const ele = document.querySelector("")
+      // ReactDOM.findDOMNode(ele)
   }
   // 以下是更新阶段  只有数据发生变化才会进入
     //将要接受来自父组件的属性
