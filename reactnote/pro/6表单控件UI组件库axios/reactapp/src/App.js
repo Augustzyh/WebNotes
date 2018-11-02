@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.svg'
 import lantuLogo from './static/img/logo.png'
+import Home from './components/home/Home'
+import Form from './components/home/form'
 
 class App extends Component {
     //react所有东西都要放到src下哦
@@ -22,6 +24,9 @@ class App extends Component {
           <img src={logo} width="100" alt=""/>
           <img src={lantuLogo} alt=""/>
           <img src={require('./static/img/logo.png')} alt=""/>
+          <Home/>
+          <hr/>
+          <Form/>
       </div>
     );
   }
