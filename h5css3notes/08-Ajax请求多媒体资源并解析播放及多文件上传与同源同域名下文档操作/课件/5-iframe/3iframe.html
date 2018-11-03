@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn1" value="点击此按钮打开open一个新窗口">
+<input type="button" id="btn2" value="点击去改变打开的窗口的背景颜色">
+<script>
+    let opener;
+    btn1.onclick = function () {
+        opener = window.open('4iframe.html');
+    }
+    btn2.onclick = function () {
+        opener.document.body.style.background = 'skyblue';
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

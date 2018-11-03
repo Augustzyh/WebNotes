@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+    <script>
+        document.onclick = function () {
+            console.time(1);
+            let w = new Worker("./1-Worker.js") // 超短时间计算 多线程
+            w.postMessage(50000)             // 发送
+            w.onmessage = function (e){     // 接受
+                box.innerHTML = e.data
+            }
+            console.timeEnd(1);
+        }
+    </script>
+</body>
+</html>

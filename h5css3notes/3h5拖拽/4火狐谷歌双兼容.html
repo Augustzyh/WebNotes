@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap {
+            float:left;
+            width:400px;
+            height:200px;
+            background-color: red;
+        }
+        #box {
+            float:right;
+            background-color: green;
+        }
+        #box li {
+            width:100px;
+            height:100px;
+            border:1px solid red;
+        }
+        #Img{
+            position:absolute;
+            left:-9999px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" draggable="true">0</div>
+    <img id="Img" src="img/logo.png" alt="">
+    <ul id="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        wrap.onmouseenter = function(e) {
+            console.log(e.dataTransfer);
+        }
+        /*let li = box.querySelectorAll("li")
+        li.forEach((val, idx) => {
+            val.setAttribute('draggable',true)
+            val.ondragstart = function (e) {
+                e.dataTransfer.setData('key', idx)
+                console.log(e.dataTransfer);  //谷歌火狐都有
+                e.dataTransfer.setDragImage(Img,0,0)   //(图片，X,Y)相对光标 img定位到老外边
+            }
+        })
+        wrap.ondragenter = function () {
+            this.innerHTML = "请放手"
+        }
+        wrap.ondragover = function (e) {
+            e.preventDefault()
+            e.stopPropagation()
+        }
+        wrap.ondragleave = function () {
+            this.innerHTML = ''
+        }
+        wrap.ondrop = function (e) {
+            this.innerHTML = '请拖拽到此区域'
+            box.removeChild(li[e.dataTransfer.getData('key')])
+        }*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        canvas{
+            border:1px solid #bbb;
+            /*width: 600px;*/
+            /*height:400px; !* 会放大，所以别写宽高*!*/
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        let oC = document.querySelector("canvas")
+        // 正常情况下必须在2d平面图形环境绘制
+        let cxt = oC.getContext("2d")
+        // 线条坐标 一个点到另一个点
+        // 起始点 终止点  默认2px
+
+        cxt.lineWidth = 10
+        cxt.lineJoin = 'round'   // 顶点圆滑  //border-radius:5px  默认尖
+        cxt.lineJoin = 'bevel'   // 斜角
+        cxt.beginPath()
+        cxt.moveTo(0,200)
+        cxt.lineTo(250,200)
+        cxt.lineTo(400,350)
+        cxt.lineTo(20,100)
+        cxt.closePath()
+        cxt.stroke()
+
+    </script>
+</body>
+</html>

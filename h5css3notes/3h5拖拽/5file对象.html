@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            body,html{
+                height:100%;
+            }
+            body{
+                overflow:hidden;
+                display:flex;
+                background: url("img/bg.jpg");
+                background-size:100% 100%;
+            }
+            #wrap {
+                width:800px;
+                height:150px;
+                background-color:rgba(0,0,0,0.5);
+                margin:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            /*
+            h5高级部分用不到css3
+            * file 用于获取外部拖进的东西信息
+            * */
+            wrap.ondragover = function(e) {
+                e.preventDefault()
+                e.stopPropagation()
+            }
+            wrap.ondrop = function (e) {
+                e.preventDefault()
+                e.stopPropagation()      //默认跳转 阻止一下页面跳转
+                console.log(e.dataTransfer.files); //列表
+                console.log(e.dataTransfer.files.length); //长度
+                console.log(e.dataTransfer.files[0].name);
+                console.log(e.dataTransfer.files[0].type);
+                console.log(parseInt(e.dataTransfer.files[0].size/1024)+'Kb');   //大小字节
+                console.log(new Date(e.dataTransfer.files[0].lastModified));  //最后修改的时间\
+
+
+                //文件读取对象  拖拽预览
+                let oFile = e.dataTransfer.files[0];
+                // 创建文件读取对象
+                let file = new FileReader();
+                //分析文件
+                file.readAsDataURL(oFile)
+                console.log(file);
+                file.onload = function () {
+                    //if(/image/.test(this.result)  //判断是否是图片，爬虫要好好用正则
+                    console.log(this.result);  //base64编码的路径
+                    var img = new Image();
+                    img.src = this.result;
+                    img.width = 150;
+                    img.height = 150;
+                    img.onload = function () {
+                        wrap.appendChild(img)
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

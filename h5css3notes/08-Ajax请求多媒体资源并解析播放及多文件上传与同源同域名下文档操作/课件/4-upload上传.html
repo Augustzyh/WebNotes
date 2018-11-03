@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        canvas{
+            box-shadow: 0 0 5px red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <!--美观问题-->
+    <input type="file" id="input" multiple>  <!--通过定位移走-->
+    <label for="input"></label>
+    <!--点击了label标签 相当就点击 了input标签-->
+    <script>
+        let oIpt = document.querySelector('#input');
+        oIpt.onchange = function () { // 监听表单的值发生变化
+            if( oIpt.value ){
+                for ( let i=0;i<oIpt.files.length;i++ ){
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('post','./upload.php',true);
+                    // 通过对象 携带文件
+                    let oFormData = new FormData();
+                    oFormData.append('xyz',oIpt.files[i]);
+                    xhr.send(oFormData);
+                }
+
+                oIpt.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

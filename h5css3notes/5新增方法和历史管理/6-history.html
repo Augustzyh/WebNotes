@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body{
+            background-color: gray;
+        }
+        li{
+            list-style: none;
+        }
+        #box{
+            width: 800px;
+            height: 400px;
+            background: rgba(0,0,0,0.5);
+            margin: 80px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+        }
+        ul{
+            width: 170px;
+            height: 200px;
+            box-shadow: 0 0 5px #fff;
+            text-align: center;
+            line-height: 45px;
+
+        }
+        li{
+            border-bottom: 1px solid white;
+        }
+        p{
+            width: 470px;
+            height: 230px;
+            box-shadow: 0 0 5px white;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="list"></ul>
+        <p id="con"></p>
+    </div>
+    <script src="data.js"></script>
+    <script>
+        // 既然历史记录，那我们可以根据历史记录 做些操作
+        // 根据历史所存的数据  去渲染
+        // 数据先行
+        // 理解在PC端使用
+        let str = '';
+        for (let key in data){
+            str += '<li data-name="'+key+'">'+key+'</li>';
+        }
+        list.innerHTML = str;
+
+        let aLi = document.querySelectorAll('li');
+        aLi.forEach(function (item,index) {
+            item.onclick = function () {
+                console.log( data[this.dataset['name']] );
+                con.innerHTML = data[this.dataset['name']];
+                console.log( window.history );
+                // 点击li  通过pustState函数把数据写入到 历史记录里面
+                let a = decodeURI(this.dataset['name']);
+                //console.log(a)
+                if( window.history && window.history.pushState ){
+                    window.history.pushState(a,'追梦','#abc='+a);
+                }
+
+            }
+        })
+        // 监听后退 前进 按钮
+        window.onpopstate = function (e) {
+            console.log(e.state)
+            if( e.state ){
+                con.innerHTML = data[e.state]; // 赋值
+            }
+        }
+        window.onhashchange = function () {
+            console.log( window.location.hash )
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.responseType = 'arraybuffer';
+        xhr.onload = function () {
+            console.log( xhr.response )
+            let buffer = xhr.response
+            let blob = new Blob([buffer], {type: 'audio/mpeg'})
+            console.log(blob);
+            let url = window.URL.createObjectURL(blob)
+            console.log(url);
+            let audio = document.createElement("audio")
+            audio.src = url
+            audio.control = 'controls'
+            audio.volume = 0.1
+            document.body.appendChild(audio)
+            audio.play();   //新版谷歌不允许自动播放视频音频，必须事件触发
+        }
+        callBack()
+        xhr.open('post','./mp3/jnStylePsy.mp3',true);
+        xhr.send();
+
+        let bool = true
+        function callBack() {
+            document.onclick = function () {
+                if(bool) {
+                    this.querySelector('audio').play();
+                } else {
+                    this.querySelector('audio').pause();
+                    //this.querySelector('audio').currentTime = 0; 重新播放
+                }
+                bool = !bool
+            }
+            // 在移动   ontouchstart
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

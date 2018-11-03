@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        canvas{
+            box-shadow: 0 0 5px red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="c">
+        <canvas width="400" height="300"></canvas>
+        <!--canvas 不仅可以绘制图片 ，而且还可以绘制视频-->
+    </div>
+    <input type="file" id="input" multiple>
+    <input type="button" id="btn" value="btn">
+    <script>
+        let cxt = document.querySelector('canvas').getContext('2d');
+        btn.onclick = function () {
+            console.log( input.value ); // 不是路径  ，只是普通的字符串
+            console.log( input.files );
+            let filelist = input.files;
+            for( let i=0;i<filelist.length;i++ ){
+                // 以前通过H5 拖拽实现，现在通过 input 实现多图片预览
+                let blob = new Blob([filelist[i]]);
+                let url = window.URL.createObjectURL(blob);
+                let img = new Image();
+                img.src = url;
+                img.width = 100;
+                img.onload = function () {
+                    box.appendChild(this);
+                    cxt.drawImage(this,135,90,100,130); // 可以右键导出图片，也可以通过js导出图片
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

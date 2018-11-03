@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            // 绘制图标  echarts
+            let c = document.createElement("canvas")
+            c.style.border = "1px solid green"
+            let cxt = c.getContext('2d')
+            cxt.fillStyle = 'purple'
+            cxt.fillRect(0,0,300,150)
+            cxt.fillStyle = 'yellow'
+            cxt.fillRect(50,50,100,50)
+            document.body.appendChild(c)
+
+            //把canvas图片数据 转化成 blob
+            c.toBlob(function (blob) {
+                console.log(blob);
+                let img = new Image()
+                img.src = URL.createObjectURL(blob)
+                img.onload = function () {
+                    document.body.appendChild(img)
+                }
+
+                let reader = new FileReader()
+                reader.readAsDataURL(blob,'utf-8')
+                reader.onload = function (e) {
+                    let img = new Image()
+                    img.src = e.target.result
+                    img.onload = function () {
+                        document.body.appendChild(img)
+                    }
+                }
+
+            })
+
+
+        </script>
+    </body>
+</html>

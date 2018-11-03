@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            const str = 'zhangyu'
+            let arr = []
+            for(let i=0;i<str.length;i++){
+                arr[i] = str.charCodeAt(i)
+            }
+            console.log(arr);
+            let arr1 = new Uint8Array(arr)
+            console.log(arr1);
+
+            //将arr1类型化数组转化成blob
+            let blob = new Blob([arr1], {type: 'text/plain'})
+            console.log(blob);
+            let reader = new FileReader()
+            reader.readAsText(blob, 'utf-8')
+            reader.onload = function (e) {
+                console.log(e.target.result);
+                let data = e.target.result
+                let blob2 = new Blob([data])
+                // 介质下载文件
+                let link = document.createElement('a')
+                link.href = window.URL.createObjectURL(blob2)
+                link.download = 'abc.txt'   //doc xls
+                link.click()
+            }
+        </script>
+    </body>
+</html>

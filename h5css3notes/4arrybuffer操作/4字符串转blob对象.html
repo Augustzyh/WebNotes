@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //BLOB (binary large object)，二进制大对象，是一个可以存储二进制文件的容器
+            let arr = ['hello','world']
+            //第一个参数必须是数组
+            let blob = new Blob(arr, {type:'text/plain'})
+            //slice文件上传切割 分片上传 把这些片段校验并组合成一个文件
+            let newBlob = blob.slice(0,4)
+            console.log(blob);
+            console.log(newBlob);
+
+            /*Blob 对象有两个只读属性：
+            size：二进制数据的大小，单位为字节。（文件上传时可以在前端判断文件大小是否合适）
+            type：二进制数据的 MIME 类型，全部为小写，如果类型未知，则该值为空字符串。（文件上传时可以在前端判断文件类型是否合适）
+            gbk编码：	数字字母 一字节 1KB= 1024字节 一中文汉字是 2字节
+            UTF-8编码： 数字字母 一字节 1KB= 1024字节 一个中文汉字是 3字节*/
+            //mime类型
+        </script>
+    </body>
+</html>

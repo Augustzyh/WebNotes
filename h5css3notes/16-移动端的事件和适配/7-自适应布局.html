@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // 适配 自适应 无论再声明设备上都是640
+        let width = window.screen.width
+        // 固定宽度设计图大小
+        let fixWid = 640;
+        let scale = width/fixWid
+        let meta = document.createElement("meta")
+        meta.setAttribute('name','viewport')
+        meta.setAttribute('content',"width="+ fixWid +", user-scalable=no, initial-scale="+ scale + ", maximum-scale="+ scale + ", minimum-scale="+ scale + "")
+        document.head.appendChild(meta)
+    </script>
+    <title>octopus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body{
+            background-color: #ddd;
+        }
+        li{
+            list-style: none;
+        }
+        #main{
+            max-width: 640px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        .hd{
+            height: 574px;
+        }
+        .preferential{
+            height: 190px;
+            border: 1px solid blue;
+        }
+        .preferential ul {
+            display: flex;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .preferential ul li{
+            width: 170px;
+            height: 130px;
+            box-shadow: 0 0 50px red;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section id="main">
+        <div class="hd"><img src="img/hd_02.jpg" alt="" width="100%" height="100%"></div>
+        <div class="preferential">
+            <ul>
+                <li><img src="img/preferential.png" width="100%" height="100%" alt=""></li>
+                <li><img src="img/preferential.png" width="100%" height="100%" alt=""></li>
+                <li><img src="img/preferential.png" width="100%" height="100%" alt=""></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

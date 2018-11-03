@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        document.onclick = function () {
+            // 根据ACSII码 生成大量的字符
+            console.time(1);
+            let str = '';
+            let num = 50000;
+            for( let i=0;i<num;i++ ){
+                str += String.fromCharCode(i);
+            }
+            box.innerHTML = str;
+            console.timeEnd(1);
+        }
+    </script>
+</body>
+</html>

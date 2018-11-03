@@ -1,0 +1,35 @@
+/*let rem = 640/10rem;*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ddd;
+}
+li {
+  list-style: none;
+}
+#main {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.hd {
+  height: 8.96875rem;
+}
+.preferential {
+  height: 190px;
+  border: 1px solid blue;
+}
+.preferential ul {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.preferential ul li {
+  width: 2.65625rem;
+  height: 2.03125rem;
+  box-shadow: 0 0 0.78125rem #ff0000;
+  border-radius: 0.15625rem;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 后端返回的数据是字符串
+        // 前端需要进行格式解析
+        let arrStr = '["追梦",18]';
+        let newArr = JSON.parse(arrStr);
+        console.log(newArr);
+
+        let json1 = '{ "name":"追梦","age":18 }';
+        let json2 = `{
+            "name":"追梦",
+            "age":18
+        }`;
+        let newJson1 = JSON.parse(json2);
+        console.log(newJson1)
+
+        // 前端 要发起请求 携带数据 格式类型肯定是字符串
+        let json3 = {
+            name:"追梦",
+            age:18
+        }
+        console.log( JSON.stringify(json3) );// 默认补上双引号
+
+        let arr3 = ["追梦",18];
+        console.log(JSON.stringify(arr3));
+        // 很多东西你见过你学过 ，但是你知道 真实场景下 怎么运用吗？
+        // 相对来说，不太安全 ， 只要是js语法结构 都可以当作js代码执行
+        eval('alert(1);alert(1);alert(1);alert(1);');
+        //sql注入
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

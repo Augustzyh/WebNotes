@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            // 绘制图标  echarts
+            let c = document.createElement("canvas")
+            c.style.border = "1px solid green"
+            let cxt = c.getContext('2d')
+            cxt.fillStyle = 'purple'
+            cxt.fillRect(0,0,300,150)
+            cxt.fillStyle = 'yellow'
+            cxt.fillRect(50,50,100,50)
+            document.body.appendChild(c)
+
+            //把url转blob
+            let dataUrl = c.toDataURL('image/png')
+            console.log(dataUrl);
+
+            function dataURLtoBlob(dataUrl) {
+                let arr = dataUrl.split(",")
+                let mime = arr[0].match(/:(.*?);/)[1]
+                console.log(mime);
+                //base64编码过的字符串解码
+                let bStr = window.atob(arr[1])
+                console.log(bStr);
+                let n = bStr.length
+                let u8Arr = new Uint8Array(n)
+                console.log(u8Arr);
+                while(n--) {
+                    u8Arr[n] = bStr.charCodeAt(n)
+                }
+                return new Blob([u8Arr],{type:mime})
+            }
+
+            let blob2 = dataURLtoBlob(dataUrl)
+            let img = new Image()
+            img.src = URL.createObjectURL(blob2)
+            img.onload = function () {
+                document.body.appendChild(img)
+            }
+
+            let reader = new FileReader()
+            reader.readAsDataURL(blob2,'utf-8')
+            reader.onload = function (e) {
+                let img = new Image()
+                img.src = e.target.result
+                img.onload = function () {
+                    document.body.appendChild(img)
+                }
+            }
+        </script>
+    </body>
+</html>

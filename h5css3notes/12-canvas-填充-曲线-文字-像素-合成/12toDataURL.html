@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        body{
+            display: flex;
+        }
+        canvas{
+            margin:auto;
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <canvas width="500" height="400"></canvas>
+    <script>
+        let oC = document.querySelector("canvas")
+        let cxt = oC.getContext("2d")
+        // 设置全局图像透明
+        cxt.globalAlpha = 0.7
+        cxt.fillStyle = "yellow"  //目标
+        cxt.arc(250,200,50,0,6.3)
+        cxt.fill()
+
+        //在目标图像上显示原图像
+        cxt.globalCompositeOperation = 'source-atop'
+        //显示源在目标内的部分
+        cxt.globalCompositeOperation = 'source-in'
+        //去掉源挡住目标的源部分  花月亮
+        cxt.globalCompositeOperation = 'destination-out'
+
+        cxt.beginPath()
+        cxt.fillStyle = "blue"   //源
+        cxt.arc(300,200,50,0,6.3)
+        cxt.fill()
+
+        console.log(oC.toDataURL());
+        fn()
+        function fn() {
+            let link = document.createElement("a")
+            link.href = oC.toDataURL()
+            link.download = "月亮.png"
+            link.click();
+        }
+
+    </script>
+</body>
+</html>

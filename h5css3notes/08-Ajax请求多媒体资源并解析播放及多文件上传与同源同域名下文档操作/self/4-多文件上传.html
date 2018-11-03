@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        canvas{
+            width:400px;
+            height:400px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <input type="file" id="inp" multiple>
+    <label for="inp">通过定位吧inp移走，给label样式</label>
+    <input type="button" id="btn">
+
+    <script>
+        inp.onchange = function () {  //监听表单发生变化
+            if(inp.value){
+                for(let i = 0;i< inp.files.length;i++){
+                    let xhr = new XMLHttpRequest()
+                    xhr.open('post', '后端接口', true)
+                    let oFormData = new FormData()
+                    oFormData.append('xyz', inp.files[i])   //（文件信息随便起，文件对象）
+                    xhr.send()
+                }
+
+                inp.value = ''
+            }
+        }
+
+
+        // 开启ecs的上传权限  进入项目 执行 chmod -R 777
+    </script>
+</body>
+</html>

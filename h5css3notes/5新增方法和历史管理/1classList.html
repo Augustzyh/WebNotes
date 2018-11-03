@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body{
+            background-color: gray;
+        }
+        div{
+            width: 300px;
+            height: 100px;
+            background: pink;
+        }
+        .a{
+            background-color: yellow;
+        }
+        .b{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="a b"></div>
+    <input type="button" value="添加">
+    <input type="button" value="删除">
+    <input type="button" value="获取len">
+    <input type="button" value="toggle">
+    <input type="button" value="contains">
+    <script>
+        // 可以通过 classList 对 class类名 增删改查
+        let input = document.querySelectorAll('input');
+        input[0].onclick = function () {
+            // box.className = 'a b abc';
+            console.log( box.classList )
+            box.classList.add('abc','xyz');  // jq addClass()
+            // 不能 add('a b')
+        }
+        input[1].onclick = function () {
+            // jq removeClass()
+            box.classList.remove('abc')
+        }
+        input[2].onclick = function () {
+            console.log( box.classList.length )
+        }
+        input[3].onclick = function () {
+            //  jq  toggleClass()
+            box.classList.toggle('b');
+        }
+        input[4].onclick = function () {
+            // jq  hasClass()
+            let c = box.classList.contains('xyz');
+            console.log(c);
+            c?(box.classList.remove('xyz')):(box.classList.add('xyz'));
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

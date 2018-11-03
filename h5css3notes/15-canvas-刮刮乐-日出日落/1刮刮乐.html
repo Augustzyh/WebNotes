@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            * {
+                margin: 0;
+                padding: 0
+            }
+            html,body{
+                height: 100%;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+            body{
+                overflow: hidden;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="bg.jpg" draggable="false" alt="">
+        
+        <script>
+            let oImg = document.querySelector("img")
+            //判断是否加载完成complete
+            if(oImg.complete || oImg.readyState == 'complete' || oImg.readyState=='loading') {
+                draw()
+            }else{
+                oImg.onload = draw
+            }
+
+            function draw() {
+                let oC = document.createElement("canvas")
+                oC.style.position = 'absolute'
+                oC.style.left = oImg.offsetLeft + 'px'
+                oC.style.top = oImg.offsetTop + 'px'
+                oC.width = oImg.width
+                oC.height = oImg.height
+                oImg.parentNode.insertBefore(oC, oImg)
+
+                let cxt = oC.getContext("2d")
+                cxt.fillStyle = "#bbb"
+                cxt.fillRect(0,0,oC.width,oC.height)
+                oC.onmousedown = function (e) {
+                    e = e||event;
+                    let x = e.pageX - this.offsetLeft;
+                    let y = e.pageY - this.offsetTop;
+                    cxt.beginPath()
+                    cxt.arc(x,y,50,0,2*Math.PI)
+                    cxt.fill()
+                    // 合成透明色
+                    cxt.globalCompositeOperation = "destination-out"
+                    cxt.lineCap = 'round'
+                    cxt.lineWidth = 100
+
+                    this.onmousemove = function (e) {
+                        e = e || event
+                        cxt.beginPath()
+                        cxt.moveTo(x,y)
+                        cxt.lineTo(e.pageX - oC.offsetLeft, e.pageY - oC.offsetTop)
+                        //cxt.arc(e.pageX - oC.offsetLeft,e.pageY - oC.offsetLeft,50,0,2*Math.PI)
+                        cxt.stroke()
+                        x = e.pageX - oC.offsetLeft
+                        y = e.pageY - oC.offsetTop
+                    }
+                    this.onmouseup = function () {
+                        this.onmouseup = null
+                        this.onmousemove = null
+                        check();
+                    }
+                    //检测刮开面积
+                    function check() {
+                        let data = cxt.getImageData(0,0,oC.width,oC.height).data
+                        let n = 0   //被挂开的像素
+                        for(let i = 0; i< data.length;i+=4){
+                            if(data[i] == 0 && data[i+1] == 0 && data[i+2] == 0 && data[i+3] == 0){
+                                n++;
+                            }
+                        }
+                        // 计算被刮开面积的百分比
+                        let finish = n*100/(oC.width * oC.height)
+                        if( finish > 60) {
+                            cxt.beginPath()
+                            cxt.fillRect(0,0,oC.width,oC.height)
+                            //document.title = "恭喜您中奖了"
+                            alert("恭喜您中奖了")
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

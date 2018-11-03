@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        body{
+            display: flex;
+        }
+        canvas{
+            margin:auto;
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <canvas width="500" height="400"></canvas>
+    <script>
+        let oC = document.querySelector("canvas")
+        let cxt = oC.getContext("2d")
+        cxt.moveTo(95,195)
+        cxt.arcTo(95,20,210,66,50)  //切线交点坐标x1 y1 结束坐标 x2 y2 圆弧半径
+        cxt.stroke()
+    </script>
+</body>
+</html>

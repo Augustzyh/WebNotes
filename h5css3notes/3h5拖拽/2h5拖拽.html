@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap {
+            position: absolute;
+            top:100px;
+            left:100px;
+            width:200px;
+            height:200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" draggable="true"></div>
+
+    <script>
+        /*
+        * 谷歌内核加属性可拖拽 开关  draggable="true"
+        *
+        * */
+        /*wrap.ondragover = (e) => {
+            wrap.style.top = (e.clientY-100) + "px"
+            wrap.style.left = (e.clientX-100) + "px"
+            //wrap.style.cssText = 'left:'+(e.clientX-100)+'px;top:'+(e.clientY-100)+'px';
+        }*/
+        wrap.ondragend = (e) => {
+            wrap.style.top = (e.clientY-100) + "px"
+            wrap.style.left = (e.clientX-100) + "px"
+            //wrap.style.cssText = 'left:'+(e.clientX-100)+'px;top:'+(e.clientY-100)+'px';
+        }
+    </script>
+</body>
+</html>

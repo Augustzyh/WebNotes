@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+    <h4>这是第四个窗口</h4>
+    <input type="button" id="btn" value="点击此按钮去改变3iframe.html">
+    <script>
+        btn.onclick = function () {
+            window.opener.document.body.style.background = 'red';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				box-sizing:border-box;
+			}
+			body{
+				-webkit-user-select:none;
+				-moz-user-select:none;
+				-ms-user-select:none;
+				user-select:none;
+			}
+			#drag{
+				width:1200px;
+				box-shadow:0 0 10px #000;
+				margin:100px auto 0;
+				overflow:hidden;
+			}
+			#drag .left{
+				width:400px;
+				height:500px;
+				float:left;
+			}
+			#drag .left div{
+				height:50%;
+				position:relative;
+			}
+			#drag .img span{
+				position:absolute;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+
+				color:red;
+				font-size:20px;
+				
+				text-align:center;
+				line-height:12.5em;
+			}
+/* 
+			#drag .img span:nth-child(1){
+				background:url("img/1.png") center center/100% no-repeat;
+			}
+			#drag .img span:nth-child(2){
+				background:url("img/2.png") center center/100% no-repeat;
+			}
+			#drag .img span:nth-child(3){
+				background:url("img/3.png") center center/100% no-repeat;
+			}
+			#drag .img span:nth-child(4){
+				background:url("img/4.png") center center/100% no-repeat;
+			}
+ */
+			#drag .right{
+				width:800px;
+				height:500px;
+				float:right;
+			}
+			#drag .right span{
+				width:50%;
+				height:50%;
+				float:left;
+
+				color:#fff;
+				font-size:20px;
+				
+				text-align:center;
+				line-height:12.5em;
+			}
+/* 
+			#drag .right span:nth-child(1){
+				background:url("img/1.png") center center/100% no-repeat;
+			}
+			#drag .right span:nth-child(2){
+				background:url("img/2.png") center center/100% no-repeat;
+			}
+			#drag .right span:nth-child(3){
+				background:url("img/3.png") center center/100% no-repeat;
+			}
+			#drag .right span:nth-child(4){
+				background:url("img/4.png") center center/100% no-repeat;
+			}
+ */			
+			#btn{
+				display:block;
+				width:100px;
+				height:40px;
+				margin:20px auto 0;
+				cursor:pointer;
+				text-align:center;
+				line-height:40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='drag'>
+			<div class='left'>
+				<div><img draggable='false' src="img/bg.jpg" width='100%' height='100%' alt="" /></div>
+				<div class='img'>
+					<!-- <span></span>
+					<span></span>
+					<span></span>
+					<span></span> -->
+				</div>
+			</div>
+			<div class='right'>
+				<!-- <span></span>
+				<span></span>
+				<span></span>
+				<span></span> -->
+			</div>
+		</div>
+		<span id='btn'>后退一步</span>
+
+		<script type="text/javascript">
+			var oImg = document.querySelector('.img'),
+				oRight = document.querySelector('.right');
+			btn.style.background = randomColor();
+			var arr = [],
+				arr1 = [];
+			for( var i=1;i<=4;i++ ){
+				arr[i-1] = i;
+				arr1 = arr.sort(randomSort);
+			}
+			function randomSort(){
+				return Math.random() > 0.5 ? 1 : -1;
+			}
+			//console.log(arr,arr1)
+			function randomColor(){
+				var r = Math.floor(Math.random()*256);
+				var g = Math.floor(Math.random()*256);
+				var b = Math.floor(Math.random()*256);
+
+				return 'rgb('+r+','+g+','+b+')';
+			}
+
+
+			for( var i=0;i<arr1.length;i++ ){
+				oImg.innerHTML += '<span draggable="true" style="background:url(img/'+arr1[i]+'.png) center center/100% no-repeat"></span>';
+				oRight.innerHTML += '<span style="background:'+randomColor()+'">'+(i+1)+'</span>';
+			}
+
+			var aSpan = oImg.querySelectorAll('span'),
+				aTarget = oRight.querySelectorAll('span');
+			for( var i=0;i<aSpan.length;i++ ){
+				// 拖拽开始
+				aSpan[i].index = i;
+				aSpan[i].ondragstart = function(){
+					This = this.index;
+					//this.innerHTML = '拖拽中。。。';
+				}
+				
+				// 拖拽结束
+				aSpan[i].ondragend = function(){
+					//this.innerHTML = '';
+				}
+
+				// 图片进入到目标元素
+				aTarget[i].ondragenter = function(){
+					//this.style.background = randomColor();
+				}
+				
+				// 阻止默认事件
+				aTarget[i].ondragover = function(e){
+					e.preventDefault();
+				}
+				
+				// 离开目标
+				aTarget[i].ondragleave = function(){
+					//this.style.background = randomColor();
+				}
+				
+				aTarget[i].ondrop = function(){
+					if( !this.onOff ){
+						var i =  aSpan[This];
+						var T = this;
+						var strBg = this.style.background;
+						var iner = this.innerHTML;
+						//console.log( strBg );
+						//console.log( aSpan[This],aSpan[This].style.background );
+						this.style.background = aSpan[This].style.background;
+						oImg.removeChild( aSpan[This] );
+						this.innerHTML = '';
+						
+
+						if( !oImg.children.length ){
+							oImg.innerHTML = '恭喜你通关';
+							oImg.style.cssText = 'color:#fff;text-shadow:0 0 10px #000;font-size:50px;text-align:center;;line-height:5em;';
+						}
+						btn.onclick = function(){
+							oImg.appendChild( i );
+							T.innerHTML = iner;
+							T.style.background = strBg;
+							T.onOff = false;
+						}
+						
+						this.onOff = true;
+					}
+					
+				}
+			}
+
+		</script>
+	</body>
+</html>
+
+				
+				
+				
+				

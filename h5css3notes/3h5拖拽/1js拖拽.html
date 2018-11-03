@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap {
+                position: absolute;
+                width:200px;
+                height:200px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            wrap.onmousedown = (e) => {
+                let downX = e.clientX - wrap.offsetLeft,
+                    downY = e.clientY - wrap.offsetTop
+                ;
+                document.onmousemove = (e) => {
+                    let moveX = e.clientX - downX,
+                        moveY = e.clientY - downY
+                    ;
+                    wrap.style.top = moveY + "px"
+                    wrap.style.left = moveX + "px"
+                }
+
+                document.onmouseup = () => {
+                    document.onmousemove = document.onmouseup = null
+                }
+            }
+        </script>
+    </body>
+</html>

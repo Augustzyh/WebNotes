@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        canvas{
+            border:1px solid #bbb;
+            /*width: 600px;*/
+            /*height:400px; !* 会放大，所以别写宽高*!*/
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <canvas width="500" height="500"></canvas>
+    <!--
+        canvas 默认 width=300  height =150
+    -->
+    <script>
+        let oC = document.querySelector("canvas")
+        // 正常情况下必须在2d平面图形环境绘制
+        let cxt = oC.getContext("2d")
+        // cxt.strokeStyle = "blue"  用什么方式就写什么
+
+        cxt.fillStyle = "pink"
+        cxt.fillRect(100,50,100,50)   //矩形（x,y,w,h）
+    </script>
+</body>
+</html>

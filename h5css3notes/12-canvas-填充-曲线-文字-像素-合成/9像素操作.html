@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        body{
+            display: flex;
+        }
+        canvas{
+            margin:auto;
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <canvas width="500" height="400"></canvas>
+    <script>
+        let oC = document.querySelector("canvas")
+        let cxt = oC.getContext("2d")
+        let imageData = cxt.createImageData(100,100); // 创建100*100的空白大小 1w个像素
+        //y颜色有三原色rgb组成
+        //每个像素由4个像素点组成  一共4w个像素点(r, g, b ,a) 0-255
+        console.log(imageData);
+        for(let i=0; i<imageData.data.length;i+=4){  //每四个一组
+            imageData.data[i] = 0
+            imageData.data[i+1] = 0
+            imageData.data[i+2] = 255
+            imageData.data[i+3] = 150
+        }
+        let {random,floor} = Math
+        let newimageData = cxt.createImageData(imageData)
+        for(let i=0; i<imageData.data.length;i+=4){  //每四个一组
+            newimageData.data[i] = floor(random()*120)
+            newimageData.data[i+1] = floor(random()*220)
+            newimageData.data[i+2] = floor(random()*50)
+            newimageData.data[i+3] = floor(random()*255)
+        }
+        // 操作橡树后输出到canvas
+        cxt.putImageData(newimageData,240,240)
+
+    </script>
+</body>
+</html>

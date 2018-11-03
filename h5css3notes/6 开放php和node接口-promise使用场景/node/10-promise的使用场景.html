@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background: url("../img/bg.jpg");
+            background-size: cover;
+            display: flex;
+            color: white;
+        }
+        
+        #personInfo{
+            width: 350px;
+            height: 400px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.5);
+            margin: auto;
+            background: rgba(0,0,0,0.5);
+        }
+        #personInfo > div{
+            margin-bottom: 30px;
+        }
+        #personInfo > div > label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        #personInfo > div > input{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-indent: 2em;
+            border: 0;
+            color: rgba(255,255,255,0.8);
+            box-shadow: inset 0 0 5px rgba(255,255,255,0.5);
+            background: transparent;
+        }
+        select{
+            background-color: purple;
+            border: 0;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="personInfo"></div>
+    <script src="node_modules/art-template/lib/template-web.js"></script>
+    <script type="text/template" id="tpl">
+        <div>
+            <label for="">用户名</label>
+            <input type="text" value="{{ users.name }}">
+        </div>
+        <div>
+            <label for="">年龄</label>
+            <input type="text" value="{{ users.age }}">
+        </div>
+        <div>
+            <label for="">描述</label>
+            <select name="" id="">
+                {{ each jobs }}
+                {{ if users.id === $value.id }}
+                    <option value="{{ $value.name }}" selected>{{ $value.name }}</option>
+                {{ else }}
+                    <option value="{{ $value.name }}">{{ $value.name }}</option>
+                {{ /if }}
+                {{ /each }}
+            </select>
+        </div>
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        /*
+        * 模板引擎 art-template
+        * */
+        // 开发一个项目 最少 3~5接口
+        /*getData('http://localhost:6789/users?id=1',function (users) {
+            users = JSON.parse(users);
+            console.log(users);
+            getData('http://localhost:6789/jobs',function (jobs) {
+                jobs = JSON.parse(jobs)
+                let htmlTemplate = template('tpl',{
+                    users:users,
+                    jobs:jobs
+                })
+                console.log(htmlTemplate)
+                personInfo.innerHTML = htmlTemplate;
+            });
+        });
+        function getData(url,callback) {
+            const xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                if( xhr.readyState === 4 && xhr.status === 200 ){
+                    callback && callback(xhr.response)
+                }
+            }
+            xhr.open('get',url,true);
+            xhr.send();
+        }*/
+        let data = {};
+
+        $.get('http://localhost:6789/users?id=1')
+            .then((users)=>{
+                console.log(users)
+                data.users = JSON.parse(users);
+                return $.get('http://localhost:6789/jobs')
+            })
+            .then((jobs)=>{
+                console.log(jobs)
+                data.jobs = JSON.parse(jobs)
+
+                let htmlTemplate = template('tpl',data);
+                console.log(htmlTemplate)
+                personInfo.innerHTML = htmlTemplate;
+            })
+
+        /*let data = {}
+        promiseGetData('http://localhost:6789/users?id=1')
+            .then((users)=>{
+                data.users = JSON.parse(users)
+                return promiseGetData('http://localhost:6789/jobs')
+            })
+            .then((jobs)=>{
+                data.jobs = JSON.parse(jobs)
+                let htmlTemplate = template('tpl',data);
+                console.log(htmlTemplate)
+                personInfo.innerHTML = htmlTemplate;
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+        function promiseGetData(url,callback) {
+            return new Promise(function (resolve,reject) {
+                const xhr = new XMLHttpRequest();
+                xhr.onload = function () {
+                    if( xhr.readyState == 4 & xhr.status == 200 ){
+                        callback && callback(xhr.response);
+                        resolve(xhr.response)
+                    }
+                }
+                xhr.onerror = function (err) {
+                    console.log(err)
+                    reject(err)
+                }
+                xhr.open('get',url,true);
+                xhr.send();
+            })
+        }*/
+    </script>
+
+</body>
+</html>

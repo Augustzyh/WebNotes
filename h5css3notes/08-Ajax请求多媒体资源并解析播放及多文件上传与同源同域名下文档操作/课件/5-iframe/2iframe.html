@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+<h2>这是第二个页面</h2>
+
+<input type="button" id="btn" value="点击改变父页面（1iframe.html）的背景">
+<script>
+    btn.onclick = function () {
+        console.log(parent)
+        parent.document.body.style.background = 'yellowgreen';
+    }
+
+    // parent -> 父页面
+    // window -> 当前网页
+    // top -> 顶层页面
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

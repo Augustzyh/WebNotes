@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #box{
+            width:500px;
+            height:150px;
+            margin:100px auto;
+            background-color:pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        box.ondragover = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        box.ondrop = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let dataTransfer = e.dataTransfer;
+            let fileData = dataTransfer.files[0]
+
+            //用url不用读取blob一大串数字编码，而是url直接指向存在内存当中的文件
+            let url = window.URL.createObjectURL(fileData) || window.webkitURL.createObjectURL(fileData) || null
+            console.log(url);
+            this.innerHTML = `<img src="${url}" >`
+        }
+    </script>
+</body>
+</html>

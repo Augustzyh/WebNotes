@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>octopus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        div{
+            line-height: 35px;
+            border: 1px solid blue;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <div data-src="http://baidu.com">百度</div>
+    <div data-src="http://jd.com">京东</div>
+    <div data-src="http://taobao.com">淘宝</div>
+    <div data-src="http://tmall.com">天猫</div>
+    <script>
+        let aDiv = document.querySelectorAll('div');
+        for( let i=0;i<aDiv.length;i++ ){
+            aDiv[i].addEventListener(
+                'touchmove',
+                function () {
+                    // 移动就不跳转 ，不跳转标识
+                    this.onOff = true;
+                }
+            )
+            aDiv[i].addEventListener(
+                'touchend',
+                function () {
+                    if( !this.onOff ){
+                        window.location.href = this.dataset['src'];
+                    }
+                    this.onOff = false;
+                }
+            )
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 把 数据 编译成data base64编码
+        // 这种字符串 好处在 减少http请求，不要大面积使用
+        // 组成的成分 0-9 a-z A-Z + / = 64个字符
+        let str = 'hello';
+        // 把普通的字符串 转成  data base 64 数据
+        let str1 = window.btoa(str); // 编码
+        console.log(str1)
+
+        let str2 = window.atob(str1);  // 解码
+        console.log(str2)
+
+        let str3 = 'hello追梦'; // 有[中文]不能够直接编码
+        let uri = encodeURIComponent(str3); // 把中文进行编码
+        console.log( window.btoa(uri) ); // 这时才能够编码
+
+        let data = 'aGVsbG8lRTglQkYlQkQlRTYlQTIlQTY=';
+        console.log( window.atob(data) ); // 编码
+        let str4 = window.atob(data);
+        console.log( decodeURIComponent(str4) ); // 解析人能够认识的数据
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

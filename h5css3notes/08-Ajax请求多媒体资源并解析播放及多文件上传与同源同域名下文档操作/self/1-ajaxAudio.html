@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            let oCxt = new AudioContext() //web Audio API
+            console.log(oCxt);
+            let xhr = new XMLHttpRequest()
+            xhr.responseType = "arraybuffer"
+            xhr.onload = function () {
+                console.log(xhr.response);
+                oCxt.decodeAudioData(xhr.response, function (buffer) {
+                    console.log(buffer);
+                    let sourseNode = oCxt.createBufferSource()
+                    sourseNode.buffer = buffer
+                    sourseNode.connect(oCxt.destination)
+                    sourseNode.start(0)
+                })
+            }
+            xhr.open("post","./mp3/jnStylePsy.mp3",true)
+            xhr.send()
+        </script>
+    </body>
+</html>

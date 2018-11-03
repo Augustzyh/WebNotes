@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75d8f949-62b7-4e25-ad3f-f961085fe5c7" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1740935931">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="40" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.14" value="4" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="4" />
+          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.31" value="2" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.38" value="2" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.56" value="1" />
+          <entry key="project.open.time.57" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.65" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.85" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="42" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="appcache" value="2" />
+          <entry key="css" value="2" />
+          <entry key="gif" value="1" />
+          <entry key="html" value="230" />
+          <entry key="jpg" value="17" />
+          <entry key="js" value="50" />
+          <entry key="json" value="1" />
+          <entry key="less" value="2" />
+          <entry key="md" value="12" />
+          <entry key="mime" value="2" />
+          <entry key="mp3" value="2" />
+          <entry key="php" value="7" />
+          <entry key="png" value="9" />
+          <entry key="psd" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="2" />
+          <entry key="HTML" value="230" />
+          <entry key="Image" value="28" />
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="50" />
+          <entry key="Less" value="2" />
+          <entry key="PLAIN_TEXT" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="22772" />
+          <entry key="js" value="9002" />
+          <entry key="less" value="7" />
+          <entry key="md" value="6" />
+          <entry key="php" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="22772" />
+          <entry key="JavaScript" value="9002" />
+          <entry key="Less" value="7" />
+          <entry key="PLAIN_TEXT" value="27" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="h5css3notes" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10-canvas-4种矩形-样式属性-线条函数-开始结束路径-边界与端点属性-正弦函数动画/12端点.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10-canvas-4种矩形-样式属性-线条函数-开始结束路径-边界与端点属性-正弦函数动画/11图形边界样式.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10-canvas-4种矩形-样式属性-线条函数-开始结束路径-边界与端点属性-正弦函数动画/10结束路径.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/4接上.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/7表盘.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/13-多文件上传/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/14-桌面级便签系统-canvas特效/2-canvas粒子跟随鼠标移动/canvas粒子跟随移动4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/3h5拖拽/3h5拖拽七兄弟.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/3h5拖拽/4火狐谷歌双兼容.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="55" column="10" lean-forward="true" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/13-多文件上传/upload.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/2变换.html" />
+        <option value="$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/3save保存路径.html" />
+        <option value="$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/4接上.html" />
+        <option value="$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/3save保存路径restore释放路劲.html" />
+        <option value="$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/5图片和视频.html" />
+        <option value="$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/6视频.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/1填充背景.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/3径向渐变.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/2线性渐变.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/4曲线.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/5贝塞尔曲线.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/6绘制文字.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/7表盘.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/8阴影.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/9像素操作.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/10操作图片像素.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/11合成.html" />
+        <option value="$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/12toDataURL.html" />
+        <option value="$PROJECT_DIR$/13-多文件上传/t.js" />
+        <option value="$PROJECT_DIR$/13-多文件上传/t2.js" />
+        <option value="$PROJECT_DIR$/13-多文件上传/index.html" />
+        <option value="$PROJECT_DIR$/13-多文件上传/js/js.js" />
+        <option value="$PROJECT_DIR$/14-桌面级便签系统-canvas特效/1 desk/desk.html" />
+        <option value="$PROJECT_DIR$/14-桌面级便签系统-canvas特效/test.js" />
+        <option value="$PROJECT_DIR$/14-桌面级便签系统-canvas特效/2-canvas粒子跟随鼠标移动/canvas粒子跟随移动2.html" />
+        <option value="$PROJECT_DIR$/15-canvas-刮刮乐-日出日落/1刮刮乐.html" />
+        <option value="$PROJECT_DIR$/15-canvas-刮刮乐-日出日落/2日出日落.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/t1.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/t2.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/2阻止默认事件.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/3点透.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/4-location.href.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/1移动端事件.html" />
+        <option value="$PROJECT_DIR$/4arrybuffer操作/10DataURL.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/6-百分比布局方案.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/8-rem布局.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/7-自适应布局.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/css/index.less" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/des.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/des/core.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/des/tripledes.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/des/cipher-core.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/des/mode-ecb.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/des/1.html" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/des/test.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/tt.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/11.js" />
+        <option value="$PROJECT_DIR$/16-移动端的事件和适配/22.js" />
+        <option value="$PROJECT_DIR$/09-localStorage-webWorker-cache应用/1-progress/upload.php" />
+        <option value="$PROJECT_DIR$/14-桌面级便签系统-canvas特效/2-canvas粒子跟随鼠标移动/canvas粒子跟随移动4.html" />
+        <option value="$PROJECT_DIR$/3h5拖拽/4火狐谷歌双兼容.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/6 开放php和node接口-promise使用场景/node/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/2服务器/node/package.json" />
+      <path value="$PROJECT_DIR$/6 开放php和node接口-promise使用场景/node/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-42" />
+    <option name="width" value="1026" />
+    <option name="height" value="546" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="2服务器" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="3h5拖拽" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="4arrybuffer操作" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="5新增方法和历史管理" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="6 开放php和node接口-promise使用场景" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="08-Ajax请求多媒体资源并解析播放及多文件上传与同源同域名下文档操作" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="09-localStorage-webWorker-cache应用" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="09-localStorage-webWorker-cache应用" type="462c0819:PsiDirectoryNode" />
+              <item name="1-progress" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="09-localStorage-webWorker-cache应用" type="462c0819:PsiDirectoryNode" />
+              <item name="3-webWorker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="09-localStorage-webWorker-cache应用" type="462c0819:PsiDirectoryNode" />
+              <item name="4-cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="10-canvas-4种矩形-样式属性-线条函数-开始结束路径-边界与端点属性-正弦函数动画" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="11-canvas-圆形-变换-保存与释放状态-drawImage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="12-canvas-填充-曲线-文字-像素-合成" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="13-多文件上传" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="14-桌面级便签系统-canvas特效" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="14-桌面级便签系统-canvas特效" type="462c0819:PsiDirectoryNode" />
+              <item name="2-canvas粒子跟随鼠标移动" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="16-移动端的事件和适配" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5css3notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5css3notes" type="462c0819:PsiDirectoryNode" />
+              <item name="16-移动端的事件和适配" type="462c0819:PsiDirectoryNode" />
+              <item name="des" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/web前端阿飞/h5css3notes/2服务器/node/1.js" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\web前端阿飞\h5css3notes\16-移动端的事件和适配\des" />
+      <recent name="E:\web前端阿飞\h5css3notes\12-canvas-填充-曲线-文字-像素-合成" />
+      <recent name="E:\web前端阿飞\h5css3notes\09-localStorage-webWorker-cache应用" />
+      <recent name="E:\web前端阿飞\h5css3notes\08-Ajax请求多媒体资源并解析播放及多文件上传与同源同域名下文档操作\self" />
+      <recent name="E:\web前端阿飞\h5css3notes\08-Ajax请求多媒体资源并解析播放及多文件上传与同源同域名下文档操作\课件" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\web前端阿飞\h5css3notes\16-移动端的事件和适配" />
+      <recent name="E:\web前端阿飞\h5css3notes\15-canvas-刮刮乐-日出日落" />
+      <recent name="E:\web前端阿飞\h5css3notes\14-桌面级便签系统-canvas特效" />
+      <recent name="E:\web前端阿飞\h5css3notes\14-桌面级便签系统-canvas特效\1 desk" />
+      <recent name="E:\web前端阿飞\h5css3notes\13-多文件上传\upload" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75d8f949-62b7-4e25-ad3f-f961085fe5c7" name="Default Changelist" comment="" />
+      <created>1534812565729</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534812565729</updated>
+      <workItem from="1534812578344" duration="960000" />
+      <workItem from="1534817743807" duration="423000" />
+      <workItem from="1534839573984" duration="3751000" />
+      <workItem from="1534905430354" duration="3333000" />
+      <workItem from="1534916142846" duration="597000" />
+      <workItem from="1534922413140" duration="2865000" />
+      <workItem from="1534927530534" duration="529000" />
+      <workItem from="1534928470929" duration="233000" />
+      <workItem from="1534942419889" duration="9349000" />
+      <workItem from="1534989938632" duration="6367000" />
+      <workItem from="1535249558472" duration="11097000" />
+      <workItem from="1535431195134" duration="2622000" />
+      <workItem from="1535616860879" duration="10806000" />
+      <workItem from="1535765464966" duration="599000" />
+      <workItem from="1535857281050" duration="20556000" />
+      <workItem from="1536038098300" duration="114000" />
+      <workItem from="1536069196122" duration="3409000" />
+      <workItem from="1536119784213" duration="756000" />
+      <workItem from="1536207391539" duration="8626000" />
+      <workItem from="1536223280818" duration="8307000" />
+      <workItem from="1536318614789" duration="1632000" />
+      <workItem from="1536321646065" duration="2523000" />
+      <workItem from="1536382428110" duration="1610000" />
+      <workItem from="1536458133578" duration="26114000" />
+      <workItem from="1536631156320" duration="14955000" />
+      <workItem from="1536663651579" duration="3360000" />
+      <workItem from="1536674708547" duration="595000" />
+      <workItem from="1536750504988" duration="8027000" />
+      <workItem from="1536799473540" duration="23361000" />
+      <workItem from="1536897908745" duration="12712000" />
+      <workItem from="1536934368564" duration="3309000" />
+      <workItem from="1537001908863" duration="9671000" />
+      <workItem from="1537099451144" duration="2140000" />
+      <workItem from="1537149011533" duration="877000" />
+      <workItem from="1537164459617" duration="4601000" />
+      <workItem from="1537320187484" duration="3476000" />
+      <workItem from="1537409957663" duration="2897000" />
+      <workItem from="1537443175270" duration="5715000" />
+      <workItem from="1537611008467" duration="2656000" />
+      <workItem from="1538527687879" duration="956000" />
+      <workItem from="1539352147751" duration="1320000" />
+      <workItem from="1540003651642" duration="1925000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="229731000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.12127976" />
+      <window_info id="Favorites" order="1" sideWeight="0.50163937" side_tool="true" weight="0.16517857" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Structure" order="6" weight="0.24918033" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18852459" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/des/mode-ecb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/des/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16675">
+          <caret line="725" column="10" selection-end-line="742" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/7-自适应布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" column="6" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/des/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2服务器/18期H5课程笔记(1).md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2服务器/LAMP.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2服务器/PM2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3h5拖拽/1js拖拽.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3h5拖拽/2h5拖拽.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/4-location.href.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/3径向渐变.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/11合成.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/2阻止默认事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/12toDataURL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3h5拖拽/5file对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5新增方法和历史管理/2-dataset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4arrybuffer操作/2URL对象.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5新增方法和历史管理/3-parse-stringify.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5新增方法和历史管理/6-history.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5新增方法和历史管理/7-go-back-forward.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-localStorage-webWorker-cache应用/3-webWorker/1-ASCII码生成字符(1).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-localStorage-webWorker-cache应用/3-webWorker/2-webWorker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-localStorage-webWorker-cache应用/4-cache/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-localStorage-webWorker-cache应用/4-cache/manifest.appcache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/tt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/11.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" selection-start-line="5" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/22.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5新增方法和历史管理/1classList.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4arrybuffer操作/10DataURL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="989">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-localStorage-webWorker-cache应用/1-progress/5-upload-progress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-localStorage-webWorker-cache应用/1-progress/upload/1-鎷煎浘.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3496">
+          <caret line="152" column="35" selection-start-line="152" selection-start-column="35" selection-end-line="152" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-localStorage-webWorker-cache应用/1-progress/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/8-rem布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-localStorage-webWorker-cache应用/3-webWorker/1-Worker.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16-移动端的事件和适配/设计图.psd">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/10操作图片像素.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/9像素操作.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/8阴影.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/1画圆arc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1449" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/3save保存路径restore释放路劲.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/2线性渐变.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-canvas-4种矩形-样式属性-线条函数-开始结束路径-边界与端点属性-正弦函数动画/12端点.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-canvas-4种矩形-样式属性-线条函数-开始结束路径-边界与端点属性-正弦函数动画/11图形边界样式.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-canvas-4种矩形-样式属性-线条函数-开始结束路径-边界与端点属性-正弦函数动画/10结束路径.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-canvas-圆形-变换-保存与释放状态-drawImage/4接上.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-canvas-填充-曲线-文字-像素-合成/7表盘.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/13-多文件上传/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/13-多文件上传/upload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14-桌面级便签系统-canvas特效/2-canvas粒子跟随鼠标移动/canvas粒子跟随移动4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3h5拖拽/3h5拖拽七兄弟.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3h5拖拽/4火狐谷歌双兼容.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="55" column="10" lean-forward="true" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

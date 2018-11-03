@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+<img src="" alt="">
+<audio src="./mp3/jnStylePsy.mp3" controls></audio>
+    <script>
+        let aCxt = new AudioContext(); // web Audio API
+        console.log(aCxt);
+        let xhr = new XMLHttpRequest();
+        xhr.responseType = 'arraybuffer';
+        xhr.onload = function () {
+            console.log( xhr.response )
+            aCxt.decodeAudioData(xhr.response,function (buffer) {
+                console.log(buffer)
+                let sourceNode = aCxt.createBufferSource();
+                sourceNode.buffer = buffer;
+                sourceNode.connect(aCxt.destination);
+                //sourceNode.start(0);  // 如果放到服务器里面，可能有需要花点时间
+            })
+        }
+        xhr.open('post','./mp3/jnStylePsy.mp3',true);
+        xhr.send();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

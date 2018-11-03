@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        iframe{
+            width: 600px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+<h1>这是第一个页面</h1>
+<input type="button" id="btn" value="点击改变2iframe的背景颜色"><br>
+<iframe  src="2iframe.html" frameborder="0"></iframe>
+
+<script>
+    // 要同服务 器 里 并在同一个域名 下 去操作里面的页面，[不能操作去操作别人的]！！
+    btn.onclick = function () {
+        console.log( document.querySelector('iframe').contentWindow )  // 2的window对象
+        document.querySelector('iframe').contentWindow.document.body.style.background = 'hotpink';
+    }
+
+    // contentWindow -> 子页面
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

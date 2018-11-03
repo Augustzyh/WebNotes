@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        body{
+            display: flex;
+        }
+        canvas{
+            background-color: #666;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="300"></canvas>
+
+    <script>
+        let oC = document.querySelector("canvas")
+        let cxt = oC.getContext("2d")
+
+
+        cxt.strokeStyle = "#fff"
+        cxt.translate(0,150);  //默认原点0，0 改变至 0，150
+        cxt.moveTo(0,0)
+        let i =0;
+        let n =0
+        let start = 0
+        let rang = 150  //振幅
+        function fn() {
+            i += 5;
+            cxt.lineTo(i,Math.sin((i-start)*2*Math.PI/300)*rang)
+            if(i>=500){
+                start += 20
+                i = 0;
+                cxt.moveTo(n,Math.sin((n-start)*2*Math.PI/300)*rang);
+            }
+            cxt.stroke()
+            requestAnimationFrame(fn)
+        }
+        /*function fn() {
+            n +=5;
+            cxt.lineTo(n,Math.sin((n-start)*2*Math.PI/300)*rang);
+            if( n>=500 ){
+                start += 20;
+                n = 0;
+                cxt.moveTo(n,Math.sin((n-start)*2*Math.PI/300)*rang);
+            }
+            cxt.stroke();
+            requestAnimationFrame(fn);
+        }*/
+        fn()
+        //cxt.lineTo(150,0)
+    </script>
+</body>
+</html>

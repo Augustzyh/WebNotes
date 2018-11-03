@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script>
+        let html = document.querySelector('html');
+        let width = html.getBoundingClientRect().width;
+        html.style.fontSize = width / 10 + 'px';
+    </script>
+    <title>octopus</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<section id="main">
+    <div class="hd"><img src="img/hd_02.jpg" alt="" width="100%" height="100%"></div>
+    <div class="preferential">
+        <ul>
+            <li><img src="img/preferential.png" width="100%" height="100%" alt=""></li>
+            <li><img src="img/preferential.png" width="100%" height="100%" alt=""></li>
+            <li><img src="img/preferential.png" width="100%" height="100%" alt=""></li>
+        </ul>
+    </div>
+</section>
+    <script>
+        //console.log( getComputedStyle(box)['fontSize'] )
+        /*
+        *   rem
+        *       r: root 根据节点 html
+        *       em: 根据自身的文字大小
+        *   去设置 html的文字大小
+        * */
+    </script>
+</body>
+</html>

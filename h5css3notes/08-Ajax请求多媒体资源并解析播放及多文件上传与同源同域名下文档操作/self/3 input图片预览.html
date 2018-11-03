@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            canvas{
+                width:400px;
+                height:400px;
+                border: 1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <div id="c">
+            <canvas></canvas>
+        </div>
+        <input type="file" id="inp" multiple>
+        <input type="button" id="btn">
+        
+        <script>
+            let ctx = document.querySelector("canvas").getContext("2d")
+            btn.onclick = function () {
+                console.log(inp.value);
+                console.log(inp.files);
+                let fileList = inp.files
+                for(let i=0; i< fileList.length;i++){
+                    // 实现图片预览
+                    let blob = new Blob([fileList[i]])
+                    let url = window.URL.createObjectURL(blob)
+                    let img = new Image()
+                    img.src= url
+                    img.width = 100
+                    img.onload = function () {
+                        wrap.appendChild(this)
+                        ctx.drawImage(this,0,0,100,130)
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>

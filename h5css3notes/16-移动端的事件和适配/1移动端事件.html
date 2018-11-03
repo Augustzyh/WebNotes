@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width:400px;
+                height:400px;
+                background-color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            wrap.ontouchstart = () => {
+                wrap.style.backgroundColor = "yellow"
+            }
+            wrap.ontouchmove = () => {
+                wrap.style.backgroundColor = randomColor()
+            }
+            wrap.ontouchend = () => {
+                wrap.style.backgroundColor = "blue"
+            }
+            function randomColor() {
+                let r = Math.floor(Math.random()*256);
+                let g = Math.floor(Math.random()*256);
+                let b = Math.floor(Math.random()*256);
+                let a = Math.random().toFixed(2);
+                return 'rgba('+r+','+g+','+b+','+a+')';
+            }
+            /*box.addEventListener(
+                'touchmove',
+                function (e) {
+                    //console.log( e.changedTouches.length )
+                    this.innerHTML = e.changedTouches.length;
+                    touches 屏幕上的手指列表
+                    targetTouches 当前元素上手指列表
+                }
+            )*/
+        </script>
+    </body>
+</html>

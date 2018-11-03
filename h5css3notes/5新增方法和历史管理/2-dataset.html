@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+<body>
+    <div id="box" data-a="自定义数据" data-a-basd-cgag="长名字" data-tpl-id="m_h_v31toutiao_default_1"></div>
+    <script>
+        // dataset 对自定义属性 增删改查
+        // 查
+        console.log(box.dataset);
+        console.log(box.dataset.a);
+        console.log(box.dataset['aBasdCgag']);
+        console.log(box.dataset['tplId']);
+        // 从第一个名字之后 都要驼峰命名法
+
+        // 改
+
+        box.dataset['a'] = '改变值';
+        box.setAttribute('data-abc-xyz','通过setAttr设置值')
+        console.log( box.getAttribute('data-a') )
+
+        // 删除
+        box.dataset['a'] = '';  // 没有值  属性就不存在
+        box.setAttribute('data-abc-xyz','');
+        box.removeAttribute('data-abc-xyz');
+
+        delete box.dataset['tplId']
+
+        // 框架 组件之间通信
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

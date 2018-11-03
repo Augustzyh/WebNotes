@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TZ-追梦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box" contenteditable="true"></div>
+    <input type="text" id="txt">
+    <input type="button" id="login" value="登录">
+    <input type="button" value="删除" id="del">
+    <input type="button" value="clear" id="clear">
+    <script>
+        // 原生 js 自己要封装三个方法 设置、获取、删除cookie 大小比较
+        // h5本地存储 不需要封装，有提供api,直接云调用就行，存储量比较大 5M
+        // localstrorage 永久存储  理论上生命周期很长（长生不老）
+        // sessionstorage 临时存储  关闭浏览器，生命周期终结
+        document.oncontextmenu = function (e) {
+            //e.preventDefault();
+            //return false;
+        }
+        if(window.localStorage.getItem('login')){
+
+            txt.value = window.localStorage.getItem('login');
+        }
+        login.onclick = function () {
+            console.log(localStorage)
+                                // 可以存大量数据或html结构
+            // 真正使用时，要对数据进行加密
+            localStorage.setItem('login',txt.value);
+            localStorage.abc = 'xyz';
+        }
+        del.onclick = function () {
+            console.log(window.localStorage.getItem('abc'))
+            console.log(window.localStorage.removeItem('abc'));
+        }
+        clear.onclick = function () {
+            console.log(window.localStorage.clear());  // 全部清空
+        }
+    </script>
+</body>
+</html>
+
+
+
+

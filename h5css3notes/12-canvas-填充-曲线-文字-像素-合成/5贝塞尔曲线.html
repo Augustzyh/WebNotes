@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        body{
+            display: flex;
+        }
+        canvas{
+            margin:auto;
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <canvas width="500" height="400"></canvas>
+    <script>
+        let oC = document.querySelector("canvas")
+        let cxt = oC.getContext("2d")
+        cxt.strokeStyle = "#fff"
+        // 二次贝塞尔曲线
+        cxt.beginPath()
+        cxt.moveTo(200,200)  //起始点
+        cxt.quadraticCurveTo(250,0,300,200) //（拉扯点x，拉扯点y，结束点x，结束点y）
+        cxt.stroke()
+
+        //三次贝塞尔曲线
+        cxt.beginPath()
+        cxt.moveTo(100,200)  //起始点
+        cxt.bezierCurveTo(200,0,300,350,400,200) //（拉扯点1x，拉扯点1y，拉扯点2x，拉扯点2y，结束点x，结束点y）
+        cxt.stroke()
+    </script>
+</body>
+</html>

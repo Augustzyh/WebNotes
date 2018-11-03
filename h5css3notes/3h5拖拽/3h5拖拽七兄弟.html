@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        #wrap {
+            float:left;
+            width:400px;
+            height:200px;
+            background-color: red;
+        }
+        #box {
+            float:right;
+            width:100px;
+            height:100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" draggable="true">0</div>
+    <div id="box" draggable="true"></div>
+
+    <script>
+        /*
+        被拖拽元素三事件
+        * ondragstart   拖拽开始干什么
+        * ondrag  拖拽时
+        * ondragend  结束时
+        *
+        * 目标元素四事件:
+        * ondragenter  光标进入触发
+        * ondragover  在目标上
+        * ondragleave 进入
+        * ondrop  要干嘛就干 放手触发   要想触发此事 ，必在over上阻止默认事件和事件冒泡
+        * */
+        let n=0;
+        box.ondragstart = function () {
+            this.style.backgroundColor = 'pink'
+        }
+        box.ondrag = function () {
+            /*n++;
+            wrap.innerText = n;*/
+        }
+        box.ondragend = function () {
+            n=0;
+            wrap.innerText += "box";
+            this.style.backgroundColor = 'green'
+        }
+
+        wrap.ondragenter = function () {
+            this.style.backgroundColor = 'yellow'
+        }
+        wrap.ondragover = function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            n++;
+            wrap.innerText = n;
+        }
+        wrap.ondragleave = function () {
+            this.style.backgroundColor = 'purple'
+        }
+        wrap.ondrop = function () {
+            document.body.removeChild(box)
+
+            wrap.innerHTML += '已回收';
+        }
+    </script>
+</body>
+</html>

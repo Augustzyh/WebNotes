@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Octpus</title>
+    <meta name="keywords" content="44-章鱼">
+    <meta name="description" content="大章鱼网页">
+    <meta name="author" content="大章鱼">
+    <style>
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        body{
+            display: flex;
+        }
+        canvas{
+            margin:auto;
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <canvas width="500" height="400"></canvas>
+    <script>
+        let {PI} = Math
+        let oC = document.querySelector("canvas")
+        let cxt = oC.getContext("2d")
+        cxt.save()
+        cxt.strokeStyle = "#fff"
+        cxt.moveTo(250,200)
+        cxt.restore()
+
+        //相互间互不影响 常用成对出现
+
+        cxt.save()
+        cxt.beginPath()
+        cxt.arc(250,200,100,0,2*PI)
+        cxt.stroke()
+        cxt.restore()
+
+    </script>
+</body>
+</html>

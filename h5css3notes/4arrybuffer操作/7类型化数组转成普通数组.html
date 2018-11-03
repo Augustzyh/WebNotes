@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            let typedArray = new Uint8Array([1,2,3,4])
+            console.log(typedArray);
+            let arr = Array.from(typedArray)
+            console.log(arr);
+            let arr1 = Array.apply([],typedArray)
+
+
+            //把arraybuffer转换成blob
+            let arr3 = new ArrayBuffer(12)
+            let blob1 = new Blob([arr3],{type:'text/plain'})
+            console.log(blob1);
+
+            //用试图函数 操作arraybuffer
+            let arr4 = new Int16Array(arr3)
+            console.log(arr4); //6
+            let arr5 = new Int32Array(arr3)
+            console.log(arr5); //3
+            let blob2 = new Blob(arr5)
+            console.log(blob2);
+        </script>
+    </body>
+</html>

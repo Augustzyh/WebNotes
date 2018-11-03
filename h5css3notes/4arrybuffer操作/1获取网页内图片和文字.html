@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #box{
+                width:500px;
+                height:150px;
+                margin:100px auto;
+                background-color:pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <img src="img/bg.jpg" width='150' alt="">
+            爱的就卡死的鬼啊收到
+        </div>
+        <div id="box"></div>
+        <script>
+            box.ondragover = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            box.ondrop = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                let dataTransfer = e.dataTransfer;
+                console.log(dataTransfer);
+                //获取文本或url
+                let text = dataTransfer.getData('Text') || dataTransfer.getData('text/plain')
+                console.log(text);
+                //获取url
+                //this.innerHTML += `<img src="${text}" width='150' height="150" alt="">`
+                let url = dataTransfer.getData('url') || dataTransfer.getData('text/uri-list')
+                //console.log(url);
+
+                //
+                let fileData = dataTransfer.files[0]
+                let reader = new FileReader()
+                reader.readAsDataURL(fileData)
+                //reader.readAsText(fileData)
+                reader.onload = (e) => {
+                    console.log(e.target.result);
+                    //this.innerHTML += `<img src="${e.target.result}" width='150' height="150" alt="">`
+                    this.innerHTML = e.target.result
+                }
+            }
+        </script>
+    </body>
+</html>
