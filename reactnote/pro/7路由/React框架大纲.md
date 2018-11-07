@@ -122,5 +122,5 @@ App2 404 Switch  + navlink样式
 
 ## 十、路由小实战
 
-- [reactEcharts小实战](http://47.96.29.109/reactEcharts/)
+- [reactEcharts小实战](http://zyhlrw.top/reactEcharts/)
 

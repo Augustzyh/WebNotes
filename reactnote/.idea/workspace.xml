@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84226329-597b-43e6-9a5d-3aa692959820" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/about.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/not404.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reactnote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reactnote.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro/7路由/React框架大纲.md" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/React框架大纲.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,7 +79,7 @@
           <entry key="project.closed" value="20" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.14" value="2" />
-          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.19" value="1" />
@@ -105,7 +94,7 @@
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.81" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -142,7 +131,7 @@
           <entry key="html" value="2528" />
           <entry key="js" value="3750" />
           <entry key="jsx" value="4703" />
-          <entry key="md" value="403" />
+          <entry key="md" value="413" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -153,7 +142,7 @@
           <entry key="HTML" value="2528" />
           <entry key="JSX Harmony" value="4700" />
           <entry key="JavaScript" value="3750" />
-          <entry key="PLAIN_TEXT" value="406" />
+          <entry key="PLAIN_TEXT" value="416" />
         </counts>
       </usages-collector>
     </session>
@@ -163,7 +152,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/not404.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="184">
               <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -175,11 +164,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
+            <state relative-caret-position="437">
               <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#72#143#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,7 +176,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/node_modules/_react-router-dom@4.3.1@react-router-dom/es/Link.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
+            <state relative-caret-position="460">
               <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
             </state>
           </provider>
@@ -197,7 +185,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
+            <state relative-caret-position="1265">
               <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
             </state>
           </provider>
@@ -206,7 +194,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
+            <state relative-caret-position="1058">
               <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -216,20 +204,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pro/7路由/React框架大纲.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            <state relative-caret-position="194">
+              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-621" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -246,11 +232,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+            <state relative-caret-position="253">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -334,8 +320,8 @@
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/not404.jsx" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App.css" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js" />
-        <option value="$PROJECT_DIR$/pro/7路由/React框架大纲.md" />
         <option value="$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/App.js" />
+        <option value="$PROJECT_DIR$/pro/7路由/React框架大纲.md" />
       </list>
     </option>
   </component>
@@ -359,6 +345,7 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/1/空项目备用/reactapp/package.json" />
       <path value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/package.json" />
       <path value="$PROJECT_DIR$/pro/4toggle生命周期/lifecycle/package.json" />
       <path value="$PROJECT_DIR$/pro/5toggle动画&amp;脚手架开发方式/reactapp/package.json" />
@@ -391,6 +378,12 @@
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnote" type="462c0819:PsiDirectoryNode" />
               <item name="pro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
+              <item name="pro" type="462c0819:PsiDirectoryNode" />
+              <item name="7路由" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
@@ -504,11 +497,12 @@
       <workItem from="1541508016095" duration="4359000" />
       <workItem from="1541516276717" duration="5353000" />
       <workItem from="1541595833977" duration="3233000" />
+      <workItem from="1541602917738" duration="620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135606000" />
+    <option name="totallyTimeSpent" value="136226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -658,9 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,13 +667,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/NotFound.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/NotFound.jsx" />
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/news/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1058">
@@ -715,9 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -735,10 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-92">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#72#144#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,9 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -783,15 +758,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/record/ui.js" />
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/not404.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="184">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -799,34 +772,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.css">
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+        <state relative-caret-position="437">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/node_modules/_react-router-dom@4.3.1@react-router-dom/es/Link.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
+        <state relative-caret-position="460">
           <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js">
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#72#143#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1265">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
+        <state relative-caret-position="1058">
           <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -835,17 +807,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/React框架大纲.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-621" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -854,25 +817,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/record/ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        <state relative-caret-position="253">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/React框架大纲.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
