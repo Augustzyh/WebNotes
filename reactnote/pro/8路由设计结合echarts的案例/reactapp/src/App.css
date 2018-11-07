@@ -47,11 +47,3 @@ table {
     color:red;
     font-size:25px;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-}
-.active{
-    color:red;
-    font-size:30px;
-}

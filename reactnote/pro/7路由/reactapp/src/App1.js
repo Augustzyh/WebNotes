@@ -46,6 +46,7 @@ class App1 extends Component {
                                                 {...props}
                                                 data="其他值"
                                                 routes={item.routes}
+                                                abc = "123"
                                             />
                                         )}
                                     ></Route>

@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84226329-597b-43e6-9a5d-3aa692959820" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/home/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/layout/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/news/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/news/newsList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/product/productsList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/add.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/del.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/login/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/about.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/not404.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/reactnote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reactnote.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/7路由/React框架大纲.md" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/React框架大纲.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/7路由/reactapp/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro/7路由/reactapp/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,13 +87,15 @@
     <session id="767846192">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.36" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.47" value="1" />
@@ -104,20 +105,20 @@
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.81" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="11" />
+          <entry key="css" value="13" />
           <entry key="editorconfig" value="2" />
           <entry key="gitattributes" value="1" />
-          <entry key="gitignore" value="1" />
-          <entry key="html" value="25" />
-          <entry key="js" value="42" />
-          <entry key="json" value="9" />
-          <entry key="jsx" value="23" />
-          <entry key="md" value="14" />
+          <entry key="gitignore" value="2" />
+          <entry key="html" value="26" />
+          <entry key="js" value="55" />
+          <entry key="json" value="12" />
+          <entry key="jsx" value="40" />
+          <entry key="md" value="18" />
           <entry key="svg" value="2" />
           <entry key="tpl" value="2" />
           <entry key="txt" value="1" />
@@ -125,33 +126,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="11" />
-          <entry key="HTML" value="25" />
-          <entry key="JSON" value="9" />
-          <entry key="JSX Harmony" value="23" />
-          <entry key="JavaScript" value="42" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="CSS" value="13" />
+          <entry key="HTML" value="26" />
+          <entry key="JSON" value="12" />
+          <entry key="JSX Harmony" value="33" />
+          <entry key="JavaScript" value="55" />
+          <entry key="PLAIN_TEXT" value="32" />
           <entry key="SVG" value="2" />
+          <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="119" />
+          <entry key="css" value="160" />
           <entry key="html" value="2528" />
-          <entry key="js" value="3413" />
-          <entry key="jsx" value="4455" />
-          <entry key="md" value="160" />
+          <entry key="js" value="3750" />
+          <entry key="jsx" value="4703" />
+          <entry key="md" value="403" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="119" />
+          <entry key="CSS" value="160" />
           <entry key="HTML" value="2528" />
-          <entry key="JSX Harmony" value="4455" />
-          <entry key="JavaScript" value="3413" />
-          <entry key="PLAIN_TEXT" value="160" />
+          <entry key="JSX Harmony" value="4700" />
+          <entry key="JavaScript" value="3750" />
+          <entry key="PLAIN_TEXT" value="406" />
         </counts>
       </usages-collector>
     </session>
@@ -159,110 +161,98 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/React框架大纲.md">
+        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/not404.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            <state relative-caret-position="207">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#72#143#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/node_modules/_react-router-dom@4.3.1@react-router-dom/es/Link.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="599">
+              <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#72#144#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/7路由/React框架大纲.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-621" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js">
+        <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+            <state relative-caret-position="46">
+              <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#72#144#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/layout/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/login/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/add.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/del.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="38" column="17" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#72#144#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="41" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -276,6 +266,7 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="XSLT Stylesheet" />
       </list>
     </option>
   </component>
@@ -294,14 +285,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/exls/1.html" />
-        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/todomvc-app-template/index.html" />
-        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/main.js" />
-        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/app.js" />
-        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/node_modules/_todomvc-common@1.0.5@todomvc-common/base.js" />
-        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/component/footer.js" />
-        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/component/header.js" />
-        <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/component/footer.jsx" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/index.html" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/app.jsx" />
         <option value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/src/component/header.jsx" />
@@ -329,7 +312,6 @@
         <option value="$PROJECT_DIR$/pro/6表单控件UI组件库axios/reactapp/src/components/home/Home.jsx" />
         <option value="$PROJECT_DIR$/pro/6表单控件UI组件库axios/reactapp/src/App.js" />
         <option value="$PROJECT_DIR$/pro/6表单控件UI组件库axios/reactapp/src/components/home/form.jsx" />
-        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App.css" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/home/index.jsx" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/layout/index.jsx" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/product/index.jsx" />
@@ -337,14 +319,23 @@
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/product/productsList.jsx" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/news/newsList.jsx" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App.js" />
-        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/index.js" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/login/index.jsx" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/add.jsx" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/del.jsx" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/router/index.js" />
-        <option value="$PROJECT_DIR$/pro/7路由/React框架大纲.md" />
-        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js" />
         <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/router/App2.js" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/App3.js" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/index.js" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/about.jsx" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/NotFound.jsx" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/Home.jsx" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/not404.jsx" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App.css" />
+        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js" />
+        <option value="$PROJECT_DIR$/pro/7路由/React框架大纲.md" />
+        <option value="$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/App.js" />
       </list>
     </option>
   </component>
@@ -372,6 +363,8 @@
       <path value="$PROJECT_DIR$/pro/4toggle生命周期/lifecycle/package.json" />
       <path value="$PROJECT_DIR$/pro/5toggle动画&amp;脚手架开发方式/reactapp/package.json" />
       <path value="$PROJECT_DIR$/pro/6表单控件UI组件库axios/reactapp/package.json" />
+      <path value="$PROJECT_DIR$/pro/7路由/reactapp/package.json" />
+      <path value="$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/package.json" />
       <path value="$PROJECT_DIR$/pro/package.json" />
     </packageJsonPaths>
   </component>
@@ -387,7 +380,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -404,78 +396,44 @@
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnote" type="462c0819:PsiDirectoryNode" />
               <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="6表单控件UI组件库axios" type="462c0819:PsiDirectoryNode" />
+              <item name="8路由设计结合echarts的案例" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnote" type="462c0819:PsiDirectoryNode" />
               <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="7路由" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="7路由" type="462c0819:PsiDirectoryNode" />
+              <item name="8路由设计结合echarts的案例" type="462c0819:PsiDirectoryNode" />
               <item name="reactapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnote" type="462c0819:PsiDirectoryNode" />
               <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="7路由" type="462c0819:PsiDirectoryNode" />
+              <item name="8路由设计结合echarts的案例" type="462c0819:PsiDirectoryNode" />
               <item name="reactapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="7路由" type="462c0819:PsiDirectoryNode" />
-              <item name="reactapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="7路由" type="462c0819:PsiDirectoryNode" />
-              <item name="reactapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="test2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="7路由" type="462c0819:PsiDirectoryNode" />
-              <item name="reactapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="test2" type="462c0819:PsiDirectoryNode" />
-              <item name="console" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="7路由" type="462c0819:PsiDirectoryNode" />
-              <item name="reactapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSX Harmony" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.11.0" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -485,18 +443,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\webnotes\WebNotes\reactnote\pro\7路由\reactapp\src\components\test3\Home" />
       <recent name="E:\webnotes\WebNotes\reactnote\1" />
       <recent name="E:\webnotes\WebNotes\reactnote\pro\7路由" />
       <recent name="E:\webnotes\WebNotes\reactnote\pro\5toggle动画&amp;脚手架开发方式" />
       <recent name="E:\webnotes\WebNotes\reactnote\pro\4toggle项目初始化更新销毁阶段" />
-      <recent name="D:\reactnote\1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\webnotes\WebNotes\reactnote\pro\8路由设计结合echarts的案例\reactapp" />
       <recent name="E:\webnotes\WebNotes\reactnote\pro\6表单控件UI组件库\reactapp\src" />
       <recent name="E:\webnotes\WebNotes\reactnote\pro\5toggle动画&amp;脚手架开发方式\reactapp\static" />
       <recent name="E:\webnotes\WebNotes\reactnote\pro\5toggle动画&amp;脚手架开发方式\reactapp\src\component\header" />
       <recent name="D:\reactnote\pro\3class基本语法import和todolist\exls" />
-      <recent name="D:\reactnote\pro\3class基本语法import和todolist\todolist\todomvc-app-template\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -543,14 +501,18 @@
       <workItem from="1541344458917" duration="2270000" />
       <workItem from="1541347214147" duration="4659000" />
       <workItem from="1541352801856" duration="632000" />
+      <workItem from="1541508016095" duration="4359000" />
+      <workItem from="1541516276717" duration="5353000" />
+      <workItem from="1541595833977" duration="3233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122661000" />
+    <option name="totallyTimeSpent" value="135606000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17113096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -564,8 +526,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49776787" visible="true" weight="0.35303777" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50223213" side_tool="true" weight="0.35139573" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49627978" visible="true" weight="0.35139573" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5037202" side_tool="true" weight="0.352459" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -583,105 +545,16 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pro/1react/2helloWorld.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/2基础语法/1-注释.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/2基础语法/6-无状态组组件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/6表单控件UI组件库/reactapp/package-lock.json" />
-    <entry file="file://$PROJECT_DIR$/pro/6表单控件UI组件库/reactapp/package.json" />
-    <entry file="file://$PROJECT_DIR$/pro/6表单控件UI组件库/reactapp/src/App.css" />
-    <entry file="file://$PROJECT_DIR$/pro/6表单控件UI组件库/reactapp/src/logo.svg" />
-    <entry file="file://$PROJECT_DIR$/pro/6表单控件UI组件库/reactapp/src/App.js" />
-    <entry file="file://$PROJECT_DIR$/pro/5toggle动画&amp;脚手架开发方式/data.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1/record.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/2基础语法/7-函数式组件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/5toggle动画&amp;脚手架开发方式/reactapp/src/component/header/header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/5toggle动画&amp;脚手架开发方式/reactapp/src/component/footer/footer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/5toggle动画&amp;脚手架开发方式/reactapp/src/component/main/main.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/5toggle动画&amp;脚手架开发方式/reactapp/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro/6表单控件UI组件库axios/reactapp/src/App.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/1/React框架大纲.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.test.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/home/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
@@ -740,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/news/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro/4toggle生命周期/1-toggle.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-184">
@@ -758,13 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/news/newsList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -795,53 +654,86 @@
     <entry file="file://$PROJECT_DIR$/pro/6表单控件UI组件库axios/reactapp/src/components/ant.jsx">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/React框架大纲.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/layout/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/login/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/add.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="17" />
+        <state relative-caret-position="230">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/router/App2.js" />
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/App3.js" />
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/layout/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/NotFound.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/news/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1058">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/add.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test1/news/newsList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/del.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="-92">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -850,40 +742,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/index.js">
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/Home.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/about.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="41" />
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/del.jsx">
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="299">
+          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/console/console.jsx">
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test2/login/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        <state relative-caret-position="322">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/components/test3/Home/not404.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/node_modules/_react-router-dom@4.3.1@react-router-dom/es/Link.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#72#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+        <state relative-caret-position="599">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#72#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/7路由/React框架大纲.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/record/ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

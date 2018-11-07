@@ -3,8 +3,16 @@ cnpm i react-router-dom -D
 
 对于query  需使用node 的 url模块 cnpm i url -D
 
+本节内容:
 App + test1 路由写法 + query/params + routes模块化至router
 App1 + test2  重定向 + 父-》子传值（render）
+               + 设置默认属性值:即子组件设置默认值，父组件传了则用，没传则使用默认
+               + rccp(prop-types设置父组件传值类型)cnpm i prop-types -D
+               + 阿里图标也放入src,在哪要用在哪映入css就可以了
+App2 404 Switch  + navlink样式
+
+路由设计思想:先找同级路由，在找子路由,显示区域用形如test1中的Lyout包裹，
+若显示区域也有nav
 
 ## 九、react-router路由
 
@@ -105,7 +113,7 @@ App1 + test2  重定向 + 父-》子传值（render）
           title: PropTypes.number
       }
   6.   404
-  
+  ``            Switch
   7. navlink
   
   
