@@ -1,0 +1,41 @@
+@charset "UTF-8";
+* {
+    margin:0;
+    padding:0;
+}
+li {
+    list-style: none;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.leftSide {
+    width: 240px;
+    height: 100vh;
+    background-color: #2d2d36;
+}
+.rightSide {
+    width: calc(100% - 240px);
+    height: 100vh;
+}
+.logo {
+    height:60px;
+    background-color: #37485d;
+}
+.logo img {
+    display: block;
+}
+.rightSide .content {
+    overflow: hidden;
+    height: calc(100vh - 60px);
+}
+.rightSide .content>div{
+    width:100%;
+    height:100%;
+    background-color: #000;
+}
+
+a{
+    text-decoration: none;
+}

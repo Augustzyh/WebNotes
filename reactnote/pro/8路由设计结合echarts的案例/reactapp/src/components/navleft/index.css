@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.navLeft {
+
+}
+.navLeft ul {
+    background: url("./icon.jpg") no-repeat 20px 0;
+}
+.navLeft ul li {
+    height: 52px;
+    line-height:52px;
+    text-indent:4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 6px;
+}
+.navLeft ul li a{
+    color:#57697e;
+    text-decoration: none;
+}
+.navLeft ul li a.active{
+    color:orangered;
+}

@@ -1,0 +1,6 @@
+@charset "UTF-8";
+.notfound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
