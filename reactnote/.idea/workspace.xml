@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84226329-597b-43e6-9a5d-3aa692959820" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro/10饿了么移动端/record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reactnote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reactnote.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/serviceWorker.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -92,7 +89,7 @@
     <session id="767846192">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
@@ -106,6 +103,7 @@
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.55" value="1" />
@@ -113,7 +111,7 @@
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.81" value="1" />
-          <entry key="project.opened" value="28" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -215,11 +213,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/reactapp/src/App.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1/react.md">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -233,29 +226,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/record.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/reactapp/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/reactapp/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -362,7 +337,6 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/1/空项目备用/reactapp/package.json" />
-      <path value="$PROJECT_DIR$/pro/10饿了么移动端/reactapp/package.json" />
       <path value="$PROJECT_DIR$/pro/3class基本语法import和todolist/todolist/package.json" />
       <path value="$PROJECT_DIR$/pro/4toggle生命周期/lifecycle/package.json" />
       <path value="$PROJECT_DIR$/pro/5toggle动画&amp;脚手架开发方式/reactapp/package.json" />
@@ -386,6 +360,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -406,13 +381,6 @@
             </path>
             <path>
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="10饿了么移动端" type="462c0819:PsiDirectoryNode" />
-              <item name="reactapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -424,7 +392,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,16 +475,16 @@
       <workItem from="1542008018719" duration="43279000" />
       <workItem from="1542256858025" duration="8179000" />
       <workItem from="1542266353879" duration="9895000" />
-      <workItem from="1542282452332" duration="603000" />
+      <workItem from="1542282452332" duration="1703000" />
+      <workItem from="1542285563450" duration="993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210575000" />
+    <option name="totallyTimeSpent" value="212668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17113096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -531,7 +498,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49627978" visible="true" weight="0.34811166" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49627978" visible="true" weight="0.3464696" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5037202" side_tool="true" weight="0.352459" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -793,6 +760,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/reactapp/.gitignore" />
     <entry file="file://$PROJECT_DIR$/pro/9命令设计模式redux/record.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1725">
@@ -839,24 +807,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/reactapp/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/record.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/reactapp/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/reactapp/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
