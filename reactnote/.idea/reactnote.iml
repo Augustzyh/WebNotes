@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/pro/7路由/reactapp/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/pro/8路由设计结合echarts的案例/reactapp/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/9命令设计模式redux/reactapp/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/pro/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />

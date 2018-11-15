@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Octpus</title>
+        <meta name="keywords" content="44-章鱼">
+        <meta name="description" content="大章鱼网页">
+        <meta name="author" content="大章鱼">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            const 连={}
+            连.步兵 = function (num) {
+                console.log("加入" + num + "人，开始战斗");
+            }
+            连.九八k = function (num) {
+                console.log("装备" + num + "支，开始战斗");
+            }
+            //发号施令
+            连.连长 = function (命令) {
+                连[命令.type](命令.num)
+            }
+            //下达命令
+            连.连长({
+                type: "步兵",
+                num: 120
+            })
+            连.连长({
+                type: "九八k",
+                num: 200
+            })
+        </script>
+    </body>
+</html>
