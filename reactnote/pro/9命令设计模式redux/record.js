@@ -14,7 +14,7 @@ index.js +
 redux1 -> 基本操作
 redux2+before->App -》组件使用
 redux3+before->App -> 借助中间件处理异步操作  redux-thunk
-react-redux  :  外部app&&index
+react-redux + 代码装饰  :  外部app&&index
 //安装redux
 npm i redux -S
 
@@ -68,6 +68,12 @@ App = connect(mapStateToProps, mapDispatchToProps)(App)
 
 
 
-//代码装饰器
-cnpm i babel-plugin-transform-decorators-legacy -D
-1. 显示配置文件 npm run eject
+//代码装饰器插件
+cnpm i babel-plugin-transform-decorators-legacy -D  babel>7.x去npm搜
+1. 显示配置文件 npm run eject //然后关闭项目cnpm i防报错
+2.配置文件："babel": {
+    "presets": [
+        "react-app"
+    ],
+        "plugins"：  改一下就可以装饰了见外部App
+}

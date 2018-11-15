@@ -45,4 +45,9 @@ const mapDispatchToProps = {addChicken,addDelay,subChicken}
 //一挂挂载到props上便可以再组件内使用
 App = connect(mapStateToProps, mapDispatchToProps)(App)
 
+//装饰后
+/*@connect(
+    state => ({num : state}),
+    {addDelay, subChicken, addChicken}
+)*/
 export default App;
