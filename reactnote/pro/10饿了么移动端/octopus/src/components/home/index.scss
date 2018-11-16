@@ -1,0 +1,287 @@
+/*
+html{
+    font-size:13.33333vw;
+!*
+    100vw
+    设备屏幕也分成7.5等分 每一等分 100/7.5 = 13.33333
+   设计图  750px
+    把设计图分成7.5等分，每一份100px
+    100px作为换算单位
+*!
+}
+.App{
+    !*
+        1rem = 13.33333vw  =  100px
+    *!
+    width:1rem;
+    height: 1rem;
+    color:red;
+    background-color: blue;
+    font-size: .1rem;
+}*/
+.App{
+    padding-bottom: 1rem;
+    overflow: visible;
+}
+.location{
+    padding-top: .24rem;
+    background-color: #00A7FF;
+    .sub{
+        height: .92rem;
+        text-indent: .15rem;
+        line-height: 1.1rem;
+        span{
+            display: inline-block;
+            font-size: .35rem;
+            color: white;
+        }
+        .dingwei{
+        }
+        .info{
+            font-weight: bold;
+        }
+    }
+}
+/*吸顶盒*/
+.fixTop {
+    /*可在移动端应用*/
+    z-index: 999;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.06rem;
+    background: #00A7FF;
+    a{
+        width:6.94rem;
+        height: 0.72rem;
+        background-color: #fff;
+        color:#999;
+        display: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        text-decoration: none;
+        span{
+            margin-left: .1rem;
+            font-size: .3rem;
+            font-family: simsun;
+        }
+    }
+}
+
+/*分类导航 借助ant的走马灯*/
+.category{
+    overflow: hidden;
+    width:100%;
+    height:3.5rem;
+    padding-top: .24rem;
+    .nav-item {
+        display: flex !important;
+        flex-wrap:wrap !important;
+        height: 3.5rem;
+        width:100%;
+        a{
+            width:20%;
+            height:1.35rem;
+            color:#666;
+            font-size: .16rem;
+            text-align: center;
+            img{
+                width:.9rem;
+                height:.9rem;
+                margin: 0 auto;
+            }
+        }
+    }
+    .slick-dots{
+        margin-top: .24rem !important;
+    }
+    li button{
+        background-color: #000 !important;
+        opacity: .2 !important;
+    }
+    li.slick-active button{
+        opacity: .5 !important;
+    }
+}
+
+/*抢购*/
+.scarebuy{
+    padding: .1rem .2rem;
+    height: 2.99rem;
+    display: flex;
+    justify-content: space-between;
+    a{
+        img{
+            width:3.52rem;
+            height: 2.79rem;
+        }
+    }
+}
+
+/*促销*/
+.promotion {
+    height: 1.76rem;
+    .promotion-item{
+        width:100%;
+        height: 1.76rem;
+        a{
+            height:1.76rem;
+            img{
+                width:100%;
+                height: 1.76rem;
+            }
+        }
+    }
+}
+
+/*推荐商家*/
+.recommend{
+    margin-top: .16rem;
+    .recommend-icon{
+        width:3.12rem;
+        height:.72rem;
+        margin: auto;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+}
+
+/*下拉菜单*/
+.menu{
+    position: sticky;
+    top:1.06rem;
+    z-index: 999;
+    background-color: #fff;
+    border-bottom: 0.01rem solid #eee;
+    ul{
+        height:.8rem;
+        display: flex;
+        li{
+            width:25%;
+            flex:1;
+            height: .8rem;
+            text-align: center;
+            color:#666;
+            font-size: .28rem;
+            line-height: .8rem;
+        }
+    }
+}
+
+/*商品列表*/
+.goodsList{
+    ul{
+        .shopInfo{
+            display: flex;
+            justify-content: space-between;
+            padding-top: .3rem;
+            padding-bottom: .3rem;
+            min-height: 3.52rem;
+            border-bottom: 0.01rem solid #eee;
+            .logo{
+                width:1.3rem;
+                height:1.3rem;
+                overflow: hidden;
+                border: 0.01rem solid #eee;
+                border-radius: 0.05rem;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+            .goodInfo{
+                width: calc(100% - 1.45rem);
+                height:100%;
+                color: #666;
+                .title{
+                    color:#333;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+                .ant-rate{
+                    height:0.26rem;
+                    li{
+                        height:100%;
+                        margin-right: -6px;
+                        div{
+                            height:100%;
+                            line-height: 0;
+                            i{
+                                height:100%;
+                                svg{
+                                    height:100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ant-rate-text{
+                    font-size: .12rem;
+                }
+                .money{
+                    display: flex;
+                    justify-content: space-between;
+                    color:#ddd;
+                    font-size: .12rem;
+                    span{
+                        color: #666;
+                    }
+                }
+                .type{
+                    margin: .1rem 0;
+                    .type-name{
+                        border: 0.01rem solid #eee;
+                    }
+                }
+                .discount{
+                    .disicon{
+                        width: .29rem;
+                        height: .29rem;
+                        color:#fff;
+                        margin-right: .1rem;
+                        font-size: .15rem;
+                        border-radius: .05rem;
+                    }
+                    .discount-green{
+                        background-color: rgb(112, 188, 70);
+                    }
+                    .discount-red{
+                        background-color: rgb(240, 115, 115);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*底部导航栏*/
+.navBottom{
+    position:fixed;
+    bottom:0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #fff;
+    padding: .2rem 0;
+    z-index:999;
+    a{
+        width:25%;
+        text-align: center;
+        color:#8e8e93;
+        i{
+            display: block;
+            font-size: .4rem;
+        }
+        span{
+            font-size: .2rem;
+        }
+    }
+    a.active {
+        color: #0089dc;
+    }
+}
