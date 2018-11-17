@@ -1,0 +1,19 @@
+.location{
+    padding-top: .24rem;
+    background-color: #00A7FF;
+    .sub{
+        height: .92rem;
+        text-indent: .15rem;
+        line-height: 1.1rem;
+        span{
+            display: inline-block;
+            font-size: .35rem;
+            color: white;
+        }
+        .dingwei{
+        }
+        .info{
+            font-weight: bold;
+        }
+    }
+}

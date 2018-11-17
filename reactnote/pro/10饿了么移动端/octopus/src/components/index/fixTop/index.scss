@@ -1,0 +1,29 @@
+
+/*吸顶盒*/
+.fixTop {
+    /*可在移动端应用*/
+    z-index: 999;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.06rem;
+    background: #00A7FF;
+    a{
+        width:6.94rem;
+        height: 0.72rem;
+        background-color: #fff;
+        color:#999;
+        display: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        text-decoration: none;
+        span{
+            margin-left: .1rem;
+            font-size: .3rem;
+            font-family: simsun;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+/*下拉菜单*/
+.menu{
+    position: sticky;
+    top:1.06rem;
+    z-index: 999;
+    background-color: #fff;
+    border-bottom: 0.01rem solid #eee;
+    ul{
+        height:.8rem;
+        display: flex;
+        li{
+            width:25%;
+            flex:1;
+            height: .8rem;
+            text-align: center;
+            color:#666;
+            font-size: .28rem;
+            line-height: .8rem;
+        }
+    }
+}
