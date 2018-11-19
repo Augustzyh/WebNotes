@@ -78,6 +78,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="27" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
@@ -101,7 +102,7 @@
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.81" value="1" />
-          <entry key="project.opened" value="31" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -112,11 +113,11 @@
           <entry key="gitignore" value="5" />
           <entry key="html" value="35" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="125" />
+          <entry key="js" value="129" />
           <entry key="json" value="21" />
-          <entry key="jsx" value="74" />
-          <entry key="md" value="24" />
-          <entry key="png" value="3" />
+          <entry key="jsx" value="75" />
+          <entry key="md" value="25" />
+          <entry key="png" value="4" />
           <entry key="svg" value="3" />
           <entry key="tpl" value="2" />
           <entry key="txt" value="2" />
@@ -126,11 +127,11 @@
         <counts>
           <entry key="CSS" value="32" />
           <entry key="HTML" value="35" />
-          <entry key="Image" value="4" />
+          <entry key="Image" value="5" />
           <entry key="JSON" value="21" />
-          <entry key="JSX Harmony" value="66" />
-          <entry key="JavaScript" value="125" />
-          <entry key="PLAIN_TEXT" value="42" />
+          <entry key="JSX Harmony" value="67" />
+          <entry key="JavaScript" value="129" />
+          <entry key="PLAIN_TEXT" value="43" />
           <entry key="SVG" value="3" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -139,9 +140,9 @@
         <counts>
           <entry key="css" value="864" />
           <entry key="html" value="2709" />
-          <entry key="js" value="8617" />
+          <entry key="js" value="8708" />
           <entry key="json" value="59" />
-          <entry key="jsx" value="6201" />
+          <entry key="jsx" value="6227" />
           <entry key="md" value="413" />
         </counts>
       </usages-collector>
@@ -152,8 +153,8 @@
           <entry key="CSS" value="864" />
           <entry key="HTML" value="2709" />
           <entry key="JSON" value="59" />
-          <entry key="JSX Harmony" value="6198" />
-          <entry key="JavaScript" value="8617" />
+          <entry key="JSX Harmony" value="6224" />
+          <entry key="JavaScript" value="8708" />
           <entry key="PLAIN_TEXT" value="416" />
         </counts>
       </usages-collector>
@@ -161,25 +162,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1/react.md">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1/record.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/record.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="279">
+              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -187,17 +174,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/record.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="-227">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/设计图.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/接口文档.md">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/components/layout/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="391">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -265,7 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js" />
         <option value="$PROJECT_DIR$/pro/7路由/React框架大纲.md" />
         <option value="$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/index.js" />
         <option value="$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/components/logo/index.jsx" />
@@ -315,6 +311,7 @@
         <option value="$PROJECT_DIR$/pro/9命令设计模式redux/record.js" />
         <option value="$PROJECT_DIR$/pro/9命令设计模式redux/reactapp/src/App.js" />
         <option value="$PROJECT_DIR$/pro/10饿了么移动端/octopus/public/index.html" />
+        <option value="$PROJECT_DIR$/pro/10饿了么移动端/octopus/src/components/index/category/index.jsx" />
         <option value="$PROJECT_DIR$/pro/10饿了么移动端/record.js" />
       </list>
     </option>
@@ -351,7 +348,7 @@
       <path value="$PROJECT_DIR$/pro/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-42" />
     <option name="width" value="1026" />
     <option name="height" value="546" />
@@ -364,7 +361,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -386,6 +382,12 @@
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnote" type="462c0819:PsiDirectoryNode" />
               <item name="pro" type="462c0819:PsiDirectoryNode" />
+              <item name="4toggle生命周期" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
+              <item name="pro" type="462c0819:PsiDirectoryNode" />
               <item name="8路由设计结合echarts的案例" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -396,19 +398,13 @@
             </path>
             <path>
               <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactnote" type="462c0819:PsiDirectoryNode" />
-              <item name="pro" type="462c0819:PsiDirectoryNode" />
-              <item name="10饿了么移动端" type="462c0819:PsiDirectoryNode" />
-              <item name="octopus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactnote" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,12 +491,13 @@
       <workItem from="1542282452332" duration="1703000" />
       <workItem from="1542285563450" duration="993000" />
       <workItem from="1542287627795" duration="5391000" />
-      <workItem from="1542422680731" duration="1883000" />
+      <workItem from="1542422680731" duration="4761000" />
+      <workItem from="1542617092813" duration="1632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219942000" />
+    <option name="totallyTimeSpent" value="224452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -537,41 +534,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/App1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/7路由/reactapp/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/components/navleft/navlink.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/components/navleft/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -768,10 +730,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/record.js">
+    <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/octopus/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/octopus/src/components/index/category/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/4toggle生命周期/2-生命周期.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/components/layout/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -798,20 +785,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/reactapp/src/components/layout/index.jsx">
+    <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/设计图.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/接口文档.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro/8路由设计结合echarts的案例/record.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-227">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro/10饿了么移动端/record.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="279">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
     </entry>

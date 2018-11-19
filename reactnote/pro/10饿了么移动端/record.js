@@ -9,5 +9,11 @@
 index首页面组件
 router 路由显示组件
 
+sass伪类  &::after
 
-pm2杀进城 pm2 delete id
+pm2杀进程 pm2 delete id
+
+一般再组件加载完请求数据挂载 ComponentDidMount
+
+
+video 自动播放autoPlay  需静音 muted
