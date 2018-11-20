@@ -7,6 +7,8 @@ import CategoryList from "./components/router/category";
 import ScarebugSub from "./components/router/scarebuy";
 import PromotionSub from "./components/router/promotion";
 import Discover from "./components/router/navbottom/discover";
+import Mine from "./components/router/navbottom/mine";
+import GoodsListSub from "./components/router/goodslist";
 class App extends Component {
   render() {
     return (
@@ -19,6 +21,8 @@ class App extends Component {
               <Route path="/scarebuy/sub:id" component={ScarebugSub}></Route>
               <Route path="/promotion/sub:id" component={PromotionSub}></Route>
               <Route path="/discover" component={Discover}></Route>
+              <Route path="/mine" component={Mine}></Route>
+              <Route path="/goodsList:id" component={GoodsListSub}></Route>
             </Switch>
           </Layout>
       </Router>

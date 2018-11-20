@@ -1,0 +1,94 @@
+.mine{
+    height: 100vh;
+    background-color: #f0f0f0;
+    .avator{
+        height: 2.2rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: #00A8FF;
+        .icon{
+            width: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius: 50%;
+                background-color: #ddd;
+            }
+        }
+        .descripe{
+            width: 4.4rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            .userInfo{
+                margin-bottom: .18rem;
+                .login{
+                    font-size: .4rem;
+                    font-weight: bold;
+                    color: #fff;
+                }
+            }
+        }
+        .arrow{
+            width: .8rem;
+            text-align: center;
+            line-height: 2.2rem;
+            i{
+                color: #fff;
+                font-size: large;
+            }
+        }
+    }
+    .mainInfo{
+        display: flex;
+        height:1.66rem;
+        background-color: #fff;
+        a{
+            flex: 1;
+            border-right: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            i{
+                font-size: .6rem;
+            }
+            .icon-caifu-mian{
+                color: #ff9900;
+            }
+            .icon-hongbao{
+                color: #f1372b;
+            }
+            .icon-jifen-xianxing{
+                color: #066042;
+            }
+        }
+        a:last-child {
+            border: none;
+        }
+    }
+    .detialInfo{
+        width:100%;
+        margin: .2rem 0;
+        .infoList{
+            display: block;
+            width:100%;
+            height: .9rem;
+            line-height: .9rem;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            .iconfont{
+                margin: 0 .3rem;
+                font-size: .44rem;
+            }
+            .title{
+                color: #333;
+                font-size: .35rem;
+            }
+        }
+    }
+}

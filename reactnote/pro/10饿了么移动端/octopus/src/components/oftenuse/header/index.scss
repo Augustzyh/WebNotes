@@ -1,0 +1,79 @@
+.categorylist{
+    .head{
+        position: sticky;
+        top:0;
+        background-color: #00A8FF;
+        color:#fff;
+        z-index: 999;
+        font-weight: bold;
+        text-align: center;
+        .back{
+            position: absolute;
+            top: .22rem;
+            left: .08rem;
+            height: .58rem;
+            width: .58rem;
+            line-height: .58rem;
+            a{
+                position: absolute;
+                top:0;
+                left:0;
+                display: block;
+                width: 100%;
+                height:100%;
+            }
+        }
+        .title{
+            height: 1.02rem;
+            line-height: 1.02rem;
+            font-size: .4rem;
+        }
+        .tags{
+            display: flex;
+            justify-content: space-between;
+            height: .8rem;
+            width:100%;
+            .list{
+                width:6.6rem;
+                ul{
+                    width:100%;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                    li{
+                        display: inline-block;
+                        padding: 0 .2rem;
+                        line-height: .8rem;
+                        a{
+                            color:#fff;
+                            opacity: .7;
+                        }
+                        a.active{
+                            opacity: 1;
+                            font-weight: bold;
+                            position: relative;
+                            &::after{
+                                position: absolute;
+                                bottom: -0.11rem;
+                                left:0;
+                                right: 0;
+                                margin:auto;
+                                width: 100%;
+                                height: 2px;
+                                content: '';
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .moreIcon{
+                width: .6rem;
+                line-height: .8rem;
+                z-index: 99;
+            }
+        }
+    }
+    .menu{
+        top:1.84rem;
+    }
+}
